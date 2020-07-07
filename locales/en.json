@@ -1,0 +1,203 @@
+{
+  "header": {
+    "Home": "Home",
+    "community": "Forum",
+    "communityTitle": "Community",
+    "ecology": "Ecology",
+    "FAQ": "FAQ",
+    "About": "About",
+    "languages": "EN",
+    "AlphaNet": "TestNet",
+    "Join AlphaNet": "Join AlphaNet",
+    "EcoWhitePaper": "Economy WhitePaper",
+    "Blockchain Browser": "Blockchain Browser",
+    "Documents": "Documents",
+    "WhitePaper": "White Paper",
+    "Github": "Github",
+    "ZH": "中文",
+    "EN": "EN"
+  },
+  "footer": {
+    "Success": "Copy Success",
+    "Error": "Copy Error",
+    "Copy": "Copy",
+    "title": "Follow Us",
+    "Crust": "Crust",
+    "WhitePaper": "WhitePaper",
+    "EcoWhitePaper": "Economy WhitePaper",
+    "Github": "Github",
+    "FAQ": "FAQ",
+    "forum": "Forum",
+    "Twitter": "Twitter",
+    "Telegram": "Telegram",
+    "Cooperation": "Cooperation",
+    "Feedback": "Feedback",
+    "JoinUs": "Contact Us",
+    "Community": "Community",
+    "ContactUs": "Contact Us"
+  },
+  "indexBanner": {
+    "title": "Crust",
+    "sub": "Chain to Decentralized Cloud",
+    "contentLink1": "Source Code",
+    "contentLink2": "Alphanet",
+    "contentAnd": "and",
+    "content": "are now available",
+    "introduce": "Whitepaper",
+    "desc": "Chain to Decentralized Cloud"
+  },
+  "crust": {
+    "title": "Crust",
+    "sub": "What is Crust",
+    "content": {
+      "text1": "implements the incentive layer protocol for decentralized storage.  It is adaptable to multiple storage layer protocols such as IPFS, and provides support for the application layer. Crust's architecture also has the capability of supporting a decentralized computing layer and building a decentralized cloud ecosystem.",
+      "text3": ""
+    },
+    "TEE": {
+      "title": "Meaningful Proof of Work",
+      "desc": "Based on the TEE (Trusted Execution Environment) technology, Crust implements MPoW (Meaningful Proof of Work) mechanism to quantify meaningful storage resource usage and generate corresponding work report in a reliable way."
+    },
+    "MPoW": {
+      "title": "Guaranteed by Storage Resources",
+      "desc": "Crust's GPoS (Guaranteed Proof of Stake) consensus uses storage resources as a guarantee. It encourages nodes to provide more storage resources, and improves the security and robustness of the network."
+    },
+    "GPoS": {
+      "title": "Decentralized Cloud Storage and Computing",
+      "desc": "With GPoS consensus and MPoW mechanism, Crust is able to support the quantification and consensus of both storage and computing resource usage, and builds ubiquitous decentralized cloud storage and computing capabilities."
+    }
+  },
+  "indexproduct": {
+    "title": "Crust",
+    "sub": "Crust",
+    "content": "Crust implements the incentive layer protocol for decentralized storage. It is adaptable to multiple storage layer protocols such as IPFS, and provides support for the application layer. Crust's architecture also has the capability of supporting a decentralized computing layer and building a decentralized cloud ecosystem.",
+    "introduce": "Introduce",
+    "onetitle": "Meaningful Proof of Work",
+    "twotitle": "Guaranteed by Storage Resources",
+    "threetitle": "Decentralized Cloud Storage and Computing",
+    "onecontent": "Based on the TEE (Trusted Execution Environment) technology, Crust implements MPoW (Meaningful Proof of Work) mechanism to quantify meaningful storage resource usage and generate corresponding work report in a reliable way.",
+    "twocontent": "Crust's GPoS (Guaranteed Proof of Stake) consensus uses storage resources as a guarantee. It encourages nodes to provide more storage resources, and improves the security and robustness of the network.",
+    "threecontent": "With GPoS consensus and MPoW mechanism, Crust is able to support the quantification and consensus of both storage and computing resource usage, and builds ubiquitous decentralized cloud storage and computing capabilities."
+  },
+  "productMatrix": {
+    "title": "Product Matrix",
+    "row-1-title": "Crust Pan",
+    "row-1-subtitle": "Decentralized iCloud ",
+    "row-1-desc": "Provide a cloud storage application",
+    "1-t1": "Cheaper",
+    "1-t1-intro1": "Lower price, larger space",
+    "1-t1-intro2": "Lower price, larger space",
+    "1-t2": "Privacy",
+    "1-t2-intro1": "Hardware encryption and decentralized<br/>space protects you from privacy leak",
+    "1-t2-intro2": "Hardware encryption and decentralized space protects you from privacy leak",
+    "1-t3": "Faster",
+    "1-t3-intro1": "Accelarated access through<br/>storage nodes everywhere",
+    "1-t3-intro2": "Accelarated access through storage nodes everywhere",
+    "one-t3-intro2": "storage nodes everywhere",
+    "row-2-title": "Cuber Cloud",
+    "2-cloud": "",
+    "2-intro1": "",
+    "row-2-desc": "Provide an S3 compatible storage service",
+    "row-2-subtitle": "Uber for Cloud",
+    "2-t1": "Low Cost",
+    "2-t1-intro1": "Get massive storage space with low budget",
+    "2-t1-intro2": "Get massive storage space with low budget",
+    "2-t2": "More Secure",
+    "2-t2-intro1": "Enterprise-level confidential and sensitive information <br/>protection solution keeps your business safe",
+    "2-t2-intro2": "Enterprise-level confidential and sensitive information protection solution keeps your business safe",
+    "2-t3": "High Efficiency",
+    "2-t3-intro1": "Enable edge computing scenarios, <br/>accelerating your business",
+    "2-t3-intro2": "Enable edge computing scenarios, accelerating your business"
+  },
+  "indexscene": {
+    "title": "Product Matrix",
+    "sub": "Product Matrix",
+    "one": "Web3 Pan",
+    "one-intro-highlight": "Decentralized iCloud ",
+    "one-intro1": "",
+    "one-intro2": "Provide a cloud storage application",
+    "one-t1": "Cheaper",
+    "one-t1-intro": "Lower price, larger space",
+    "one-t2": "Privacy",
+    "one-t2-intro1": "Hardware encryption and decentralized",
+    "one-t2-intro2": "space protects you from privacy leak",
+    "one-t3": "Faster",
+    "one-t3-intro1": "Accelarated access through",
+    "one-t3-intro2": "storage nodes everywhere",
+    "two": "Cuber Cloud",
+    "two-cloud": "",
+    "two-intro1": "",
+    "two-intro2": "Provide an S3 compatible decentralized storage service",
+    "two-intro-highlight": "Uber for Cloud ",
+    "two-t1": "Low Cost",
+    "two-t1-intro": "Get massive storage space with low budget",
+    "two-t2": "More Secure",
+    "two-t2-intro1": "Enterprise-level confidential and sensitive information",
+    "two-t2-intro2": "protection solution keeps your business safe",
+    "two-t3": "High Efficiency",
+    "two-t3-intro": "Enable edge computing scenarios, accelerating your business"
+  },
+  "timeline": {
+    "title": "Time Line",
+    "sub": "Time Line",
+    "coreTeam": {
+      "title": "2018 Q3",
+      "subtitle": " Core Team"
+    },
+    "prototyping": {
+      "title": "2019 Q2",
+      "subtitle": "Proof of concept +<br/> Prototyping"
+    },
+    "alpha": {
+      "title": "2020 Q1",
+      "subtitle": "Alpha Test Net"
+    },
+    "beta": {
+      "title": "2020 Q2",
+      "subtitle": "Beta Test Net"
+    },
+    "mainNet": {
+      "title": "2020 Q4",
+      "subtitle": "The Main Net"
+    }
+  },
+  "news": {
+    "bannertitle": "News Center",
+    "bannersub": "Latest news about Crust",
+    "title": "PRESS CENTER",
+    "sub": "PRESS CENTER"
+  },
+  "business": {
+    "bannertitle": "Crust",
+    "bannersub": "“Create a better future“",
+    "title": "Cooperation",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "company": "Company",
+    "post": "Post",
+    "purpose": "Purpose",
+    "detail": "Detail",
+    "submit": "Submit"
+  },
+  "feedback": {
+    "bannertitle": "Crust",
+    "bannersub": "“Share ideas and ideas“",
+    "title": "Feedback",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "detail": "Detail",
+    "submit": "Submit"
+  },
+  "detail": {
+    "title": "CONTENT",
+    "sub": "More Detail"
+  },
+  "faq": {
+    "title": "FAQ",
+    "sub": "Focus on Crust hot issues"
+  },
+  "Partnerships": {
+    "title": "Partnerships"
+  }
+}
