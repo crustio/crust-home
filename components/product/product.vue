@@ -34,7 +34,7 @@
             ></div>
             <div
               class="desc normal-text"
-              v-html="$t(`productMatrix.${card}-t${i}-intro1`)"
+              v-html="$t(`productMatrix.${card}-t${i}-intro2`)"
             ></div>
           </b-card>
         </div>
