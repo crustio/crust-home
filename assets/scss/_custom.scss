@@ -1,0 +1,12 @@
+// custom.scss
+
+// All of your custom SCSS variables go first
+
+$light: #f1f1f1;
+$mainColor: #eb761c;
+$navBgColor: rgb(0, 0, 0);
+$secondary: #ffffff;
+
+$dark: $navBgColor;
+$warning: $mainColor;
+$component-active-color: $mainColor;
