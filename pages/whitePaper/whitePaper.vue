@@ -24,15 +24,6 @@ export default {
       progress: 0,
     }
   },
-  mounted() {},
-  methods: {
-    handleLoaded() {
-      this.progress++
-      if (this.progress === this.pdfPageCount - 1) {
-        this.loading = false
-      }
-    },
-  },
   computed: {
     pdfSrc() {
       let name = this.$route.name.toLowerCase()
@@ -40,6 +31,15 @@ export default {
         name += "_en"
       }
       return require(`../../assets/pdfs/${name}.pdf`)
+    },
+  },
+  mounted() {},
+  methods: {
+    handleLoaded() {
+      this.progress++
+      if (this.progress === this.pdfPageCount - 1) {
+        this.loading = false
+      }
     },
   },
 }
