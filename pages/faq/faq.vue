@@ -24,6 +24,7 @@
             v-if="$store.state.locale === 'zh'"
             class="content"
             v-html="item.content.replace(/&nbsp;/g, '')"
+            v-html="item.content"
           ></div>
           <div
             v-else
