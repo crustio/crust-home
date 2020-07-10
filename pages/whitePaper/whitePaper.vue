@@ -30,7 +30,7 @@ export default {
       if (this.$store.state.locale === "en") {
         name += "_en"
       }
-      return require(`../../assets/pdfs/${name}.pdf`)
+      return require(`../../static/pdfs/${name}.pdf`)
     },
   },
   mounted() {},
