@@ -14,21 +14,21 @@
       </b-row>
       <b-row class="nav-container container">
         <b-col
+          v-for="(item, i) in items"
+          :key="'nav' + i"
           cols="6"
           xs="6"
           md="3"
           xl="3"
           lg="3"
-          v-for="(item, i) in items"
-          :key="'nav' + i"
         >
           <div class="title">{{ $t(`footer.${titles[i]}`) }}</div>
           <template v-for="nav in item">
             <a
+              :key="nav"
               class="nav list-text"
               href="javascript:void(0)"
               @click="jump(nav)"
-              :key="nav"
               >{{ $t(`footer.${nav}`) }}</a
             >
           </template>
@@ -39,9 +39,9 @@
       </b-row>
       <div class="icon-wrapper container">
         <a
-          href="javascript:void(0)"
           v-for="icon in iconList"
           :key="icon"
+          href="javascript:void(0)"
           @click="jump(icon)"
         >
           <i class="iconfont" :class="`icon-${icon}-icon`"></i>
@@ -92,11 +92,11 @@ export default {
     },
     jump(name) {
       if (
-        ["WhitePaper", "FAQ", "/", "Cooperation", "EcoWhitePaper"].indexOf(
+        ["WhitePaper", "FAQ", "/", "Cooperation", "EcoWhitePaper"].includes(
           name
-        ) > -1
+        )
       ) {
-        return this.$router.push(name)
+        return this.$router.push(name.toLowerCase())
       } else {
         jumpTo(name)
       }
