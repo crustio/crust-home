@@ -4,7 +4,7 @@
     <div class="footer-wrapper container">
       <b-row class="mail-wrapper">
         <b-col class="mail-container" cols="8" sm="7" md="9" xl="9" lg="9">
-          Crustcommunity@gmail
+          Crustcommunity@gmail.com
         </b-col>
         <b-col cols="4" sm="5" md="3" xl="3" lg="3">
           <b-button class="btn" variant="warning" @click="handleCopy">{{
