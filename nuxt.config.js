@@ -130,4 +130,11 @@ export default {
     bootstrapVueCSS: false, // Or `bvCSS: false`
     icon: true,
   },
+  loading: {
+    color: '#eb761c',
+    height: '4px',
+    css: {
+      zIndex: 1000
+    }
+  }
 }

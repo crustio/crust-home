@@ -117,7 +117,7 @@ export default {
 <style lang="scss" scoped>
 .navbar {
   min-height: 60px;
-  z-index: 100;
+  z-index: 10;
   .navbar-nav {
     font-family: nasalization;
     .nav-item {
