@@ -1,17 +1,19 @@
 <template>
   <div class="whitePaper container-fluid">
-    <client-only placeholder="Loading...">
+    <client-only>
       <div>
         <div v-for="(pageNum, index) in pdfPageCount" :key="index">
           <pdf
             class="container"
             :src="pdfSrc"
             :page="pageNum"
-            @loaded="handleLoaded"
+            @loaded="handleLoaded
+"
           ></pdf>
         </div>
       </div>
-    </client-only>
+    </client-only>.
+    
   </div>
 </template>
 <script>
@@ -30,15 +32,20 @@ export default {
       if (this.$store.state.locale === "en") {
         name += "_en"
       }
-      return require(`../../static/pdfs/${name}.pdf`)
+      return `/pdfs/${name}.pdf`
     },
   },
-  mounted() {},
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+    })
+
+  },
   methods: {
     handleLoaded() {
       this.progress++
       if (this.progress === this.pdfPageCount - 1) {
-        this.loading = false
+        this.$nuxt.$loading.finish()
       }
     },
   },
