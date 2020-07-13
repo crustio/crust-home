@@ -7,8 +7,7 @@
             class="container"
             :src="pdfSrc"
             :page="pageNum"
-            @loaded="handleLoaded
-"
+            @loaded="handleLoaded"
           ></pdf>
         </div>
       </div>
