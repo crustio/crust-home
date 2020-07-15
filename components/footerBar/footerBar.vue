@@ -4,7 +4,7 @@
     <div class="footer-wrapper container">
       <b-row class="mail-wrapper">
         <b-col class="mail-container" cols="8" sm="7" md="9" xl="9" lg="9">
-          Crustcommunity@gmail
+          CrustNetwork@gmail.com
         </b-col>
         <b-col cols="4" sm="5" md="3" xl="3" lg="3">
           <b-button class="btn" variant="warning" @click="handleCopy">{{
@@ -14,21 +14,21 @@
       </b-row>
       <b-row class="nav-container container">
         <b-col
+          v-for="(item, i) in items"
+          :key="'nav' + i"
           cols="6"
           xs="6"
           md="3"
           xl="3"
           lg="3"
-          v-for="(item, i) in items"
-          :key="'nav' + i"
         >
           <div class="title">{{ $t(`footer.${titles[i]}`) }}</div>
           <template v-for="nav in item">
             <a
+              :key="nav"
               class="nav list-text"
               href="javascript:void(0)"
               @click="jump(nav)"
-              :key="nav"
               >{{ $t(`footer.${nav}`) }}</a
             >
           </template>
@@ -39,9 +39,9 @@
       </b-row>
       <div class="icon-wrapper container">
         <a
-          href="javascript:void(0)"
           v-for="icon in iconList"
           :key="icon"
+          href="javascript:void(0)"
           @click="jump(icon)"
         >
           <i class="iconfont" :class="`icon-${icon}-icon`"></i>
@@ -75,7 +75,7 @@ export default {
   },
   methods: {
     handleCopy() {
-      this.$copyText("Crustcommunity@gmail.com")
+      this.$copyText("CrustNetwork@gmail.com")
         .then(() => {
           this.$bvToast.toast(this.$t("footer.Success"), {
             title: false,
@@ -92,11 +92,11 @@ export default {
     },
     jump(name) {
       if (
-        ["WhitePaper", "FAQ", "/", "Cooperation", "EcoWhitePaper"].indexOf(
+        ["WhitePaper", "FAQ", "/", "Cooperation", "EcoWhitePaper"].includes(
           name
-        ) > -1
+        )
       ) {
-        return this.$router.push(name)
+        return this.$router.push(name.toLowerCase())
       } else {
         jumpTo(name)
       }

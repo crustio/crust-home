@@ -23,12 +23,12 @@
           <div
             v-if="$store.state.locale === 'zh'"
             class="content"
-            v-html="item.content"
+            v-html="item.content.replace(/&nbsp;/g, '')"
           ></div>
           <div
             v-else
             class="content"
-            v-html="item.content_en"
+            v-html="item.content_en.replace(/&nbsp;/g, '')"
           ></div>
         </div>
       </div>

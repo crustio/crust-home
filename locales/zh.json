@@ -70,7 +70,7 @@
   },
   "productMatrix": {
     "title": "产品矩阵",
-    "row-1-title": "Crust Pan",
+    "row-1-title": "Crust Cloud",
     "row-1-subtitle": "去中心化云空间",
     "row-1-desc": " 提供一个分布式云存储应用",
     "1-t1": "更便宜",
@@ -82,7 +82,7 @@
     "1-t3": "更快捷",
     "1-t3-intro1": "服务节点无处不在，<br/>上传下载更快捷",
     "1-t3-intro2": "服务节点无处不在，上传下载更快捷",
-    "row-2-title": "Cuber Cloud",
+    "row-2-title": " Crust Cloud Enterprise",
     "2-cloud": "",
     "2-intro1": "",
     "row-2-desc": "提供一个兼容AWS S3接口的企业级云存储服务",

@@ -2,16 +2,16 @@
   <div class="container-fluid partners-wrapper" ref="scroller">
     <mainTitle :text="$t(`Partnerships.title`)"></mainTitle>
     <div class="container partners-container">
-      <b-row>
+      <b-row >
         <b-col
-          v-for="i in 8"
+          v-for="i in 9"
           :key="`part${i}`"
           class="image-wrapper"
           :class="{ show: process >= i }"
           cols="6"
-          lg="3"
-          md="3"
-          xl="3"
+          lg="4"
+          md="6"
+          xl="4"
           sm="6"
         >
           <div class="container-fluid">
@@ -99,8 +99,11 @@ $bgColor: #f9fafb;
   background-color: $bgColor;
   padding-bottom: 100px;
   .image-wrapper {
-    padding: 10px;
+    padding: 5px;
     visibility: hidden;
+    @include media-breakpoint-up(md) {
+      padding: 20px 30px;
+    }
     &.show {
       visibility: visible;
       animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
