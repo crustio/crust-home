@@ -16,7 +16,7 @@ const outerDit = {
   github: "https://github.com/crustio",
   twitter: "https://twitter.com/CrustNetwork",
   medium: "https://medium.com/@CrustNetwork",
-  telegram: "https://t.me/joinchat/QoLlsBMxJwVtFKwFDho0Pw",
+  telegram: "https://t.me/CrustNetwork",
   explorer: "http://explorer.crust.network/",
   "blockchain browser": "http://explorer.crust.network/",
   "join alphanet": "https://github.com/crustio/crust/wiki/Join-Crust-Alphanet",
