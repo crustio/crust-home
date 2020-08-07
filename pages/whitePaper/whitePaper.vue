@@ -11,8 +11,8 @@
           ></pdf>
         </div>
       </div>
-    </client-only>.
-    
+    </client-only>
+
   </div>
 </template>
 <script>
