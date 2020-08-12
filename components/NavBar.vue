@@ -56,7 +56,7 @@ export default {
         {
           name: "AlphaNet",
           hasChild: true,
-          children: ["Join AlphaNet", "Blockchain Browser"],
+          children: ["Join AlphaNet", "Blockchain Browser", "Crust Apps"],
         },
         {
           name: "Documents",
@@ -92,6 +92,10 @@ export default {
       }
       this.activeNav = name
       if (outerList.indexOf(name) > -1) {
+        if (name === 'join alphanet') {
+          name = 'join alphanet' + this.$store.state.locale
+          console.log(name);
+        }
         return jumpTo(name)
       }
       if (name === "home") {
