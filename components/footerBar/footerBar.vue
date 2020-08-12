@@ -91,12 +91,14 @@ export default {
         })
     },
     jump(name) {
-      if (
-        ["WhitePaper", "FAQ", "/", "Cooperation", "EcoWhitePaper"].includes(
-          name
-        )
-      ) {
+      if (["FAQ", "/", "Cooperation"].includes(name)) {
         return this.$router.push(name.toLowerCase())
+      } else if (name === "WhitePaper" || name === "EcoWhitePaper") {
+        name = name.toLowerCase()
+        if (this.$store.state.locale === "en") {
+          name += "_en"
+        }
+        return window.open(`/pdfs/${name}.pdf`, "_blank")
       } else {
         jumpTo(name)
       }

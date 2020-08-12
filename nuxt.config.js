@@ -22,7 +22,8 @@ export default {
         hid: "keywords",
         name: "keywords",
         content:
-          "Crust Network, Storage, Crust, Blockchain, Decentralized Storage, Cru, Privacy Protection, Provacy Data, IPFS",
+          "Crust Network, Storage, Crust Blockchain, Decentralized Storage, CRU, Privacy Protection, Privacy Data," +
+          " IPFS",
       },
       { name: "robots", content: "all" },
       { name: "author", content: "Crust, crust, Crust Network" },

@@ -54,9 +54,9 @@ export default {
           hasChild: false,
         },
         {
-          name: "AlphaNet",
+          name: "TestNet",
           hasChild: true,
-          children: ["Join AlphaNet", "Blockchain Browser"],
+          children: ["Join TestNet", "Blockchain Browser", "Crust Apps"],
         },
         {
           name: "Documents",
@@ -77,7 +77,12 @@ export default {
   methods: {
     jump(name) {
       name = name.toLowerCase()
-      this.activeNav = name
+      if (name === 'ecowhitepaper' || name === 'whitepaper' ) {
+        if (this.$store.state.locale === "en") {
+          name += "_en"
+        }
+        return window.open(`/pdfs/${name}.pdf`, "_blank")
+      }
       if (name === "zh" || name === "en") {
         // 切换语言
         this.$i18n.locale = name
@@ -85,7 +90,11 @@ export default {
         document.cookie = "locale=" + name
         return this.$store.commit("SET_LANG", name)
       }
+      this.activeNav = name
       if (outerList.indexOf(name) > -1) {
+        if (name === 'join testnet') {
+          name = 'join testnet' + this.$store.state.locale
+        }
         return jumpTo(name)
       }
       if (name === "home") {
