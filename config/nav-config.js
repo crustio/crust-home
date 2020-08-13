@@ -20,7 +20,7 @@ const outerDit = {
   medium: "https://medium.com/@CrustNetwork",
   telegram: "https://t.me/CrustNetwork",
   explorer: "http://explorer.crust.network/",
-  "crust apps": "http://apps.crust.network/",
+  "crust apps": "https://apps.crust.network/",
   "blockchain browser": "http://explorer.crust.network/",
 }
 const outerList = Object.keys(outerDit)
