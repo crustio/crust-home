@@ -22,6 +22,7 @@ const outerDit = {
   explorer: "http://explorer.crust.network/",
   "crust apps": "https://apps.crust.network/",
   "blockchain browser": "http://explorer.crust.network/",
+  "pdfBucket": "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/"
 }
 const outerList = Object.keys(outerDit)
 module.exports = {

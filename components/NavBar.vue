@@ -42,7 +42,7 @@
 
 <script>
 import jumpTo from "../utils"
-import { outerList } from "../config/nav-config"
+import { outerList, outerDit } from '@/config/nav-config'
 
 export default {
   data() {
@@ -81,7 +81,7 @@ export default {
         if (this.$store.state.locale === "en") {
           name += "_en"
         }
-        return window.open(`/pdfs/${name}.pdf`, "_blank")
+        return window.open(`${outerDit.pdfBucket}${name}.pdf`, "_blank")
       }
       if (name === "zh" || name === "en") {
         // 切换语言
