@@ -58,6 +58,7 @@
 <script>
 import mainTitle from "../title"
 import jumpTo from "~/utils"
+import { outerDit } from "@/config/nav-config"
 export default {
   components: {
     mainTitle,
@@ -98,7 +99,7 @@ export default {
         if (this.$store.state.locale === "en") {
           name += "_en"
         }
-        return window.open(`/pdfs/${name}.pdf`, "_blank")
+        return window.open(`${outerDit.pdfBucket}${name}.pdf`, "_blank")
       } else {
         jumpTo(name)
       }
