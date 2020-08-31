@@ -74,11 +74,17 @@
         </div>
       </b-card>
     </div>
+    <div class="container text-center">
+      <button @click="handleClick" class="btn-custom">
+        {{ $t("button.learnMore") }}
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
 import mainTitle from "../title"
+import { outerDit } from "@/config/nav-config"
 export default {
   name: "Product",
   data() {
@@ -98,6 +104,9 @@ export default {
     },
   },
   methods: {
+    handleClick() {
+      window.open(outerDit.cloud, "_blank")
+    },
     emitScrollListener() {
       const scroller = this.$refs.scroller
       const scrollerWrapperScrollTop = scroller.getBoundingClientRect().top
@@ -130,6 +139,7 @@ export default {
 <style lang="scss" scoped>
 .product {
   width: 100%;
+  padding-bottom: 60px;
   background: linear-gradient(
     45deg,
     rgba(92, 37, 51, 1) 0%,

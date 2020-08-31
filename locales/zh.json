@@ -1,4 +1,8 @@
 {
+  "button": {
+    "learnMore": "了解更多",
+    "checkOnGithub": "在Github上查看"
+  },
   "header": {
     "Github": "Github",
     "ZH": "中文",

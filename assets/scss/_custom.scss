@@ -10,3 +10,21 @@ $secondary: #ffffff;
 $dark: $navBgColor;
 $warning: $mainColor;
 $component-active-color: $mainColor;
+.btn-custom {
+  font-family: nasalization;
+  padding: 0.5rem 3rem;
+  border-radius: 25px;
+  border: 1px solid $mainColor;
+  background-color: transparent;
+  color: $mainColor;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  outline: none;
+  &:hover {
+    color: #fff;
+    background-color: $mainColor;
+  }
+  &:focus {
+    outline: none;
+  }
+}

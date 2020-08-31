@@ -1,4 +1,8 @@
 {
+  "button": {
+    "learnMore": "Learn More",
+    "checkOnGithub": "Check Our Github"
+  },
   "header": {
     "Home": "Home",
     "community": "Forum",

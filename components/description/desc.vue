@@ -36,11 +36,17 @@
           </b-card>
         </b-col>
       </b-row>
+      <div class="container text-center">
+        <button @click="handleClick" class="btn-custom">
+          {{ $t("button.checkOnGithub") }}
+        </button>
+      </div>
     </div>
   </div>
 </template>
 <script>
 import title from "~/components/title"
+import { outerDit } from "@/config/nav-config"
 export default {
   components: {
     mainTitle: title,
@@ -56,6 +62,9 @@ export default {
     this.emitScrollListener()
   },
   methods: {
+    handleClick() {
+      window.open(outerDit.maxwell, "_blank")
+    },
     emitScrollListener() {
       const scroller = this.$refs.scroller
       const scrollerWrapperScrollTop = scroller.getBoundingClientRect().top
@@ -109,7 +118,7 @@ export default {
   }
   .container {
     .card-container {
-      margin-top: 30px;
+      margin: 30px 0;
       padding-right: 0;
     }
     .card {
