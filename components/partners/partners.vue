@@ -2,28 +2,25 @@
   <div class="container-fluid partners-wrapper" ref="scroller">
     <mainTitle :text="$t(`Partnerships.title`)"></mainTitle>
     <div class="container partners-container">
-      <b-row >
+      <b-row
+        align-h="start"
+        cols="2"
+        cols-xl="5"
+        cols-lg="5"
+        cols-md="4"
+        cols-sm="2"
+      >
         <b-col
-          v-for="i in 9"
+          v-for="i in 24"
           :key="`part${i}`"
           class="image-wrapper"
           :class="{ show: process >= i }"
-          cols="6"
-          lg="4"
-          md="6"
-          xl="4"
-          sm="6"
         >
-          <div class="container-fluid">
+          <div class="container-fluid bg-white img-box">
             <b-img
-              class="image"
-              :src="
-                require(`../../assets/images/Partner0${i}${
-                  locale === 'en' && i === 5 ? 'en' : ''
-                }.png`)
-              "
               fluid
-              fluid-grow
+              class="image"
+              :src="`https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/partners/img${i}.png`"
               alt="Responsive image"
             ></b-img>
           </div>
@@ -70,7 +67,7 @@ export default {
     scrollListener(scroller, clientH) {
       if (
         scroller.getBoundingClientRect().top - clientH < 0 &&
-        this.process < 16
+        this.process < 23
       ) {
         this.start()
       }
@@ -81,7 +78,7 @@ export default {
       }
       this.timer = setInterval(() => {
         this.process++
-        if (this.process > 15) {
+        if (this.process > 23) {
           clearInterval(this.timer)
         }
       }, 100)
@@ -97,26 +94,26 @@ export default {
 $bgColor: #f9fafb;
 .partners-wrapper {
   background-color: $bgColor;
-  padding-bottom: 100px;
   .image-wrapper {
-    padding: 5px;
     visibility: hidden;
-    @include media-breakpoint-up(md) {
-      padding: 20px 30px;
+    padding: 20px 30px;
+
+    .img-box {
+      height: 125px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        box-shadow: 13px 11px 28px -8px rgba(0, 0, 0, 0.75);
+      }
     }
     &.show {
       visibility: visible;
       animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
       animation-duration: 1s; /* don't forget to set a duration! */
-    }
-    .image {
-      border: 2px solid #fff;
-      background: #fff;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      &:hover {
-        border-color: #f3f4f7;
-      }
     }
   }
 }

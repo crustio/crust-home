@@ -53,7 +53,7 @@
     "title": "Crust",
     "sub": "什么是Crust",
     "content": {
-      "text1": "提供了Web3⽣态系统的去中⼼化存储⽹络，⽀持包括IPFS在内的多种存储层协议，并对应⽤层提供接⼝。 Crust的技术栈还能够⽀持去中⼼化计算层。Crust 旨在构建⼀个重视数据隐私和所有权的分散式云⽣态系统。",
+      "text1": "CRUST提供了Web3⽣态系统的去中⼼化存储⽹络，⽀持包括IPFS在内的多种存储\n层协议，并对应⽤层提供接⼝。 Crust的技术栈还能够⽀持去中⼼化计算层。Crust\n旨在构建⼀个重视数据隐私和所有权的分散式云⽣态系统。",
       "text3": ""
     },
     "TEE": {
@@ -161,5 +161,45 @@
   },
   "Partnerships": {
     "title": "合作伙伴"
+  },
+  "teamMembers": {
+    "title": "团队成员",
+    "members": [
+      {
+        "name": "Bova Chen",
+        "title": "Co-Founder",
+        "desc": "He has 15+ yrs experience of financial investment. He started asTMT researcher and then managed several funds as investment director. Hefounded Winsun Capital and did successful investments in crypto industry."
+      },
+      {
+        "name": "Leo Wang",
+        "title": "Co-Founder",
+        "desc": "He has 15+ yrs experience in IT industry. Leo worked in Microsoftand Cisco as senior development lead. He got rich experience in distributedstorage, cloud computing and blockchain, and led a blockchain-based projectto store and exchange manufacturing data in different geo-locations."
+      },
+      {
+        "name": "Zikun Fan",
+        "title": "Technical Lead",
+        "desc": "He got his master degree in Computer Science from ZheJiangUniversity and received the PhD offer from CERCS Lab of Georgia Tech. Zikunworked in Microsoft on Azure Kubernetes and blockchain based projects."
+      },
+      {
+        "name": "Steve Shi",
+        "title": "Market Lead",
+        "desc": "He got 10+ years experience of marketing, program operation andnew product management in IT Industry. Steve got both master degrees in MBAfrom Shanghai Jiaotong University. He worked in Cisco to support new productglobal launch business."
+      },
+      {
+        "name": "Dean Yan",
+        "title": "Product Lead",
+        "desc": "Dean is experienced in information security and blockchaintechnologies. He has been working in Cisco on supply chain blockchain basedprojects, one of his innovation projects was announced in globalDevelopment@Cisco conference."
+      },
+      {
+        "name": "Yang Zhao",
+        "title": "Core developer",
+        "desc": "Yang got his master's degree from Tsinghua University. He hasparticipated in open source projects and made significant contributions. Yangworked in Microsoft on cyber security, distributed storage and big dataprojects."
+      },
+      {
+        "name": "Yao Zhao",
+        "title": "Core developer",
+        "desc": "Yao got his master’s degree from Shanghai Jiaotong University.He is experienced in Data security and Linux kernel technologies. Yao worked inCisco IT security department and participated several blockchain projects."
+      }
+    ]
   }
 }

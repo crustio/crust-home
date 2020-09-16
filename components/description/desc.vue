@@ -101,9 +101,6 @@ export default {
   @include bgImage("~assets/images/descBg");
   background-position: left 50px;
   background-size: contain;
-  @include media-breakpoint-up(sm) {
-    margin-bottom: 60px;
-  }
   @include media-breakpoint-down(lg) {
     background: none;
   }

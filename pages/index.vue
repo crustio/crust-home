@@ -30,7 +30,7 @@ export default {
 <style lang="scss" scoped>
 .main {
   .item {
-    padding-bottom: 30px;
+    padding: 30px;
   }
 }
 </style>

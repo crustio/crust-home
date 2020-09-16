@@ -8,13 +8,13 @@
       :rounded="true"
     ></b-img>
     <b-card-title class="title">
-      {{ $t(`members[${idx - 1}].name`) }}</b-card-title
+      {{ $t(`teamMembers.members[${idx - 1}].name`) }}</b-card-title
     >
     <b-card-sub-title class="subtitle">
-      {{ $t(`members[${idx - 1}].title`) }}</b-card-sub-title
+      {{ $t(`teamMembers.members[${idx - 1}].title`) }}</b-card-sub-title
     >
     <b-card-text class="text-white text-sm-center">
-      {{ $t(`members[${idx - 1}].desc`) }}
+      {{ $t(`teamMembers.members[${idx - 1}].desc`) }}
     </b-card-text>
   </b-card>
 </template>

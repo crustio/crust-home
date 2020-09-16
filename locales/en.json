@@ -201,41 +201,44 @@
   "Partnerships": {
     "title": "Partnerships"
   },
-  "members": [
-    {
-      "name": "Bova Chen",
-      "title": "Co-Founder",
-      "desc": "Co-Founder. He has 15+ yrs experience of financial investment. He started as\nTMT researcher and then managed several funds as investment director. He\nfounded Winsun Capital and did successful investments in crypto industry."
-    },
-    {
-      "name": "Leo Wang",
-      "title": "Co-Founder",
-      "desc": "Co-Founder. He has 15+ yrs experience in IT industry. Leo worked in Microsoft\nand Cisco as senior development lead. He got rich experience in distributed\nstorage, cloud computing and blockchain, and led a blockchain-based project\nto store and exchange manufacturing data in different geo-locations."
-    },
-    {
-      "name": "Zikun Fan",
-      "title": "Technical Lead",
-      "desc": "Technical Lead. He got his master degree in Computer Science from ZheJiang\nUniversity and received the PhD offer from CERCS Lab of Georgia Tech. Zikun\nworked in Microsoft on Azure Kubernetes and blockchain based projects."
-    },
-    {
-      "name": "Steve Shi",
-      "title": "Market Lead",
-      "desc": "Market Lead. He got 10+ years experience of marketing, program operation andnew product management in IT Industry. Steve got both master degrees in MBAfrom Shanghai Jiaotong University. He worked in Cisco to support new productglobal launch business."
-    },
-    {
-      "name": "Dean Yan",
-      "title": "Product Lead",
-      "desc": "Product Lead. Dean is experienced in information security and blockchaintechnologies. He has been working in Cisco on supply chain blockchain basedprojects, one of his innovation projects was announced in globalDevelopment@Cisco conference."
-    },
-    {
-      "name": "Yang Zhao",
-      "title": "Core developer",
-      "desc": "Core developer. Yang got his master's degree from Tsinghua University. He hasparticipated in open source projects and made significant contributions. Yangworked in Microsoft on cyber security, distributed storage and big dataprojects."
-    },
-    {
-      "name": "Yao Zhao",
-      "title": "Core developer",
-      "desc": "Core developer. Yao got his master’s degree from Shanghai Jiaotong University.He is experienced in Data security and Linux kernel technologies. Yao worked inCisco IT security department and participated several blockchain projects."
-    }
-  ]
+  "teamMembers": {
+    "title": "Team Members",
+    "members": [
+      {
+        "name": "Bova Chen",
+        "title": "Co-Founder",
+        "desc": "CoHe has 15+ yrs experience of financial investment. He started as\nTMT researcher and then managed several funds as investment director. He\nfounded Winsun Capital and did successful investments in crypto industry."
+      },
+      {
+        "name": "Leo Wang",
+        "title": "Co-Founder",
+        "desc": "CoHe has 15+ yrs experience in IT industry. Leo worked in Microsoft\nand Cisco as senior development lead. He got rich experience in distributed\nstorage, cloud computing and blockchain, and led a blockchain-based project\nto store and exchange manufacturing data in different geo-locations."
+      },
+      {
+        "name": "Zikun Fan",
+        "title": "Technical Lead",
+        "desc": "He got his master degree in Computer Science from ZheJiang\nUniversity and received the PhD offer from CERCS Lab of Georgia Tech. Zikun\nworked in Microsoft on Azure Kubernetes and blockchain based projects."
+      },
+      {
+        "name": "Steve Shi",
+        "title": "Market Lead",
+        "desc": "He got 10+ years experience of marketing, program operation andnew product management in IT Industry. Steve got both master degrees in MBAfrom Shanghai Jiaotong University. He worked in Cisco to support new productglobal launch business."
+      },
+      {
+        "name": "Dean Yan",
+        "title": "Product Lead",
+        "desc": "Dean is experienced in information security and blockchaintechnologies. He has been working in Cisco on supply chain blockchain basedprojects, one of his innovation projects was announced in globalDevelopment@Cisco conference."
+      },
+      {
+        "name": "Yang Zhao",
+        "title": "Core developer",
+        "desc": "Yang got his master's degree from Tsinghua University. He hasparticipated in open source projects and made significant contributions. Yangworked in Microsoft on cyber security, distributed storage and big dataprojects."
+      },
+      {
+        "name": "Yao Zhao",
+        "title": "Core developer",
+        "desc": "Yao got his master’s degree from Shanghai Jiaotong University.He is experienced in Data security and Linux kernel technologies. Yao worked inCisco IT security department and participated several blockchain projects."
+      }
+    ]
+  }
 }
