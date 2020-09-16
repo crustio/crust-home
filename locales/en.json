@@ -153,7 +153,7 @@
       "subtitle": "Alpha Test Net"
     },
     "beta": {
-      "title": "2020 Q2",
+      "title": "2020 Q3",
       "subtitle": "Beta Test Net"
     },
     "mainNet": {
@@ -212,7 +212,7 @@
       {
         "name": "Leo Wang",
         "title": "Co-Founder",
-        "desc": "He has 15+ yrs experience in IT industry. Leo worked in Microsoft and Cisco as senior development lead. He got rich experience in distributed storage, cloud computing and blockchain, and led a blockchain-based project to store and exchange manufacturing data in different geo-locations."
+        "desc": "He has 15+ yrs experience in IT industry. Leo worked in Microsoft and Cisco as senior development lead. He got rich experience in distributed storage, cloud computing and blockchain, and led a blockchain-based project to store and exchange manufacturing data in different geo-locations. "
       },
       {
         "name": "Zikun Fan",
@@ -222,17 +222,17 @@
       {
         "name": "Steve Shi",
         "title": "Market Lead",
-        "desc": "He got 10+ yrs experience of marketing, program operation and new product management in IT Industry. Steve got both master degrees in MBA from Shanghai Jiaotong University. He worked in Cisco to support new product global launch business."
+        "desc": "He got 10+ yrs experience of marketing, program operation and new product management in IT Industry. Steve got both his master degree and MBA from Shanghai Jiaotong University. He worked in Cisco to support new product global launch business."
       },
       {
         "name": "Dean Yan",
         "title": "Product Lead",
-        "desc": "Dean is experienced in information security and blockchain technologies. He has been working in Cisco on supply chain blockchain based projects, one of his innovation projects was announced in globalDevelopment@Cisco conference."
+        "desc": "Dean is experienced in information security and blockchain technologies. He has been working in Cisco on supply chain blockchain based projects, one of his innovation projects was announced in global Development@Cisco conference."
       },
       {
         "name": "Yang Zhao",
         "title": "Core Developer",
-        "desc": "Yang got his master's degree from Tsinghua University. He has participated in open source projects and made significant contributions. Yangworked in Microsoft on cyber security, distributed storage and big data projects."
+        "desc": "Yang got his master's degree from Tsinghua University. He has participated in open source projects and made significant contributions. Yang worked in Microsoft on cyber security, distributed storage and big data projects."
       },
       {
         "name": "Yao Zhao",
