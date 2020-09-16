@@ -13,7 +13,7 @@
     <b-card-sub-title class="subtitle">
       {{ $t(`teamMembers.members[${idx - 1}].title`) }}</b-card-sub-title
     >
-    <b-card-text class="text-white text-sm-center">
+    <b-card-text class="text text-sm-center">
       {{ $t(`teamMembers.members[${idx - 1}].desc`) }}
     </b-card-text>
   </b-card>
@@ -48,6 +48,9 @@ export default {
     font-size: 14px;
     font-weight: 300;
     color: $mainColor !important;
+  }
+  .text {
+    color: #FEFEFE;
   }
 }
 </style>
