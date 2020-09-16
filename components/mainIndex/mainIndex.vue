@@ -20,7 +20,7 @@ export default {}
   margin-top: -60px;
   width: 100%;
   height: 100vh;
-  background-image: url("~assets/images/mainBg.png");
+  background-image: url("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/mainBg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -29,7 +29,7 @@ export default {}
   .container {
     width: 641px;
     height: 400px;
-    @include bgImage("~assets/images/mainCrustBg");
+    @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/mainCrustBg");
     position: relative;
     .main-logo {
       position: absolute;
@@ -41,14 +41,14 @@ export default {}
         margin: 0 auto;
         width: 507px;
         height: 120px;
-        @include bgImage("~assets/images/mainLogo");
+        @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/mainLogo");
         background-size: cover;
       }
       .desc {
         margin: 0 auto;
         width: 507px;
         height: 50px;
-        @include bgImage("~assets/images/desc");
+        @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/desc");
         background-size: contain;
         &.desc-zh {
           background: none;
@@ -68,7 +68,7 @@ export default {}
       }
     }
     @include media-breakpoint-down(xs) {
-      @include bgImage("~assets/images/mainCrustBg");
+      @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/mainCrustBg");
       position: relative;
       background-size: contain;
 
