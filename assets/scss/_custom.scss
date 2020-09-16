@@ -10,3 +10,12 @@ $secondary: #ffffff;
 $dark: $navBgColor;
 $warning: $mainColor;
 $component-active-color: $mainColor;
+
+$bgColorTm: #343434;
+$bgColorTmItem: $dark;
+
+.main-text {
+  color: $mainColor;
+  font-size: 36px;
+}
+

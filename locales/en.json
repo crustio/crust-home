@@ -51,7 +51,7 @@
     "title": "Crust",
     "sub": "What is Crust",
     "content": {
-      "text1": "implements the incentive layer protocol for decentralized storage.  It is adaptable to multiple storage layer protocols such as IPFS, and provides support for the application layer. Crust's architecture also has the capability of supporting a decentralized computing layer and building a decentralized cloud ecosystem.",
+      "text1": "provides a decentralized storage network of Web3 ecosystem. It supports multiple storage layer protocols such as IPFS, and exposes storage interfaces to application layer. Crust's technical stack is also capable of supporting a decentralized computing layer. It is designed to build a decentralized cloud ecosystem that values data privacy and ownership.",
       "text3": ""
     },
     "TEE": {
@@ -200,5 +200,42 @@
   },
   "Partnerships": {
     "title": "Partnerships"
-  }
+  },
+  "members": [
+    {
+      "name": "Bova Chen",
+      "title": "Co-Founder",
+      "desc": "Co-Founder. He has 15+ yrs experience of financial investment. He started as\nTMT researcher and then managed several funds as investment director. He\nfounded Winsun Capital and did successful investments in crypto industry."
+    },
+    {
+      "name": "Leo Wang",
+      "title": "Co-Founder",
+      "desc": "Co-Founder. He has 15+ yrs experience in IT industry. Leo worked in Microsoft\nand Cisco as senior development lead. He got rich experience in distributed\nstorage, cloud computing and blockchain, and led a blockchain-based project\nto store and exchange manufacturing data in different geo-locations."
+    },
+    {
+      "name": "Zikun Fan",
+      "title": "Technical Lead",
+      "desc": "Technical Lead. He got his master degree in Computer Science from ZheJiang\nUniversity and received the PhD offer from CERCS Lab of Georgia Tech. Zikun\nworked in Microsoft on Azure Kubernetes and blockchain based projects."
+    },
+    {
+      "name": "Steve Shi",
+      "title": "Market Lead",
+      "desc": "Market Lead. He got 10+ years experience of marketing, program operation andnew product management in IT Industry. Steve got both master degrees in MBAfrom Shanghai Jiaotong University. He worked in Cisco to support new productglobal launch business."
+    },
+    {
+      "name": "Dean Yan",
+      "title": "Product Lead",
+      "desc": "Product Lead. Dean is experienced in information security and blockchaintechnologies. He has been working in Cisco on supply chain blockchain basedprojects, one of his innovation projects was announced in globalDevelopment@Cisco conference."
+    },
+    {
+      "name": "Yang Zhao",
+      "title": "Core developer",
+      "desc": "Core developer. Yang got his master's degree from Tsinghua University. He hasparticipated in open source projects and made significant contributions. Yangworked in Microsoft on cyber security, distributed storage and big dataprojects."
+    },
+    {
+      "name": "Yao Zhao",
+      "title": "Core developer",
+      "desc": "Core developer. Yao got his master’s degree from Shanghai Jiaotong University.He is experienced in Data security and Linux kernel technologies. Yao worked inCisco IT security department and participated several blockchain projects."
+    }
+  ]
 }
