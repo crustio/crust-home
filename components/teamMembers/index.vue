@@ -3,11 +3,10 @@
     <mainTitle :text="$t('teamMembers.title')"> </mainTitle>
     <div class="container">
       <b-row
-        cols="2"
+        cols="1"
         cols-xl="4"
         cols-lg="4"
         cols-md="3"
-        cols-sm="2"
         align-h="center"
       >
         <b-col
@@ -17,7 +16,6 @@
         >
           <MemberItem
             class="item"
-            :class="{ show: process > item }"
             :idx="item"
         /></b-col>
       </b-row>
@@ -89,7 +87,6 @@ export default {
   height: 100%;
   background-color: $bgColorTm;
   .item {
-    visibility: hidden;
     &.show {
       visibility: visible;
       animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */

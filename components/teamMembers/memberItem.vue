@@ -40,6 +40,8 @@ export default {
 <style lang="scss" scoped>
 .member-item {
   margin-bottom: 25px;
+  max-width: 100%;
+  overflow: hidden;
   .title {
     color: $mainColor;
   }
@@ -50,7 +52,10 @@ export default {
     color: $mainColor !important;
   }
   .text {
-    color: #FEFEFE;
+    color: #fefefe;
+  }
+  .card-text {
+    word-wrap: break-word;
   }
 }
 </style>
