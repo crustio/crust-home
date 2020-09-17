@@ -51,7 +51,7 @@
     "title": "Crust",
     "sub": "What is Crust",
     "content": {
-      "text1": "provides a decentralized storage network of Web3 ecosystem. It supports multiple storage layer protocols such as IPFS, and exposes storage interfaces to application layer. Crust's technical stack is also capable of supporting a decentralized computing layer. It is designed to build a decentralized cloud ecosystem that values data privacy and ownership.",
+      "text1": " provides a decentralized storage network of Web3 ecosystem. It supports multiple storage layer protocols such as IPFS, and exposes storage interfaces to application layer. Crust's technical stack is also capable of supporting a decentralized computing layer. It is designed to build a decentralized cloud ecosystem that values data privacy and ownership.",
       "text3": ""
     },
     "TEE": {
@@ -237,7 +237,7 @@
       {
         "name": "Yao Zhao",
         "title": "Core Developer",
-        "desc": "Yao got his master’s degree from Shanghai Jiaotong University. He is experienced in Data security and Linux kernel technologies. Yao worked inCisco IT security department and participated several blockchain projects."
+        "desc": "Yao got his master’s degree from Shanghai Jiaotong University. He is experienced in Data security and Linux kernel technologies. Yao worked in Cisco IT security department and participated several blockchain projects."
       }
     ]
   }
