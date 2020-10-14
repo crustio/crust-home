@@ -35,11 +35,17 @@
           </b-card>
         </b-col>
       </b-row>
+      <div class="container text-center">
+        <button @click="handleClick" class="btn-custom">
+          {{ $t("button.checkOnGithub") }}
+        </button>
+      </div>
     </div>
   </div>
 </template>
 <script>
 import title from "~/components/title"
+import { outerDit } from "@/config/nav-config"
 export default {
   components: {
     mainTitle: title,
@@ -55,6 +61,9 @@ export default {
     this.emitScrollListener()
   },
   methods: {
+    handleClick() {
+      window.open(outerDit.learnMore, "_blank")
+    },
     emitScrollListener() {
       const scroller = this.$refs.scroller
       const scrollerWrapperScrollTop = scroller.getBoundingClientRect().top
@@ -96,7 +105,6 @@ export default {
 <style lang="scss" scoped>
 .crust {
   width: 100%;
-  margin-bottom: 30px;
   @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/descBg");
   background-position: left 50px;
   background-size: contain;
@@ -105,7 +113,7 @@ export default {
   }
   .container {
     .card-container {
-      margin-top: 30px;
+      margin: 30px 0;
       padding-right: 0;
     }
     .card {

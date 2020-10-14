@@ -1,4 +1,8 @@
 {
+  "button": {
+    "learnMore": "Learn More",
+    "checkOnGithub": "Check Our Github"
+  },
   "header": {
     "Home": "Home",
     "community": "Forum",
@@ -16,7 +20,8 @@
     "WhitePaper": "Technology Whitepaper",
     "Github": "Github",
     "ZH": "中文",
-    "EN": "EN"
+    "EN": "EN",
+    "Crust Cloud": "Crust Cloud"
   },
   "footer": {
     "Success": "Copy Success",

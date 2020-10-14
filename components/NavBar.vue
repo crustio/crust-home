@@ -2,7 +2,10 @@
   <b-navbar fixed="true" toggleable="lg" type="dark" variant="dark">
     <div class="container">
       <b-navbar-brand href="#" @click="jump('home')">
-        <img src="https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/logo.png" alt="" />
+        <img
+          src="https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/logo.png"
+          alt=""
+        />
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"> </b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
@@ -20,9 +23,10 @@
               }"
               menu-class="drop"
               right
+              :key="item.name"
             >
               <template v-for="child in item.children">
-                <b-dropdown-item @click="jump(child)" href="#">{{
+                <b-dropdown-item :key="child" @click="jump(child)" href="#">{{
                   $t(`header.${child}`)
                 }}</b-dropdown-item>
               </template>
@@ -30,6 +34,7 @@
             <b-nav-item
               :active="item.name.toLowerCase() === activeNav"
               @click="jump(item.name)"
+              :key="item.name"
               v-else
               >{{ $t(`header.${item.name}`) }}</b-nav-item
             >
@@ -42,7 +47,8 @@
 
 <script>
 import jumpTo from "../utils"
-import { outerList, outerDit } from '@/config/nav-config'
+import { outerList, outerDit } from "@/config/nav-config"
+import VueScrollTo from "vue-scrollto"
 
 export default {
   data() {
@@ -56,7 +62,12 @@ export default {
         {
           name: "TestNet",
           hasChild: true,
-          children: ["Join TestNet", "Blockchain Browser", "Crust Apps"],
+          children: [
+            "Join TestNet",
+            "Blockchain Browser",
+            "Crust Apps",
+            "Crust Cloud",
+          ],
         },
         {
           name: "Documents",
@@ -77,7 +88,7 @@ export default {
   methods: {
     jump(name) {
       name = name.toLowerCase()
-      if (name === 'ecowhitepaper' || name === 'whitepaper' ) {
+      if (name === "ecowhitepaper" || name === "whitepaper") {
         if (this.$store.state.locale === "en") {
           name += "_en"
         }
@@ -90,11 +101,19 @@ export default {
         document.cookie = "locale=" + name
         return this.$store.commit("SET_LANG", name)
       }
+      console.log(name)
+      if (name === "crust cloud") {
+        if (this.$route.name !== "home") {
+          this.$router.push("/#product")
+        }
+        return this.$scrollTo(document.querySelector("#product"))
+      }
       this.activeNav = name
       if (outerList.indexOf(name) > -1) {
-        if (name === 'join testnet') {
-          name = 'join testnet' + this.$store.state.locale
+        if (name === "join testnet") {
+          name = "join testnet" + (this.$store.state.locale === "en" ? "en" : "")
         }
+        console.log(name)
         return jumpTo(name)
       }
       if (name === "home") {

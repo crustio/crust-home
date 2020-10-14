@@ -1,5 +1,5 @@
 <template>
-  <div class="product" ref="scroller">
+  <div class="product" id="product" ref="scroller">
     <main-title :text="$t(`productMatrix.title`)"></main-title>
     <div class="card-container container web">
       <b-card
@@ -74,11 +74,17 @@
         </div>
       </b-card>
     </div>
+    <div class="container text-center">
+      <button @click="handleClick" class="btn-custom">
+        {{ $t("button.learnMore") }}
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
 import mainTitle from "../title"
+import { outerDit } from "@/config/nav-config"
 export default {
   name: "Product",
   data() {
@@ -98,6 +104,12 @@ export default {
     },
   },
   methods: {
+    handleClick() {
+      window.open(
+        outerDit[this.$store.state.locale === "en" ? "clouden" : "cloud"],
+        "_blank"
+      )
+    },
     emitScrollListener() {
       const scroller = this.$refs.scroller
       const scrollerWrapperScrollTop = scroller.getBoundingClientRect().top
