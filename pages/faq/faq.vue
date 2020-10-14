@@ -120,7 +120,7 @@ export default {
         },
         {
           title:
-            "文件共享是一个常见的云存储场景，Crust是否可以支持文件共享链接？",
+            "文件共享是一个常见的云存储场景，Crust Cloud是否可以支持文件共享链接？",
           title_en:
             " File sharing is a common cloud storage scenario. Will file sharing links be available on Crust?",
           content_en:
@@ -129,7 +129,7 @@ export default {
             "&nbsp;&nbsp;&nbsp;&nbsp; 是的。下一版本的Crust Cloud将会推出文件分享链接以及提取码的功能。",
         },
         {
-          title: "CrustCloud未来是否可以支持隐私文件的存储？",
+          title: "Crust Cloud未来是否可以支持隐私文件的存储？",
           title_en:
             "Will Crust Cloud support the storage of private files in the future?",
           content_en:
@@ -139,7 +139,7 @@ export default {
         },
         {
           title:
-            "CrustCloud存储的过程中，文件是否被分片存储了？文件是否有冗余和备份？",
+            "Crust Cloud存储的过程中，文件是否被分片存储了？文件是否有冗余和备份？",
           title_en:
             "During the process of Crust Cloud storage, are files redundant and backed up? Are files stored in shards?",
           content_en:
