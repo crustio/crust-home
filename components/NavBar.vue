@@ -111,8 +111,9 @@ export default {
       this.activeNav = name
       if (outerList.indexOf(name) > -1) {
         if (name === "join testnet") {
-          name = "join testnet" + this.$store.state.locale
+          name = "join testnet" + (this.$store.state.locale === "en" ? "en" : "")
         }
+        console.log(name)
         return jumpTo(name)
       }
       if (name === "home") {
