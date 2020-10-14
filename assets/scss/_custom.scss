@@ -28,3 +28,11 @@ $component-active-color: $mainColor;
     outline: none;
   }
 }
+
+$bgColorTm: #343434;
+$bgColorTmItem: $dark;
+
+.main-text {
+  color: $mainColor;
+  font-size: 36px;
+}

@@ -34,7 +34,11 @@
           </template>
         </b-col>
         <b-col cols="6" xs="6" sm="3" md="3" xl="3" lg="3">
-          <b-img src="~assets/images/code.png" right width="100"></b-img>
+          <b-img
+            src="https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/code.png"
+            right
+            width="100"
+          ></b-img>
         </b-col>
       </b-row>
       <div class="icon-wrapper container">
@@ -134,6 +138,9 @@ export default {
         background-color: #fff;
         border-radius: 4px;
         font-weight: 400;
+        @include media-breakpoint-down(md) {
+          font-size: 14px;
+        }
       }
       .btn {
         width: 100px;
@@ -179,7 +186,9 @@ export default {
     }
     .bg-wrapper {
       text-align: center;
-      @include bgImage("~assets/images/footerBg");
+      @include bgImage(
+        "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/footerBg"
+      );
       font-size: 14px;
       line-height: 100px;
       margin: 0 auto;

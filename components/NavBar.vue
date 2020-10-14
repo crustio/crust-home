@@ -2,7 +2,7 @@
   <b-navbar fixed="true" toggleable="lg" type="dark" variant="dark">
     <div class="container">
       <b-navbar-brand href="#" @click="jump('home')">
-        <img src="~assets/images/logo.png" alt="" />
+        <img src="https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/logo.png" alt="" />
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"> </b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>

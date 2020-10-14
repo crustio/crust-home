@@ -3,8 +3,7 @@
     <main-title :text="$t('crust.sub')"></main-title>
     <div class="container">
       <div class="crust-desc normal-text">
-        <b>CRUST</b>
-        {{ $t("crust.content.text1") }}
+        <span class="font-weight-bold">CRUST</span>{{ $t("crust.content.text1") }}
       </div>
       <b-row class="card-container container">
         <!--        <b-card-group deck>-->
@@ -24,7 +23,7 @@
           >
             <template v-slot:header>
               <b-img
-                :src="require(`~/assets/images/${item}.png`)"
+                :src="`https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/${item}.png`"
                 center
                 fluid
                 alt=""
@@ -107,12 +106,9 @@ export default {
 .crust {
   width: 100%;
   margin-bottom: 30px;
-  @include bgImage("~assets/images/descBg");
+  @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/descBg");
   background-position: left 50px;
   background-size: contain;
-  @include media-breakpoint-up(sm) {
-    margin-bottom: 60px;
-  }
   @include media-breakpoint-down(lg) {
     background: none;
   }

@@ -6,7 +6,7 @@
         class="card-wrapper"
         :class="{ show }"
         v-for="card in 2"
-        :img-src="require(`../../assets/images/productBg${card}.png`)"
+        :img-src="`https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/productBg${card}.png`"
         img-alt="Image"
         :img-left="card === 2 ? true : false"
         :img-right="card === 1 ? true : false"
@@ -44,7 +44,7 @@
       <b-card
         class="card-wrapper"
         v-for="card in 2"
-        :img-src="require(`../../assets/images/productBg${card}.png`)"
+        :img-src="`https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/productBg${card}.png`"
         img-alt="Image"
         img-top
         :key="'card' + card"
@@ -187,7 +187,8 @@ export default {
         }
       }
       @mixin iconBg($n) {
-        background: url("~assets/images/product-$n.png") no-repeat left center;
+        background: url("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/product-$n.png")
+          no-repeat left center;
       }
       .card-wrapper {
         padding-bottom: 50px;
@@ -231,13 +232,16 @@ export default {
           line-height: 20px;
         }
         &.item-1 {
-          background: url("~assets/images/product-1.png") no-repeat left center;
+          background: url("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/product-1.png")
+            no-repeat left center;
         }
         &.item-2 {
-          background: url("~assets/images/product-2.png") no-repeat left center;
+          background: url("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/product-2.png")
+            no-repeat left center;
         }
         &.item-3 {
-          background: url("~assets/images/product-3.png") no-repeat left center;
+          background: url("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/product-3.png")
+            no-repeat left center;
         }
       }
       .text-container {
@@ -294,16 +298,16 @@ export default {
             font-family: nasalization;
           }
           &.item-1 {
-            background: url("~assets/images/product-1.png") no-repeat left
-              center;
+            background: url("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/product-1.png")
+              no-repeat left center;
           }
           &.item-2 {
-            background: url("~assets/images/product-2.png") no-repeat left
-              center;
+            background: url("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/product-2.png")
+              no-repeat left center;
           }
           &.item-3 {
-            background: url("~assets/images/product-3.png") no-repeat left
-              center;
+            background: url("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/product-3.png")
+              no-repeat left center;
           }
           background-size: 60%;
         }
