@@ -118,6 +118,43 @@ export default {
           content:
             "&nbsp;&nbsp;&nbsp;&nbsp;2020年3月，我们上线了Crust开发测试网，与此同时我们会开放部分源代码。近期Crust通过了Substrate Builder’s Program的审核，将会获得来自Substrate团队的技术支持和生态助力。<br />&nbsp;&nbsp;&nbsp;&nbsp;我们计划在同年6月上线Crust公开测试网，在这个版本中Crust将支持完整功能的经济模型和存储交易市场，并计划联合Phala测试网，为W3A应用提供去中心化的存储。<br />&nbsp;&nbsp;&nbsp;&nbsp;Crust主网计划将在2020年10月上线并接入Polkadot插槽。",
         },
+        {
+          title:
+            "文件共享是一个常见的云存储场景，Crust是否可以支持文件共享链接？",
+          title_en:
+            " File sharing is a common cloud storage scenario. Will file sharing links be available on Crust?",
+          content_en:
+            "&nbsp;&nbsp;&nbsp;&nbsp; Yes. The next version of Crust Cloud will include file-sharing links and code-extraction capabilities.",
+          content:
+            "&nbsp;&nbsp;&nbsp;&nbsp; 是的。下一版本的Crust Cloud将会推出文件分享链接以及提取码的功能。",
+        },
+        {
+          title: "CrustCloud未来是否可以支持隐私文件的存储？",
+          title_en:
+            "Will Crust Cloud support the storage of private files in the future?",
+          content_en:
+            "&nbsp;&nbsp;&nbsp;&nbsp; Yes, the next version of Crust Cloud will offer a privacy storage function, where files will be uploaded encrypted and inaccessible. Further, we plan to upgrade the Crust Network before and after the main network launch, so that nodes can support TEE based data authentication and encryption and thus provide full flow protection for user privacy.",
+          content:
+            "&nbsp;&nbsp;&nbsp;&nbsp; 会。在下一版本的Crust Cloud将会推出隐私空间功能，在隐私空间中的文件将会加密上传，任何人都无法获得明文件。 进一步的，我们计划在主网上线前后，升级Crust底层协议，使得节点可以支持TEE层面的数据确权和加密，做到用户隐私全链路的保护。",
+        },
+        {
+          title:
+            "CrustCloud存储的过程中，文件是否被分片存储了？文件是否有冗余和备份？",
+          title_en:
+            "During the process of Crust Cloud storage, are files redundant and backed up? Are files stored in shards?",
+          content_en:
+            "&nbsp;&nbsp;&nbsp;&nbsp; Backup orders are already supported in the Crust storage market. Automatic node selection and initiation of multiple replicas will be implemented in future Crust Cloud versions. <br/>Sharding: Generally distributed file systems such as FastDFS and IPFS Cluser can both support sharding within a cluster. Crust is currently compatible with both the FastDFS and IPFS file protocols and can efficiently support both single point and cluster morphology of nodes. Further, Crust Network currently supports shard storage orders, and in the future Crust Cloud will accordingly support shard storage for large files across nodes by initiating shard storage orders.",
+          content:
+            "&nbsp;&nbsp;&nbsp;&nbsp; 是的。下一版本的Crust 关于备份问题。Crust存储市场已经支持了备份订单。未来Crust Cloud将会加入自动选择节点并发起多路副本的功能。<br/>关于分片（Sharding）问题。一般分布式文件系统如FastDFS以及IPFS的IPFS Cluser，都支持集群内的分片。Crust Network目前兼容了FastDFS和IPFS文件协议，可以高效的支持节点的单点形态和集群形态。进一步的，Crust Network已经支持了分片存储订单，未来Crust Cloud将会相应地支持分片功能，通过发起分片存储订单，来支持大文件跨节点的分片存储。",
+        },
+        {
+          title: "Crust底层是否用到了IPFS？是否支持了多点服务？",
+          title_en: "Is IPFS used on Crust? Is multi-point service supported?",
+          content_en:
+            "&nbsp;&nbsp;&nbsp;&nbsp;IPFS is currently available for miners' internal storage, but IPFS routing has not yet been enabled in Crust Network. The main reason is that IPFS is not yet stable enough relative to the large Internet ecosystem. Crust will be closely monitoring the develop progress of IPFS. As for multi-point download services, some P2P protocols are well supported except for the IPFS stack. We will closely monitor and evaluate these protocols as well and make compatibility upgrades in the future. Currently, the Crust team is focused on basic storage proof.",
+          content:
+            "&nbsp;&nbsp;&nbsp;&nbsp; IPFS目前已经用在矿工内部存储上，而IPFS的外部路由功能尚未在Crust网络中开启。主要原因是IPFS目前相对大型互联网生态来说尚不够稳定，Crust团队会密切关注IPFS的开发进度。 关于多点下载服务，除了IPFS协议栈外，一些P2P的协议都有很好的支持，我们会密切关注和评估这些协议，并在未来进行兼容升级。 现阶段的Crust团队主要聚焦在更加底层的存储证明上。",
+        },
       ],
     }
   },

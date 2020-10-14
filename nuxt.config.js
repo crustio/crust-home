@@ -100,6 +100,25 @@ export default {
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
     "@nuxtjs/style-resources",
+    "vue-scrollto/nuxt",
+
+    // Or if you have custom options...
+    [
+      "vue-scrollto/nuxt",
+      {
+        duration: 500,
+        container: "body",
+        easing: "ease",
+        offset: 100,
+        force: true,
+        cancelable: true,
+        onStart: false,
+        onDone: false,
+        onCancel: false,
+        x: false,
+        y: true,
+      },
+    ],
   ],
   /*
    ** Axios module configuration
@@ -132,10 +151,10 @@ export default {
     icon: true,
   },
   loading: {
-    color: '#eb761c',
-    height: '4px',
+    color: "#eb761c",
+    height: "4px",
     css: {
-      zIndex: 1000
-    }
-  }
+      zIndex: 1000,
+    },
+  },
 }

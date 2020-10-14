@@ -1,5 +1,5 @@
 <template>
-  <div class="product" ref="scroller">
+  <div class="product" id="product" ref="scroller">
     <main-title :text="$t(`productMatrix.title`)"></main-title>
     <div class="card-container container web">
       <b-card
@@ -105,7 +105,10 @@ export default {
   },
   methods: {
     handleClick() {
-      window.open(outerDit.cloud, "_blank")
+      window.open(
+        outerDit[this.$store.state.locale === "en" ? "clouden" : "cloud"],
+        "_blank"
+      )
     },
     emitScrollListener() {
       const scroller = this.$refs.scroller

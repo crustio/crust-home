@@ -62,7 +62,7 @@ export default {
   },
   methods: {
     handleClick() {
-      window.open(outerDit.maxwell, "_blank")
+      window.open(outerDit.learnMore, "_blank")
     },
     emitScrollListener() {
       const scroller = this.$refs.scroller
