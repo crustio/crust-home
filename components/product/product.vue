@@ -142,7 +142,6 @@ export default {
 <style lang="scss" scoped>
 .product {
   width: 100%;
-  padding-bottom: 60px;
   background: linear-gradient(
     45deg,
     rgba(92, 37, 51, 1) 0%,

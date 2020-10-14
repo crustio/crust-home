@@ -105,7 +105,6 @@ export default {
 <style lang="scss" scoped>
 .crust {
   width: 100%;
-  margin-bottom: 30px;
   @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/descBg");
   background-position: left 50px;
   background-size: contain;
