@@ -14,12 +14,15 @@ export default {
     NavBar,
     footerBar,
   },
+  mounted() {
+    console.log(this.$route)
+  },
   head() {
     return {
       title:
         this.$store.state.locale === "en"
           ? "Crust - Chain to Decentralized Cloud"
-          : 'Crust - 链接分布式云',
+          : "Crust - 链接分布式云",
     }
   },
   computed: {

@@ -26,13 +26,9 @@
               :key="item.name"
             >
               <template v-for="child in item.children">
-                <b-dropdown-item
-                  :key="child"
-                  v-scroll-to="'#product'"
-                  @click="jump(child)"
-                  href="#"
-                  >{{ $t(`header.${child}`) }}</b-dropdown-item
-                >
+                <b-dropdown-item :key="child" @click="jump(child)" href="#">{{
+                  $t(`header.${child}`)
+                }}</b-dropdown-item>
               </template>
             </b-nav-item-dropdown>
             <b-nav-item
@@ -52,6 +48,7 @@
 <script>
 import jumpTo from "../utils"
 import { outerList, outerDit } from "@/config/nav-config"
+import VueScrollTo from "vue-scrollto"
 
 export default {
   data() {
@@ -106,7 +103,10 @@ export default {
       }
       console.log(name)
       if (name === "crust cloud") {
-        return
+        if (this.$route.name !== "home") {
+          this.$router.push("/#product")
+        }
+        return this.$scrollTo(document.querySelector("#product"))
       }
       this.activeNav = name
       if (outerList.indexOf(name) > -1) {
