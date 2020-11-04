@@ -67,6 +67,7 @@ export default {
             "Blockchain Browser",
             "Crust Apps",
             "Crust Cloud",
+            "Profix Ark"
           ],
         },
         {
@@ -119,6 +120,11 @@ export default {
       if (name === "home") {
         return this.$router.push("/")
       }
+      if (name === "profix ark") {
+        console.log('跳去活动页')
+        return this.$router.push("/ark")
+      }
+      console.log('activeNav：：：：', this.activeNav)
       this.$router.push(name)
     },
   },

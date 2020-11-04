@@ -4,7 +4,7 @@ const innerList = [
   "Join TestNet",
   "WhitePaper",
   "EcoWhitePaper",
-  "home",
+  "home"
 ]
 // const innerDit = {
 //   "WhitePaper",
