@@ -155,15 +155,15 @@
     },
     "alpha": {
       "title": "2020 Q1",
-      "subtitle": "Alpha Test Net"
+      "subtitle": "Rocky Testnet"
     },
     "ark": {
       "title": "2020 Q4",
-      "subtitle": "Profit Ark"
+      "subtitle": "Maxwell Testnet"
     },
     "mainNet": {
       "title": "2021 Q1",
-      "subtitle": "The Main Net"
+      "subtitle": "Mainnet"
     }
   },
   "news": {

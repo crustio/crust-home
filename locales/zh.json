@@ -116,15 +116,15 @@
     },
     "alpha": {
       "title": "2020 Q1",
-      "subtitle": "Alpha测试网上线"
+      "subtitle": "Rocky 测试网"
     },
     "ark": {
       "title": "2020 Q4",
-      "subtitle": "方舟计划"
+      "subtitle": "Maxwell 测试网"
     },
     "mainNet": {
       "title": "2021 Q1",
-      "subtitle": "主网上线稳定运行"
+      "subtitle": "主网上线"
     }
   },
   "news": {
