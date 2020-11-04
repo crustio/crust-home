@@ -63,7 +63,7 @@ export default {
   },
   data() {
     return {
-      items: ["coreTeam", "prototyping", "alpha", "beta", "mainNet"],
+      items: ["coreTeam", "prototyping", "alpha", "ark", "mainNet"],
       process: 0,
       timer: null,
     }
