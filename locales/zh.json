@@ -64,15 +64,15 @@
     },
     "TEE": {
       "title": "有意义的工作量证明",
-      "desc": "基于可信执行环境（Trusted Execution Environment,TEE）技术，Crust实现了有意义的工作量证明（Meaningful Proof of Work, MPoW）机制，使得有意义的存储量的统计变得更加简单可靠"
+      "desc": "基于可信执行环境（Trusted Execution Environment, TEE）技术，Crust实现了有意义的工作量证明（Meaningful Proof of Work, MPoW）机制，使得有意义的存储量的统计变得更加简单可靠。"
     },
     "MPoW": {
       "title": "以存储资源为担保额度",
-      "desc": "MPoW机制可信量化的存储资源包含有意义的存储量和可用存储的供应量。基于这种被可信量化的存储资源作为担保额度的共识协议(Guaranteed Proof of Stake, GPoS)，Crust激励节点提供更多存储资源的同时也保证了网络更高的安全性"
+      "desc": "MPoW机制可信量化的存储资源包含有意义的存储量和可用存储的供应量。基于这种被可信量化的存储资源作为担保额度的共识协议(Guaranteed Proof of Stake, GPoS)，Crust激励节点提供更多存储资源的同时也保证了网络更高的安全性。"
     },
     "GPoS": {
       "title": "去中心化的存储和计算",
-      "desc": "基于以存储资源为担保额度的共识和有意义的工作量证明机制，Crust可以支持从存储到计算的量化和共识，实现去中心化的泛在云服务"
+      "desc": "基于以存储资源为担保额度的共识和有意义的工作量证明机制，Crust可以支持从存储到计算的量化和共识，实现去中心化的泛在云服务。"
     }
   },
   "productMatrix": {
@@ -117,15 +117,15 @@
     },
     "alpha": {
       "title": "2020 Q1",
-      "subtitle": "Alpha测试网上线"
+      "subtitle": "Rocky 测试网"
     },
-    "beta": {
-      "title": "2020 Q3",
-      "subtitle": "Beta测试网上线"
+    "ark": {
+      "title": "2020 Q4",
+      "subtitle": "Maxwell 测试网"
     },
     "mainNet": {
-      "title": "2020 Q4",
-      "subtitle": "主网上线稳定运行"
+      "title": "2021 Q1",
+      "subtitle": "主网上线"
     }
   },
   "news": {
