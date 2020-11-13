@@ -102,7 +102,6 @@ export default {
         document.cookie = "locale=" + name
         return this.$store.commit("SET_LANG", name)
       }
-      console.log(name)
       if (name === "crust cloud") {
         if (this.$route.name !== "home") {
           this.$router.push("/#product")
@@ -114,17 +113,14 @@ export default {
         if (name === "join testnet") {
           name = "join testnet" + (this.$store.state.locale === "en" ? "en" : "")
         }
-        console.log(name)
         return jumpTo(name)
       }
       if (name === "home") {
         return this.$router.push("/")
       }
       if (name === "profix ark") {
-        console.log('跳去活动页')
         return this.$router.push("/ark")
       }
-      console.log('activeNav：：：：', this.activeNav)
       this.$router.push(name)
     },
   },
