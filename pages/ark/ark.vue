@@ -58,5 +58,24 @@
             }
         }
     }
+    @include media-breakpoint-down(xs) {
+        .container {
+            margin-top: 25px;
+            .statistics {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .card-data:nth-of-type(2) {
+                    margin-left: 15px;
+                }
+            }
+            .mt20 {
+                margin-top: 20px;
+                .table thead th {
+                    border-top: none !important;
+                }
+            }
+        }
+    }
     
 </style>

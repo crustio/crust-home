@@ -23,4 +23,40 @@
             }
         }
     }
+    @include media-breakpoint-down(xs) {
+        .ark-description {
+            margin: 15px auto;
+            .ark-content {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        .ark-description {
+            margin: 15px auto;
+            .ark-content {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+    @include media-breakpoint-down(md) {
+        .ark-description {
+            margin: 15px auto;
+            .ark-content {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+    @media (max-width: 420px) {
+        .ark-description {
+            margin: 15px auto;
+            .ark-content {
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+    }
 </style>

@@ -9,6 +9,8 @@
             :current-page="currentPage"
             thStyle={ border-top: none; }
             tdClass="noBorder"
+            :busy="isBusy"
+            responsive
         >
             <template #cell(reportSlot)="data">
                 <div>{{ data.item.reportSlot }}</div>
@@ -31,14 +33,20 @@
                 <div>{{ data.item.reportRate }}</div>
             </template>
             <template #cell(totalPoints)="data">
-                <b>啊{{ data.item.totalPoints }}</b>
-                <b>我{{ data.item.totalPoints }}</b>
-                <b>额{{ data.item.totalPoints }}</b>
-                <b>人{{ data.item.totalPoints }}</b>
-                <b>他{{ data.item.totalPoints }}</b>
+                <b>1{{ data.item.totalPoints }}</b>
+                <b>2{{ data.item.totalPoints }}</b>
+                <b>3{{ data.item.totalPoints }}</b>
+                <b>4{{ data.item.totalPoints }}</b>
+                <b>5{{ data.item.totalPoints }}</b>
+            </template>
+            <template #table-busy>
+                <div class="text-center text-orange my-2" v-if="isBusy">
+                    <b-spinner class="align-middle"></b-spinner>
+                    <strong>Loading...</strong>
+                </div>
             </template>
         </b-table>
-         <b-pagination
+        <b-pagination
             v-model="currentPage"
             :total-rows="rows"
             :per-page="perPage"
@@ -76,7 +84,8 @@
                         label:  'Points'
                     }
                 ],
-                list: []
+                list: [],
+                isBusy: false
             }
         },
         mounted () {
@@ -84,13 +93,17 @@
         },
         methods: {
             async getNodeList() {
-                const res = await this.$axios.get('/api/tee/queryNodeEraStatusOverview')
-                if(res.status === 200 && res.data.code === 1) {
-                    this.list = res.data.data
-                }
+                this.isBusy = true
+                this.$axios.get('/api/tee/queryNodeEraStatusOverview').then(res => {
+                    if(res.status === 200 && res.data.code === 1) {
+                        this.list = res.data.data
+                        this.isBusy = false
+                    }
+                }).catch(err => {
+                    this.isBusy = false
+                })
             },
             rowClass( item, type) {
-                console.log('item::', item, index)
                 if (!item || type !== 'row') return
                 if (item.status === 'grey') return 'table-secondary'
             }
@@ -139,6 +152,14 @@
         border-radius: 3px;
         .page-link {
             color: #fff !important;
+        }
+    }
+    .text-orange {
+        color: #FA8C16;
+    }
+    @media (max-width: 420px) {
+        .table thead th {
+            font-size: 14px;
         }
     }
 </style>

@@ -8,9 +8,9 @@
             :img-src= imgSrc
             img-alt="Image"
             sub-title-text-variant="white"
-            style="border: none;"
+            style="border: none;min-height: 100px;"
         >
-            <b-card-text style="font-size: 30px;font-weight:normal;">{{ text }}</b-card-text>
+            <b-card-text style="font-weight:normal;">{{ text }}</b-card-text>
         </b-card>
     </div>
 </template>
@@ -44,4 +44,51 @@
 </script>
 
 <style lang="scss">
+    .card-img {
+        min-height: 100px; 
+        max-height: 140px;
+    }
+    .card-text {
+        font-size: 30px;
+    }
+    @include media-breakpoint-down(xs) {22
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 0.2rem;
+        }
+        .card-text {
+            font-size: 18px;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        .card-img {
+            min-height: 110px; 
+        }
+        .card-title {
+            font-size: 28px;
+            margin-bottom: 0.2rem;
+        }
+        .card-text {
+            font-size: 20px;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        .card-title {
+            font-size: 30px;
+            margin-bottom: 0.2rem;
+        }
+        .card-text {
+            font-size: 24px;
+        }
+    }
+    @media (max-width: 420px) {
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 0.2rem;
+        }
+        .card-text {
+            font-size: 20px;
+        }
+    }
+    
 </style>
