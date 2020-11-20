@@ -6,6 +6,7 @@
         <div class="desc" :class="{ 'desc-zh': $store.state.locale === 'zh' }">
           <p v-html="$t('indexBanner.desc')"></p>
         </div>
+        <p class="test-net-title">Crust激励测试网已启动</p>
       </div>
     </div>
   </div>
@@ -29,7 +30,7 @@ export default {}
   .container {
     width: 641px;
     height: 400px;
-    @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/mainCrustBg");
+    // @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/mainCrustBg");
     position: relative;
     .main-logo {
       position: absolute;
@@ -66,6 +67,31 @@ export default {}
           display: none;
         }
       }
+      .test-net-title {
+        color: #ffffff;
+        text-align: center;
+        font-size: 30px;
+        &::before, ::after {
+          content: "";
+          height: 1px;
+          width: 50px;
+          background: orange;
+          clear: both;
+          display: inline-block;
+          position: relative;
+          top: -10px;
+        }
+        &::after {
+          content: "";
+          height: 1px;
+          width: 50px;
+          background: orange;
+          clear: both;
+          display: inline-block;
+          position: relative;
+          top: -10px;
+        }
+      }
     }
     @include media-breakpoint-down(xs) {
       @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/mainCrustBg");
@@ -98,6 +124,31 @@ export default {}
             font-size: 1.5rem;
             text-align: center;
           }
+        }
+        .test-net-title {
+          color: #ffffff;
+          text-align: center;
+          font-size: 30px;
+          &::before{
+            content: "";
+            height: 1px;
+            width: 50px;
+            background: orange;
+            clear: both;
+            display: inline-block;
+            position: relative;
+            top: -10px;
+          }
+          &::after {
+          content: "";
+          height: 1px;
+          width: 50px;
+          background: orange;
+          clear: both;
+          display: inline-block;
+          position: relative;
+          top: -10px;
+        }
         }
       }
     }
