@@ -7,13 +7,13 @@
         <arkDescription />
         <div class="statistics">
             <arkCard 
-                cardTitle= '300 PB'
+                cardData= '300 PB'
                 imgSrc= 'https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/ark-left.png'
                 text= 'Total Storage'
                 class="card-data" 
             />
             <arkCard 
-                cardTitle= '400'
+                cardData= '400'
                 imgSrc= 'https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/ark-right.png'
                 text= 'Total Node'
                 class="card-data" 

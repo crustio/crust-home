@@ -7,7 +7,6 @@
             :tbody-tr-class="rowClass"
             :per-page="perPage"
             :current-page="currentPage"
-            thStyle={ border-top: none; }
             tdClass="noBorder"
             :busy="isBusy"
             responsive
@@ -115,7 +114,7 @@
         }
     }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     .shorterId {
         overflow: hidden;
         white-space: nowrap;

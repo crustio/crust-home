@@ -2,7 +2,7 @@
     <div>
         <b-card
             overlay
-            :title= cardTitle
+            :title= cardData
             title-tag="h1"
             text-variant="white"
             :img-src= imgSrc
@@ -18,7 +18,7 @@
 <script>
     export default {
         props: {
-            cardTitle: {
+            cardData: {
                 type: String,
                 default: '300'
             },
@@ -43,7 +43,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .card-img {
         min-height: 100px; 
         max-height: 140px;
@@ -51,7 +51,7 @@
     .card-text {
         font-size: 30px;
     }
-    @include media-breakpoint-down(xs) {22
+    @include media-breakpoint-down(xs) {
         .card-title {
             font-size: 24px;
             margin-bottom: 0.2rem;
