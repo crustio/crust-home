@@ -63,10 +63,10 @@ export default {
           name: "TestNet",
           hasChild: true,
           children: [
-            "Join TestNet",
+            "Join Profit Ark",
             "Blockchain Browser",
             "Crust Apps",
-            "Crust Cloud",
+            "Crust Cloud"
           ],
         },
         {
@@ -101,7 +101,6 @@ export default {
         document.cookie = "locale=" + name
         return this.$store.commit("SET_LANG", name)
       }
-      console.log(name)
       if (name === "crust cloud") {
         if (this.$route.name !== "home") {
           this.$router.push("/#product")
@@ -110,10 +109,6 @@ export default {
       }
       this.activeNav = name
       if (outerList.indexOf(name) > -1) {
-        if (name === "join testnet") {
-          name = "join testnet" + (this.$store.state.locale === "en" ? "en" : "")
-        }
-        console.log(name)
         return jumpTo(name)
       }
       if (name === "home") {

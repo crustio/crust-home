@@ -1,3 +1,6 @@
+
+let target = "http://192.168.50.7:18081"
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -8,7 +11,7 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: "server",
+  // target: "http://192.168.50.7:18081",
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -124,7 +127,21 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api': {
+      target,
+      pathRewrite: {
+        '^/api': '/api'
+      }
+    },
+    '/cityjson': {
+      target: 'http://pv.sohu.com/',
+      pathRewrite: { '^/cityjson': '/cityjson' }
+    }
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/

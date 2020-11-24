@@ -1,7 +1,9 @@
 {
   "button": {
     "learnMore": "了解更多",
-    "checkOnGithub": "在Github上查看"
+    "checkOnGithub": "在Github上查看",
+    "joinArk": "加入“方舟计划”",
+    "arkTitle": "Crust激励测试网已启动"
   },
   "header": {
     "Github": "Github",
@@ -18,11 +20,12 @@
     "about": "关于我们",
     "languages": "中文",
     "TestNet": "测试网",
-    "Join TestNet": "加入测试网",
+    "Join Profit Ark": "加入方舟计划",
     "Crust Apps": "Crust Apps",
     "Blockchain Browser": "区块链浏览器",
     "doc": "资料",
-    "Crust Cloud": "Crust Cloud"
+    "Crust Cloud": "Crust Cloud",
+    "Profix Ark": "方舟计划"
   },
   "footer": {
     "Success": "复制成功",

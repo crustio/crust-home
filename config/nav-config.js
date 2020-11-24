@@ -1,10 +1,10 @@
 const innerList = [
   "TestNet",
   "Blockchain Browser",
-  "Join TestNet",
+  "Join Profit Ark",
   "WhitePaper",
   "EcoWhitePaper",
-  "home",
+  "home"
 ]
 // const innerDit = {
 //   "WhitePaper",
@@ -12,10 +12,7 @@ const innerList = [
 //   "home",
 // }
 const outerDit = {
-  "join testnet":
-    "https://github.com/crustio/crust/wiki/Maxwell-CC2-%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97",
-  "join testneten":
-    "https://github.com/crustio/crust/wiki/Maxwell-CC2-User-Guide",
+  "join profit ark": "https://ark.crust.network/",
   github: "https://github.com/crustio",
   twitter: "https://twitter.com/CrustNetwork",
   medium: "https://medium.com/@CrustNetwork",
