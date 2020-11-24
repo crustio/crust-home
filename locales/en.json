@@ -1,7 +1,9 @@
 {
   "button": {
     "learnMore": "Learn More",
-    "checkOnGithub": "Check Our Github"
+    "checkOnGithub": "Check Our Github",
+    "joinArk": "Join Profit Ark",
+    "arkTitle": "Crust Incentivized Testnet is Ready"
   },
   "header": {
     "Home": "Home",
@@ -12,7 +14,7 @@
     "About": "About",
     "languages": "EN",
     "TestNet": "TestNet",
-    "Join TestNet": "Join TestNet",
+    "Join Profit Ark": "Join Profit Ark",
     "Crust Apps": "Crust Apps",
     "EcoWhitePaper": "Economy Whitepaper",
     "Blockchain Browser": "Blockchain Browser",

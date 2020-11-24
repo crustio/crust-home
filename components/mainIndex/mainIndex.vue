@@ -6,14 +6,26 @@
         <div class="desc" :class="{ 'desc-zh': $store.state.locale === 'zh' }">
           <p v-html="$t('indexBanner.desc')"></p>
         </div>
-        <p class="test-net-title">Crust激励测试网已启动</p>
+        <p class="test-net-title">{{ $t("button.arkTitle") }}</p>
+        <div class="container text-center">
+          <button @click="handleClick('join profit ark')" class="btn-custom">
+            {{ $t("button.joinArk") }}
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import jumpTo from "../../utils"
+export default {
+  methods: {
+    handleClick(name) {
+      jumpTo(name)
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -28,13 +40,12 @@ export default {}
   display: flex;
   align-items: center;
   .container {
-    width: 641px;
-    height: 400px;
-    // @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/mainCrustBg");
+    width: 100%;
+    height: 500px;
     position: relative;
     .main-logo {
       position: absolute;
-      top: 162px;
+      top: 100px;
       width: 100%;
       animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
       animation-duration: 0.5s; /* don't forget to set a duration! */
@@ -71,30 +82,32 @@ export default {}
         color: #ffffff;
         text-align: center;
         font-size: 30px;
-        &::before, ::after {
+        margin-top: 30px;
+        &::before {
           content: "";
           height: 1px;
-          width: 50px;
-          background: orange;
+          width: 30px;
+          background: #eb761c;
           clear: both;
           display: inline-block;
           position: relative;
           top: -10px;
+          right: 30px;
         }
         &::after {
           content: "";
           height: 1px;
-          width: 50px;
-          background: orange;
+          width: 30px;
+          background: #eb761c;
           clear: both;
           display: inline-block;
           position: relative;
           top: -10px;
+          left: 30px;
         }
       }
     }
     @include media-breakpoint-down(xs) {
-      @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/mainCrustBg");
       position: relative;
       background-size: contain;
 
@@ -121,33 +134,21 @@ export default {}
           p {
             display: block;
             font-family: nasalization;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             text-align: center;
           }
         }
         .test-net-title {
           color: #ffffff;
           text-align: center;
-          font-size: 30px;
+          font-size: 1.2rem;
           &::before{
             content: "";
-            height: 1px;
-            width: 50px;
-            background: orange;
-            clear: both;
-            display: inline-block;
-            position: relative;
-            top: -10px;
+            display: none;
           }
           &::after {
           content: "";
-          height: 1px;
-          width: 50px;
-          background: orange;
-          clear: both;
-          display: inline-block;
-          position: relative;
-          top: -10px;
+          display: none;
         }
         }
       }

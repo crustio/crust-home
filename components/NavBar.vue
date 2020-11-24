@@ -63,11 +63,10 @@ export default {
           name: "TestNet",
           hasChild: true,
           children: [
-            "Join TestNet",
+            "Join Profit Ark",
             "Blockchain Browser",
             "Crust Apps",
-            "Crust Cloud",
-            "Profix Ark"
+            "Crust Cloud"
           ],
         },
         {
@@ -110,16 +109,10 @@ export default {
       }
       this.activeNav = name
       if (outerList.indexOf(name) > -1) {
-        if (name === "join testnet") {
-          name = "join testnet" + (this.$store.state.locale === "en" ? "en" : "")
-        }
         return jumpTo(name)
       }
       if (name === "home") {
         return this.$router.push("/")
-      }
-      if (name === "profix ark") {
-        return this.$router.push("/ark")
       }
       this.$router.push(name)
     },
