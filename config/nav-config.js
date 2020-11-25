@@ -19,7 +19,7 @@ const outerDit = {
   telegram: "https://t.me/CrustNetwork",
   explorer: "http://explorer.crust.network/",
   "crust apps": "https://apps.crust.network/",
-  "blockchain browser": "http://explorer.crust.network/",
+  "blockchain browser": "https://crust.subscan.io/",
   pdfBucket:
     "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/",
   clouden: "https://github.com/crustio/crust/wiki/Crust-Cloud-Testing-Guide",
