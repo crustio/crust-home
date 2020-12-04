@@ -12,8 +12,8 @@
             <button @click="handleClick('join profit ark')" class="btn-custom">
               {{ $t("button.joinArk") }}
             </button>
-            <button @click="handleClick('cmsToken')" class="btn-custom margin-left-25">
-              {{ $t("button.cmsToken") }}
+            <button @click="handleClick('csmToken')" class="btn-custom margin-left-25">
+              {{ $t("button.csmToken") }}
             </button>
           </div>
         </div>
