@@ -8,9 +8,14 @@
         </div>
         <p class="test-net-title">{{ $t("button.arkTitle") }}</p>
         <div class="container text-center">
-          <button @click="handleClick('join profit ark')" class="btn-custom">
-            {{ $t("button.joinArk") }}
-          </button>
+          <div>
+            <button @click="handleClick('join profit ark')" class="btn-custom">
+              {{ $t("button.joinArk") }}
+            </button>
+            <button @click="handleClick('cmsToken')" class="btn-custom margin-left-25">
+              {{ $t("button.cmsToken") }}
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -107,6 +112,9 @@ export default {
         }
       }
     }
+    .margin-left-25 {
+      margin-left: 25px;
+    }
     @include media-breakpoint-down(xs) {
       position: relative;
       background-size: contain;
@@ -147,9 +155,9 @@ export default {
             display: none;
           }
           &::after {
-          content: "";
-          display: none;
-        }
+            content: "";
+            display: none;
+          }
         }
       }
     }
