@@ -13,7 +13,7 @@ const innerList = [
 // }
 const outerDit = {
   "join profit ark": "https://ark.crust.network/",
-  "csmtoken": "https://csm-event.crust.run/#/cru/auto",
+  "csmtoken": "https://csm.crust.network/#/cru/auto",
   github: "https://github.com/crustio",
   twitter: "https://twitter.com/CrustNetwork",
   medium: "https://medium.com/@CrustNetwork",
