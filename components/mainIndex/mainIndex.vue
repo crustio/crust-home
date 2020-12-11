@@ -123,6 +123,11 @@ export default {
       position: relative;
       background-size: contain;
 
+      .margin-left-25 {
+        margin-left: 0px;
+        margin-top: 15px;
+      }
+
       .main-logo {
         position: absolute;
         width: 100%;
