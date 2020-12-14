@@ -12,18 +12,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.4
 
-      - name: Merge master -> gb-pages
+      - name: Merge master -> gh-pages
         uses: devmasx/merge-branch@v1.3.1
         with:
           type: now
           from_branch: master
-          target_branch: gb-pages
+          target_branch: gh-pages
           github_token: ${{ secrets.GAVFU_PAT }}
 
-      - name: Checkout gb-pages branch
+      - name: Checkout gh-pages branch
         uses: actions/checkout@v2.3.4
         with:
-          ref: gb-pages
+          ref: gh-pages
 
       - name: Install dependencies
         uses: Borales/actions-yarn@v2.3.0
