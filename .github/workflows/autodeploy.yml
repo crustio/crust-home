@@ -1,4 +1,4 @@
-name: Auto Deploy Github Pages
+name: Auto Deploy Github Pages (Beta)
 
 on:
   workflow_dispatch:
