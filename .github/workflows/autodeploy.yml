@@ -7,6 +7,7 @@ on:
 
 jobs:
   build-deploy:
+    if: github.repository == 'gavfu/crust-home'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
