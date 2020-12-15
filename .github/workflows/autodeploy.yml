@@ -1,0 +1,48 @@
+name: Auto Deploy Github Pages (Beta)
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    if: github.repository == 'gavfu/crust-home'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+
+      - name: Merge master -> gh-pages
+        uses: devmasx/merge-branch@v1.3.1
+        with:
+          type: now
+          from_branch: master
+          target_branch: gh-pages
+          github_token: ${{ secrets.GAVFU_PAT }}
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v2.3.4
+        with:
+          ref: gh-pages
+
+      - name: Install dependencies
+        uses: Borales/actions-yarn@v2.3.0
+        with:
+          cmd: install
+
+      - name: Build for production
+        uses: Borales/actions-yarn@v2.3.0
+        with:
+          cmd: generate
+
+      - name: Deploy to namek-network/crust-home-deploy
+        uses: hpcodecraft/action-deploy-workspace-to-repo@v2.2
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GAVFU_PAT }}
+          SRC_FOLDER: dist
+          DEST_OWNER: namek-network
+          DEST_REPO: crust-home-deploy
+          DEST_BRANCH: main
+          DEST_FOLDER: docs
