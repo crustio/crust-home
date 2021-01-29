@@ -23,7 +23,7 @@ const outerDit = {
   explorer: "http://explorer.crust.network/",
   "crust apps": "https://apps.crust.network/",
   "blockchain explorer": "https://crust.subscan.io/",
-  "storage explorer": "https://crust.subscan.io/",
+  "storage explorer": " https://splorer.crust.network",
   pdfBucket:
     "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/",
   clouden: "https://github.com/crustio/crust/wiki/Crust-Cloud-Testing-Guide",
