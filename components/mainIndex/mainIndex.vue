@@ -27,7 +27,7 @@ import jumpTo from "../../utils"
 export default {
   methods: {
     handleClick(name) {
-      if (this.$store.state.locale === "en") {
+      if (name === 'join preview network' && this.$store.state.locale === "en") {
         name += "_en"
       }
       jumpTo(name)
