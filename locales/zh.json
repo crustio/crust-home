@@ -3,7 +3,9 @@
     "learnMore": "了解更多",
     "checkOnGithub": "在Github上查看",
     "joinArk": "加入“方舟计划”",
+    "joinPreviewNetwork": "加入预览网",
     "arkTitle": "Crust激励测试网已启动",
+    "networkTitle": "Crust预览网已就绪",
     "csmToken": "CSM通证"
   },
   "header": {
@@ -22,11 +24,15 @@
     "languages": "中文",
     "TestNet": "测试网",
     "Join Profit Ark": "加入方舟计划",
+    "Join Preview Network": "加入预览网",
     "Crust Apps": "Crust Apps",
-    "Blockchain Browser": "区块链浏览器",
+    "Blockchain Explorer": "区块链浏览器",
+    "Storage Explorer": "存储浏览器",
     "doc": "资料",
     "Crust Cloud": "Crust Cloud",
-    "Profix Ark": "方舟计划"
+    "Profix Ark": "方舟计划",
+    "Preview Network": "预览网",
+    "Wiki": "Wiki"
   },
   "footer": {
     "Success": "复制成功",

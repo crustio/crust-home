@@ -63,8 +63,9 @@ export default {
           name: "TestNet",
           hasChild: true,
           children: [
-            "Join Profit Ark",
-            "Blockchain Browser",
+            "Join Preview Network",
+            "Blockchain Explorer",
+            "Storage Explorer",
             "Crust Apps",
             "Crust Cloud"
           ],
@@ -72,7 +73,7 @@ export default {
         {
           name: "Documents",
           hasChild: true,
-          children: ["WhitePaper", "EcoWhitePaper", "Github"],
+          children: ["WhitePaper", "EcoWhitePaper", "Github", "Wiki"],
         },
         {
           name: "FAQ",
@@ -88,6 +89,11 @@ export default {
   methods: {
     jump(name) {
       name = name.toLowerCase()
+      if (name === "join preview network" || name === "wiki") {
+        if (this.$store.state.locale === "en") {
+          name += "_en"
+        }
+      }
       if (name === "ecowhitepaper" || name === "whitepaper") {
         if (this.$store.state.locale === "en") {
           name += "_en"

@@ -3,7 +3,9 @@
     "learnMore": "Learn More",
     "checkOnGithub": "Check Our Github",
     "joinArk": "Join Profit Ark",
+    "joinPreviewNetwork": "Join Preview Network",
     "arkTitle": "Crust Incentivized Testnet is Ready",
+    "networkTitle": "Crust Preview Network is Ready",
     "csmToken": "CSM Token"
   },
   "header": {
@@ -16,16 +18,20 @@
     "languages": "EN",
     "TestNet": "TestNet",
     "Join Profit Ark": "Join Profit Ark",
+    "Join Preview Network": "Join Preview Network",
     "Crust Apps": "Crust Apps",
     "EcoWhitePaper": "Economy Whitepaper",
-    "Blockchain Browser": "Blockchain Browser",
+    "Blockchain Explorer": "Blockchain Explorer",
+    "Storage Explorer": "Storage Explorer",
     "Documents": "Documents",
     "WhitePaper": "Technology Whitepaper",
     "Github": "Github",
     "ZH": "中文",
     "EN": "EN",
     "Crust Cloud": "Crust Cloud",
-    "Profix Ark": "Profix Ark"
+    "Profix Ark": "Profix Ark",
+    "Preview Network": "Preview Network",
+    "Wiki": "Wiki"
   },
   "footer": {
     "Success": "Copy Success",

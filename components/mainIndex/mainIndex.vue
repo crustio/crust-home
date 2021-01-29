@@ -6,11 +6,11 @@
         <div class="desc" :class="{ 'desc-zh': $store.state.locale === 'zh' }">
           <p v-html="$t('indexBanner.desc')"></p>
         </div>
-        <p class="test-net-title">{{ $t("button.arkTitle") }}</p>
+        <p class="test-net-title">{{ $t("button.networkTitle") }}</p>
         <div class="container text-center">
           <div>
-            <button @click="handleClick('join profit ark')" class="btn-custom button-width">
-              {{ $t("button.joinArk") }}
+            <button @click="handleClick('join preview network')" class="btn-custom button-width">
+              {{ $t("button.joinPreviewNetwork") }}
             </button>
             <button @click="handleClick('csmToken')" class="btn-custom margin-left-25 button-width">
               {{ $t("button.csmToken") }}
@@ -27,6 +27,9 @@ import jumpTo from "../../utils"
 export default {
   methods: {
     handleClick(name) {
+      if (name === 'join preview network' && this.$store.state.locale === "en") {
+        name += "_en"
+      }
       jumpTo(name)
     }
   }
