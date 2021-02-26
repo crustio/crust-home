@@ -3,7 +3,9 @@
     <main-title :text="$t('crust.sub')"></main-title>
     <div class="container">
       <div class="crust-desc normal-text">
-        <span class="font-weight-bold">CRUST</span>{{ $t("crust.content.text1") }}
+        <p v-html="$t(`crust.content.text2`)"> </p>
+        <!-- <span class="font-weight-bold">CRUST</span>{{ $t("crust.content.text1") }} -->
+
       </div>
       <b-row class="card-container container">
         <!--        <b-card-group deck>-->

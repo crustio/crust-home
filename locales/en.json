@@ -3,10 +3,13 @@
     "learnMore": "Learn More",
     "checkOnGithub": "Check Our Github",
     "joinArk": "Join Profit Ark",
-    "joinPreviewNetwork": "Join Preview Network",
+    "joinPreviewNetwork": "Join Maxwell",
     "arkTitle": "Crust Incentivized Testnet is Ready",
-    "networkTitle": "Crust Preview Network is Ready",
-    "csmToken": "CSM Token"
+    "networkTitle": "Crust Preview Network \"Maxwell\" is now live",
+    "csmToken": "CSM Token",
+    "experienceCrustApps": "Experience Crust Apps",
+    "buildOnCrust": "Build On Crust"
+
   },
   "header": {
     "Home": "Home",
@@ -67,6 +70,7 @@
     "sub": "What is Crust",
     "content": {
       "text1": " provides a decentralized storage network of Web3 ecosystem. It supports multiple storage layer protocols such as IPFS, and exposes storage interfaces to application layer. Crust's technical stack is also capable of supporting a decentralized computing layer. It is designed to build a decentralized cloud ecosystem that values data privacy and ownership.",
+      "text2": "<span class='font-weight-bold'>CRUST</span> provides a <a class='btn-link'>decentralized storage network</a> of <a class='btn-link'>Web3.0</a> ecosystem. It supports multiple storage layer protocols such as <a class='btn-link'>IPFS</a>, and exposes storage interfaces to application layer. Crust's technical stack is also capable of supporting a decentralized computing layer. It is designed to build a <a class='btn-link'>decentralized cloud</a> ecosystem that values data <a class='btn-link'>privacy and ownership</a>.",
       "text3": ""
     },
     "TEE": {
@@ -93,6 +97,25 @@
     "onecontent": "Based on the TEE (Trusted Execution Environment) technology, Crust implements MPoW (Meaningful Proof of Work) mechanism to quantify meaningful storage resource usage and generate corresponding work report in a reliable way.",
     "twocontent": "Crust's GPoS (Guaranteed Proof of Stake) consensus uses storage resources as a guarantee. It encourages nodes to provide more storage resources, and improves the security and robustness of the network.",
     "threecontent": "With GPoS consensus and MPoW mechanism, Crust is able to support the quantification and consensus of both storage and computing resource usage, and builds ubiquitous decentralized cloud storage and computing capabilities."
+  },
+  "decentralized": {
+    "title": "Use Crust to Connect to Decentralized Cloud",
+    "step-1-1": "Add your files to IPFS",
+    "step-1-2": ">> ipfs add crust.png",
+    "step-1-3": "added QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
+    "step-2-1": "Place storage order in Curst",
+    "step-2-2": ">> crust-cli order QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
+    "step-3-1": "Get your files anywhere",
+    "step-3-2": ">> ipfs get QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
+    "title2": "Decentralized Cloud in Web3.0",
+    "serverlessTitle": "Serverless DApp/website hosting",
+    "serverlessSubTitle": "Developers are able to deploy their own Dapps/websites based on Crust/IPFS Network. With this, developers are able to only focus on building Dapps/websites, no need for server management. Moreover, Crust Network incentives multiple nodes to store Dapp/website files and provide storage services, thus ensuring the high availability of Dapps/websites. &#91Crust Apps] is an example, it is hosted on Crust Network.",
+    "generalTitle": "General off-chain data storage",
+    "generalSubTitle": "Some blockchain-based decentralized applications, such as NFT and decentralized social platforms, involve a large amount of user data, far beyond the on-chain storage capacity. Based on Crust/IPFS Network, developers can provide general off-chain data storage services for these applications.",
+    "AcceleratedTitle": "Accelerated content delivery",
+    "AcceleratedSubTitle": "Developers are able to build P2P content delivery network (CDN) services with Crust/IPFS Network. Crust Network incentivizes the nodes to spontaneously distribute CDN data and play the role of CDN edge nodes to accelerate the data transmission for CDN users.",
+    "SecuredTitle": "Secured cloud storage",
+    "SecuredSubTitle": "Developers are able to build Cloud storage applications with Crust/IPFS Network. Without maintaining storage clusters, developers only need to integrate the SDK of Crust/IPFS into applications to provide users with stable storage services."
   },
   "productMatrix": {
     "title": "Product Matrix",
