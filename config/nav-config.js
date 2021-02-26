@@ -14,7 +14,7 @@ const innerList = [
 const outerDit = {
   "join profit ark": "https://ark.crust.network/",
   "join preview network": "https://wiki.crust.network/docs/zh-CN/previewNetworkMaxwell",
-  "csmtoken": "https://csm.crust.network/#/cru/step2",
+  "csmtoken": "https://csm.crust.network/#/cru/info",
   github: "https://github.com/crustio",
   wiki: "https://wiki.crust.network/zh-CN",
   twitter: "https://twitter.com/CrustNetwork",
