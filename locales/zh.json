@@ -6,7 +6,9 @@
     "joinPreviewNetwork": "加入预览网",
     "arkTitle": "Crust激励测试网已启动",
     "networkTitle": "Crust预览网已就绪",
-    "csmToken": "CSM通证"
+    "csmToken": "CSM通证",
+    "experienceCrustApps": "体验Crust Apps",
+    "buildOnCrust": "基于Crust构建"
   },
   "header": {
     "Github": "Github",
@@ -83,6 +85,25 @@
       "title": "去中心化的存储和计算",
       "desc": "基于以存储资源为担保额度的共识和有意义的工作量证明机制，Crust可以支持从存储到计算的量化和共识，实现去中心化的泛在云服务。"
     }
+  },
+  "decentralized": {
+    "title": "使用Crust构建分布式云",
+    "step-1-1": "将你的文件存入IPFS网络",
+    "step-1-2": ">> ipfs add crust.png",
+    "step-1-3": "added QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
+    "step-2-1": "在Crust网络中为文件生成存储订单",
+    "step-2-2": ">> crust-cli order QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
+    "step-3-1": "随时随地都可通过PFS获取到你的文件",
+    "step-3-2": ">> ipfs get QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
+    "title2": "Web3.0 的分布式云",
+    "serverlessTitle": "“无服务器”的网站和Dapp",
+    "serverlessSubTitle": "开发者可以基于Crust/IPFS网络部署自己的Dapp和网站。开发者只需关注Dapp和网站的构建，而无需管理任何服务器。Crust网络会激励多个分布的节点存储Dapp和网站文件并提供服务，从而保证Dapp和网站的高可用性。[Crust Apps]已经部署在Crust网络上。",
+    "generalTitle": "通用的链下数据存储",
+    "generalSubTitle": "一些基于区块链的应用，比如NFT、去中心化社交平台等，其业务会涉及到大量的用户数据。而链上存储量往往无法负载这些庞大的数据。因此，开发者可以基于Crust/IPFS网络，为这些应用提供通用的链下数据存储服务。",
+    "AcceleratedTitle": "更快的内容分发网络",
+    "AcceleratedSubTitle": "开发者可以基于Crust/IPFS 网络构建P2P CDN服务。在Crust网络激励层协议的作用下，Crust网络中的节点会自发的在网络中扩散CDN文件并承担起边缘节点的职责，为用户带来更快的数据传输。",
+    "SecuredTitle": "更安全的云存储",
+    "SecuredSubTitle": "开发者可以基于Crust/IPFS网络开发云存储应用。开发者无需维护存储集群，只需在应用上集成Crust/IPFS的SDK，即可为用户提供稳定的存储服务。"
   },
   "productMatrix": {
     "title": "产品矩阵",

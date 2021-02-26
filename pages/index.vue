@@ -2,7 +2,7 @@
   <div class="main" id="content">
     <mainIndex class="item" />
     <description class="item" />
-    <product class="item" />
+    <decentralized class="item" />
     <timeline class="item" />
     <TeamMembers class="item" />
     <partners class="item" />
@@ -15,11 +15,13 @@ import product from "~/components/product"
 import timeline from "~/components/timeline"
 import partners from "~/components/partners"
 import TeamMembers from "~/components/teamMembers"
+import decentralized from "~/components/decentralized"
 export default {
   components: {
     mainIndex,
     description,
     product,
+    decentralized,
     timeline,
     partners,
     TeamMembers,
