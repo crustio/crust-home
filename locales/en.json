@@ -171,8 +171,12 @@
       "title": "2020 Q4",
       "subtitle": "Maxwell Testnet"
     },
-    "mainNet": {
+    "previewNetwork": {
       "title": "2021 Q1",
+      "subtitle": "Preview Network"
+    },
+    "mainNet": {
+      "title": "2021 Q2",
       "subtitle": "Mainnet"
     }
   },
