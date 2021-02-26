@@ -3,12 +3,13 @@
     "learnMore": "Learn More",
     "checkOnGithub": "Check Our Github",
     "joinArk": "Join Profit Ark",
-    "joinPreviewNetwork": "Join Preview Network",
+    "joinPreviewNetwork": "Join Maxwell",
     "arkTitle": "Crust Incentivized Testnet is Ready",
-    "networkTitle": "Crust Preview Network is Ready",
+    "networkTitle": "Crust Preview Network \"Maxwell\" is now live",
     "csmToken": "CSM Token",
     "experienceCrustApps": "Experience Crust Apps",
     "buildOnCrust": "Build On Crust"
+
   },
   "header": {
     "Home": "Home",
@@ -69,6 +70,7 @@
     "sub": "What is Crust",
     "content": {
       "text1": " provides a decentralized storage network of Web3 ecosystem. It supports multiple storage layer protocols such as IPFS, and exposes storage interfaces to application layer. Crust's technical stack is also capable of supporting a decentralized computing layer. It is designed to build a decentralized cloud ecosystem that values data privacy and ownership.",
+      "text2": "<span class='font-weight-bold'>CRUST</span> provides a <a class='btn-link'>decentralized storage network</a> of <a class='btn-link'>Web3.0</a> ecosystem. It supports multiple storage layer protocols such as <a class='btn-link'>IPFS</a>, and exposes storage interfaces to application layer. Crust's technical stack is also capable of supporting a decentralized computing layer. It is designed to build a <a class='btn-link'>decentralized cloud</a> ecosystem that values data <a class='btn-link'>privacy and ownership</a>.",
       "text3": ""
     },
     "TEE": {
