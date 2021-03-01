@@ -1,6 +1,6 @@
 <template>
   <div class="decentralized" id="decentralized" ref="scroller">
-    <main-title class="title" :text="$t(`decentralized.title`)"></main-title>
+    <main-title class="title-d" :text="$t(`decentralized.title`)"></main-title>
     <b-container>
       <b-row align-v="center" class="video-step">
         <b-col sm="12" md="12" lg="6" xl="6">
@@ -11,7 +11,7 @@
         </b-col>
       </b-row>
       <b-row class="title-row">
-        <main-title :text="$t(`decentralized.title2`)"></main-title>
+        <main-title class="title-d" :text="$t(`decentralized.title2`)"></main-title>
       </b-row>
       <b-row class="text-row text-row-container">
         <b-col sm="12" md="12" lg="12" xl="6">
@@ -136,6 +136,9 @@ export default {
     }
     .title-row {
       margin-top: 40px;
+    }
+    .title-d {
+      font-size: 1.6rem;
     }
   }
 
