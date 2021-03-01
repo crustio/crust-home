@@ -6,7 +6,7 @@
       class="video-js d-video"
       preload="auto">
       <source
-        src="https://ipfs.io/ipfs/QmdupR3YAC2maPSwB76xzpKBiqDF2jj5nEfTHvEkxZL6d9"
+        src="https://crust.network/download/CrustDemo.mp4"
         type="video/mp4"
       >
     </video>
