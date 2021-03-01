@@ -1,12 +1,12 @@
 <template>
   <div class="decentralized" id="decentralized" ref="scroller">
     <main-title class="title" :text="$t(`decentralized.title`)"></main-title>
-    <b-container fluid>
+    <b-container>
       <b-row align-v="center" class="video-step">
-        <b-col sm="12" md="12" lg="12" xl="6">
+        <b-col sm="12" md="12" lg="6" xl="6">
           <dVideo></dVideo>
         </b-col>
-        <b-col sm="12" md="12" lg="12" xl="6" class="steps-container">
+        <b-col sm="12" md="12" lg="6" xl="6" class="steps-container">
           <dSteps></dSteps>
         </b-col>
       </b-row>
@@ -126,8 +126,8 @@ export default {
     rgba(0, 26, 103, 1) 100%
   );
   .text-row-container {
-    margin-left: 100px;
-    margin-right: 100px;
+    // margin-left: 100px;
+    // margin-right: 100px;
   }
 
   @media screen and (max-width: 500px) {
@@ -147,8 +147,7 @@ export default {
       margin-top: 49px;
     }
     .text-row {
-      padding-left: 30px;
-      padding-right: 30px;
+
     }
     .steps-container {
       height: 100%;
