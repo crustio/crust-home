@@ -56,8 +56,8 @@ export default {
       animation-duration: 0.5s; /* don't forget to set a duration! */
       .logo {
         margin: 0 auto;
-        width: 681px;
-        height: 180px;
+        width: 508px;
+        height: 132px;
         // line-height: 120px;
         background-image: url('~/assets/main_logo_en.png');
         background-repeat: no-repeat;
