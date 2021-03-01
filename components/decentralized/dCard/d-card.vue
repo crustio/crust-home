@@ -30,6 +30,8 @@ export default {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
   .image {
     margin-bottom: 30px;
   }
@@ -42,7 +44,6 @@ export default {
   }
   .subTitle {
     font-size: 14px;
-    width: 762px;
     @media (max-width: 500px) {
       width: 330px;
     }

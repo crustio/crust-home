@@ -13,7 +13,7 @@
       <b-row class="title-row">
         <main-title :text="$t(`decentralized.title2`)"></main-title>
       </b-row>
-      <b-row class="text-row">
+      <b-row class="text-row text-row-container">
         <b-col sm="12" md="12" lg="12" xl="6">
           <dCard
           :imgSrc="require('~/assets/images/serverless.png')"
@@ -27,7 +27,7 @@
           :subTitle="$t(`decentralized.generalSubTitle`)"></dCard>
         </b-col>
       </b-row>
-      <b-row>
+      <b-row class="text-row text-row-container">
         <b-col sm="12" md="12" lg="12" xl="6">
           <dCard
           :imgSrc="require('~/assets/images/accelerate.png')"
@@ -125,6 +125,10 @@ export default {
     rgba(92, 37, 51, 1) 0%,
     rgba(0, 26, 103, 1) 100%
   );
+  .text-row-container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
 
   @media screen and (max-width: 500px) {
     .video-step {
