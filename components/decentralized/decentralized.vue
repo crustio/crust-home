@@ -1,26 +1,26 @@
 <template>
   <div class="decentralized" id="decentralized" ref="scroller">
     <main-title class="title" :text="$t(`decentralized.title`)"></main-title>
-    <b-container fluid class="card-container web">
-      <b-row>
-        <b-col>
+    <b-container fluid>
+      <b-row align-v="center">
+        <b-col sm="12" md="12" lg="12" xl="6">
           <dVideo></dVideo>
         </b-col>
-        <b-col class="steps">
+        <b-col sm="12" md="12" lg="12" xl="6">
           <dSteps></dSteps>
         </b-col>
       </b-row>
-      <b-row class="margin-top-large">
+      <b-row>
         <main-title class="title" :text="$t(`decentralized.title2`)"></main-title>
       </b-row>
-      <b-row class="margin-bottom-large margin-top-large">
-        <b-col>
+      <b-row>
+        <b-col sm="12" md="12" lg="12" xl="6">
           <dCard
           :imgSrc="require('~/assets/images/serverless.png')"
           :title="$t(`decentralized.serverlessTitle`)"
           :subTitle="$t(`decentralized.serverlessSubTitle`)" ></dCard>
         </b-col>
-        <b-col>
+        <b-col sm="12" md="12" lg="12" xl="6">
           <dCard
           :imgSrc="require('~/assets/images/data.png')"
           :title="$t(`decentralized.generalTitle`)"
@@ -28,55 +28,22 @@
         </b-col>
       </b-row>
       <b-row>
-        <b-col>
+        <b-col sm="12" md="12" lg="12" xl="6">
           <dCard
           :imgSrc="require('~/assets/images/accelerate.png')"
           :title="$t(`decentralized.AcceleratedTitle`)"
           :subTitle="$t(`decentralized.AcceleratedSubTitle`)"></dCard>
         </b-col>
-        <b-col>
+        <b-col sm="12" md="12" lg="12" xl="6">
           <dCard
           :imgSrc="require('~/assets/images/secured.png')"
           :title="$t(`decentralized.SecuredTitle`)"
           :subTitle="$t(`decentralized.SecuredSubTitle`)"></dCard>
         </b-col>
       </b-row>
+
     </b-container>
-    <b-container fluid class="card-container phone">
-      <b-row>
-        <dVideo></dVideo>
-      </b-row>
-      <b-row>
-        <dSteps></dSteps>
-      </b-row>
-      <b-row class="part">
-        <main-title class="title" :text="$t(`decentralized.title2`)"></main-title>
-      </b-row>
-      <b-row class="margin-bottom-sm">
-        <dCard
-        :imgSrc="require('~/assets/images/serverless.png')"
-        :title="$t(`decentralized.serverlessTitle`)"
-        :subTitle="$t(`decentralized.serverlessSubTitle`)" ></dCard>
-      </b-row>
-      <b-row class="margin-bottom-sm">
-        <dCard
-        :imgSrc="require('~/assets/images/data.png')"
-        :title="$t(`decentralized.generalTitle`)"
-        :subTitle="$t(`decentralized.serverlessSubTitle`)"></dCard>
-      </b-row>
-      <b-row class="margin-bottom-sm">
-        <dCard
-          :imgSrc="require('~/assets/images/accelerate.png')"
-          :title="$t(`decentralized.AcceleratedTitle`)"
-          :subTitle="$t(`decentralized.AcceleratedSubTitle`)"></dCard>
-      </b-row>
-      <b-row class="margin-bottom-sm">
-        <dCard
-          :imgSrc="require('~/assets/images/secured.png')"
-          :title="$t(`decentralized.SecuredTitle`)"
-          :subTitle="$t(`decentralized.SecuredSubTitle`)"></dCard>
-      </b-row>
-    </b-container>
+
   </div>
 </template>
 
@@ -340,18 +307,6 @@ export default {
         margin-right: 30px;
       }
     }
-  }
-  .part {
-    margin-top: 30px;
-  }
-  .margin-bottom-sm {
-    margin-bottom: 20px;
-  }
-  .margin-bottom-large {
-    margin-bottom: 60px;
-  }
-  .margin-top-large {
-    margin-top: 50px;
   }
 }
 </style>
