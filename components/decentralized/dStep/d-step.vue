@@ -3,7 +3,7 @@
     <b-col sm="2" md="4" lg="2" xl="3">
       <div class="order-1">{{order}}</div>
     </b-col>
-    <b-col sm="10" md="7" lg="7" xl="9">
+    <b-col class="step-container" sm="10" md="7" lg="7" xl="9">
       <div class="step"> {{step1}} </div>
       <div class="step-tip"> {{step2}} </div>
       <div class="step-tip"> {{step3}} </div>
@@ -45,9 +45,14 @@ export default {
     color: rgba(255, 255, 255, 0.15);
     text-align: center;
   }
+  .step-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
   .step {
-    height: 68px;
-    padding-top: 20px;
+    margin-bottom: 10px;
     font-size: 20px;
     font-family: nasalization;
     font-weight: 400;

@@ -11,7 +11,7 @@
         </b-col>
       </b-row>
       <b-row>
-        <main-title class="title" :text="$t(`decentralized.title2`)"></main-title>
+        <main-title class="title2" :text="$t(`decentralized.title2`)"></main-title>
       </b-row>
       <b-row>
         <b-col sm="12" md="12" lg="12" xl="6">
@@ -124,6 +124,9 @@ export default {
     rgba(92, 37, 51, 1) 0%,
     rgba(0, 26, 103, 1) 100%
   );
+  .title2 {
+    margin-top: 30px
+  }
   .card-container {
     margin-top: 60px;
     &.phone {

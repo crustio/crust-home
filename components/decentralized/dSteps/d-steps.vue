@@ -16,14 +16,14 @@
       :step1="$t(`decentralized.step-3-1`)"
       :step2="$t(`decentralized.step-3-2`)">
     </dStep>
-    <b-row>
-      <b-col cols="12" sm="6" md="6" lg="6" xl="6" class="step-btn">
-        <button @click="handleExperienceClick" class="btn-custom">
+    <b-row class="step-btn-container">
+      <b-col cols="12" sm="6" md="6" lg="6" xl="6">
+        <button @click="handleExperienceClick" class="btn-custom step-btn">
           {{ $t("button.experienceCrustApps") }}
         </button>
       </b-col>
-      <b-col cols="12"  sm="6" md="6" lg="6" xl="6" class="step-btn">
-        <button @click="handleBuildClick" class="btn-custom">
+      <b-col cols="12"  sm="6" md="6" lg="6" xl="6">
+        <button @click="handleBuildClick" class="btn-custom step-btn">
           {{ $t("button.buildOnCrust") }}
         </button>
       </b-col>
@@ -55,8 +55,15 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+  .step-btn-container {
+    @media (min-width: 500px) {
+      margin-left: 36px;
+    }
+  }
   .step-btn {
-    margin-top: 10px;
-    text-align: center;
+    width: 300px;
+    @media (max-width: 500px) {
+      margin-top: 20px;
+    }
   }
 </style>
