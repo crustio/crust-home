@@ -1,12 +1,12 @@
 <template>
   <div>
     <b-row class="step-1" align-v="center">
-      <b-col sm="2" md="4" lg="2" xl="1">
-        <div class="order-1">
+      <b-col sm="2" md="4" lg="2" xl="2">
+        <span class="order-1">
           01
-        </div>
+        </span>
       </b-col>
-      <b-col sm="10" md="8" lg="10" xl="11" class="step-margin-left">
+      <b-col sm="10" md="8" lg="10" xl="10" class="step-margin-left">
         <div class="step"> {{$t(`decentralized.step-1-1`)}} </div>
         <div class="step-tip step-tip-1-1"> {{$t(`decentralized.step-1-2`)}} </div>
         <div class="step-tip"> {{$t(`decentralized.step-1-3`)}} </div>
@@ -14,20 +14,20 @@
     </b-row>
 
     <b-row  class="step-2" align-v="center">
-      <b-col sm="2" md="4" lg="2" xl="1">
-        <div class="order-1 order-2">02</div>
+      <b-col sm="2" md="4" lg="2" xl="2">
+        <span class="order-1 order-2">02</span>
       </b-col>
-      <b-col sm="10" md="8" lg="10" xl="11" class="step-margin-left">
+      <b-col sm="10" md="8" lg="10" xl="10" class="step-margin-left">
         <div class="step step-tip-2-1"> {{$t(`decentralized.step-2-1`)}} </div>
         <div class="step-tip step-tip-2-2"> {{$t(`decentralized.step-2-2`)}} </div>
       </b-col>
     </b-row>
 
     <b-row  class="step-3" align-v="center">
-      <b-col sm="2" md="4" lg="2" xl="1">
-        <div class="order-1">03</div>
+      <b-col sm="2" md="4" lg="2" xl="2">
+        <span class="order-1">03</span>
       </b-col>
-      <b-col sm="10" md="8" lg="10" xl="11" class="step-margin-left">
+      <b-col sm="10" md="8" lg="10" xl="10" class="step-margin-left">
         <div class="step step-tip-3-1"> {{$t(`decentralized.step-3-1`)}} </div>
         <div class="step-tip step-tip-3-2"> {{$t(`decentralized.step-3-2`)}} </div>
       </b-col>
@@ -156,7 +156,7 @@ export default {
       text-align: left;
     }
     .step-margin-left {
-      padding-left: 65px;
+      padding-left: 20px;
     }
     .btn-custom {
       width: 235px;
