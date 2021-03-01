@@ -92,12 +92,18 @@ export default {
     left: -80px;
     top: 100px;
     color: rgba(255, 255, 255, 0.2);
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
   }
   .swiper-button-next {
     right: -80px;
     top: 100px;
     outline: none;
     color: rgba(255, 255, 255, 0.2);
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
   }
   .swiper-button-prev:after {
     font-size: 60px;

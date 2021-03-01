@@ -143,12 +143,18 @@ $bgColor: #f9fafb;
     left: -80px;
     top: 60px;
     color: rgba(226, 228, 234, 1);
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
   }
   .swiper-button-next {
     right: -80px;
     top: 60px;
     outline: none;
     color: rgba(226, 228, 234, 1);
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
   }
   .swiper-button-prev:after {
     font-size: 60px;

@@ -78,12 +78,12 @@
       "desc": "Based on the TEE (Trusted Execution Environment) technology, Crust implements MPoW (Meaningful Proof of Work) mechanism to quantify meaningful storage resource usage and generate corresponding work report in a reliable way."
     },
     "MPoW": {
-      "title": "Guaranteed by Storage Resources",
-      "desc": "Crust's GPoS (Guaranteed Proof of Stake) consensus uses storage resources as a guarantee. It encourages nodes to provide more storage resources, and improves the security and robustness of the network."
+      "title": "Guaranteed PoS Consensus",
+      "desc": "Crust’s GPoS (Guaranteed Proof of Stake) derives from PoS consensus. It requires nodes to provide storage resources as a guarantee to obtain staking quota, and encourages users to stake their tokens to high quality nodes via guarantee operation to obtain staking income."
     },
     "GPoS": {
-      "title": "Decentralized Cloud Storage and Computing",
-      "desc": "With GPoS consensus and MPoW mechanism, Crust is able to support the quantification and consensus of both storage and computing resource usage, and builds ubiquitous decentralized cloud storage and computing capabilities."
+      "title": "Decentralized Cloud Storage Market",
+      "desc": "Crust’s DSM (Decentralized Storage Market) enables users to place storage orders on the chain, to get their data stored and distributed on Crust Network. With the back up of entire network, users can retrieve their data from everywhere at anytime."
     }
   },
   "indexproduct": {
