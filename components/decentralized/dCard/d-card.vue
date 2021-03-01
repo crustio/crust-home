@@ -32,6 +32,8 @@ export default {
   margin-top: 30px;
   .image {
     margin-bottom: 30px;
+    height: 73px;
+    object-fit: scale-down;
   }
   .title {
     font-size: 20px;
@@ -45,7 +47,6 @@ export default {
     @media (max-width: 500px) {
       width: 330px;
     }
-    font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     color: #FFFFFF;
   }
