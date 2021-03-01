@@ -109,7 +109,7 @@
     "step-3-2": ">> ipfs get QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
     "title2": "Decentralized Cloud in Web3.0",
     "serverlessTitle": "Serverless DApp/website hosting",
-    "serverlessSubTitle": "<p>Developers are able to deploy their own Dapps/websites based on Crust/IPFS Network. With this, developers are able to only focus on building Dapps/websites, no need for server management. Moreover, Crust Network incentives multiple nodes to store Dapp/website files and provide storage services, thus ensuring the high availability of Dapps/websites. <a href='https://apps.crust.network' class='btn-link' target='_blank'>[Crust Apps]</a> is an example, it is hosted on Crust Network.</p>",
+    "serverlessSubTitle": "<p>Developers are able to deploy their own Dapps/websites based on Crust/IPFS Network. With this, developers are able to only focus on building Dapps/websites, no need for server management. Moreover, Crust Network incentives multiple nodes to store Dapp/website files and provide storage services, thus ensuring the high availability of Dapps/websites. <a href='https://apps.crust.network' class='btn-link' target='_blank'>Crust Apps</a> is an example, it is hosted on Crust Network.</p>",
     "generalTitle": "General off-chain data storage",
     "generalSubTitle": "Some blockchain-based decentralized applications, such as NFT and decentralized social platforms, involve a large amount of user data, far beyond the on-chain storage capacity. Based on Crust/IPFS Network, developers can provide general off-chain data storage services for these applications.",
     "AcceleratedTitle": "Accelerated content delivery",
