@@ -39,7 +39,7 @@ export default {
         slidesPerView: 5,
         breakpoints: {
           320: {
-            slidesPerView: 2,
+            slidesPerView: 1,
           },
           768: {
             slidesPerView: 3,

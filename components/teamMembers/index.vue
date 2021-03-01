@@ -10,7 +10,7 @@
         >
           <MemberItem class="item" :idx="item" />
         </swiper-slide>
-        <!--        <div slot="pagination" class="swiper-pagination"></div>-->
+        <div slot="pagination" class="swiper-pagination swiper-pagination-member"></div>
       </swiper>
       <div slot="button-prev" class="swiper-button-prev member-prev"></div>
       <div slot="button-next" class="swiper-button-next member-next"></div>
@@ -48,6 +48,9 @@ export default {
         navigation: {
           nextEl: ".member-next",
           prevEl: ".member-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination-member",
         },
       },
     }
@@ -101,6 +104,15 @@ export default {
   }
   .swiper-button-next:after {
     font-size: 60px;
+  }
+  .swiper-slide {
+    height: auto;
+  }
+  .swiper-container {
+    --swiper-theme-color: #999abc;
+  }
+  .swiper-pagination-bullets {
+    bottom: 0;
   }
 }
 </style>

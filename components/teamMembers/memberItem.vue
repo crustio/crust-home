@@ -3,7 +3,6 @@
     <div class="top">
       <b-img
         :src="`https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/members/member${idx}.png`"
-        fluid
         width="60px"
         height="60px"
         :rounded="true"
@@ -48,7 +47,6 @@ export default {
   margin-bottom: 25px;
   max-width: 100%;
   overflow: hidden;
-  height: 250px;
   .title {
     color: $mainColor;
   }

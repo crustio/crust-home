@@ -2,10 +2,7 @@
   <div class="container-fluid main-index">
     <div class="container">
       <div class="main-logo">
-        <div class="logo"></div>
-        <div class="desc" :class="{ 'desc-zh': $store.state.locale === 'zh' }">
-          {{$t('indexBanner.desc')}}
-        </div>
+        <div class="logo" :class="{ 'desc-zh': $store.state.locale === 'zh' }"></div>
         <p class="test-net-title">{{ $t("button.networkTitle") }}</p>
         <div class="container text-center">
           <div>
@@ -60,9 +57,9 @@ export default {
       .logo {
         margin: 0 auto;
         width: 681px;
-        height: 136px;
+        height: 180px;
         // line-height: 120px;
-        background-image: url('~/assets/main_logo.png');
+        background-image: url('~/assets/main_logo_en.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -72,7 +69,10 @@ export default {
         color: #ffffff;
         text-align: center;
         span{
-          color: #eb761c
+          color: #eb761c;
+        }
+        &.desc-zh {
+          background-image: url('~/assets/main_logo_zh.png');
         }
       }
       .desc {
@@ -144,7 +144,7 @@ export default {
         .test-net-title {
           color: #ffffff;
           text-align: center;
-          font-size: 1.2rem;
+          font-size: 0.9rem;
           &::before{
             content: "";
             display: none;
