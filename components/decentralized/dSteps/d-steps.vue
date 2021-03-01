@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-row class="step-1">
+    <b-row class="step-1" align-v="center">
       <b-col sm="2" md="4" lg="2" xl="1">
         <div class="order-1">
           01
@@ -13,7 +13,7 @@
       </b-col>
     </b-row>
 
-    <b-row  class="step-2">
+    <b-row  class="step-2" align-v="center">
       <b-col sm="2" md="4" lg="2" xl="1">
         <div class="order-1 order-2">02</div>
       </b-col>
@@ -23,7 +23,7 @@
       </b-col>
     </b-row>
 
-    <b-row  class="step-3">
+    <b-row  class="step-3" align-v="center">
       <b-col sm="2" md="4" lg="2" xl="1">
         <div class="order-1">03</div>
       </b-col>
