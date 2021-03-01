@@ -56,7 +56,7 @@ export default {
     top: 50%;
     width: 50%;
     height: auto;
-    transform: translate(-10%, -50%);
+    transform: translate(-30%, -50%);
     @media (max-width: 500px) {
       transform: translate(-50%, -50%);
     }

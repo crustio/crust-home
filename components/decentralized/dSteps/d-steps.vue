@@ -105,7 +105,7 @@ export default {
       margin-top: 20px;
     }
     .step {
-      font-size: 20px;
+      font-size: 1rem;
       font-family: nasalization;
       font-weight: 400;
       color: #FFFFFF;
@@ -197,7 +197,7 @@ export default {
       line-height: 50px;
     }
     .step-tip-2-2 {
-      line-height: 1px;
+      // line-height: 1px;
     }
     .step-3 {
       margin-top: 15px;
@@ -206,7 +206,7 @@ export default {
       line-height: 50px;
     }
     .step-tip-3-2 {
-      line-height: 1px;
+      // line-height: 1px;
     }
   }
 </style>
