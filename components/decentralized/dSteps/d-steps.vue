@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-row >
+    <b-row class="step-1">
       <b-col sm="2" md="4" lg="2" xl="1">
         <div class="order-1">
           01
@@ -15,7 +15,7 @@
 
     <b-row  class="step-2">
       <b-col sm="2" md="4" lg="2" xl="1">
-        <div class="order-1">02</div>
+        <div class="order-1 order-2">02</div>
       </b-col>
       <b-col sm="10" md="8" lg="10" xl="11" class="step-margin-left">
         <div class="step step-tip-2-1"> {{$t(`decentralized.step-2-1`)}} </div>
@@ -148,12 +148,15 @@ export default {
         margin-top: 30px;
       }
     }
+    .step-1 {
+      margin-top: 15px;
+    }
     .step-btn {
       margin-top: 30px;
       text-align: left;
     }
     .step-margin-left {
-      padding-left: 45px;
+      padding-left: 65px;
     }
     .btn-custom {
       width: 235px;
@@ -166,6 +169,9 @@ export default {
       line-height: 70px;
       color: rgba(255, 255, 255, 0.15);
       text-align: left;
+    }
+    .order-2 {
+      margin-top: 12px;
     }
     .step {
       font-size: 20px;
@@ -185,7 +191,7 @@ export default {
       margin-top: 7px;
     }
     .step-2 {
-      margin-top: 40px;
+      margin-top: 15px;
     }
     .step-tip-2-1 {
       line-height: 50px;
@@ -194,7 +200,7 @@ export default {
       line-height: 1px;
     }
     .step-3 {
-      margin-top: 40px;
+      margin-top: 15px;
     }
     .step-tip-3-1 {
       line-height: 50px;
