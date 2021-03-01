@@ -122,12 +122,12 @@ export default {
       margin-top: 7px;
     }
     .step-tip-2-1 {
-      line-height: 50px;
+      margin-bottom: 10px;
     }
     .step-tip-2-2 {
     }
     .step-tip-3-1 {
-      line-height: 50px;
+      margin-bottom: 10px;
     }
     .step-tip-3-2 {
 
