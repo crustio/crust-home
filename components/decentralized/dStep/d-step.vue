@@ -1,9 +1,9 @@
 <template>
-  <b-row>
-    <b-col cols="2" class="order-container">
+  <b-row align-h="center">
+    <b-col sm="2" md="4" lg="2" xl="3">
       <div class="order-1">{{order}}</div>
     </b-col>
-    <b-col >
+    <b-col sm="10" md="7" lg="7" xl="9">
       <div class="step"> {{step1}} </div>
       <div class="step-tip"> {{step2}} </div>
       <div class="step-tip"> {{step3}} </div>
@@ -43,6 +43,7 @@ export default {
     font-family: PingFangSC-Medium, PingFang SC;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.15);
+    text-align: center;
   }
   .step {
     height: 68px;
@@ -54,11 +55,11 @@ export default {
     line-height: 28px;
   }
   .step-tip {
-    height: 40px;
     font-size: 14px;
     font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     color: #FFFFFF;
-    line-height: 20px;
+    line-height: 23px;
+    word-break: break-all;
   }
 </style>

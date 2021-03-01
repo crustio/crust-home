@@ -2,7 +2,7 @@
   <div class="container">
     <img :src="imgSrc" class="image">
     <div class="title">{{ title }}</div>
-    <div class="subTitle">{{ subTitle }}</div>
+    <div class="subTitle" v-html="subTitle"></div>
   </div>
 </template>
 <script>
@@ -29,6 +29,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
   .image {
     margin-bottom: 30px;
   }
