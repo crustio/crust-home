@@ -76,6 +76,7 @@ export default {
   plugins: [
     "~/plugins/i18n.js",
     "~/plugins/clipboard2.js",
+    "~/plugins/vue-awesome-swiper.js",
     { src: "~/plugins/vue-pdf.js", ssr: false },
   ],
   router: {

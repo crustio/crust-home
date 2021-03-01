@@ -63,7 +63,14 @@ export default {
   },
   data() {
     return {
-      items: ["coreTeam", "prototyping", "alpha", "ark", "mainNet"],
+      items: [
+        "coreTeam",
+        "prototyping",
+        "alpha",
+        "ark",
+        "previewNetwork",
+        "mainNet",
+      ],
       process: 0,
       timer: null,
     }
@@ -193,12 +200,17 @@ export default {
           &:nth-child(4) {
             .img-wrapper {
               background-color: red;
-              @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-bottom");
+              @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-bottom-active");
             }
           }
           &:nth-child(5) {
             .img-wrapper {
-              @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline");
+              @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-active");
+            }
+          }
+          &:nth-child(6) {
+            .img-wrapper {
+              @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-bottom");
             }
           }
         }
@@ -270,8 +282,7 @@ export default {
             }
           }
         }
-        &:nth-child(5),
-        &:nth-child(6) {
+        &:nth-child(7) {
           .col-wrapper {
             .bg-wrapper {
               @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-v");

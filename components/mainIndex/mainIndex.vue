@@ -2,10 +2,7 @@
   <div class="container-fluid main-index">
     <div class="container">
       <div class="main-logo">
-        <div class="logo"></div>
-        <div class="desc" :class="{ 'desc-zh': $store.state.locale === 'zh' }">
-          <p v-html="$t('indexBanner.desc')"></p>
-        </div>
+        <div class="logo" :class="{ 'desc-zh': $store.state.locale === 'zh' }"></div>
         <p class="test-net-title">{{ $t("button.networkTitle") }}</p>
         <div class="container text-center">
           <div>
@@ -59,60 +56,46 @@ export default {
       animation-duration: 0.5s; /* don't forget to set a duration! */
       .logo {
         margin: 0 auto;
-        width: 507px;
-        height: 120px;
-        @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/mainLogo");
+        width: 512px;
+        height: 132px;
+        // line-height: 120px;
+        background-image: url('~/assets/main_logo_en.png');
+        background-repeat: no-repeat;
+        background-position: center;
         background-size: cover;
+        // @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/mainLogo");
+        font-family: nasalization;
+        font-size: 120px;
+        color: #ffffff;
+        text-align: center;
+        span{
+          color: #eb761c;
+        }
+        &.desc-zh {
+          background-image: url('~/assets/main_logo_zh.png');
+        }
       }
       .desc {
         margin: 0 auto;
-        width: 507px;
-        height: 50px;
-        @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/desc");
-        background-size: contain;
+        width: 681px;
+        color: #ffffff;
+        font-size: 28px;
+        letter-spacing: 7px;
+        text-indent: 7px;
+        font-family: nasalization;
+        line-height: 60px;
+        text-align: center;
         &.desc-zh {
-          background: none;
-          & > p {
-            width: 100%;
-            display: block;
-            color: #eee;
-            font-size: 30px;
-            text-align: center;
-            letter-spacing: 50px;
-            text-indent: 25px;
-          }
+          letter-spacing: 50px !important;
+          text-indent: 50px;
         }
-        & > p {
-          display: none;
-        }
+
       }
       .test-net-title {
         color: #ffffff;
         text-align: center;
-        font-size: 30px;
-        margin-top: 30px;
-        &::before {
-          content: "";
-          height: 1px;
-          width: 30px;
-          background: #eb761c;
-          clear: both;
-          display: inline-block;
-          position: relative;
-          top: -10px;
-          right: 30px;
-        }
-        &::after {
-          content: "";
-          height: 1px;
-          width: 30px;
-          background: #eb761c;
-          clear: both;
-          display: inline-block;
-          position: relative;
-          top: -10px;
-          left: 30px;
-        }
+        font-size: 24px;
+        margin-top: 90px;
       }
     }
     .margin-left-25 {
@@ -161,7 +144,7 @@ export default {
         .test-net-title {
           color: #ffffff;
           text-align: center;
-          font-size: 1.2rem;
+          font-size: 0.95rem;
           &::before{
             content: "";
             display: none;

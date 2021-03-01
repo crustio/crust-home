@@ -1,16 +1,9 @@
 <template>
   <div class="container-fluid partners-wrapper" ref="scroller">
     <mainTitle :text="$t(`Partnerships.title`)"></mainTitle>
-    <div class="container partners-container">
-      <b-row
-        align-h="start"
-        cols="2"
-        cols-xl="5"
-        cols-lg="5"
-        cols-md="4"
-        cols-sm="2"
-      >
-        <b-col
+    <div class="container swiper-father">
+      <swiper class="swiper" :options="swiperOptions">
+        <swiper-slide
           v-for="i in 24"
           :key="`part${i}`"
           class="image-wrapper"
@@ -24,8 +17,11 @@
               alt="Responsive image"
             ></b-img>
           </div>
-        </b-col>
-      </b-row>
+        </swiper-slide>
+        <!--        <div slot="pagination" class="swiper-pagination"></div>-->
+      </swiper>
+      <div slot="button-prev" class="swiper-button-prev partner-prev"></div>
+      <div slot="button-next" class="swiper-button-next partner-next"></div>
     </div>
   </div>
 </template>
@@ -38,12 +34,35 @@ export default {
     return {
       process: 0,
       timer: null,
+      swiperOptions: {
+        loop: true,
+        slidesPerView: 5,
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 5,
+          },
+        },
+        spaceBetween: 24,
+        navigation: {
+          nextEl: ".partner-next",
+          prevEl: ".partner-prev",
+        },
+      },
     }
   },
   components: {
     mainTitle,
   },
   computed: {
+    swiper() {
+      return this.$refs.mySwiper.$swiper
+    },
     locale() {
       return this.$store.state.locale
     },
@@ -115,6 +134,33 @@ $bgColor: #f9fafb;
       animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
       animation-duration: 1s; /* don't forget to set a duration! */
     }
+  }
+}
+.swiper-father {
+  position: relative;
+  .swiper-button-prev {
+    outline: none;
+    left: -80px;
+    top: 60px;
+    color: rgba(226, 228, 234, 1);
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+  .swiper-button-next {
+    right: -80px;
+    top: 60px;
+    outline: none;
+    color: rgba(226, 228, 234, 1);
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+  .swiper-button-prev:after {
+    font-size: 60px;
+  }
+  .swiper-button-next:after {
+    font-size: 60px;
   }
 }
 </style>
