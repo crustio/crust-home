@@ -2,18 +2,18 @@
   <div class="decentralized" id="decentralized" ref="scroller">
     <main-title class="title" :text="$t(`decentralized.title`)"></main-title>
     <b-container fluid>
-      <b-row align-v="center">
+      <b-row align-v="center" class="video-step">
         <b-col sm="12" md="12" lg="12" xl="6">
           <dVideo></dVideo>
         </b-col>
-        <b-col sm="12" md="12" lg="12" xl="6">
+        <b-col sm="12" md="12" lg="12" xl="6" class="steps-container">
           <dSteps></dSteps>
         </b-col>
       </b-row>
-      <b-row>
-        <main-title class="title" :text="$t(`decentralized.title2`)"></main-title>
+      <b-row class="title-row">
+        <main-title :text="$t(`decentralized.title2`)"></main-title>
       </b-row>
-      <b-row>
+      <b-row class="text-row">
         <b-col sm="12" md="12" lg="12" xl="6">
           <dCard
           :imgSrc="require('~/assets/images/serverless.png')"
@@ -24,7 +24,7 @@
           <dCard
           :imgSrc="require('~/assets/images/data.png')"
           :title="$t(`decentralized.generalTitle`)"
-          :subTitle="$t(`decentralized.serverlessSubTitle`)"></dCard>
+          :subTitle="$t(`decentralized.generalSubTitle`)"></dCard>
         </b-col>
       </b-row>
       <b-row>
@@ -119,11 +119,46 @@ export default {
 <style lang="scss" scoped>
 .decentralized {
   width: 100%;
+  padding-bottom: 60px !important;
   background: linear-gradient(
     45deg,
     rgba(92, 37, 51, 1) 0%,
     rgba(0, 26, 103, 1) 100%
   );
+
+  @media screen and (max-width: 500px) {
+    .video-step {
+      margin-top: 30px;
+    }
+    .title-row {
+      margin-top: 40px;
+    }
+  }
+
+  @media screen and (min-width: 501px) {
+    .video-step {
+      margin-top: 30px;
+    }
+    .title-row {
+      margin-top: 49px;
+    }
+    .text-row {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .steps-container {
+      height: 100%;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .video-step {
+      height: 375px;
+      margin-top: 30px;
+    }
+  }
+  .steps-container {
+    height: 100%;
+  }
   .card-container {
     margin-top: 60px;
     &.phone {

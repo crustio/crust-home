@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="d-card-container">
     <img :src="imgSrc" class="image">
     <div class="title">{{ title }}</div>
     <div class="subTitle" v-html="subTitle"></div>
@@ -24,7 +24,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.container {
+.d-card-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,7 +35,6 @@ export default {
   }
   .title {
     font-size: 20px;
-    font-family: PingFangSC-Medium, PingFang SC;
     font-weight: 500;
     color: #FFFFFF;
     text-align: center;
@@ -43,6 +42,10 @@ export default {
   }
   .subTitle {
     font-size: 14px;
+    width: 762px;
+    @media (max-width: 500px) {
+      width: 330px;
+    }
     font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     color: #FFFFFF;

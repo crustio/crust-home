@@ -45,6 +45,7 @@ export default {
     max-width: 600px;
     height: auto;
     margin: auto;
+    margin-right: 0;
   }
   .video-container {
     position: relative;
@@ -55,6 +56,6 @@ export default {
     top: 50%;
     width: 50%;
     height: auto;
-    transform: translate(-50%, -50%);
+    transform: translate(-10%, -50%);
   }
 </style>

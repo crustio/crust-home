@@ -40,7 +40,6 @@ export default {
   .order-1 {
     padding-left: 10px;
     font-size: 80px;
-    font-family: PingFangSC-Medium, PingFang SC;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.15);
     text-align: center;
@@ -56,7 +55,6 @@ export default {
   }
   .step-tip {
     font-size: 14px;
-    font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     color: #FFFFFF;
     line-height: 23px;
