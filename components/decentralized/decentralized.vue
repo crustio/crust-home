@@ -1,7 +1,7 @@
 <template>
   <div class="decentralized" id="decentralized" ref="scroller">
     <main-title class="title-d" :text="$t(`decentralized.title`)"></main-title>
-    <b-container>
+    <b-container class="clear-padding">
       <div class="top-container">
         <div class="video-c">
           <dVideo></dVideo>
@@ -123,7 +123,7 @@ export default {
   .top-container {
     display: flex;
     flex-direction: column;
-
+    margin-top: 30px;
     justify-content: center;
     .video-c {
       margin-bottom: 10px;
@@ -147,6 +147,7 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 43px;
     .video-c {
       margin-bottom: 10px;
       align-self: center;
@@ -164,8 +165,9 @@ export default {
   .top-container {
     display: flex;
     flex-direction: row;
+    margin-top: 30px;
     .video-c {
-      margin-right: 10px;
+      margin-right: 20px;
       align-self: center;
     }
     .steps-c {
@@ -186,5 +188,9 @@ export default {
     rgba(92, 37, 51, 1) 0%,
     rgba(0, 26, 103, 1) 100%
   );
+  .clear-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }
 </style>
