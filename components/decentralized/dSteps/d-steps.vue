@@ -85,16 +85,16 @@ export default {
         margin-top: 15px;
       }
       .step-left {
-        min-width: 96px;
+        min-width: 106px;
       }
       .step-texts {
         flex-grow: 1;
       }
       &.step-2 {
-        margin-top: 15px;
+        margin-top: 20px;
       }
       &.step-3 {
-        margin-top: 15px;
+        margin-top: 20px;
       }
     }
     .btn-container {
@@ -128,13 +128,14 @@ export default {
       color: rgba(255, 255, 255, 0.15);
       text-align: center;
       margin-top: 20px;
+      font-family: Helvetica;
     }
     .step {
       font-size: 1rem;
       font-family: nasalization;
       font-weight: 400;
       color: #FFFFFF;
-      line-height: 28px;
+      line-height: 1;
     }
     .step-tip {
       font-size: 14px;
@@ -164,16 +165,16 @@ export default {
       display: flex;
       align-items: center;
       .step-left {
-        min-width: 96px;
+        min-width: 106px;
       }
       .step-texts {
         flex-grow: 1;
       }
       &.step-2 {
-        margin-top: 15px;
+        margin-top: 20px;
       }
       &.step-3 {
-        margin-top: 15px;
+        margin-top: 20px;
       }
     }
     .btn-container {
@@ -210,6 +211,7 @@ export default {
       line-height: 70px;
       color: rgba(255, 255, 255, 0.15);
       text-align: left;
+      font-family: Helvetica;
     }
     .order-2 {
       margin-top: 12px;
@@ -219,7 +221,7 @@ export default {
       font-family: nasalization;
       font-weight: 400;
       color: #FFFFFF;
-      line-height: 28px;
+      line-height: 1;
     }
     .step-tip {
       font-size: 14px;
@@ -229,25 +231,25 @@ export default {
       word-break: break-all;
     }
     .step-tip-1-1 {
-      margin-top: 7px;
+      margin-top: 12px;
     }
     .step-2 {
       margin-top: 15px;
     }
     .step-tip-2-1 {
-      line-height: 50px;
+      line-height: 1;
     }
     .step-tip-2-2 {
-      // line-height: 1px;
+      margin-top: 12px;
     }
     .step-3 {
       margin-top: 15px;
     }
     .step-tip-3-1 {
-      line-height: 50px;
+      line-height: 1;
     }
     .step-tip-3-2 {
-      // line-height: 1px;
+      margin-top: 12px;
     }
   }
 </style>
