@@ -93,7 +93,7 @@
     "step-1-2": ">> ipfs add crust.png",
     "step-1-3": "added QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
     "step-2-1": "在Crust网络中为文件生成存储订单",
-    "step-2-2": ">> crust-cli order QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
+    "step-2-2": ">> crust-cli publish QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
     "step-3-1": "随时随地都可通过IPFS获取到你的文件",
     "step-3-2": ">> ipfs get QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
     "title2": "Web3.0 的分布式云",

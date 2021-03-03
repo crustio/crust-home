@@ -241,6 +241,8 @@ export default {
     }
     .step-tip-2-2 {
       margin-top: 12px;
+      overflow: visible;
+      white-space: nowrap;
     }
     .step-3 {
       margin-top: 15px;
