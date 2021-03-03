@@ -1,7 +1,7 @@
 <template>
   <div class="decentralized" id="decentralized" ref="scroller">
     <main-title class="title-d" :text="$t(`decentralized.title`)"></main-title>
-    <b-container class="clear-padding">
+    <b-container class="clear-padding special-width">
       <div class="top-container">
         <div class="video-c">
           <dVideo></dVideo>
@@ -191,6 +191,11 @@ export default {
   .clear-padding {
     padding-right: 0px;
     padding-left: 0px;
+  }
+  .special-width {
+    @media (min-width: 1200px) {
+      max-width: 1200px;
+    }
   }
 }
 </style>
