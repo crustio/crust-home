@@ -53,7 +53,7 @@
       </div>
       <div class="bg-wrapper container">
         Copyright ©
-        <a href="javascript:void(0)" @click="jump('/')">Crust 2020</a>
+        <a href="javascript:void(0)" @click="jump('/')">Crust 2021</a>
       </div>
     </div>
   </div>
