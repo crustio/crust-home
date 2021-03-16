@@ -31,8 +31,10 @@ const outerDit = {
   learnMore: "https://github.com/crustio/crust",
   "join preview network_en": "https://wiki.crust.network/docs/en/previewNetworkMaxwell",
   "join preview network_zh": "https://wiki.crust.network/docs/zh-CN/previewNetworkMaxwell",
-  "wiki_en": "https://wiki.crust.network/en",
-  "wiki_zh": "https://wiki.crust.network/zh-CN",
+  wiki_en: "https://wiki.crust.network/en",
+  wiki_zh: "https://wiki.crust.network/zh-CN",
+  wallet_wiki_en: "https://wiki.crust.network/docs/en/crustWallet",
+  wallet_wiki_zh: "https://wiki.crust.network/docs/zh-CN/crustWallet",
 }
 const outerList = Object.keys(outerDit)
 module.exports = {

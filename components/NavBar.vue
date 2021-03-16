@@ -67,7 +67,8 @@ export default {
             "Blockchain Explorer",
             "Storage Explorer",
             "Crust Apps",
-            "Crust Cloud"
+            "Crust Cloud",
+            "Crust Wallet",
           ],
         },
         {
@@ -112,6 +113,9 @@ export default {
           this.$router.push("/#product")
         }
         return this.$scrollTo(document.querySelector("#product"))
+      }
+      if (name === "crust wallet") {
+        return window.open(outerDit[this.$store.state.locale === "en" ? "wallet_wiki_en" : "wallet_wiki_zh"], "_blank")
       }
       this.activeNav = name
       if (outerList.indexOf(name) > -1) {
