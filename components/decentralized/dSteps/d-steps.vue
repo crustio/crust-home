@@ -1,37 +1,41 @@
 <template>
   <div>
-    <b-row class="step-1" align-v="center">
-      <b-col sm="2" md="4" lg="2" xl="2">
+    <div class="n-step">
+      <div class="step-left">
         <span class="order-1">
           01
         </span>
-      </b-col>
-      <b-col sm="10" md="8" lg="10" xl="10" class="step-margin-left">
+      </div>
+      <div class="step-texts">
         <div class="step"> {{$t(`decentralized.step-1-1`)}} </div>
         <div class="step-tip step-tip-1-1"> {{$t(`decentralized.step-1-2`)}} </div>
         <div class="step-tip"> {{$t(`decentralized.step-1-3`)}} </div>
-      </b-col>
-    </b-row>
+      </div>
+    </div>
 
-    <b-row  class="step-2" align-v="center">
-      <b-col sm="2" md="4" lg="2" xl="2">
-        <span class="order-1 order-2">02</span>
-      </b-col>
-      <b-col sm="10" md="8" lg="10" xl="10" class="step-margin-left">
+    <div class="n-step step-2">
+      <div class="step-left">
+        <span class="order-1">
+          02
+        </span>
+      </div>
+      <div class="step-texts">
         <div class="step step-tip-2-1"> {{$t(`decentralized.step-2-1`)}} </div>
         <div class="step-tip step-tip-2-2"> {{$t(`decentralized.step-2-2`)}} </div>
-      </b-col>
-    </b-row>
+      </div>
+    </div>
 
-    <b-row  class="step-3" align-v="center">
-      <b-col sm="2" md="4" lg="2" xl="2">
-        <span class="order-1">03</span>
-      </b-col>
-      <b-col sm="10" md="8" lg="10" xl="10" class="step-margin-left">
-        <div class="step step-tip-3-1"> {{$t(`decentralized.step-3-1`)}} </div>
+    <div class="n-step step-3">
+      <div class="step-left">
+        <span class="order-1">
+          03
+        </span>
+      </div>
+      <div class="step-texts">
+          <div class="step step-tip-3-1"> {{$t(`decentralized.step-3-1`)}} </div>
         <div class="step-tip step-tip-3-2"> {{$t(`decentralized.step-3-2`)}} </div>
-      </b-col>
-    </b-row>
+      </div>
+    </div>
 
     <b-row>
       <div class="btn-container">
@@ -72,6 +76,27 @@ export default {
 </script>
 <style lang="scss" scoped>
   @media screen and (max-width: 500px){
+    .n-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
+      .step {
+        margin-top: 15px;
+      }
+      .step-left {
+        min-width: 106px;
+      }
+      .step-texts {
+        flex-grow: 1;
+      }
+      &.step-2 {
+        margin-top: 20px;
+      }
+      &.step-3 {
+        margin-top: 20px;
+      }
+    }
     .btn-container {
       display: flex;
       align-items: center;
@@ -103,13 +128,14 @@ export default {
       color: rgba(255, 255, 255, 0.15);
       text-align: center;
       margin-top: 20px;
+      font-family: Helvetica;
     }
     .step {
       font-size: 1rem;
       font-family: nasalization;
       font-weight: 400;
       color: #FFFFFF;
-      line-height: 28px;
+      line-height: 1;
     }
     .step-tip {
       font-size: 14px;
@@ -135,6 +161,22 @@ export default {
   }
 
   @media screen and (min-width: 501px) {
+    .n-step {
+      display: flex;
+      align-items: center;
+      .step-left {
+        min-width: 106px;
+      }
+      .step-texts {
+        flex-grow: 1;
+      }
+      &.step-2 {
+        margin-top: 20px;
+      }
+      &.step-3 {
+        margin-top: 20px;
+      }
+    }
     .btn-container {
       display: flex;
       justify-content: left;
@@ -169,6 +211,7 @@ export default {
       line-height: 70px;
       color: rgba(255, 255, 255, 0.15);
       text-align: left;
+      font-family: Helvetica;
     }
     .order-2 {
       margin-top: 12px;
@@ -178,7 +221,7 @@ export default {
       font-family: nasalization;
       font-weight: 400;
       color: #FFFFFF;
-      line-height: 28px;
+      line-height: 1;
     }
     .step-tip {
       font-size: 14px;
@@ -188,25 +231,27 @@ export default {
       word-break: break-all;
     }
     .step-tip-1-1 {
-      margin-top: 7px;
+      margin-top: 12px;
     }
     .step-2 {
       margin-top: 15px;
     }
     .step-tip-2-1 {
-      line-height: 50px;
+      line-height: 1;
     }
     .step-tip-2-2 {
-      // line-height: 1px;
+      margin-top: 12px;
+      overflow: visible;
+      white-space: nowrap;
     }
     .step-3 {
       margin-top: 15px;
     }
     .step-tip-3-1 {
-      line-height: 50px;
+      line-height: 1;
     }
     .step-tip-3-2 {
-      // line-height: 1px;
+      margin-top: 12px;
     }
   }
 </style>

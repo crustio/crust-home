@@ -42,7 +42,7 @@ export default {
 <style lang="scss" scoped>
   .d-video {
     width: 100%;
-    max-width: 600px;
+    max-width: 520px;
     height: auto;
     margin: auto;
     margin-right: 0;
