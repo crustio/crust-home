@@ -86,11 +86,12 @@ export default {
   }
 }
 .swiper-father {
+  padding-top: 12px;
   position: relative;
   .swiper-button-prev {
     outline: none;
     left: -80px;
-    top: 100px;
+    top: 115px;
     color: rgba(255, 255, 255, 0.2);
     @include media-breakpoint-down(xs) {
       display: none;
@@ -98,7 +99,7 @@ export default {
   }
   .swiper-button-next {
     right: -80px;
-    top: 100px;
+    top: 115px;
     outline: none;
     color: rgba(255, 255, 255, 0.2);
     @include media-breakpoint-down(xs) {
@@ -116,6 +117,8 @@ export default {
   }
   .swiper-container {
     --swiper-theme-color: #999abc;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
   }
   .swiper-pagination-bullets {
     bottom: 0;
