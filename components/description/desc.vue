@@ -114,6 +114,7 @@ export default {
     background: none;
   }
   .container {
+    margin-top: 12px;
     .card-container {
       margin: 30px 0;
       padding-right: 0;

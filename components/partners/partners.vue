@@ -115,7 +115,7 @@ $bgColor: #f9fafb;
   background-color: $bgColor;
   .image-wrapper {
     visibility: hidden;
-    padding: 20px 30px;
+    padding: 20px 30px 30px 30px;
 
     .img-box {
       height: 125px;
