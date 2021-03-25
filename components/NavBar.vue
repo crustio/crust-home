@@ -149,12 +149,21 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
+  .container {
+    @media (min-width: 1270px) {
+      max-width: 1270px;
+    }
+  }
   min-height: 60px;
   z-index: 10;
   .navbar-nav {
-    font-family: nasalization;
+    opacity: 0.6;
+    font-family: InterV;
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 0;
     .nav-item {
-      padding: 0 30px;
+      padding-left: 64px;
       &.b-nav-dropdown {
         &.active {
           .dropdown-toggle {
@@ -163,16 +172,10 @@ export default {
             }
           }
         }
-        .nav-link {
-          font-weight: 400;
-          font-size: 14px;
-        }
       }
       .nav-link {
-        font-weight: 400;
-        font-size: 14px;
         &.active {
-          color: $mainColor;
+          font-family: InterV_Extra-Bold;
         }
       }
     }

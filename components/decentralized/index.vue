@@ -1,4 +1,4 @@
 <script>
-import decentralized from "./decentralized.vue"
-export default decentralized
+import decentralized2 from "./decentralized2.vue"
+export default decentralized2
 </script>
