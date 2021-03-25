@@ -1,17 +1,38 @@
 <template>
   <div class="container-fluid main-index">
-    <div class="container">
+    <div class="container main">
       <div class="main-logo">
-        <div class="logo" :class="{ 'desc-zh': $store.state.locale === 'zh' }"></div>
+        <p class="logo">{{ $t("indexBanner.sub") }}</p>
         <p class="test-net-title">{{ $t("button.networkTitle") }}</p>
-        <div class="container text-center">
-          <div>
-            <button @click="handleClick('join preview network')" class="btn-custom button-width">
-              {{ $t("button.joinPreviewNetwork") }}
-            </button>
-            <button @click="handleClick('csmToken')" class="btn-custom margin-left-25 button-width">
-              {{ $t("button.csmToken") }}
-            </button>
+        <div class="buttons">
+          <button @click="handleClick('join preview network')" class="btn-custom button-width">
+            {{ $t("button.joinPreviewNetwork") }}
+          </button>
+          <button @click="handleClick('csmToken')" class="btn-custom margin-left-25 button-width">
+            {{ $t("button.csmToken") }}
+          </button>
+        </div>
+      </div>
+      <div id="global"></div>
+    </div>
+    <div class="back">
+      <div class="container description">
+        <div class="description-left">
+          <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
+          <p class="content color-main">
+            {{ $t("crust.title") + $t(`crust.content.text1`) }}
+          </p>
+          <button @click="handleClick" class="btn-custom">
+            {{ $t("button.checkOnGithub") }}
+          </button>
+        </div>
+        <div class="description-right">
+          <div class="description-right-left">
+            <DescCard :idx="1" />
+          </div>
+          <div class="description-right-right">
+            <DescCard :idx="2" />
+            <DescCard :idx="0" />
           </div>
         </div>
       </div>
@@ -21,15 +42,22 @@
 
 <script>
 import jumpTo from "../../utils"
+import DescCard from "./descCard"
 export default {
+  components: {
+    DescCard,
+  },
   methods: {
     handleClick(name) {
       if (name === 'join preview network' && this.$store.state.locale === "en") {
         name += "_en"
       }
       jumpTo(name)
-    }
-  }
+    },
+  },
+  head: {
+    script: [{ src: "/script/three.js" }, { src: "/script/global.js" }, { src: "/script/TrackballControls.js"} ],
+  },
 }
 </script>
 
@@ -37,43 +65,28 @@ export default {
 .main-index {
   margin-top: -60px;
   width: 100%;
-  height: 100vh;
-  background-image: url("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/mainBg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  .container {
+  height: 1520px;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  .main {
     width: 100%;
-    height: 500px;
+    height: 100vh;
     position: relative;
+    display: flex;
+    align-items: center;
     .main-logo {
-      position: absolute;
-      top: 100px;
-      width: 100%;
+      width: 50%;
       animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
       animation-duration: 0.5s; /* don't forget to set a duration! */
       .logo {
-        margin: 0 auto;
-        width: 512px;
-        height: 132px;
-        // line-height: 120px;
-        background-image: url('~/assets/main_logo_en.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        // @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/mainLogo");
-        font-family: nasalization;
-        font-size: 120px;
+        font-family: InterV_Semi-Bold;
+        font-size: 64px;
         color: #ffffff;
-        text-align: center;
-        span{
-          color: #eb761c;
-        }
-        &.desc-zh {
-          background-image: url('~/assets/main_logo_zh.png');
-        }
+        letter-spacing: 0;
+        text-align: left;
+        line-height: 70px;
+        margin-bottom: 2rem;
       }
       .desc {
         margin: 0 auto;
@@ -89,14 +102,23 @@ export default {
           letter-spacing: 50px !important;
           text-indent: 50px;
         }
-
       }
       .test-net-title {
-        color: #ffffff;
-        text-align: center;
-        font-size: 24px;
-        margin-top: 90px;
+        opacity: 0.53;
+        font-family: Inter-Regular;
+        font-size: 20px;
+        color: #ffcba9;
+        letter-spacing: 0;
+        text-align: left;
+        margin-bottom: 60px;
       }
+      .buttons {
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+    #global {
+      margin-left: 80px;
     }
     .margin-left-25 {
       margin-left: 25px;
@@ -156,6 +178,53 @@ export default {
         }
       }
     }
+  }
+  .back {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc((1520px - 100vh) * 1.6);
+    background-color: $secondary;
+    clip-path: polygon(0 37.5%, 100% 0%, 100% 100%, 0 100%);
+    .description {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      .description-left {
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .sub-title {
+          margin-bottom: 56px;
+        }
+        .content {
+          margin-bottom: 40px;
+          max-width: 474px;
+        }
+        .btn-custom {
+          width: 200px;
+          margin-bottom: 137px;
+        }
+      }
+      .description-right {
+        display: flex;
+        align-items: center;
+
+        .description-right-right {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  @media (min-width: 1270px) {
+    max-width: 1270px;
   }
 }
 </style>

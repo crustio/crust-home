@@ -1,4 +1,4 @@
 <script>
-import partners from "./partners"
+import partners from "./partners2"
 export default partners
 </script>

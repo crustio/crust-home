@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Orbitron-Regular_Black";
+  src:
+    url("Orbitron-Black.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Orbitron-Regular";
+  src:
+    url("Orbitron-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
