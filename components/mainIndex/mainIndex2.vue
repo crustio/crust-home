@@ -29,7 +29,7 @@
             <p class="content color-main" :class="getZhcnCss()">
               {{ $t("crust.title") + $t(`crust.content.text1`) }}
             </p>
-            <button class="btn-custom" @click="handleClick">
+            <button class="btn-custom" @click="handleClick('Check Our Github')">
               {{ $t("button.checkOnGithub") }}
             </button>
           </div>
@@ -287,6 +287,7 @@ export default {
           letter-spacing: 0;
           text-align: left;
           margin-bottom: 20px;
+          max-width: 200px;
         }
         .buttons {
           display: flex;

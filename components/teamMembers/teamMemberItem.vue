@@ -50,7 +50,7 @@ export default {
   align-items: stretch;
   color: #1f1f1f;
   &.zh-cn {
-    height: 457px;
+    height: 454px;
   }
 
   .member-item-img {
@@ -81,6 +81,7 @@ export default {
     font-size: 24px;
     letter-spacing: 0;
     line-height: 29px;
+    text-transform: uppercase;
   }
 
   .member-item-title {
@@ -88,6 +89,7 @@ export default {
     font-size: 16px;
     letter-spacing: 0;
     line-height: 20px;
+    text-transform: uppercase;
   }
 
   .member-item-line {

@@ -3,7 +3,7 @@
     <div class="container-fluid dec-connect">
       <div class="container">
         <div class="dec-top">
-          <div class="dec-top-left sub-title color-white">
+          <div class="dec-top-left sub-title color-white" :class="getZhcnCss()">
             {{ $t(`decentralized.title`) }}
           </div>
           <div class="dec-top-right">
@@ -149,15 +149,22 @@ export default {
   },
   destroyed() {},
   methods: {
+    getZhcnCss() {
+      if (this.$store.state.locale === "en") {
+        return ''
+      } else {
+        return 'zh-cn'
+      }
+    },
     handleExperienceClick() {
       window.open(
-        outerDit[this.$store.state.locale === "en" ? "clouden" : "cloud"],
+        outerDit["crust apps"],
         "_blank"
       )
     },
     handleBuildClick() {
       window.open(
-        outerDit[this.$store.state.locale === "en" ? "clouden" : "cloud"],
+        outerDit[this.$store.state.locale === "en" ? "wiki_en" : "wiki_zh"],
         "_blank"
       )
     },
@@ -284,8 +291,11 @@ export default {
         justify-content: space-between;
         margin-bottom: 30px;
         .dec-top-left {
-          max-width: 300px;
+          max-width: 240px;
           margin-bottom: 30px;
+          &.zh-cn {
+            max-width: 300px;
+          }
         }
         .dec-top-right {
           display: flex;

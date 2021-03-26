@@ -148,7 +148,7 @@ export default {
     }
     .desc-card-bottom {
       font-family: InterV;
-      font-size: 14px;
+      font-size: 12px;
       letter-spacing: 0;
       text-align: left;
     }

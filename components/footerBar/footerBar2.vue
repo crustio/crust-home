@@ -3,6 +3,13 @@
     <div class="container">
       <div class="foot-left">
         <div class="foot-left-top">
+          <a class="social weixin" href="javascript:">
+            <img class="qrcode" :src="require('~/assets/images/weixin.jpg')" alt="微信二维码"/>
+            <div
+              class="foot-left-top-icon"
+              v-html="weixin"
+            ></div>
+          </a>
           <template v-for="(icon, idx) in icons">
             <div
               :key="`icon-${idx}`"
@@ -17,9 +24,18 @@
         </div>
       </div>
       <div class="foot-right">
-        <div class="foot-right-title">{{ $t(`footer.Subscrible`) }}</div>
-        <div class="foot-right-subtitle">{{ $t(`footer.subtitle`) }}</div>
-        <div class="foot-right-email"></div>
+        <div class="foot-right-title">{{ $t(`footer.title`) }}</div>
+        <div class="mail-wrapper">
+          <div class="mail-container">
+            CrustNetwork@gmail.com
+          </div>
+          <div>
+            <b-button class="btn copy" variant="warning" @click="handleCopy">{{
+              $t(`footer.Copy`)
+            }}</b-button>
+          </div>
+        </div>
+
         <div class="foot-right-link">
           <div
             v-for="(item, i) in items"
@@ -63,8 +79,9 @@ export default {
         ["Twitter", "Telegram"],
         ["Cooperation", "Github"],
       ],
-      iconNames: ["weixin", "telegram", "medium", "twitter", "github"],
-      icons: [IconWeinxin, IconTelegram, IconMedium, IconTwitter, IconGithub],
+      iconNames: ["telegram", "medium", "twitter", "github"],
+      icons: [IconTelegram, IconMedium, IconTwitter, IconGithub],
+      weixin: IconWeinxin,
     }
   },
   methods: {
@@ -150,6 +167,27 @@ export default {
         flex-direction: column;
         justify-content: flex-end;
 
+        .mail-wrapper {
+          display: flex;
+          flex-wrap: nowrap;
+          margin-bottom: 70px;
+          .mail-container {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-right: 15px;
+            color: #41485d;
+            min-width: 400px;
+            font-size: 18px;
+            line-height: 42px;
+            background-color: #fff;
+            border-radius: 4px;
+            font-weight: 400;
+          }
+          .copy {
+            width: 100px;
+          }
+        }
+
         .foot-right-title {
           font-family: InterV_Semi-Bold;
           font-size: 48px;
@@ -201,6 +239,33 @@ export default {
       }
     }
   }
+  a.weixin {
+	  position: relative;
+  }
+
+  .weixin img.qrcode {
+    position: absolute;
+    z-index: 99;
+    top: -135px;
+    right: -28px;
+    width: 7.5rem;
+    max-width: none;
+    height: 7.5rem;
+    transform: scale(0);
+    transform-origin: top right;
+    opacity: 0;
+    border: .3125rem solid #0085ba;
+    border-radius: .25rem;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+  }
+
+  .weixin:hover img.qrcode {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -216,7 +281,7 @@ export default {
       flex-direction: column-reverse;
       align-items: center;
       justify-content: flex-start;
-      height: 520px;
+      height: 578px;
 
       .foot-left {
         display: flex;
@@ -253,14 +318,35 @@ export default {
         flex-direction: column;
         justify-content: flex-end;
 
+         .mail-wrapper {
+          display: flex;
+          flex-wrap: nowrap;
+          margin-bottom: 60px;
+          .mail-container {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-right: 15px;
+            color: #41485d;
+            min-width: 180px;
+            font-size: 14px;
+            line-height: 42px;
+            background-color: #fff;
+            border-radius: 4px;
+            font-weight: 400;
+          }
+          .copy {
+            width: 100px;
+          }
+        }
+
         .foot-right-title {
           font-family: InterV_Semi-Bold;
           font-size: 24px;
           color: #ff6400;
           letter-spacing: 0;
-          text-align: left;
+          text-align: center;
           line-height: 30px;
-          margin-bottom: 9px;
+          margin-bottom: 19px;
         }
 
         .foot-right-subtitle {
@@ -306,5 +392,6 @@ export default {
       }
     }
   }
+
 }
 </style>

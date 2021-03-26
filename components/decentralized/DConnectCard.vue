@@ -1,6 +1,6 @@
 <template>
   <div class="d-connect-card">
-    <div class="title" v-html="title"></div>
+    <div class="title" v-html="title" :class="getZhcnCss()"></div>
     <div class="content">
       <div class="content-top">
         <img :src="require('~/assets/images/icon-content-top.png')" />
@@ -37,6 +37,15 @@ export default {
       default: "",
     },
   },
+  methods: {
+    getZhcnCss() {
+      if (this.$store.state.locale === "en") {
+        return 'en'
+      } else {
+        return 'zh-cn'
+      }
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -60,6 +69,9 @@ export default {
     letter-spacing: -1px;
     text-align: left;
     margin-bottom: 6px;
+    &.en {
+      white-space: nowrap;
+    }
     @media screen and (max-width: 1200px) {
       font-size: 18px;
       letter-spacing: -0.75px;
