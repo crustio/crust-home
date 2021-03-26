@@ -8,8 +8,8 @@
       <div class="content-bottom">
         <img :src="require('~/assets/images/icon-content-bottom.png')" />
         <div>
-          <div>{{ content1 }}</div>
-          <div>{{ content2 }}</div>
+          <div class="content-font">{{ content1 }}</div>
+          <div class="content-font">{{ content2 }}</div>
         </div>
       </div>
     </div>
@@ -105,6 +105,9 @@ export default {
         width: 5px;
         height: 14px;
         margin-right: 2px;
+      }
+      .content-font {
+        font-family: Courier;
       }
     }
   }

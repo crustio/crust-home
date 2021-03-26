@@ -1,7 +1,7 @@
 <template>
-  <div class="member-item">
+  <div class="member-item" :class="getZhcnCss()">
     <div class="member-item-img" :class="'member-item-img-' + index"></div>
-    <div class="member-item-desc flex-grow-1">{{ desc }}</div>
+    <div class="member-item-desc flex-grow-1" :class="getZhcnCss()">{{ desc }}</div>
     <div class="member-item-line"></div>
     <div class="member-item-name">{{ name }}</div>
     <div class="member-item-title">{{ title }}</div>
@@ -29,6 +29,15 @@ export default {
       default: 0,
     },
   },
+  methods: {
+    getZhcnCss() {
+      if (this.$store.state.locale === "en") {
+        return ''
+      } else {
+        return 'zh-cn'
+      }
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -40,6 +49,9 @@ export default {
   flex-direction: column;
   align-items: stretch;
   color: #1f1f1f;
+  &.zh-cn {
+    height: 457px;
+  }
 
   .member-item-img {
     height: 235px;
@@ -59,6 +71,9 @@ export default {
     color: rgba(31, 31, 31, 0.75);
     letter-spacing: 0;
     line-height: 17px;
+    &.zh-cn {
+      line-height: 22px;
+    }
   }
 
   .member-item-name {

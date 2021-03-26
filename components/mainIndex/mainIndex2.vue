@@ -26,7 +26,7 @@
         <div class="container description">
           <div class="description-left">
             <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
-            <p class="content color-main">
+            <p class="content color-main" :class="getZhcnCss()">
               {{ $t("crust.title") + $t(`crust.content.text1`) }}
             </p>
             <button class="btn-custom" @click="handleClick">
@@ -49,7 +49,7 @@
       <div class="description">
         <div class="description-left">
           <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
-          <p class="content color-main">
+          <p class="content color-main" :class="getZhcnCss()">
             {{ $t("crust.title") + $t(`crust.content.text1`) }}
           </p>
           <button class="btn-custom" @click="handleClickCheck()">
@@ -111,6 +111,13 @@ export default {
     }
   },
   methods: {
+    getZhcnCss() {
+      if (this.$store.state.locale === "en") {
+        return ''
+      } else {
+        return 'zh-cn'
+      }
+    },
     handleClick(name) {
       if (
         name === "join preview network" &&
@@ -214,6 +221,9 @@ export default {
           .content {
             margin-bottom: 40px;
             max-width: 474px;
+            &.zh-cn {
+              line-height: 26px;
+            }
           }
           .btn-custom {
             width: 200px;
@@ -323,6 +333,9 @@ export default {
           max-width: 474px;
           font-size: 12px;
           line-height: 16px;
+            &.zh-cn {
+              line-height: 26px;
+            }
         }
         .btn-custom {
           width: 128px;
