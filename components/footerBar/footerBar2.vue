@@ -63,8 +63,8 @@ export default {
         ["Twitter", "Telegram"],
         ["Cooperation", "Github"],
       ],
-      iconNames: ["github", "medium", "telegram", "twitter", "weixin"],
-      icons: [IconGithub, IconMedium, IconTelegram, IconTwitter, IconWeinxin],
+      iconNames: ["weixin", "telegram", "medium", "twitter", "github"],
+      icons: [IconWeinxin, IconTelegram, IconMedium, IconTwitter, IconGithub],
     }
   },
   methods: {

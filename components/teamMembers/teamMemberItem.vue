@@ -34,7 +34,7 @@ export default {
 <style lang="scss" scoped>
 .member-item {
   width: 246px;
-  height: 445px;
+  height: 476px;
   cursor: default;
   display: flex;
   flex-direction: column;
