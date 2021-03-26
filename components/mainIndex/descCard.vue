@@ -4,11 +4,11 @@
       <div class="desc-card-top-left">
         <div v-html="icons[idx]"></div>
       </div>
-      <div class="desc-card-top-right">
+      <div class="desc-card-top-right" :class="getZhcnCss()">
         {{ $t(`crust.${items[idx]}.title`) }}
       </div>
     </div>
-    <div class="desc-card-bottom">
+    <div class="desc-card-bottom" :class="getZhcnCss()">
       {{ $t(`crust.${items[idx]}.desc`) }}
     </div>
   </div>
@@ -39,6 +39,15 @@ export default {
   },
   watch: {},
   mounted() {},
+  methods: {
+    getZhcnCss() {
+      if (this.$store.state.locale === "en") {
+        return ''
+      } else {
+        return 'zh-cn'
+      }
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -79,6 +88,9 @@ export default {
         letter-spacing: -1px;
         text-align: left;
         line-height: 29px;
+        &.zh-cn {
+          font-size: 22px;
+        }
       }
     }
     .desc-card-bottom {
@@ -87,6 +99,9 @@ export default {
       letter-spacing: 0;
       text-align: left;
       line-height: 17px;
+      &.zh-cn {
+        line-height: 22px;
+      }
     }
   }
 }
@@ -126,11 +141,14 @@ export default {
         letter-spacing: -1px;
         text-align: left;
         line-height: 29px;
+        &.zh-cn {
+          font-size: 22px;
+        }
       }
     }
     .desc-card-bottom {
       font-family: InterV;
-      font-size: 14px;
+      font-size: 12px;
       letter-spacing: 0;
       text-align: left;
     }

@@ -1,8 +1,8 @@
 <template>
   <div class="d-cloud-card">
     <img :src="imgSrc" />
-    <div class="title" v-html="title"></div>
-    <div class="content">
+    <div class="title" v-html="title" :class="getZhcnCss()"></div>
+    <div class="content" :class="getZhcnCss()">
       {{ content }}
     </div>
   </div>
@@ -24,6 +24,15 @@ export default {
       default: "",
     },
   },
+  methods: {
+    getZhcnCss() {
+      if (this.$store.state.locale === "en") {
+        return ''
+      } else {
+        return 'zh-cn'
+      }
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -62,6 +71,9 @@ export default {
     text-align: left;
     line-height: 29px;
     margin-bottom: 14px;
+    &.zh-cn {
+      font-size: 22px;
+    }
   }
 
   .content {
@@ -72,6 +84,9 @@ export default {
     text-align: left;
     line-height: 17px;
     flex-grow: 1;
+    &.zh-cn {
+      line-height: 22px;
+    }
 
     @media screen and (max-width: 1200px) {
       font-size: 12px;

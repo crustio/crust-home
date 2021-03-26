@@ -81,7 +81,7 @@ export default {
         color: #ffffff;
         text-align: center;
         span {
-          color: #eb761c;
+          color: #FF6400;
         }
         &.desc-zh {
           background-image: url("~/assets/main_logo_zh.png");
