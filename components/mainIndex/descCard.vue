@@ -86,7 +86,7 @@ export default {
       font-size: 14px;
       letter-spacing: 0;
       text-align: left;
-      line-height: 15px;
+      line-height: 17px;
     }
   }
 }
@@ -133,7 +133,6 @@ export default {
       font-size: 14px;
       letter-spacing: 0;
       text-align: left;
-      line-height: 15px;
     }
   }
 }

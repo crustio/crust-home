@@ -139,7 +139,7 @@ export default {
   .main-index {
     margin-top: -60px;
     width: 100%;
-    height: 1520px;
+    height: calc(100vh + 553px);
     background-color: black;
     position: relative;
     overflow: hidden;
@@ -195,9 +195,9 @@ export default {
       bottom: 0;
       left: 0;
       width: 100%;
-      height: calc((1520px - 100vh) * 1.6);
+      height: calc(553px + 35vh);
       background-color: $secondary;
-      clip-path: polygon(0 37.5%, 100% 0%, 100% 100%, 0 100%);
+      clip-path: polygon(0 35vh, 100% 0%, 100% 100%, 0 100%);
       .description {
         width: 100%;
         height: 100%;
@@ -223,6 +223,7 @@ export default {
         .description-right {
           display: flex;
           align-items: center;
+          padding-top: 50px;
 
           .description-right-right {
             display: flex;
