@@ -284,7 +284,7 @@ export default {
         justify-content: space-between;
         margin-bottom: 30px;
         .dec-top-left {
-          max-width: 240px;
+          max-width: 300px;
           margin-bottom: 30px;
         }
         .dec-top-right {

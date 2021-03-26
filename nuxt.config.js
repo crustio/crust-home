@@ -170,7 +170,7 @@ export default {
     icon: true,
   },
   loading: {
-    color: "#eb761c",
+    color: "#FF6400",
     height: "4px",
     css: {
       zIndex: 1000,
