@@ -27,7 +27,7 @@
         <div class="foot-right-title">{{ $t(`footer.title`) }}</div>
         <div class="mail-wrapper">
           <div class="mail-container">
-            CrustNetwork@gmail.com
+            hi@crust.network
           </div>
           <div>
             <b-button class="btn copy" variant="warning" @click="handleCopy">{{
