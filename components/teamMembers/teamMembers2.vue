@@ -11,6 +11,7 @@
       <div class="member-container">
         <swiper class="swiper" :options="swiperOptions">
           <swiper-slide
+            navigation
             v-for="idx in 7"
             :key="`member${idx}`"
             class="image-wrapper"
@@ -47,7 +48,7 @@ export default {
       swiperOptions: {
         loop: false,
         slidesPerView: "auto",
-        spaceBetween: 86,
+        spaceBetween: 80,
         centeredSlides: false,
         centeredSlidesBounds: false,
         navigation: {
