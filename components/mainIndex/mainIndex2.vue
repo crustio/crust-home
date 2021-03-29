@@ -80,6 +80,7 @@
 import jumpTo from "../../utils"
 import DescCard from "./descCard"
 import { outerDit } from "@/config/nav-config"
+import * as globalScript from '../../static/script/global'
 export default {
   components: {
     DescCard,
@@ -131,10 +132,12 @@ export default {
       window.open(outerDit.learnMore, "_blank")
     },
   },
+  mounted() {
+    globalScript.runGlobal()
+  },
   head: {
     script: [
       { src: "/script/three.js" },
-      { src: "/script/global.js" },
       { src: "/script/TrackballControls.js" },
     ],
   },
@@ -147,7 +150,7 @@ export default {
     margin-top: -60px;
     width: 100%;
     height: calc(100vh + 553px);
-    background-color: black;
+    background-color: #141414;
     position: relative;
     overflow: hidden;
     .main {
@@ -253,7 +256,7 @@ export default {
     margin-top: -60px;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: #141414;
     position: relative;
     overflow: hidden;
     .main {

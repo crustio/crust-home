@@ -149,6 +149,7 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
+  background: #141414 !important;
   .container {
     @media (min-width: 1270px) {
       max-width: 1270px;

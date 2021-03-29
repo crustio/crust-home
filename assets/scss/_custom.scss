@@ -23,9 +23,12 @@ $component-active-color: $mainColor;
   text-align: center;
   transition: all 0.2s ease;
   outline: none;
+  -webkit-transition: all .5s ease-in;
+  -moz-transition: all .5s ease-in;
+  transition: all .5s ease-in;
   &:hover {
-    color: #fff;
-    background-color: $mainColor;
+    color: #0f0f0f;
+    background-color: #fff;
   }
   &:focus {
     outline: none;
