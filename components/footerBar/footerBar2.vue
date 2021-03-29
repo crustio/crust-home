@@ -4,7 +4,7 @@
       <div class="foot-left">
         <div class="foot-left-top">
           <a class="social weixin" href="javascript:">
-            <img class="qrcode" :src="require('~/assets/images/weixin.jpg')" alt="微信二维码"/>
+            <img class="qrcode" :src="require('~/assets/images/weixin.png')" alt="微信二维码"/>
             <div
               class="foot-left-top-icon"
               v-html="weixin"
@@ -254,7 +254,7 @@ export default {
     transform: scale(0);
     transform-origin: top right;
     opacity: 0;
-    border: .3125rem solid #0085ba;
+    // border: .3125rem solid #0085ba;
     border-radius: .25rem;
     -webkit-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
