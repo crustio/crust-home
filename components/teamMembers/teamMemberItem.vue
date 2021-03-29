@@ -1,6 +1,9 @@
 <template>
   <div class="member-item" :class="getZhcnCss()">
-    <div class="member-item-img" :class="'member-item-img-' + index"></div>
+    <div class="member-item-img">
+      <div class="hover-hidden" :class="'member-item-img-' + index"></div>
+      <div class="hover-show" :class="'member-item-img-' + index + '-hover'"></div>
+    </div>
     <div class="member-item-desc flex-grow-1" :class="getZhcnCss()">{{ desc }}</div>
     <div class="member-item-line"></div>
     <div class="member-item-name">{{ name }}</div>
@@ -56,12 +59,39 @@ export default {
   .member-item-img {
     height: 235px;
     margin-bottom: 22px;
+    position: relative;
+    &:hover {
+      .hover-hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .hover-show {
+        opacity: 1;
+      }
+    }
   }
 
   @for $i from 1 through 7 {
     .member-item-img-#{$i} {
       background: url("~assets/images/members-" + $i + ".png");
       background-size: cover;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  @for $i from 1 through 7 {
+    .member-item-img-#{$i}-hover {
+      background: url("~assets/images/members-" + $i + "-hover.png");
+      background-size: cover;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      pointer-events: none;
     }
   }
 
@@ -97,25 +127,6 @@ export default {
     height: 4px;
     background: #1f1f1f;
     margin: 6px 0 6px 0;
-  }
-
-  &:hover {
-    color: #ff6400;
-
-    @for $i from 1 through 7 {
-      .member-item-img-#{$i} {
-        background: url("~assets/images/members-" + $i + "-hover.png") ;
-        background-size: cover;
-      }
-    }
-
-    .member-item-desc {
-      color: #ff6400;
-    }
-
-    .member-item-line {
-      background: #ff6400;
-    }
   }
 }
 </style>
