@@ -56,7 +56,7 @@ export default {
       swiperOptions: {
         loop: false,
         slidesPerView: "auto",
-        spaceBetween: 15,
+        spaceBetween: 10,
         centeredSlides: false,
         centeredSlidesBounds: false,
         navigation: {

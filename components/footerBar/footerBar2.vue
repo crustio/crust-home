@@ -4,7 +4,7 @@
       <div class="foot-left">
         <div class="foot-left-top">
           <a class="social weixin" href="javascript:">
-            <img class="qrcode" :src="require('~/assets/images/weixin.jpg')" alt="微信二维码"/>
+            <img class="qrcode" :src="require('~/assets/images/weixin.png')" alt="微信二维码"/>
             <div
               class="foot-left-top-icon"
               v-html="weixin"
@@ -27,7 +27,7 @@
         <div class="foot-right-title">{{ $t(`footer.title`) }}</div>
         <div class="mail-wrapper">
           <div class="mail-container">
-            CrustNetwork@gmail.com
+            hi@crust.network
           </div>
           <div>
             <b-button class="btn copy" variant="warning" @click="handleCopy">{{
@@ -254,7 +254,7 @@ export default {
     transform: scale(0);
     transform-origin: top right;
     opacity: 0;
-    border: .3125rem solid #0085ba;
+    // border: .3125rem solid #0085ba;
     border-radius: .25rem;
     -webkit-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -273,6 +273,34 @@ export default {
     background: url("~/assets/images/foot-back-mobile.png");
     background-size: 100% 100%;
     background-color: $secondary;
+
+     a.weixin {
+	    position: relative;
+    }
+
+    .weixin img.qrcode {
+      position: absolute;
+      z-index: 99;
+      top: -135px;
+      right: -28px;
+      width: 7.5rem;
+      max-width: none;
+      height: 7.5rem;
+      transform: scale(0);
+      transform-origin: top right;
+      opacity: 0;
+      // border: .3125rem solid #0085ba;
+      border-radius: .25rem;
+      -webkit-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+
+    }
+
+    .weixin:hover img.qrcode {
+      transform: scale(1);
+      opacity: 1;
+    }
 
     .container {
       padding-bottom: 30px;
