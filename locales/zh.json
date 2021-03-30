@@ -8,7 +8,8 @@
     "networkTitle": "Crust预览网已就绪",
     "csmToken": "CSM通证",
     "experienceCrustApps": "体验Crust Apps",
-    "buildOnCrust": "基于Crust构建"
+    "buildOnCrust": "基于Crust构建",
+    "CrustGrants": "Crust Grants"
   },
   "header": {
     "Github": "Github",
@@ -32,6 +33,7 @@
     "Storage Explorer": "存储浏览器",
     "doc": "资料",
     "Crust Cloud": "Crust Cloud",
+    "Crust Grants": "Crust Grants",
     "Profix Ark": "方舟计划",
     "Preview Network": "预览网",
     "Wiki": "Wiki",

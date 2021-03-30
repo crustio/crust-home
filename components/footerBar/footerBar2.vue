@@ -86,7 +86,7 @@ export default {
   },
   methods: {
     handleCopy() {
-      this.$copyText("CrustNetwork@gmail.com")
+      this.$copyText("hi@crust.network")
         .then(() => {
           this.$bvToast.toast(this.$t("footer.Success"), {
             title: false,

@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <div class="container">
+    <div class="container no-padding">
       <div class="title-container">
         <div class="sub-title color-main flex-grow-1">
           {{ $t("teamMembers.title") }}
@@ -111,6 +111,10 @@ export default {
     .container {
       display: flex;
       flex-direction: column;
+      &.no-padding {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
       @media (min-width: 1270px) {
         max-width: 1270px;
       }

@@ -87,6 +87,9 @@
             <div slot="pagination" class="swiper-pagination swiper-pagination-cloud"></div>
           </swiper>
         </div>
+        <button class="btn-custom cloud-grants-btn" @click="handleBuildClick">
+          {{ $t("button.CrustGrants") }}
+        </button>
       </div>
     </div>
   </div>
@@ -162,6 +165,12 @@ export default {
         "_blank"
       )
     },
+    handleCrustGrantsClick() {
+      window.open(
+        outerDit["crust grants"],
+        "_blank"
+      )
+    },
     handleBuildClick() {
       window.open(
         outerDit[this.$store.state.locale === "en" ? "wiki_en" : "wiki_zh"],
@@ -193,6 +202,12 @@ export default {
         display: flex;
         align-items: stretch;
         justify-content: space-between;
+      }
+
+      .cloud-grants-btn {
+        width: 200px;
+        margin-top: 50px;
+        align-self: center;
       }
 
     }
@@ -255,6 +270,12 @@ export default {
         display: flex;
         align-items: stretch;
         justify-content: space-between;
+      }
+
+      .cloud-grants-btn {
+        width: 128px;
+        margin-top: 30px;
+        align-self: center;
       }
     }
 

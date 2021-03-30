@@ -1,4 +1,4 @@
-export function runGlobal() {
+export function runGlobal(THREE) {
   const CITY_RADIUS = 500,
       CITY_MARGIN = 0.5,
       BLINT_SPEED = 0.05,
@@ -29,7 +29,7 @@ export function runGlobal() {
               // basic scene
             // createDemoScene()
           createBasicScene()
-          //     // 光锥
+          // //     // 光锥
           createObjects()
           //     // 球面打点
           createEarthParticles()
@@ -68,6 +68,7 @@ export function runGlobal() {
           height = 840
       scene = new THREE.Scene()
       scene.background = new THREE.Color( 0x141414 );
+      // scene.background = new THREE.Color( 0xFF6400 );
       camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000)
       camera.position.z = 500
       renderer = new THREE.WebGLRenderer()
@@ -79,7 +80,7 @@ export function runGlobal() {
       control.rotateSpeed = 1.0
       control.zoomSpeed = 0
       control.panSpeed = 1.0
-      window.addEventListener('resize', resize)
+      // window.addEventListener('resize', resize)
   }
 
   function createObjects() {

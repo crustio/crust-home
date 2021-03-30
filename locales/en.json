@@ -8,8 +8,8 @@
     "networkTitle": "Crust Preview Network \"Maxwell\" is now live",
     "csmToken": "CSM Token",
     "experienceCrustApps": "Experience Crust Apps",
-    "buildOnCrust": "Build On Crust"
-
+    "buildOnCrust": "Build On Crust",
+    "CrustGrants": "Crust Grants"
   },
   "header": {
     "Home": "Home",
@@ -29,6 +29,7 @@
     "Documents": "Documents",
     "WhitePaper": "Tech Whitepaper",
     "Github": "Github",
+    "Crust Grants": "Crust Grants",
     "ZH": "中文",
     "EN": "EN",
     "Crust Cloud": "Crust Cloud",
