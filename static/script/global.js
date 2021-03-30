@@ -1,4 +1,4 @@
-export function runGlobal() {
+export function runGlobal(THREE) {
   const CITY_RADIUS = 500,
       CITY_MARGIN = 0.5,
       BLINT_SPEED = 0.05,

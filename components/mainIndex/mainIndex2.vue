@@ -80,7 +80,9 @@
 import jumpTo from "../../utils"
 import DescCard from "./descCard"
 import { outerDit } from "@/config/nav-config"
+import * as THREE from '../../static/script/three'
 import * as globalScript from '../../static/script/global'
+import * as TrackballControls from '../../static/script/TrackballControls'
 export default {
   components: {
     DescCard,
@@ -133,12 +135,12 @@ export default {
     },
   },
   mounted() {
-    globalScript.runGlobal()
+    TrackballControls.initControl(THREE)
+    globalScript.runGlobal(THREE)
   },
   head: {
     script: [
-      { src: "/script/three.js" },
-      { src: "/script/TrackballControls.js" },
+      // { src: "/script/three.js" },
     ],
   },
 }
