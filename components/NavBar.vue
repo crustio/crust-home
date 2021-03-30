@@ -74,7 +74,7 @@ export default {
         {
           name: "Documents",
           hasChild: true,
-          children: ["WhitePaper", "EcoWhitePaper", "Github", "Wiki"],
+          children: ["WhitePaper", "EcoWhitePaper", "Github", "Wiki", "Crust Grants"],
         },
         {
           name: "FAQ",
