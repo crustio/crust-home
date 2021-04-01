@@ -9,7 +9,8 @@
     "csmToken": "CSM通证",
     "experienceCrustApps": "体验Crust Apps",
     "buildOnCrust": "基于Crust构建",
-    "CrustGrants": "Crust Grants"
+    "CrustGrants": "Crust Grants",
+    "applyNow": "Apply Now"
   },
   "header": {
     "Github": "Github",
@@ -110,7 +111,12 @@
     "AcceleratedTitle": "更快的内容分发网络",
     "AcceleratedSubTitle": "开发者可以基于Crust/IPFS 网络构建P2P CDN服务。在Crust网络激励层协议的作用下，Crust网络中的节点会自发的在网络中扩散CDN文件并承担起边缘节点的职责，为用户带来更快的数据传输。",
     "SecuredTitle": "更安全的云存储",
-    "SecuredSubTitle": "开发者可以基于Crust/IPFS网络开发云存储应用。开发者无需维护存储集群，只需在应用上集成Crust/IPFS的SDK，即可为用户提供稳定的存储服务。"
+    "SecuredSubTitle": "开发者可以基于Crust/IPFS网络开发云存储应用。开发者无需维护存储集群，只需在应用上集成Crust/IPFS的SDK，即可为用户提供稳定的存储服务。",
+    "apply-now-prefix": "Apply for Crust Grants and join us for building the Web 3.0 decentralized cloud ecosystem.",
+    "dev-team": "开发团队",
+    "dev-team-intro": "作为去Web 3.0 中心化云技术贡献者，上海沄界信息科技有限公司致力于可信计算、区块链、云存储等领域的技术研究。",
+    "foundation": "基金会",
+    "foundation-intro": "DCF孵化了Web 3.0生态的去中心化存储网络 - “Crust Network”，并将持续资助对Web 3.0 生态中用户体验，商业价值以及技术创新做出贡献的项目和团队。"
   },
   "productMatrix": {
     "title": "产品矩阵",

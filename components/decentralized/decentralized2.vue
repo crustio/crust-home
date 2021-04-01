@@ -87,9 +87,12 @@
             <div slot="pagination" class="swiper-pagination swiper-pagination-cloud"></div>
           </swiper>
         </div>
-        <button class="btn-custom cloud-grants-btn" @click="handleBuildClick">
-          {{ $t("button.CrustGrants") }}
-        </button>
+        <div class="dec-apply-now">
+          <span class="prefix-text">{{ $t(`decentralized.apply-now-prefix`)}}</span>
+          <button class="btn-custom cloud-grants-btn" @click="handleBuildClick">
+            {{ $t("button.applyNow") }}
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -204,10 +207,22 @@ export default {
         justify-content: space-between;
       }
 
-      .cloud-grants-btn {
-        width: 200px;
-        margin-top: 50px;
-        align-self: center;
+      .dec-apply-now {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        .prefix-text {
+          font-size: 16px;
+          font-family: InterV_Semi-Bold, InterV_Semi;
+          font-weight: bold;
+          color: #0F0F0F;
+          line-height: 40px;
+          margin-right: 40px;
+        }
+        .cloud-grants-btn {
+          width: 200px;
+          align-self: center;
+        }
       }
 
     }
@@ -272,10 +287,26 @@ export default {
         justify-content: space-between;
       }
 
-      .cloud-grants-btn {
-        width: 128px;
-        margin-top: 30px;
-        align-self: center;
+      .dec-apply-now {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        .prefix-text {
+          font-size: 16px;
+          font-family: InterV_Semi-Bold, InterV_Semi;
+          font-weight: bold;
+          color: #0F0F0F;
+          line-height: 1.3;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        .cloud-grants-btn {
+          width: 200px;
+          margin-top: 20px;
+          align-self: center;
+        }
       }
     }
 

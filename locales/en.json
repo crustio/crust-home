@@ -9,7 +9,8 @@
     "csmToken": "CSM Token",
     "experienceCrustApps": "Experience Crust Apps",
     "buildOnCrust": "Build On Crust",
-    "CrustGrants": "Crust Grants"
+    "CrustGrants": "Crust Grants",
+    "applyNow": "Apply Now"
   },
   "header": {
     "Home": "Home",
@@ -122,7 +123,12 @@
     "AcceleratedTitle": "Accelerated Content Delivery",
     "AcceleratedSubTitle": "Developers are able to build P2P content delivery network (CDN) services with Crust/IPFS Network. Crust Network incentivizes the nodes to spontaneously distribute CDN data and play the role of CDN edge nodes to accelerate the data transmission for CDN users.",
     "SecuredTitle": "Secured Cloud <br> Storage",
-    "SecuredSubTitle": "Developers are able to build Cloud storage applications with Crust/IPFS Network. Without maintaining storage clusters, developers only need to integrate the SDK of Crust/IPFS into applications to provide users with stable storage services."
+    "SecuredSubTitle": "Developers are able to build Cloud storage applications with Crust/IPFS Network. Without maintaining storage clusters, developers only need to integrate the SDK of Crust/IPFS into applications to provide users with stable storage services.",
+    "apply-now-prefix": "Apply for Crust Grants and join us for building the Web 3.0 decentralized cloud ecosystem.",
+    "dev-team": "Dev Team",
+    "dev-team-intro": "technical solution provider, Clouderium Technologies (Shanghai) LTD is specialized in research and development of trusted computing, blockchain, and cloud storage.",
+    "foundation": "Foundation",
+    "foundation-intro": "DCF has incubated the decentralized storage project of Web 3.0 ecosystem - “Crust Network”, and will extend the effort to the funding of development and research projects that drive user experience, business potential and technical innovation."
   },
   "productMatrix": {
     "title": "Product Matrix",
@@ -152,7 +158,8 @@
     "2-t2-intro2": "Enterprise-level confidential and sensitive information protection solution keeps your business safe",
     "2-t3": "High Efficiency",
     "2-t3-intro1": "Enable edge computing scenarios, <br/>accelerating your business",
-    "2-t3-intro2": "Enable edge computing scenarios, accelerating your business"
+    "2-t3-intro2": "Enable edge computing scenarios, accelerating your business",
+    "apply-now-prefix": "Apply for Crust Grants and join us for building the Web 3.0 decentralized cloud ecosystem."
   },
   "indexscene": {
     "title": "Product Matrix",

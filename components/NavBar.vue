@@ -67,7 +67,6 @@ export default {
             "Blockchain Explorer",
             "Storage Explorer",
             "Crust Apps",
-            "Crust Cloud",
             "Crust Wallet",
           ],
         },
