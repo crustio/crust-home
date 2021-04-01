@@ -37,6 +37,7 @@ const outerDit = {
   wallet_wiki_zh: "https://wiki.crust.network/docs/zh-CN/crustWallet",
   "check our github": "https://github.com/crustio",
   "crust grants": "https://github.com/crustio",
+  "dev team": "https://www.linkedin.com/company/clouderium/mycompany/"
 }
 const outerList = Object.keys(outerDit)
 module.exports = {

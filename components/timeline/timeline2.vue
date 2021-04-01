@@ -86,7 +86,7 @@ export default {
 
 @media screen and (min-width: 1200px) {
   .container-fluid {
-    padding-bottom: 100px;
+    padding-bottom: 87px;
     background: $secondary;
     .container {
       display: flex;
