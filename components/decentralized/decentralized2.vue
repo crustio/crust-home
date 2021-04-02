@@ -176,7 +176,7 @@ export default {
     },
     handleBuildClick() {
       window.open(
-        outerDit[this.$store.state.locale === "en" ? "wiki_en" : "wiki_zh"],
+        outerDit[this.$store.state.locale === "en" ? "dcf grants" : "dcf grants"],
         "_blank"
       )
     },
