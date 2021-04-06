@@ -94,9 +94,12 @@ export default {
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
         color: #FFFFFF;
-        line-height: 18px;
+        line-height: 22px;
         max-width: 642px;
         margin-bottom: 50px;
+        &.zh-cn {
+          line-height: 24px;
+        }
       }
       .apply-now {
         width: 200px;
@@ -145,13 +148,16 @@ export default {
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
         color: #FFFFFF;
-        line-height: 18px;
+        line-height: 22px;
         max-width: 47%;
         margin-bottom: 24px;
         position: absolute;
         top: 288px;
         right: 15px;
         white-space: break-spaces;
+        &.zh-cn {
+          line-height: 24px;
+        }
       }
       .dev-team {
         font-size: 36px;
@@ -210,6 +216,7 @@ export default {
           width: 219px;
           margin-bottom: -3px;
           margin-top: 10px;
+          line-height: 18px;
         }
       }
       .apply-now {
@@ -270,6 +277,7 @@ export default {
         &.zh-cn {
           max-width: 236px;
           top: 362px;
+          line-height: 18px;
         }
       }
       .dev-team {
