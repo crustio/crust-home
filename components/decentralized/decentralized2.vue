@@ -89,7 +89,7 @@
         </div>
         <div class="dec-apply-now">
           <span class="prefix-text">{{ $t(`decentralized.apply-now-prefix`)}}</span>
-          <button class="btn-custom cloud-grants-btn" @click="handleBuildClick">
+          <button class="btn-custom cloud-grants-btn" @click="handleApplyNow">
             {{ $t("button.applyNow") }}
           </button>
         </div>
@@ -176,10 +176,16 @@ export default {
     },
     handleBuildClick() {
       window.open(
-        outerDit[this.$store.state.locale === "en" ? "dcf grants" : "dcf grants"],
+        outerDit[this.$store.state.locale === "en" ? "wiki_en" : "wiki_zh"],
         "_blank"
       )
     },
+    handleApplyNow() {
+      window.open(
+        outerDit[this.$store.state.locale === "en" ? "dcf grants" : "dcf grants"],
+        "_blank"
+      )
+    }
   },
 }
 </script>
@@ -294,7 +300,7 @@ export default {
         flex-direction: column;
         align-items: center;
         .prefix-text {
-          font-size: 16px;
+          font-size: 12px;
           font-family: InterV_Semi-Bold, InterV_Semi;
           font-weight: bold;
           color: #0F0F0F;
@@ -303,7 +309,7 @@ export default {
           padding-right: 10px;
         }
         .cloud-grants-btn {
-          width: 200px;
+          width: 128px;
           margin-top: 20px;
           align-self: center;
         }
