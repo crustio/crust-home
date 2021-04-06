@@ -94,7 +94,7 @@ export default {
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
         color: #FFFFFF;
-        line-height: 22px;
+        line-height: 18px;
         max-width: 642px;
         margin-bottom: 50px;
       }
@@ -145,7 +145,7 @@ export default {
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
         color: #FFFFFF;
-        line-height: 22px;
+        line-height: 18px;
         max-width: 47%;
         margin-bottom: 24px;
         position: absolute;
@@ -259,7 +259,7 @@ export default {
       }
       .dev-team-intro {
         font-size: 12px;
-        font-family: InterV_Semi-Bold, InterV_Semi;
+        font-family: InterV;
         font-weight: bold;
         color: #FFFFFF;
         line-height: 15px;
