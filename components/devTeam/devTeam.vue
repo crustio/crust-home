@@ -267,7 +267,6 @@ export default {
       .dev-team-intro {
         font-size: 12px;
         font-family: InterV;
-        font-weight: bold;
         color: #FFFFFF;
         line-height: 15px;
         max-width: 270px;
