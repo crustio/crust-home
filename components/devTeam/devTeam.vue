@@ -206,15 +206,15 @@ export default {
       }
       .dev-team-intro {
         width: 270px;
-        height: 75px;
+        height: 115px;
         font-size: 12px;
         font-family: InterV;
         color: #FFFFFF;
         line-height: 15px;
-        margin-bottom: 32px;
+        margin-bottom: 5px;
         &.zh-cn {
           width: 219px;
-          margin-bottom: -3px;
+          margin-bottom: 0;
           margin-top: 10px;
           line-height: 18px;
         }
@@ -271,7 +271,7 @@ export default {
         line-height: 15px;
         max-width: 270px;
         position: absolute;
-        top: 321px;
+        top: 341px;
         right: 0;
         &.zh-cn {
           max-width: 236px;
@@ -289,7 +289,7 @@ export default {
         margin-bottom: 24px;
         position: absolute;
         right: 0;
-        top: 257px;
+        top: 277px;
         &.zh-cn {
           top: 293px;
         }

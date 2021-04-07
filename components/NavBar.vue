@@ -107,6 +107,9 @@ export default {
         document.cookie = "locale=" + name
         return this.$store.commit("SET_LANG", name)
       }
+      if (name === "crust grants") {
+        return jumpTo('dcf grants')
+      }
       if (name === "crust cloud") {
         if (this.$route.name !== "home") {
           this.$router.push("/#product")

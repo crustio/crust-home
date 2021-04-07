@@ -96,7 +96,7 @@
   },
   "decentralized": {
     "title": "使用Crust，链接分布式云",
-    "step-1-1": "1. 将你的文件存入IPFS网络<br> <br>",
+    "step-1-1": "1. 将你的文件存入IPFS网络",
     "step-1-2": ">> ipfs add crust.png",
     "step-1-3": "added QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
     "step-2-1": "2. 在Crust网络中为文件生成存储订单",

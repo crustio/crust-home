@@ -69,6 +69,7 @@ export default {
     letter-spacing: -1px;
     text-align: left;
     margin-bottom: 6px;
+    height: 72px;
     &.en {
       white-space: nowrap;
     }
@@ -76,6 +77,7 @@ export default {
       font-size: 18px;
       letter-spacing: -0.75px;
       margin-bottom: 11px;
+      height: auto;
     }
   }
   .content {
