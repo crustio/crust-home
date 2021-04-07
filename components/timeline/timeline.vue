@@ -153,7 +153,7 @@ export default {
       }
 
       .timeline {
-        margin-top: -130px;
+        margin-top: -110px;
         display: flex;
         align-items: center;
         justify-content: space-between;

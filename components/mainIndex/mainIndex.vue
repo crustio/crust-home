@@ -2,14 +2,23 @@
   <div class="container-fluid main-index">
     <div class="container">
       <div class="main-logo">
-        <div class="logo" :class="{ 'desc-zh': $store.state.locale === 'zh' }"></div>
+        <div
+          class="logo"
+          :class="{ 'desc-zh': $store.state.locale === 'zh' }"
+        ></div>
         <p class="test-net-title">{{ $t("button.networkTitle") }}</p>
         <div class="container text-center">
           <div>
-            <button @click="handleClick('join preview network')" class="btn-custom button-width">
+            <button
+              class="btn-custom button-width"
+              @click="handleClick('join preview network')"
+            >
               {{ $t("button.joinPreviewNetwork") }}
             </button>
-            <button @click="handleClick('csmToken')" class="btn-custom margin-left-25 button-width">
+            <button
+              class="btn-custom margin-left-25 button-width"
+              @click="handleClick('csmToken')"
+            >
               {{ $t("button.csmToken") }}
             </button>
           </div>
@@ -24,12 +33,15 @@ import jumpTo from "../../utils"
 export default {
   methods: {
     handleClick(name) {
-      if (name === 'join preview network' && this.$store.state.locale === "en") {
+      if (
+        name === "join preview network" &&
+        this.$store.state.locale === "en"
+      ) {
         name += "_en"
       }
       jumpTo(name)
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -59,7 +71,7 @@ export default {
         width: 512px;
         height: 132px;
         // line-height: 120px;
-        background-image: url('~/assets/main_logo_en.png');
+        background-image: url("~/assets/main_logo_en.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -68,11 +80,11 @@ export default {
         font-size: 120px;
         color: #ffffff;
         text-align: center;
-        span{
-          color: #eb761c;
+        span {
+          color: #FF6400;
         }
         &.desc-zh {
-          background-image: url('~/assets/main_logo_zh.png');
+          background-image: url("~/assets/main_logo_zh.png");
         }
       }
       .desc {
@@ -89,7 +101,6 @@ export default {
           letter-spacing: 50px !important;
           text-indent: 50px;
         }
-
       }
       .test-net-title {
         color: #ffffff;
@@ -145,7 +156,7 @@ export default {
           color: #ffffff;
           text-align: center;
           font-size: 0.95rem;
-          &::before{
+          &::before {
             content: "";
             display: none;
           }

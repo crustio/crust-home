@@ -3,13 +3,16 @@
     "learnMore": "Learn More",
     "checkOnGithub": "Check Our Github",
     "joinArk": "Join Profit Ark",
-    "joinPreviewNetwork": "Join Maxwell",
+    "joinPreviewNetwork": "Build on Crust",
     "arkTitle": "Crust Incentivized Testnet is Ready",
-    "networkTitle": "Crust Preview Network \"Maxwell\" is now live",
+    "networkTitle": "Crust Preview Network 'Maxwell' is live. <a class='btn-link' href='https://wiki.crust.network/docs/en/previewNetworkMaxwell' target='_blank' style='text-decoration:underline !important'>Join Now >></a>",
     "csmToken": "CSM Token",
-    "experienceCrustApps": "Experience Crust Apps",
-    "buildOnCrust": "Build On Crust"
-
+    "experienceCrustApps": "Crust Apps",
+    "buildOnCrust": "Build On Crust",
+    "CrustGrants": "Crust Grants",
+    "applyNow": "Apply Now",
+    "contributeNow": "Contribute Now",
+    "applyForGrants": "Apply for Grants"
   },
   "header": {
     "Home": "Home",
@@ -27,8 +30,9 @@
     "Blockchain Explorer": "Blockchain Explorer",
     "Storage Explorer": "Storage Explorer",
     "Documents": "Documents",
-    "WhitePaper": "Technology Whitepaper",
+    "WhitePaper": "Tech Whitepaper",
     "Github": "Github",
+    "Crust Grants": "Crust Grants",
     "ZH": "中文",
     "EN": "EN",
     "Crust Cloud": "Crust Cloud",
@@ -43,7 +47,7 @@
     "Copy": "Copy",
     "title": "Follow Us",
     "Crust": "Crust",
-    "WhitePaper": "Technology Whitepaper",
+    "WhitePaper": "Tech Whitepaper",
     "EcoWhitePaper": "Economy Whitepaper",
     "Github": "Github",
     "FAQ": "FAQ",
@@ -54,11 +58,14 @@
     "Feedback": "Feedback",
     "JoinUs": "Contact Us",
     "Community": "Community",
-    "ContactUs": "Contact Us"
+    "ContactUs": "Contact Us",
+    "Subscrible": "Subscrible",
+    "subtitle": "Subscribe to the newsletter to hear about Crust Network updates and events.",
+    "Resourcese": "Resources"
   },
   "indexBanner": {
     "title": "Crust",
-    "sub": "Chain to Decentralized Cloud",
+    "sub": "Crust Network,<br> Chain to Decentralized Cloud",
     "contentLink1": "Source Code",
     "contentLink2": "TestNet",
     "contentAnd": "and",
@@ -67,10 +74,10 @@
     "desc": "Chain to Decentralized Cloud"
   },
   "crust": {
-    "title": "Crust",
+    "title": "CRUST",
     "sub": "What is Crust",
     "content": {
-      "text1": " provides a decentralized storage network of Web3 ecosystem. It supports multiple storage layer protocols such as IPFS, and exposes storage interfaces to application layer. Crust's technical stack is also capable of supporting a decentralized computing layer. It is designed to build a decentralized cloud ecosystem that values data privacy and ownership.",
+      "text1": " provides a decentralized storage network of Web3.0 ecosystem. It supports multiple storage layer protocols such as IPFS, and exposes storage interfaces to application layer. Crust’s technical stack is also capable of supporting a decentralized computing layer. It is designed to build a decentralized cloud ecosystem that values data privacy and ownership.",
       "text2": "<span class='font-weight-bold'>CRUST</span> provides a <a class='btn-link'>decentralized storage network</a> of <a class='btn-link'>Web3.0</a> ecosystem. It supports multiple storage layer protocols such as <a class='btn-link'>IPFS</a>, and exposes storage interfaces to application layer. Crust's technical stack is also capable of supporting a decentralized computing layer. It is designed to build a <a class='btn-link'>decentralized cloud</a> ecosystem that values data <a class='btn-link'>privacy and ownership</a>.",
       "text3": ""
     },
@@ -101,22 +108,29 @@
   },
   "decentralized": {
     "title": "Use Crust to Connect to Decentralized Cloud",
-    "step-1-1": "Add your files to IPFS",
+    "step-1-1": "1. Add your files to IPFS",
     "step-1-2": ">> ipfs add crust.png",
     "step-1-3": "added QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
-    "step-2-1": "Place storage order in Curst",
+    "step-2-1": "2. Place storage order in Curst",
     "step-2-2": ">> crust-cli publish QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
-    "step-3-1": "Get your files anywhere",
+    "step-2-3": "QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
+    "step-3-1": "3. Get your files anywhere",
     "step-3-2": ">> ipfs get QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
+    "step-3-3": "ipfs get QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v",
     "title2": "Decentralized Cloud in Web3.0",
-    "serverlessTitle": "Serverless DApp/website hosting",
-    "serverlessSubTitle": "<p>Developers are able to deploy their own Dapps/websites based on Crust/IPFS Network. With this, developers are able to only focus on building Dapps/websites, no need for server management. Moreover, Crust Network incentives multiple nodes to store Dapp/website files and provide storage services, thus ensuring the high availability of Dapps/websites. <a href='https://apps.crust.network' class='btn-link' target='_blank'>Crust Apps</a> is an example, it is hosted on Crust Network.</p>",
-    "generalTitle": "General off-chain data storage",
+    "serverlessTitle": "Serverless DApp / Website Hosting",
+    "serverlessSubTitle": "Developers are able to deploy their own Dapps/websites based on Crust/IPFS Network. With this, developers are able to only focus on building Dapps/websites, no need for server management. Moreover, Crust Network incentives multiple nodes to store Dapp/website files and provide storage services, thus ensuring the high availability of Dapps/websites. ",
+    "generalTitle": "General Off-chain Data Storage",
     "generalSubTitle": "Some blockchain-based decentralized applications, such as NFT and decentralized social platforms, involve a large amount of user data, far beyond the on-chain storage capacity. Based on Crust/IPFS Network, developers can provide general off-chain data storage services for these applications.",
-    "AcceleratedTitle": "Accelerated content delivery",
+    "AcceleratedTitle": "Accelerated Content Delivery",
     "AcceleratedSubTitle": "Developers are able to build P2P content delivery network (CDN) services with Crust/IPFS Network. Crust Network incentivizes the nodes to spontaneously distribute CDN data and play the role of CDN edge nodes to accelerate the data transmission for CDN users.",
-    "SecuredTitle": "Secured cloud storage",
-    "SecuredSubTitle": "Developers are able to build Cloud storage applications with Crust/IPFS Network. Without maintaining storage clusters, developers only need to integrate the SDK of Crust/IPFS into applications to provide users with stable storage services."
+    "SecuredTitle": "Secured Cloud <br> Storage",
+    "SecuredSubTitle": "Developers are able to build Cloud storage applications with Crust/IPFS Network. Without maintaining storage clusters, developers only need to integrate the SDK of Crust/IPFS into applications to provide users with stable storage services.",
+    "apply-now-prefix": "Apply for Crust Grants and join us for building the Web 3.0 decentralized cloud ecosystem.",
+    "dev-team": "Crust is an Open Source Protocol",
+    "dev-team-intro": "Crust is an open source project funded by Decentralized Cloud Foundation. It is under active development and maintenance by <a class='btn-link' href='https://www.linkedin.com/company/clouderium/mycompany' target='_blank' style='text-decoration:underline !important;color: white !important'>Clouderium Technologies</a>. Clouderium is specialized in research and development of trusted computing, blockchain, and cloud storage.",
+    "foundation": "Decentralized Cloud Foundation",
+    "foundation-intro": "DCF (Decentralized Cloud Foundation) funds and incubates teams and projects, to build decentralized cloud infrastructure and applications of Web3.0. Crust Network is the fundamental project that DCF mainly supports."
   },
   "productMatrix": {
     "title": "Product Matrix",
@@ -146,7 +160,8 @@
     "2-t2-intro2": "Enterprise-level confidential and sensitive information protection solution keeps your business safe",
     "2-t3": "High Efficiency",
     "2-t3-intro1": "Enable edge computing scenarios, <br/>accelerating your business",
-    "2-t3-intro2": "Enable edge computing scenarios, accelerating your business"
+    "2-t3-intro2": "Enable edge computing scenarios, accelerating your business",
+    "apply-now-prefix": "Apply for Crust Grants and join us for building the Web 3.0 decentralized cloud ecosystem."
   },
   "indexscene": {
     "title": "Product Matrix",
@@ -177,31 +192,43 @@
     "two-t3-intro": "Enable edge computing scenarios, accelerating your business"
   },
   "timeline": {
-    "title": "Time Line",
-    "sub": "Time Line",
+    "title": "Time Lines",
+    "sub": "Time Lines",
     "coreTeam": {
       "title": "2018 Q3",
-      "subtitle": " Core Team"
+      "subtitle": "Core Team",
+      "year": "18",
+      "season": "Q3"
     },
     "prototyping": {
       "title": "2019 Q2",
-      "subtitle": "Proof of concept +<br/> Prototyping"
+      "subtitle": "Proof of concept +<br/> Prototyping",
+      "year": "19",
+      "season": "Q2"
     },
     "alpha": {
       "title": "2020 Q1",
-      "subtitle": "Rocky Testnet"
+      "subtitle": "Rocky Testnet",
+      "year": "20",
+      "season": "Q1"
     },
     "ark": {
       "title": "2020 Q4",
-      "subtitle": "Maxwell Testnet"
+      "subtitle": "Maxwell Testnet",
+      "year": "20",
+      "season": "Q4"
     },
     "previewNetwork": {
       "title": "2021 Q1",
-      "subtitle": "Preview Network"
+      "subtitle": "Preview Network",
+      "year": "21",
+      "season": "Q1"
     },
     "mainNet": {
       "title": "2021 Q2",
-      "subtitle": "Mainnet"
+      "subtitle": "Mainnet",
+      "year": "21",
+      "season": "Q2"
     }
   },
   "news": {

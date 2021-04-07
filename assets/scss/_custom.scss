@@ -3,30 +3,42 @@
 // All of your custom SCSS variables go first
 
 $light: #f1f1f1;
-$mainColor: #eb761c;
+$mainColor: #FF6400;
 $navBgColor: rgb(0, 0, 0);
-$secondary: #ffffff;
+$secondary: #efedea;
 
 $dark: $navBgColor;
 $warning: $mainColor;
 $component-active-color: $mainColor;
 .btn-custom {
   font-variant: none;
-  font-family: nasalization;
-  padding: 0.5rem 3rem;
+  font-family: InterV_Semi-Bold;
+  padding: 0.5rem 0;
   border-radius: 25px;
-  border: 1px solid $mainColor;
-  background-color: transparent;
-  color: $mainColor;
+  border: 0;
+  background-color: $mainColor;
+  color: #FFFFFF;
   font-size: 1rem;
+  letter-spacing: 0;
+  text-align: center;
   transition: all 0.2s ease;
   outline: none;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  transition: all .2s ease-in;
   &:hover {
-    color: #fff;
-    background-color: $mainColor;
+    color: #0f0f0f;
+    background-color: #fff;
   }
   &:focus {
     outline: none;
+  }
+  @media screen and (max-width: 1200px) {
+    line-height: 28px;
+    font-size: 12px;
+    padding: 4px 0;
+    border-radius: 26px;
+
   }
 }
 
@@ -36,4 +48,30 @@ $bgColorTmItem: $dark;
 .main-text {
   color: $mainColor;
   font-size: 36px;
+}
+
+.sub-title {
+  font-family: InterV_Semi-Bold;
+  font-size: 50px;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 56px;
+  cursor: default;
+  @media screen and (max-width: 1200px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+.content {
+  font-family: InterV;
+  font-size: 16px;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 20px;
+}
+.color-main {
+  color: $mainColor;
+}
+.color-white {
+  color: white;
 }

@@ -68,7 +68,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ["~assets/scss/global.scss", "~assets/fonts/nasalization/font.css"],
+  css: ["~assets/scss/global.scss", "~assets/fonts/nasalization/font.css", "~assets/fonts/inter/inter.css", "~assets/fonts/orbitron/orbitron.css"],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -93,6 +93,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     // "@nuxtjs/eslint-module",
+    "@nuxtjs/svg",
   ],
   /*
    ** Nuxt.js modules
@@ -169,7 +170,7 @@ export default {
     icon: true,
   },
   loading: {
-    color: "#eb761c",
+    color: "#FF6400",
     height: "4px",
     css: {
       zIndex: 1000,

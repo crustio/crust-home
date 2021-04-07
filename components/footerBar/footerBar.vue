@@ -114,6 +114,9 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
+  .title {
+    padding-top: 30px;
+  }
   background: linear-gradient(
     90deg,
     rgba(32, 47, 84, 1) 0%,
@@ -127,7 +130,7 @@ export default {
     .mail-wrapper {
       @include media-breakpoint-up(md) {
         width: 700px;
-        margin: 0 auto 50px;
+        margin: 12px auto 50px;
       }
       margin-bottom: 50px;
       .mail-container {
