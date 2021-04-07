@@ -1,7 +1,11 @@
-FROM node:current-alpine3.10
+FROM nginx:stable-alpine
 
-WORKDIR /opt/web
+# The following is mainly for doc purpose to show which ENV is supported
+ENV WS_URL=
 
-COPY . .
+WORKDIR /usr/share/nginx/html
 
-CMD yarn start
+COPY docker/nginx.conf /etc/nginx/nginx.conf
+COPY ./dist /usr/share/nginx/html
+
+EXPOSE 80
