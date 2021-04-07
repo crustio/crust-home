@@ -77,7 +77,7 @@ export default {
       items: [
         ["WhitePaper", "EcoWhitePaper", "FAQ"],
         ["Twitter", "Telegram"],
-        ["Cooperation", "Github"],
+        ["Github"],
       ],
       iconNames: ["telegram", "medium", "twitter", "github"],
       icons: [IconTelegram, IconMedium, IconTwitter, IconGithub],
