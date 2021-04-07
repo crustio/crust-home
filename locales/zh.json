@@ -115,7 +115,7 @@
     "SecuredTitle": "更安全的云存储",
     "SecuredSubTitle": "开发者可以基于Crust/IPFS网络开发云存储应用。开发者无需维护存储集群，只需在应用上集成Crust/IPFS的SDK，即可为用户提供稳定的存储服务。",
     "apply-now-prefix": "申请Crust Grants，共建Web 3.0 分布式云生态",
-    "dev-team": "开发团队",
+    "dev-team": "Crust是⼀个开源项⽬",
     "dev-team-intro": "Crust是⼀个开源项⽬，由Decentralized Cloud Foundation资助。<a class='btn-link' href='https://www.linkedin.com/company/clouderium/mycompany' target='_blank' style='text-decoration:underline !important;color: white !important'>Clouderium Technologies</a>正在积极开发和维护Crust的相关代码。 Clouderium专⻔从事可信计算，区块链和云存储的研究与开发。",
     "foundation": "基金会",
     "foundation-intro": "DCF（Decentralized Cloud Foundation）资助并孵化团队和项⽬，以构建Web3.0下的分布式云基础架构和应⽤程序。Crust Network是DCF主要⽀持的基础项⽬。"
