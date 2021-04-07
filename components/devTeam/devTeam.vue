@@ -3,16 +3,16 @@
     <div class="container" style="height: 500px; position: relative">
       <div class="left-c full-width">
         <span class="dev-team">{{ $t("decentralized.dev-team") }}</span>
-        <span class="dev-team-intro" :class="getZhcnCss()">{{ $t("decentralized.dev-team-intro") }}</span>
+        <span class="dev-team-intro" :class="getZhcnCss()" v-html="$t('decentralized.dev-team-intro')"></span>
         <button class="btn-custom apply-now" @click="handleApplyDevTeamClick">
-          {{ $t("button.learnMore") }}
+          {{ $t("button.contributeNow") }}
         </button>
       </div>
       <div class="right-c full-width">
         <span class="dev-team" :class="getZhcnCss()">{{ $t("decentralized.foundation") }}</span>
         <span class="dev-team-intro" :class="getZhcnCss()">{{ $t("decentralized.foundation-intro") }}</span>
         <button class="btn-custom apply-now" @click="handleApplyFoundationClick">
-          {{ $t("button.learnMore") }}
+          {{ $t("button.applyForGrants") }}
         </button>
       </div>
     </div>
@@ -32,7 +32,7 @@ export default {
   methods: {
     handleApplyDevTeamClick() {
       window.open(
-        outerDit["dev team"],
+        outerDit["github"],
         "_blank"
       )
     },
@@ -149,7 +149,7 @@ export default {
         font-weight: bold;
         color: #FFFFFF;
         line-height: 22px;
-        max-width: 47%;
+        max-width: 50%;
         margin-bottom: 24px;
         position: absolute;
         top: 288px;

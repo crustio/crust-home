@@ -52,7 +52,15 @@
     <div class="container-fluid dec-cloud">
       <div class="container">
         <div class="dec-cloud-top sub-title color-main">
-          {{ $t(`decentralized.title2`) }}
+          <div class="dec-cloud-top-left sub-title color-main">
+            {{ $t(`decentralized.title2`) }}
+          </div>
+          <div class="dec-cloud-top-right">
+            <span class="prefix-text">{{ $t(`decentralized.apply-now-prefix`)}}</span>
+            <button class="btn-custom cloud-grants-btn" @click="handleApplyNow">
+              {{ $t("button.CrustGrants") }}
+            </button>
+          </div>
         </div>
         <div class="dec-cloud-bottom">
           <swiper class="swiper" :options="swiperOptions2">
@@ -90,7 +98,7 @@
         <div class="dec-apply-now">
           <span class="prefix-text">{{ $t(`decentralized.apply-now-prefix`)}}</span>
           <button class="btn-custom cloud-grants-btn" @click="handleApplyNow">
-            {{ $t("button.applyNow") }}
+            {{ $t("button.CrustGrants") }}
           </button>
         </div>
       </div>
@@ -203,8 +211,30 @@ export default {
       }
 
       .dec-cloud-top {
-        max-width: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 26px;
+        .dec-cloud-top-left {
+          max-width: 500px;
+        }
+
+        .dec-cloud-top-right {
+          display: flex;
+          align-items: flex-end;
+          flex-direction: column;
+          max-width: 403px;
+          font-size: 16px;
+          font-family: InterV_Semi-Bold, InterV_Semi;
+          font-weight: bold;
+          color: #6f6f6f;
+          line-height: 19px;
+          text-align: right;
+          .cloud-grants-btn {
+            margin-top: 19px;
+            width: 200px;
+          }
+        }
       }
 
       .dec-cloud-bottom {
@@ -214,7 +244,7 @@ export default {
       }
 
       .dec-apply-now {
-        display: flex;
+        display: none;
         justify-content: center;
         margin-top: 30px;
         .prefix-text {
@@ -284,7 +314,17 @@ export default {
       }
 
       .dec-cloud-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 26px;
+        .dec-cloud-top-left {
+          max-width: 500px;
+        }
+
+        .dec-cloud-top-right {
+          display: none;
+        }
       }
 
       .dec-cloud-bottom {

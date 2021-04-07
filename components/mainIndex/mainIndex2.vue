@@ -4,12 +4,12 @@
       <div class="container main">
         <div id="global"></div>
         <div class="main-logo">
-          <p class="logo">{{ $t("indexBanner.sub") }}</p>
-          <p class="test-net-title">{{ $t("button.networkTitle") }}</p>
+          <p class="logo" v-html="$t('indexBanner.sub')"></p>
+          <p class="test-net-title" v-html="$t('button.networkTitle')"></p>
           <div class="buttons">
             <button
               class="btn-custom button-width"
-              @click="handleClick('join preview network')"
+              @click="handleClick('build on crust')"
             >
               {{ $t("button.joinPreviewNetwork") }}
             </button>
@@ -83,6 +83,7 @@ import { outerDit } from "@/config/nav-config"
 import * as THREE from '../../static/script/three'
 import * as globalScript from '../../static/script/global'
 import * as TrackballControls from '../../static/script/TrackballControls'
+import VueScrollTo from "vue-scrollto"
 export default {
   components: {
     DescCard,
@@ -122,6 +123,10 @@ export default {
       }
     },
     handleClick(name) {
+      if (name === "build on crust") {
+        VueScrollTo.scrollTo(document.querySelector(".dec-connect"))
+        return
+      }
       if (
         name === "join preview network" &&
         this.$store.state.locale === "en"
@@ -169,19 +174,20 @@ export default {
         animation-duration: 0.5s; /* don't forget to set a duration! */
         .logo {
           font-family: InterV_Semi-Bold;
-          font-size: 64px;
+          font-size: 44px;
           color: #ffffff;
           letter-spacing: 0;
           text-align: left;
           line-height: 70px;
           margin-bottom: 2rem;
+          width: 635px;
         }
 
         .test-net-title {
           opacity: 0.53;
           font-family: Inter-Regular;
           font-size: 20px;
-          color: #ffcba9;
+          color: #ff6400;
           letter-spacing: 0;
           text-align: left;
           margin-bottom: 60px;
@@ -192,7 +198,7 @@ export default {
         }
       }
       #global {
-        margin-left: 80px;
+        margin-left: 40px;
       }
       .margin-left-25 {
         margin-left: 25px;
@@ -288,7 +294,7 @@ export default {
           opacity: 0.53;
           font-family: Inter-Regular;
           font-size: 12px;
-          color: #ffcba9;
+          color: #ff6400;
           letter-spacing: 0;
           text-align: left;
           margin-bottom: 20px;

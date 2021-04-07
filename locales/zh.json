@@ -3,14 +3,16 @@
     "learnMore": "了解更多",
     "checkOnGithub": "在Github上查看",
     "joinArk": "加入“方舟计划”",
-    "joinPreviewNetwork": "加入预览网",
+    "joinPreviewNetwork": "构建应用程序",
     "arkTitle": "Crust激励测试网已启动",
-    "networkTitle": "Crust预览网已就绪",
+    "networkTitle": "Crust预览⽹Maxwell已就绪。 <a class='btn-link' href='https://wiki.crust.network/docs/zh-CN/previewNetworkMaxwell' target='_blank' style='text-decoration:underline !important'>立即加入 >></a>",
     "csmToken": "CSM通证",
     "experienceCrustApps": "体验Crust Apps",
     "buildOnCrust": "基于Crust构建",
-    "CrustGrants": "Crust Grants",
-    "applyNow": "立即申请"
+    "CrustGrants": "Crust资助计划",
+    "applyNow": "立即申请",
+    "contributeNow": "贡献代码",
+    "applyForGrants": "申请资助"
   },
   "header": {
     "Github": "Github",
@@ -63,7 +65,7 @@
   },
   "indexBanner": {
     "title": "Crust",
-    "sub": "链接分布式云",
+    "sub": "Crust Network，<br>链接分布式云",
     "contentLink1": "源代码",
     "contentLink2": "测试网",
     "contentAnd": "和",
@@ -114,9 +116,9 @@
     "SecuredSubTitle": "开发者可以基于Crust/IPFS网络开发云存储应用。开发者无需维护存储集群，只需在应用上集成Crust/IPFS的SDK，即可为用户提供稳定的存储服务。",
     "apply-now-prefix": "申请Crust Grants，共建Web 3.0 分布式云生态",
     "dev-team": "开发团队",
-    "dev-team-intro": "作为去Web 3.0 中心化云技术贡献者，上海沄界信息科技有限公司致力于可信计算、区块链、云存储等领域的技术研究。",
+    "dev-team-intro": "Crust是⼀个开源项⽬，由Decentralized Cloud Foundation资助。<a class='btn-link' href='https://www.linkedin.com/company/clouderium/mycompany' target='_blank' style='text-decoration:underline !important;color: white !important'>Clouderium Technologies</a>正在积极开发和维护Crust的相关代码。 Clouderium专⻔从事可信计算，区块链和云存储的研究与开发。",
     "foundation": "基金会",
-    "foundation-intro": "DCF孵化了Web 3.0生态的去中心化存储网络 - “Crust Network”，并将持续资助对Web 3.0 生态中用户体验，商业价值以及技术创新做出贡献的项目和团队。"
+    "foundation-intro": "DCF（Decentralized Cloud Foundation）资助并孵化团队和项⽬，以构建Web3.0下的分布式云基础架构和应⽤程序。Crust Network是DCF主要⽀持的基础项⽬。"
   },
   "productMatrix": {
     "title": "产品矩阵",

@@ -3,14 +3,16 @@
     "learnMore": "Learn More",
     "checkOnGithub": "Check Our Github",
     "joinArk": "Join Profit Ark",
-    "joinPreviewNetwork": "Join Maxwell",
+    "joinPreviewNetwork": "Build on Crust",
     "arkTitle": "Crust Incentivized Testnet is Ready",
-    "networkTitle": "Crust Preview Network \"Maxwell\" is now live",
+    "networkTitle": "Crust Preview Network `Maxwell` is live. <a class='btn-link' href='https://wiki.crust.network/docs/en/previewNetworkMaxwell' target='_blank' style='text-decoration:underline !important'>Join Now >></a>",
     "csmToken": "CSM Token",
-    "experienceCrustApps": "Experience Crust Apps",
+    "experienceCrustApps": "Crust Apps",
     "buildOnCrust": "Build On Crust",
     "CrustGrants": "Crust Grants",
-    "applyNow": "Apply Now"
+    "applyNow": "Apply Now",
+    "contributeNow": "Contribute Now",
+    "applyForGrants": "Apply for Grants"
   },
   "header": {
     "Home": "Home",
@@ -59,11 +61,11 @@
     "ContactUs": "Contact Us",
     "Subscrible": "Subscrible",
     "subtitle": "Subscribe to the newsletter to hear about Crust Network updates and events.",
-    "Resourcese": "Resourcese"
+    "Resourcese": "Resources"
   },
   "indexBanner": {
     "title": "Crust",
-    "sub": "CHAIN TO DECENTRALIZED CLOUD",
+    "sub": "Crust Network,<br> Chain to Decentralized Cloud",
     "contentLink1": "Source Code",
     "contentLink2": "TestNet",
     "contentAnd": "and",
@@ -126,9 +128,9 @@
     "SecuredSubTitle": "Developers are able to build Cloud storage applications with Crust/IPFS Network. Without maintaining storage clusters, developers only need to integrate the SDK of Crust/IPFS into applications to provide users with stable storage services.",
     "apply-now-prefix": "Apply for Crust Grants and join us for building the Web 3.0 decentralized cloud ecosystem.",
     "dev-team": "Dev Team - Clouderium Technologies",
-    "dev-team-intro": "As a contributor to the Web 3.0 decentralized cloud technology, Clouderium Technologies is specialized in research and development of trusted computing, blockchain, and cloud storage, and provided technical solutions for Crust Network.",
+    "dev-team-intro": "Crust is an open source project funded by Decentralized Cloud Foundation. It is under active development and maintenance by <a class='btn-link' href='https://www.linkedin.com/company/clouderium/mycompany' target='_blank' style='text-decoration:underline !important;color: white !important'>Clouderium Technologies</a>. Clouderium is specialized in research and development of trusted computing, blockchain, and cloud storage.",
     "foundation": "Foundation - DCF",
-    "foundation-intro": "DCF (Decentralized Cloud Foundation)  has incubated the decentralized storage project of Web 3.0 ecosystem - “Crust Network”, and will extend the effort to the funding of development and research projects that drive user experience, business potential and technical innovation."
+    "foundation-intro": "DCF (Decentralized Cloud Foundation) funds and incubates teams and projects, to build decentralized cloud infrastructure and applications of Web3.0. Crust Network is the fundamental project that DCF mainly supports."
   },
   "productMatrix": {
     "title": "Product Matrix",
