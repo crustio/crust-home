@@ -97,11 +97,13 @@
         </div>
         <div class="dec-apply-now">
           <span class="prefix-text">{{ $t(`decentralized.apply-now-prefix`)}}</span>
+          <p class="check-more-title" v-html="$t('decentralized.checkMore')"></p>
           <button class="btn-custom cloud-grants-btn" @click="handleApplyNow">
             {{ $t("button.CrustGrants") }}
           </button>
         </div>
       </div>
+      <p class="check-more-title-full" v-html="$t('decentralized.checkMore')"></p>
     </div>
   </div>
 </template>
@@ -258,9 +260,18 @@ export default {
         .cloud-grants-btn {
           width: 200px;
           align-self: center;
-        }
+        }        
       }
 
+    }
+    .check-more-title-full {
+      padding-top: 40px;
+      width: 100%;
+      font-family: Inter-Regular;
+      font-size: 20px;
+      color: #ff6400;
+      letter-spacing: 0;
+      text-align: center;
     }
   }
 
@@ -353,7 +364,21 @@ export default {
           margin-top: 20px;
           align-self: center;
         }
+        .check-more-title {
+          font-family: Inter-Regular;
+          font-size: 12px;
+          color: #ff6400;
+          letter-spacing: 0;
+          text-align: left;
+          margin-top: 24px;
+          margin-bottom: 10px;
+        }
+
       }
+
+    }
+    .check-more-title-full{
+      display: none;
     }
 
     .swiper-container {
