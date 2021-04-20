@@ -73,7 +73,7 @@ export default {
         {
           name: "Documents",
           hasChild: true,
-          children: ["WhitePaper", "EcoWhitePaper", "Github", "Wiki", "Crust Grants"],
+          children: ["WhitePaper", "EcoWhitePaper", "Github", "Wiki", "Crust Grants", "Application Brief"],
         },
         {
           name: "FAQ",
@@ -89,16 +89,21 @@ export default {
   methods: {
     jump(name) {
       name = name.toLowerCase()
+      const isEn = this.$store.state.locale === "en"
       if (name === "join preview network" || name === "wiki") {
-        if (this.$store.state.locale === "en") {
+        if (isEn) {
           name += "_en"
         }
       }
       if (name === "ecowhitepaper" || name === "whitepaper") {
-        if (this.$store.state.locale === "en") {
+        if (isEn) {
           name += "_en"
         }
         return window.open(`${outerDit.pdfBucket}${name}.pdf`, "_blank")
+      }
+      if (name === "application brief") {
+        const pdfName = isEn ? "crust_applicaiton_brief_ch.pdf" : "crust_applicaiton_brief.pdf"
+        return window.open(`${outerDit.extractDocs}${pdfName}`, "_blank")
       }
       if (name === "zh" || name === "en") {
         // 切换语言
@@ -110,6 +115,7 @@ export default {
       if (name === "crust grants") {
         return jumpTo('dcf grants')
       }
+
       if (name === "crust cloud") {
         if (this.$route.name !== "home") {
           this.$router.push("/#product")
