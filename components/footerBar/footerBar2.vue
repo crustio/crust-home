@@ -78,7 +78,7 @@ export default {
       titles: ["Resourcese", "forum", "JoinUs"],
       items: [
         ["WhitePaper", "EcoWhitePaper", "FAQ"],
-        ["Twitter", "Telegram"],
+        ["Twitter", "Telegram", "Discord"],
         ["Github"],
       ],
       iconNames: ["telegram", "medium", "twitter", "github", "discord"],
