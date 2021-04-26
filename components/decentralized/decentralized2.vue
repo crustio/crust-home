@@ -97,13 +97,13 @@
         </div>
         <div class="dec-apply-now">
           <span class="prefix-text">{{ $t(`decentralized.apply-now-prefix`)}}</span>
-          <p class="check-more-title" v-html="$t('decentralized.checkMore')"></p>
+<!--          <p class="check-more-title" v-html="$t('decentralized.checkMore')"></p>-->
           <button class="btn-custom cloud-grants-btn" @click="handleApplyNow">
             {{ $t("button.CrustGrants") }}
           </button>
         </div>
       </div>
-      <p class="check-more-title-full" v-html="$t('decentralized.checkMore')"></p>
+<!--      <p class="check-more-title-full" v-html="$t('decentralized.checkMore')"></p>-->
     </div>
   </div>
 </template>
@@ -260,7 +260,7 @@ export default {
         .cloud-grants-btn {
           width: 200px;
           align-self: center;
-        }        
+        }
       }
 
     }

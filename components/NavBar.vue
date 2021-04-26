@@ -73,7 +73,7 @@ export default {
         {
           name: "Documents",
           hasChild: true,
-          children: ["WhitePaper", "EcoWhitePaper", "Github", "Wiki", "Crust Grants", "Application Brief"],
+          children: ["WhitePaper", "EcoWhitePaper", "Github", "Wiki", "Crust Grants", "Crust Solutions Handbook"],
         },
         {
           name: "FAQ",
@@ -101,8 +101,8 @@ export default {
         }
         return window.open(`${outerDit.pdfBucket}${name}.pdf`, "_blank")
       }
-      if (name === "application brief") {
-        const pdfName = isEn ? "crust_applicaiton_brief_ch.pdf" : "crust_applicaiton_brief.pdf"
+      if (name === "crust solutions handbook") {
+        const pdfName = isEn ? "crust_solutions_handbook-en.pdf" : "crust_solutions_handbook-ch.pdf"
         return window.open(`${outerDit.extractDocs}${pdfName}`, "_blank")
       }
       if (name === "zh" || name === "en") {
