@@ -67,6 +67,8 @@ import IconMedium from "@/assets/svgs/icon-medium.svg?raw"
 import IconTelegram from "@/assets/svgs/icon-telegram.svg?raw"
 import IconTwitter from "@/assets/svgs/icon-twitter.svg?raw"
 import IconWeinxin from "@/assets/svgs/icon-weixin.svg?raw"
+import IconDiscord from "@/assets/svgs/icon-discord.svg?raw"
+
 import { outerDit } from "@/config/nav-config"
 import jumpTo from "~/utils"
 export default {
@@ -79,8 +81,8 @@ export default {
         ["Twitter", "Telegram"],
         ["Github"],
       ],
-      iconNames: ["telegram", "medium", "twitter", "github"],
-      icons: [IconTelegram, IconMedium, IconTwitter, IconGithub],
+      iconNames: ["telegram", "medium", "twitter", "github", "discord"],
+      icons: [IconTelegram, IconMedium, IconTwitter, IconGithub, IconDiscord],
       weixin: IconWeinxin,
     }
   },

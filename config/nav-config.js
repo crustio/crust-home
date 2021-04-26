@@ -20,6 +20,7 @@ const outerDit = {
   twitter: "https://twitter.com/CrustNetwork",
   medium: "https://medium.com/@CrustNetwork",
   telegram: "https://t.me/CrustNetwork",
+  discord: "https://discord.gg/Jbw2PAUSCR",
   explorer: "http://explorer.crust.network/",
   "crust apps": "https://apps.crust.network/",
   "blockchain explorer": "https://crust.subscan.io/",
