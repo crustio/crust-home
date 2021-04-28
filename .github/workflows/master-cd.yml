@@ -35,7 +35,7 @@ jobs:
           command: |
             docker pull crustio/crust-web:latest
             cd /opt/compose
-            docker tag crustio/crust-web:latest crust-web
+            docker tag crustio/crust-web:latest compose_crust-web
             docker-compose up -d crust-web
           host: ${{ secrets.SSH_HOST }}
           user: ${{ secrets.SSH_USER }}
