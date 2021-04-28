@@ -103,7 +103,7 @@ export default {
       }
       if (name === "crust solutions handbook") {
         const pdfName = isEn ? "crust_solutions_handbook-en.pdf" : "crust_solutions_handbook-ch.pdf"
-        return window.open(`${outerDit.extractDocs}${pdfName}`, "_blank")
+        return window.open(`${outerDit.download}${pdfName}`, "_blank")
       }
       if (name === "zh" || name === "en") {
         // 切换语言
