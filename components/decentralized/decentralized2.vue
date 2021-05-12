@@ -109,7 +109,7 @@
       </div>
 <!--      <p class="check-more-title-full" v-html="$t('decentralized.checkMore')"></p>-->
     </div>
-    <div class="video-container" @click="handleCloseDemoVideo" v-if="showVideo">
+    <div class="m-video-container" @click="handleCloseDemoVideo" v-if="showVideo">
       <dVideo></dVideo>
     </div>
   </div>
@@ -228,7 +228,7 @@ export default {
   }
 }
 
-.video-container{
+.m-video-container{
   position: fixed;
   z-index: 100;
   width: 100vw;
@@ -511,7 +511,7 @@ export default {
     }
   }
 
-  .video-container{
+  .m-video-container{
     padding: unset;
   }
 
