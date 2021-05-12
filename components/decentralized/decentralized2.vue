@@ -340,6 +340,7 @@ export default {
           flex-wrap: wrap;
           align-items: flex-end;
           justify-content: flex-end;
+          max-width: 600px;
           .btn-custom {
             border: 2px solid $secondary;
             width: 200px;
