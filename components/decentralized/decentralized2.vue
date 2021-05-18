@@ -9,13 +9,16 @@
           <div class="dec-top-right">
             <button
               class="btn-custom"
-              style="margin-bottom: 20px"
+              style="margin-bottom: 20px;margin-right: 20px"
               @click="handleExperienceClick"
             >
               {{ $t("button.experienceCrustApps") }}
             </button>
-            <button class="btn-custom" @click="handleBuildClick">
+            <button class="btn-custom" style="margin-bottom: 20px" @click="handleBuildClick">
               {{ $t("button.buildOnCrust") }}
+            </button>
+            <button class="btn-custom" @click="handleDemoVideoClick">
+              <i v-html="iconPlay" class="icon-play"></i>{{ $t("button.demoVideo") }}
             </button>
           </div>
         </div>
@@ -25,15 +28,16 @@
               <DConnectCard
                 :img-src="require('~/assets/images/ipfs-add.png')"
                 :title="$t(`decentralized.step-1-1`)"
-                content1="added"
-                content2="QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v"
+                content1="crust-cli pin MyFiles"
+                content2=""
               />
             </swiper-slide>
             <swiper-slide>
               <DConnectCard
                 :img-src="require('~/assets/images/ipfs-place.png')"
                 :title="$t(`decentralized.step-2-1`)"
-                content2="QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v"
+                content1="crust-cli publish"
+                content2="QmUmfSj43T9fsPSaEgGcrgHH5Wq8KFv48oVXnfY4FXDJZt"
               />
             </swiper-slide>
             <swiper-slide>
@@ -41,7 +45,7 @@
                 :img-src="require('~/assets/images/ipfs-get.png')"
                 :title="$t(`decentralized.step-3-1`)"
                 content1="ipfs get"
-                content2="QmQttmFtnV2NT91MkHti2a8iW8hCRH61TE44nR6XhfNv3v"
+                content2="QmUmfSj43T9fsPSaEgGcrgHH5Wq8KFv48oVXnfY4FXDJZt"
               />
             </swiper-slide>
             <div slot="pagination" class="swiper-pagination swiper-pagination-connnct"></div>
@@ -105,18 +109,25 @@
       </div>
 <!--      <p class="check-more-title-full" v-html="$t('decentralized.checkMore')"></p>-->
     </div>
+    <div class="m-video-container" @click="handleCloseDemoVideo" v-if="showVideo">
+      <dVideo></dVideo>
+    </div>
   </div>
 </template>
 
 <script>
 import DConnectCard from "./DConnectCard"
 import DCloudCard from "./DCloudCard"
+import IconPlay from "@/assets/svgs/icon-play.svg?raw"
 import { outerDit } from "@/config/nav-config"
+import dVideo from './dVideo'
 export default {
   name: "Decentralized2",
-  components: { DConnectCard, DCloudCard },
+  components: { DConnectCard, DCloudCard, dVideo },
   data() {
     return {
+      showVideo: false,
+      iconPlay: IconPlay,
       swiperOptions1: {
         loop: false,
         slidesPerView: 3,
@@ -190,6 +201,12 @@ export default {
         "_blank"
       )
     },
+    handleDemoVideoClick() {
+      this.showVideo = true
+    },
+    handleCloseDemoVideo(){
+      this.showVideo = false
+    },
     handleApplyNow() {
       window.open(
         outerDit[this.$store.state.locale === "en" ? "dcf grants" : "dcf grants"],
@@ -201,6 +218,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.icon-play{
+  /deep/ svg{
+    margin-right: 8px;
+    margin-bottom: 2px;
+    width: 16px;
+    height: 16px;
+    fill: white;
+  }
+}
+
+.m-video-container{
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 10vw;
+  background: rgba(33,33,33, 0.2);
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
 @media screen and (min-width: 1200px) {
   .dec-cloud {
     padding: 100px 0;
@@ -293,10 +336,20 @@ export default {
         }
         .dec-top-right {
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: flex-end;
+          justify-content: flex-end;
+          max-width: 600px;
           .btn-custom {
             border: 2px solid $secondary;
             width: 200px;
+            &:hover{
+              color: #afafaf !important;
+              /deep/ svg{
+                fill: #afafaf !important;
+              }
+            }
           }
         }
       }
@@ -426,12 +479,19 @@ export default {
           .btn-custom {
             border: 2px solid $secondary;
             width: 160px;
+            &:hover{
+              color: #afafaf !important;
+              /deep/ svg{
+                fill: #afafaf !important;
+              }
+            }
           }
         }
       }
       .dec-bottom {
       }
     }
+
     .swiper-slide {
       height: auto;
     }
@@ -452,6 +512,9 @@ export default {
     }
   }
 
+  .m-video-container{
+    padding: unset;
+  }
 
 }
 

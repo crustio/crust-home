@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <img :src="imgSrc" />
+    <img class="img-content" :src="imgSrc" />
   </div>
 </template>
 <script>
@@ -130,6 +130,17 @@ export default {
     height: auto;
     max-width: 100%;
     max-height: 100%;
+  }
+  .img-content{
+    position: relative;
+    left: -26px;
+    width: calc(100% + 52px);
+    max-width: calc(100% + 52px);
+    @media screen and (max-width: 1200px) {
+      left: -20px;
+      width: calc(100% + 40px);
+      max-width: calc(100% + 52px);
+    }
   }
 }
 </style>

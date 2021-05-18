@@ -4,13 +4,14 @@
       ref="dmedia"
       controls
       class="video-js d-video"
+      @click="handleTogglePlay"
       preload="auto">
       <source
-        src="https://crust.network/download/CrustDemo.mp4"
+        src="https://ipfs.decoo.io/ipfs/QmX5pzx4HwMuSFmhS5mwP5nNxJVZJNk6SedyZjgNmwr5qo"
         type="video/mp4"
       >
     </video>
-    <img class="img-ele" :src="require('~/assets/images/tech.png')" v-if="!this.isPlaying">
+<!--    <img class="img-ele" :src="require('~/assets/images/tech.png')" v-if="!this.isPlaying">-->
   </div>
 </template>
 <script>
@@ -35,6 +36,10 @@ export default {
     },
     handlePause() {
       this.isPlaying = false
+    },
+    handleTogglePlay(e){
+      this.isPlaying = !this.isPlaying
+      e.stopPropagation()
     }
   }
 }
@@ -42,13 +47,14 @@ export default {
 <style lang="scss" scoped>
   .d-video {
     width: 100%;
-    max-width: 520px;
+    //max-width: 520px;
     height: auto;
     margin: auto;
     margin-right: 0;
   }
   .video-container {
     position: relative;
+    align-self: center;
   }
   .img-ele {
     position: absolute;
