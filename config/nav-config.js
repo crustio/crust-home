@@ -41,7 +41,9 @@ const outerDit = {
   "check our github": "https://github.com/crustio",
   "crust grants": "https://decloudf.com/",
   "dev team": "https://www.linkedin.com/company/clouderium/mycompany/",
-  "dcf grants": "https://decloudf.com?scrollto=description"
+  "dcf grants": "https://decloudf.com?scrollto=description",
+  csm_lightpaper_en: "https://ipfs.decoo.io/ipfs/QmYVRP7puUhGvQPuThHK2mtQgj2nUAoJYkBgXYxwiaC8Dq?filename=Crust%20Shadow%20lightpaper202105.pdf",
+  csm_lightpaper_zh: "https://ipfs.decoo.io/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=LT%20paper.(ZH).1_compressed.pdf"
 }
 const outerList = Object.keys(outerDit)
 module.exports = {
