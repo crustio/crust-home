@@ -73,7 +73,15 @@ export default {
         {
           name: "Documents",
           hasChild: true,
-          children: ["WhitePaper", "EcoWhitePaper", "Github", "Wiki", "Crust Grants", "Crust Solutions Handbook"],
+          children: [
+            "WhitePaper",
+            "EcoWhitePaper",
+            "Github",
+            "Wiki",
+            "Crust Grants",
+            "Crust Solutions Handbook",
+            "CSM Lightpaper",
+          ],
         },
         {
           name: "FAQ",
@@ -105,6 +113,12 @@ export default {
         const pdfName = isEn ? "crust_solutions_handbook-en.pdf" : "crust_solutions_handbook-ch.pdf"
         return window.open(`${outerDit.download}${pdfName}`, "_blank")
       }
+      if (name === 'csm lightpaper'){
+        // https://ipfs.decoo.io/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=LT%20paper.(ZH).1_compressed.pdf
+        const url = isEn ? outerDit.csm_lightpaper_en : outerDit.csm_lightpaper_zh
+        return window.open(url, '_blank')
+      }
+
       if (name === "zh" || name === "en") {
         // 切换语言
         this.$i18n.locale = name
