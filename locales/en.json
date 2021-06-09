@@ -42,7 +42,16 @@
     "Profix Ark": "Profix Ark",
     "Preview Network": "Preview Network",
     "Wiki": "Wiki",
-    "Crust Wallet": "Crust Wallet"
+    "Crust Wallet": "Crust Wallet",
+    "nutbox": "Nutbox",
+    "okex":  "Okex",
+    "kraken":  "Kraken",
+    "hotbit": "Hotbit",
+    "math_wallet":  "Mathwallet",
+    "atoken": "Atoken wallet",
+    "rewards_plan": "Rewards Plan",
+    "slot_auction": "Slot Auction",
+    "polkadot_apps": "Polkadot apps"
   },
   "footer": {
     "Success": "Copy Success",
