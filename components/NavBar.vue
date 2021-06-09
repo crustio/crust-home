@@ -1,12 +1,33 @@
 <template>
   <b-navbar fixed="true" toggleable="lg" type="dark" variant="dark">
     <div class="container">
-      <b-navbar-brand href="#" @click="jump('home')">
+      <div class="auction-tool-bar">
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item-dropdown
+              :text="$t(`header.slot_auction`)"
+              menu-class="slot-auction"
+              right
+          >
+              <template v-for="child in slot_auction">
+                <b-dropdown-item :disabled="child.disabled" :key="child.name" @click="openLink(child.location)"
+                                 href="#">{{
+                    $t(`header.${child.name}`)
+                  }}</b-dropdown-item>
+              </template>
+            </b-nav-item-dropdown>
+            <b-nav-item
+                href="#"
+                @click="openLink('rewards_plan')"
+            >{{ $t(`header.rewards_plan`) }}</b-nav-item>
+        </b-navbar-nav>
+      </div>
+      <b-navbar-brand href="#" @click="open('home')">
         <img
           src="https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/logo.png"
           alt=""
         />
       </b-navbar-brand>
+
       <b-navbar-toggle target="nav-collapse"> </b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
@@ -46,14 +67,45 @@
 </template>
 
 <script>
-import jumpTo from "../utils"
 import { outerList, outerDit } from "@/config/nav-config"
-import VueScrollTo from "vue-scrollto"
+import jumpTo from "../utils"
 
 export default {
   data() {
     return {
       activeNav: "home",
+      slot_auction: [
+        {
+          name: "polkadot_apps",
+          location: "https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/parachains/crowdloan"
+        },
+        {
+          name: "nutbox",
+          location: "https://polkadot.nutbox.io/#/crowdloan/kusama/parachain/2012"
+        },
+        {
+          name: "okex",
+          location: "https://www.ouyi.cc/earn/slotauction"
+        },
+        {
+          name: "kraken",
+          location: "https://www.kraken.com/sign-in?redirect=%252Fu%252Ffunding%252Fparachains"
+        },
+        {
+          name: "math_wallet",
+          location: "https://cloud.mathwallet.xyz/#/auction"
+        },
+        {
+          name: "atoken",
+          location: "",
+          disabled: true
+        },
+        {
+          name: "hotbit",
+          location: "",
+          disabled: true
+        },
+      ],
       navList: [
         {
           name: "Home",
@@ -95,6 +147,15 @@ export default {
     }
   },
   methods: {
+    openLink (location){
+      console.log(location);
+      if (location === 'rewards_plan') {
+        location= this.$store.state.locale === "en" ? 'https://crustnetwork.medium.com/crust-updates-kusama-parachain-slot-auction-rewards-2f6b32c682ec' : 'https://mp.weixin.qq.com/s/xtLCalg9fnvoierQTNFDfQ'
+        console.log(location);
+        window.open(location, "_blank")
+      }
+      window.open(location, "_blank")
+    },
     jump(name) {
       name = name.toLowerCase()
       const isEn = this.$store.state.locale === "en"
@@ -170,6 +231,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  position: relative;
+}
+.auction-tool-bar {
+  position: absolute;
+  left: 150px;
+  top: 0;
+  width: auto;
+  max-height: 100%;
+  .nav-item {
+    padding-left: 10px!important;
+  }
+}
 .navbar {
   background: #141414 !important;
   .container {
@@ -180,7 +254,6 @@ export default {
   min-height: 60px;
   z-index: 10;
   .navbar-nav {
-    opacity: 0.6;
     font-family: InterV;
     font-size: 16px;
     color: #ffffff;
@@ -197,8 +270,19 @@ export default {
         }
       }
       .nav-link {
+        color: #fff!important;
+        &:hover {
+          color: #ff6400!important;
+          border-bottom: 2px solid #ff6400;
+        }
+        &:focus {
+          color: #ff6400;
+          border-bottom: 2px solid #ff6400;
+        }
         &.active {
           font-family: InterV_Extra-Bold;
+          color: #ff6400;
+          border-bottom: 2px solid #ff6400;
         }
       }
     }

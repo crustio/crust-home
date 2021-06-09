@@ -42,7 +42,16 @@
     "Profix Ark": "方舟计划",
     "Preview Network": "预览网",
     "Wiki": "Wiki",
-    "Crust Wallet": "Crust 钱包"
+    "Crust Wallet": "Crust 钱包",
+    "slot_auction": "参与卡槽竞拍",
+    "nutbox": "Nutbox",
+    "okex":  "欧易OKEx",
+    "kraken":  "Kraken",
+    "math_wallet":  "麦子钱包",
+    "atoken": "Atoken钱包",
+    "hotbit": "Hotbit",
+    "rewards_plan": "查看奖励计划",
+    "polkadot_apps": "Polkadot apps"
   },
   "footer": {
     "Success": "复制成功",
