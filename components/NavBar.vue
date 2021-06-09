@@ -96,12 +96,11 @@ export default {
           location: "https://cloud.mathwallet.xyz/#/auction"
         },
         {
-          name: "atoken",
-          location: "",
-          disabled: true
+          name: "hotbit",
+          location: "https://www.hotbit.io/slotauction/detail/2",
         },
         {
-          name: "hotbit",
+          name: "atoken",
           location: "",
           disabled: true
         },
