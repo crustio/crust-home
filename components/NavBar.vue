@@ -98,7 +98,6 @@ export default {
         {
           name: "hotbit",
           location: "https://www.hotbit.io/slotauction/detail/2",
-          disabled: true
         },
         {
           name: "atoken",
