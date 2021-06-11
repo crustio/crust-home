@@ -21,9 +21,10 @@
             >{{ $t(`header.rewards_plan`) }}</b-nav-item>
         </b-navbar-nav>
       </div>
-      <b-navbar-brand href="#" @click="open('home')">
+      <b-navbar-brand href="#" @click="jump('home')">
         <img
-          src="https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/logo.png"
+          src="../assets/images/logo.svg"
+          width="90"
           alt=""
         />
       </b-navbar-brand>

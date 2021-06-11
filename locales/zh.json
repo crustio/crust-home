@@ -89,7 +89,7 @@
     "title": "Crust",
     "sub": "什么是Crust",
     "content": {
-      "text1": "提供了Web3⽣态系统的去中⼼化存储⽹络，⽀持包括IPFS在内的多种存储层协议，并对应⽤层提供接⼝。Crust的技术栈还能够⽀持去中⼼化计算层。Crust旨在构建⼀个重视数据隐私和所有权的分散式云⽣态系统。",
+      "text1": "提供了Web3⽣态系统的去中⼼化存储⽹络，⽀持包括IPFS在内的多种存储层协议，并对应⽤层提供接⼝。Crust的技术栈还能够⽀持去中⼼化计算层。Crust旨在构建⼀个重视数据隐私和所有权的分布式云⽣态系统。",
       "text2": "<span class='font-weight-bold'>CRUST</span>提供了<a class='btn-link'>Web3.0</a>⽣态系统的<a class='btn-link'>去中⼼化存储⽹络</a>，⽀持包括<a class='btn-link'>IPFS</a>在内的多种存储层协议，并对应⽤层提供接⼝。Crust的技术栈还能够⽀持去中⼼化计算层。Crust旨在构建⼀个重视<a class='btn-link'>数据隐私和所有权</a>的<a class='btn-link'>分布式云</a>⽣态系统。",
       "text3": ""
     },
