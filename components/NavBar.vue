@@ -147,12 +147,9 @@ export default {
     }
   },
   methods: {
-    openLink (location){
-      console.log(location);
-      if (location === 'rewards_plan') {
-        location= this.$store.state.locale === "en" ? 'https://crustnetwork.medium.com/crust-updates-kusama-parachain-slot-auction-rewards-2f6b32c682ec' : 'https://mp.weixin.qq.com/s/xtLCalg9fnvoierQTNFDfQ'
-        console.log(location);
-        window.open(location, "_blank")
+    openLink(location) {
+      if (location === "rewards_plan") {
+        location = this.$store.state.locale === "en" ? 'https://crustnetwork.medium.com/crust-updates-kusama-parachain-slot-auction-rewards-2f6b32c682ec' : 'https://mp.weixin.qq.com/s/xtLCalg9fnvoierQTNFDfQ'
       }
       window.open(location, "_blank")
     },
