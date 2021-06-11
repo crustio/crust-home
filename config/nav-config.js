@@ -46,6 +46,7 @@ const outerDit = {
   csm_lightpaper_zh: "https://ipfs.decoo.io/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=LT%20paper.(ZH).1_compressed.pdf",
   rewards_plan_en:"https://crustnetwork.medium.com/crust-updates-kusama-parachain-slot-auction-rewards-2f6b32c682ec",
   rewards_plan_zh:"https://mp.weixin.qq.com/s/xtLCalg9fnvoierQTNFDfQ",
+  "free storage": "https://fs.crust.network"
 }
 const outerList = Object.keys(outerDit)
 module.exports = {
