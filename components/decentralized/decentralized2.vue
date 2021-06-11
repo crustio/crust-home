@@ -17,6 +17,9 @@
             <button class="btn-custom" style="margin-bottom: 20px" @click="handleBuildClick">
               {{ $t("button.buildOnCrust") }}
             </button>
+            <button class="btn-custom" @click="handleFreeStorageClick" style="margin-right: 20px">
+              {{ $t("button.freeStorage") }}
+            </button>
             <button class="btn-custom" @click="handleDemoVideoClick">
               <i v-html="iconPlay" class="icon-play"></i>{{ $t("button.demoVideo") }}
             </button>
@@ -182,6 +185,12 @@ export default {
       } else {
         return 'zh-cn'
       }
+    },
+    handleFreeStorageClick() {
+      window.open(
+        outerDit["free storage"],
+        "_blank"
+      )
     },
     handleExperienceClick() {
       window.open(
