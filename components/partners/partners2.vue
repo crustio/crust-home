@@ -11,13 +11,13 @@
       <div class="partner-container">
         <swiper class="swiper" :options="swiperOptions">
           <swiper-slide
-            v-for="idx in 24"
+            v-for="idx in 23"
             :key="`partner${idx}`"
             class="image-wrapper"
           >
             <div class="partner-container-img">
               <img
-                :src="`https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/partners/img${idx}.png`"
+                :src="`https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/partners/img${idx}.png?v1`"
                 alt="Responsive image"
               />
             </div>
