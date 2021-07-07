@@ -403,6 +403,45 @@
       }
     ]
   },
+  "usecase": {
+    "title": "Use Cases",
+    "polkadot": {
+      "home": "https://dotapps.io",
+      "learnMore": "https://dotapps.io",
+      "desc": "Basic Polkadot/Substrate UI for interacting with a node. The main user-facing application, allowing access to all features available on Substrate chains."
+    },
+    "uniswap": {
+      "desc": "One of the most widely used decentralized trading protocol.",
+      "link": "https://uniswap.org/",
+      "learnMore": "https://medium.com/crustnetwork/decentralized-uniswap-interface-hosting-on-ipfs-18a78d1209ac"
+    },
+    "IPFS": {
+      "desc": "The home page for developer documentation for IPFS, the InterPlanetary File System.",
+      "link": "https://docs.ipfs.io/",
+      "learnMore": "https://docs.ipfs.io/"
+    },
+    "SkyeKiwi": {
+      "desc": "A decentralized secret sharing protocol that is capable of sharing files from a single seed phrase to GB size of files, to a few people to hundreds and thousands of people.",
+      "link": "http://skye.kiwi/",
+      "learnMore": "https://skyekiwi.medium.com/overview-of-client-side-skyekiwi-protocol-57cfe7c8a017"
+    },
+    "Socbay": {
+      "desc": "Socbay.io was created as an decentralized open-source video sharing platform based on IPFS and Crust network.",
+      "link": "https://socbay.io/",
+      "learnMore": "https://socbayio.medium.com/socbay-io-project-development-report-76fb4ea41cca"
+    },
+    "Decoo": {
+      "desc": "Decoo makes IPFS Pinning awfully simple and effortless. Store your files by IPFS / Crust Network and make them accessible anywhere, anytime.",
+      "link": "https://decoo.io/",
+      "learnMore": "https://decoo.io/"
+    },
+    "Realy": {
+      "desc": "Create, collect and trade valuable NFT assets of the New Luxury",
+      "link": "https://realy.pro//",
+      "learnMore": "https://realy.pro/"
+    }
+
+  },
   "Crust Maxwell": "Crust Maxwell",
   "Crust Solutions Handbook": "Crust Solutions Handbook",
   "Crust-based commercial application solution": "Crust-based commercial application solution",
