@@ -5,20 +5,30 @@
         <div id="global"></div>
         <div class="main-logo">
           <p class="logo" v-html="$t('indexBanner.sub')"></p>
-          <p class="test-net-title" v-html="$t('button.networkTitle')"></p>
           <div class="buttons">
             <button
               class="btn-custom button-width"
               @click="handleClick('build on crust')"
             >
-              {{ $t("button.joinPreviewNetwork") }}
+              {{ $t("Crust Maxwell") }}
             </button>
-            <button
-              class="btn-custom margin-left-25 button-width"
-              @click="handleClick('csmToken')"
-            >
-              {{ $t("button.csmToken") }}
-            </button>
+          </div>
+          <div class="desc">
+            Maxwell incorporates all of the Crust's core features:
+            <ul>
+              <li>
+                {{$t("Token pledging")}}
+              </li>
+              <li>
+                {{$t("A decentralized storage market")}}
+              </li>
+              <li>
+                {{$t("A document retrieval mechanism")}}
+              </li>
+            </ul>
+            <p>
+              {{$t("Crust Mainnet is coming soon")}}
+            </p>
           </div>
         </div>
       </div>
@@ -182,15 +192,20 @@ export default {
           margin-bottom: 2rem;
           width: 635px;
         }
-
-        .test-net-title {
-          opacity: 0.53;
-          font-family: Inter-Regular;
-          font-size: 20px;
+        .desc {
+          padding: 22px 0 0 5px;
+          font-size: 14px;
+          font-family: InterV_Semi-Bold, InterV_Semi;
+          font-weight: bold;
           color: #ff6400;
-          letter-spacing: 0;
-          text-align: left;
-          margin-bottom: 60px;
+          line-height: 2em;
+          p {
+            padding-top: 32px;
+            font-size: 16px;
+            font-weight: 500;
+            font-style: italic;
+            color: #ff6400;
+          }
         }
         .buttons {
           display: flex;

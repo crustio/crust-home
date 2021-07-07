@@ -7,19 +7,6 @@
             {{ $t(`decentralized.title`) }}
           </div>
           <div class="dec-top-right">
-            <button
-              class="btn-custom"
-              style="margin-bottom: 20px;margin-right: 20px"
-              @click="handleExperienceClick"
-            >
-              {{ $t("button.experienceCrustApps") }}
-            </button>
-            <button class="btn-custom" style="margin-bottom: 20px" @click="handleBuildClick">
-              {{ $t("button.buildOnCrust") }}
-            </button>
-            <button class="btn-custom" @click="handleFreeStorageClick" style="margin-right: 20px">
-              {{ $t("button.freeStorage") }}
-            </button>
             <button class="btn-custom" @click="handleDemoVideoClick">
               <i v-html="iconPlay" class="icon-play"></i>{{ $t("button.demoVideo") }}
             </button>
@@ -53,6 +40,15 @@
             </swiper-slide>
             <div slot="pagination" class="swiper-pagination swiper-pagination-connnct"></div>
           </swiper>
+          <div class="center w-100" style="text-align: center;">
+            <button
+                class="btn-custom"
+                style="margin-top: 42px"
+                @click="handleFreeStorageClick"
+            >
+            {{ $t("button.freeStorage") }}
+          </button>
+          </div>
         </div>
       </div>
     </div>
@@ -63,9 +59,9 @@
             {{ $t(`decentralized.title2`) }}
           </div>
           <div class="dec-cloud-top-right">
-            <span class="prefix-text">{{ $t(`decentralized.apply-now-prefix`)}}</span>
+            <span class="prefix-text">{{ $t(`Crust-based commercial application solution`)}}</span>
             <button class="btn-custom cloud-grants-btn" @click="handleApplyNow">
-              {{ $t("button.CrustGrants") }}
+              {{ $t("Crust Solutions Handbook") }}
             </button>
           </div>
         </div>
@@ -192,12 +188,6 @@ export default {
         "_blank"
       )
     },
-    handleExperienceClick() {
-      window.open(
-        outerDit["crust apps"],
-        "_blank"
-      )
-    },
     handleCrustGrantsClick() {
       window.open(
         outerDit["crust grants"],
@@ -286,7 +276,6 @@ export default {
           text-align: right;
           .cloud-grants-btn {
             margin-top: 19px;
-            width: 200px;
           }
         }
       }
@@ -328,7 +317,7 @@ export default {
   }
 
   .dec-connect {
-    padding: 70px 0;
+    padding: 70px 0 42px 0;
     background: $mainColor;
     .container {
       display: flex;
@@ -347,19 +336,9 @@ export default {
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
-          align-items: flex-end;
-          justify-content: flex-end;
+          align-items: center;
+          justify-content: center;
           max-width: 600px;
-          .btn-custom {
-            border: 2px solid $secondary;
-            width: 200px;
-            &:hover{
-              color: #afafaf !important;
-              /deep/ svg{
-                fill: #afafaf !important;
-              }
-            }
-          }
         }
       }
     }
@@ -371,6 +350,17 @@ export default {
   .swiper-pagination-connnct,
   .swiper-pagination-cloud {
     display: none;
+  }
+  .btn-custom {
+    border: 2px solid $secondary;
+    padding-left: 20px;
+    padding-right: 20px;
+    &:hover{
+      color: #afafaf !important;
+      /deep/ svg{
+        fill: #afafaf !important;
+      }
+    }
   }
 
 }
@@ -485,16 +475,6 @@ export default {
         .dec-top-right {
           display: flex;
           flex-direction: column;
-          .btn-custom {
-            border: 2px solid $secondary;
-            width: 160px;
-            &:hover{
-              color: #afafaf !important;
-              /deep/ svg{
-                fill: #afafaf !important;
-              }
-            }
-          }
         }
       }
       .dec-bottom {
@@ -523,6 +503,17 @@ export default {
 
   .m-video-container{
     padding: unset;
+  }
+
+  .btn-custom {
+    border: 2px solid $secondary;
+    width: 160px;
+    &:hover{
+      color: #afafaf !important;
+      /deep/ svg{
+        fill: #afafaf !important;
+      }
+    }
   }
 
 }

@@ -21,6 +21,7 @@
               :season="$t(`timeline.${item}.season`)"
               :subtitle="$t(`timeline.${item}.subtitle`)"
               :index="i"
+              :descs="$t(`timeline.${item}.descs`)"
             ></timeline-item>
           </swiper-slide>
           <!--        <div slot="pagination" class="swiper-pagination"></div>-->
@@ -50,6 +51,11 @@ export default {
         "ark",
         "previewNetwork",
         "mainNet",
+        "Edge Network",
+        "ParaChain Unique STF Upgrades",
+        "MPoW Storage Proof V2",
+        "Scaled Network",
+        "Data Computing",
       ],
       process: 0,
       timer: null,
@@ -86,7 +92,6 @@ export default {
 
 @media screen and (min-width: 1200px) {
   .container-fluid {
-    padding-bottom: 87px;
     background: $secondary;
     .container {
       display: flex;

@@ -7,7 +7,14 @@
       <div class="timeline-item-date-season">{{ season }}</div>
     </div>
     <div class="timeline-item-line"></div>
-    <div class="timeline-item-title" v-html="subtitle"></div>
+    <div class="timeline-item-text-wrapper">
+      <div class="sub-title">{{ subtitle }}</div>
+      <div class="timeline-item-desc">
+        <div class="item" v-for="item in descs" :key="item">
+          <span><span class="circle" />&nbsp;{{ item }}</span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -34,15 +41,20 @@ export default {
       type: String,
       default: "",
     },
+    descs: {
+      type: Array,
+      default: () => [],
+    },
   },
 }
 </script>
 <style lang="scss" scoped>
 .timeline-item {
   width: 240px;
-  height: 228px;
+  height: 450px;
   position: relative;
   cursor: default;
+  overflow: visible;
 
   .timeline-item-icon {
     position: absolute;
@@ -103,15 +115,33 @@ export default {
     }
   }
 
-  .timeline-item-title {
+  .timeline-item-text-wrapper {
     font-family: InterV_Semi-Bold;
-    font-size: 24px;
     color: rgba(31, 31, 31, 0.75);
     letter-spacing: 0;
     text-align: left;
     position: absolute;
     top: 152px;
     left: 19px;
+    overflow: visible;
+    .timeline-item-desc {
+      overflow: visible;
+    }
+    .sub-title {
+      display: flex;
+      align-items: center;
+      padding: 15px 0;
+      height: 80px;
+      font-size: 24px;
+      line-height: 1.2em;
+    }
+    .item {
+      margin-bottom: 5px;
+      .circle {
+        border-color: rgba(31, 31, 31, 0.75);
+        margin-left: -15px;
+      }
+    }
   }
 
   .timeline-item-line {
@@ -139,8 +169,11 @@ export default {
       }
     }
 
-    .timeline-item-title {
+    .timeline-item-text-wrapper {
       color: $mainColor;
+      .circle {
+        border-color: $mainColor;
+      }
     }
   }
 }

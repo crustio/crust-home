@@ -14,7 +14,7 @@
     "applyNow": "立即申请",
     "contributeNow": "贡献代码",
     "applyForGrants": "申请资助",
-    "freeStorage": "免费体验"
+    "freeStorage": "体验免费存储"
   },
   "header": {
     "Github": "Github",
@@ -30,7 +30,7 @@
     "FAQ": "FAQ",
     "about": "关于我们",
     "languages": "中文",
-    "TestNet": "测试网",
+    "TestNet": "预览网",
     "Join Profit Ark": "加入方舟计划",
     "Join Preview Network": "加入预览网",
     "Crust Apps": "Crust Apps",
@@ -52,7 +52,8 @@
     "atoken": "Atoken钱包",
     "hotbit": "Hotbit",
     "rewards_plan": "查看奖励计划",
-    "polkadot_apps": "Polkadot apps"
+    "polkadot_apps": "Polkadot apps",
+    "Profit Data": "Profit Data"
   },
   "footer": {
     "Success": "复制成功",
@@ -282,5 +283,12 @@
         "desc": "Yao毕业于上海交通大学并获得了软件工程硕士学位。他在数据安全及Linux内核研发上有丰富经验。Yao曾在思科信息安全部门工作，并参与了多个区块链项目的研发。"
       }
     ]
-  }
+  },
+  "Crust Maxwell": "Crust Maxwell",
+  "Crust Solutions Handbook": "Crust商业应用解决方案",
+  "Crust-based commercial application solution": "基于Crust的商业应用解决方案，介绍具体应用场景及实现路径",
+  "Token pledging": "通证质押",
+  "A decentralized storage market": "去中心化存储市场DSM",
+  "A document retrieval mechanism": "文件检索机制",
+  "Crust Mainnet is coming soon": "Crust主网即将上线..."
 }
