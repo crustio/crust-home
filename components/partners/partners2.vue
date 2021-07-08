@@ -11,15 +11,12 @@
       <div class="partner-container">
         <swiper class="swiper" :options="swiperOptions">
           <swiper-slide
-            v-for="idx in 23"
-            :key="`partner${idx}`"
+            v-for="name in partners"
+            :key="`partner${name}`"
             class="image-wrapper"
           >
             <div class="partner-container-img">
-              <img
-                :src="`https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/partners/img${idx}.png?v1`"
-                alt="Responsive image"
-              />
+              <img :src="`/image/partners/${name}.png`" alt="Responsive image" />
             </div>
           </swiper-slide>
         </swiper>
@@ -41,6 +38,29 @@ export default {
     return {
       process: 0,
       timer: null,
+      partners: [
+        "dfg",
+        "ngc",
+        "hash",
+        "sevenx",
+        "iosg",
+        "bitcoin",
+        "bithumb",
+        "bitrise",
+        "builder",
+        "chain",
+        "consensus",
+        "edge",
+        "kns",
+        "origin",
+        "teex",
+        "ticaptial",
+        "waterdrop",
+        "wujilian",
+        "darwina",
+        "phala",
+        "maskbook",
+      ],
       swiperOptions: {
         loop: false,
         slidesPerView: "auto",
@@ -72,7 +92,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 1200px) {
   .container-fluid {
     padding-bottom: 40px;
@@ -195,5 +214,4 @@ export default {
     }
   }
 }
-
 </style>

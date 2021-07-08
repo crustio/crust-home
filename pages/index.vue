@@ -2,11 +2,10 @@
   <div id="content" class="main">
     <mainIndex class="item" />
     <decentralized class="item" />
+    <Usecase class="item" />
     <timeline class="item" />
-    <usecase class="item" />
     <DevTeam class="item" />
     <partners class="item" />
-    <Usecase class="item" />
   </div>
 </template>
 <script>

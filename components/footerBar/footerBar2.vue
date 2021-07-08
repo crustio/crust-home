@@ -4,11 +4,12 @@
       <div class="foot-left">
         <div class="foot-left-top">
           <a class="social weixin" href="javascript:">
-            <img class="qrcode" :src="require('~/assets/images/weixin.png')" alt="微信二维码"/>
-            <div
-              class="foot-left-top-icon"
-              v-html="weixin"
-            ></div>
+            <img
+              class="qrcode"
+              :src="require('~/assets/images/weixin.png')"
+              alt="微信二维码"
+            />
+            <div class="foot-left-top-icon" v-html="weixin"></div>
           </a>
           <template v-for="(icon, idx) in icons">
             <div
@@ -26,9 +27,7 @@
       <div class="foot-right">
         <div class="foot-right-title">{{ $t(`footer.title`) }}</div>
         <div class="mail-wrapper">
-          <div class="mail-container">
-            hi@crust.network
-          </div>
+          <div class="mail-container">hi@crust.network</div>
           <div>
             <b-button class="btn copy" variant="warning" @click="handleCopy">{{
               $t(`footer.Copy`)
@@ -68,6 +67,7 @@ import IconTelegram from "@/assets/svgs/icon-telegram.svg?raw"
 import IconTwitter from "@/assets/svgs/icon-twitter.svg?raw"
 import IconWeinxin from "@/assets/svgs/icon-weixin.svg?raw"
 import IconDiscord from "@/assets/svgs/icon-discord.svg?raw"
+import IconDotAsk from "@/assets/svgs/icon-dotask.svg?raw"
 
 import { outerDit } from "@/config/nav-config"
 import jumpTo from "~/utils"
@@ -77,12 +77,26 @@ export default {
     return {
       titles: ["Resourcese", "forum", "JoinUs"],
       items: [
-        ["WhitePaper", "EcoWhitePaper", "FAQ"],
+        ["WhitePaper", "EcoWhitePaper", "FAQ", "mediamaterials"],
         ["Twitter", "Telegram", "Discord"],
         ["Github"],
       ],
-      iconNames: ["telegram", "medium", "twitter", "github", "discord"],
-      icons: [IconTelegram, IconMedium, IconTwitter, IconGithub, IconDiscord],
+      iconNames: [
+        "telegram",
+        "medium",
+        "twitter",
+        "github",
+        "discord",
+        "dotAsk",
+      ],
+      icons: [
+        IconTelegram,
+        IconMedium,
+        IconTwitter,
+        IconGithub,
+        IconDiscord,
+        IconDotAsk,
+      ],
       weixin: IconWeinxin,
     }
   },
@@ -242,7 +256,7 @@ export default {
     }
   }
   a.weixin {
-	  position: relative;
+    position: relative;
   }
 
   .weixin img.qrcode {
@@ -257,11 +271,10 @@ export default {
     transform-origin: top right;
     opacity: 0;
     // border: .3125rem solid #0085ba;
-    border-radius: .25rem;
-    -webkit-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-
+    border-radius: 0.25rem;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   .weixin:hover img.qrcode {
@@ -276,8 +289,8 @@ export default {
     background-size: 100% 100%;
     background-color: $secondary;
 
-     a.weixin {
-	    position: relative;
+    a.weixin {
+      position: relative;
     }
 
     .weixin img.qrcode {
@@ -292,11 +305,10 @@ export default {
       transform-origin: top right;
       opacity: 0;
       // border: .3125rem solid #0085ba;
-      border-radius: .25rem;
-      -webkit-transition: all .4s ease-in-out;
-      -o-transition: all .4s ease-in-out;
-      transition: all .4s ease-in-out;
-
+      border-radius: 0.25rem;
+      -webkit-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
     }
 
     .weixin:hover img.qrcode {
@@ -348,7 +360,7 @@ export default {
         flex-direction: column;
         justify-content: flex-end;
 
-         .mail-wrapper {
+        .mail-wrapper {
           display: flex;
           flex-wrap: nowrap;
           margin-bottom: 60px;
@@ -386,7 +398,6 @@ export default {
           text-align: left;
           line-height: 14px;
           margin-bottom: 10px;
-
         }
 
         .foot-right-email {
@@ -422,6 +433,5 @@ export default {
       }
     }
   }
-
 }
 </style>

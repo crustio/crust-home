@@ -89,7 +89,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 1200px) {
   .container-fluid {
     background: $secondary;
@@ -121,7 +120,6 @@ export default {
           top: 143px;
           left: 19px;
         }
-
       }
     }
     .swiper-slide {
@@ -173,15 +171,13 @@ export default {
         .timeline-item {
           transform: scale(0.5);
           transform-origin: 0;
-          height: 125px;
+          height: 250px;
         }
       }
     }
     .swiper-slide {
       width: 120px;
     }
-
   }
 }
-
 </style>

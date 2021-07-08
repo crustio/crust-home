@@ -56,10 +56,11 @@
     "Profit Data": "Profit Data"
   },
   "footer": {
+    "mediamaterials": "Media materials",
     "Success": "Copy Success",
     "Error": "Copy Error",
     "Copy": "Copy",
-    "title": "Follow Us",
+    "title": "Contract Us",
     "Crust": "Crust",
     "WhitePaper": "Tech Whitepaper",
     "EcoWhitePaper": "Economy Whitepaper",
@@ -406,7 +407,7 @@
   "usecase": {
     "title": "Use Cases",
     "polkadot": {
-      "home": "https://dotapps.io",
+      "link": "https://dotapps.io",
       "learnMore": "https://dotapps.io",
       "desc": "Basic Polkadot/Substrate UI for interacting with a node. The main user-facing application, allowing access to all features available on Substrate chains."
     },
@@ -445,7 +446,7 @@
   "Crust Maxwell": "Crust Maxwell",
   "Crust Solutions Handbook": "Crust Solutions Handbook",
   "Crust-based commercial application solution": "Crust-based commercial application solution",
-  "Maxwell incorporates all of the Crust's core features:": "Maxwell incorporates all of the Crust's core features:",
+  "Maxwell incorporates all of the Crust's core features": "Maxwell incorporates all of the Crust's core features:",
   "Token pledging": "Token pledging",
   "A decentralized storage market": "A decentralized storage market",
   "A document retrieval mechanism": "A document retrieval mechanism",

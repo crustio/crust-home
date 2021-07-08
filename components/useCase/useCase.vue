@@ -15,7 +15,7 @@
             :key="item"
             class="image-wrapper"
           >
-            <UsecaseItem :name="item" :index="i"></UsecaseItem>
+            <UsecaseItem :name="item" :index="i" />
           </swiper-slide>
           <!--        <div slot="pagination" class="swiper-pagination"></div>-->
         </swiper>
@@ -41,7 +41,7 @@ export default {
       process: 0,
       timer: null,
       swiperOptions: {
-        loop: false,
+        loop: true,
         slidesPerView: "auto",
         spaceBetween: 10,
         centeredSlides: false,
@@ -49,17 +49,6 @@ export default {
         navigation: {
           nextEl: ".usecase-next",
           prevEl: ".usecase-prev",
-        },
-        breakpoints: {
-          0: {
-            centeredSlides: true,
-            centeredSlidesBounds: true,
-          },
-          600: {
-            slidesPerView: "auto",
-            centeredSlides: false,
-            centeredSlidesBounds: false,
-          },
         },
       },
     }
@@ -136,7 +125,7 @@ export default {
       }
     }
     .swiper-slide {
-      width: 50%;
+      width: 100%;
     }
   }
 }
