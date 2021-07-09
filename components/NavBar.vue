@@ -3,26 +3,16 @@
     <div class="container">
       <div class="auction-tool-bar">
         <b-navbar-nav class="ml-auto">
-          <b-nav-item-dropdown
-              :text="$t(`header.slot_auction`)"
-              menu-class="slot-auction"
-              right
-          >
-              <template v-for="child in slot_auction">
-                <b-dropdown-item :disabled="child.disabled" :key="child.name" @click="openLink(child.location)"
-                                 href="#">{{
-                    $t(`header.${child.name}`)
-                  }}</b-dropdown-item>
-              </template>
-            </b-nav-item-dropdown>
-            <b-nav-item
-                href="#"
-                @click="openLink('rewards_plan')"
-            >{{ $t(`header.rewards_plan`) }}</b-nav-item>
+          <b-navbar-nav class="ml-auto">
+            <b-nav-item href="#" @click="openLink('Profit Data')">{{
+              $t(`header["Profit Data"]`)
+            }}</b-nav-item>
+          </b-navbar-nav>
         </b-navbar-nav>
       </div>
       <b-navbar-brand href="#" @click="jump('home')">
         <img
+          style="margin-top: -6px"
           src="../assets/images/logo.svg"
           width="90"
           alt=""
@@ -128,9 +118,7 @@ export default {
           children: [
             "WhitePaper",
             "EcoWhitePaper",
-            "Github",
             "Wiki",
-            "Crust Grants",
             "Crust Solutions Handbook",
             "CSM Lightpaper",
           ],
@@ -148,8 +136,8 @@ export default {
   },
   methods: {
     openLink(location) {
-      if (location === "rewards_plan") {
-        location = this.$store.state.locale === "en" ? 'https://crustnetwork.medium.com/crust-updates-kusama-parachain-slot-auction-rewards-2f6b32c682ec' : 'https://mp.weixin.qq.com/s/xtLCalg9fnvoierQTNFDfQ'
+      if (location === "Profit Data") {
+        location = "https://apps.crust.network/#/csmStaking"
       }
       window.open(location, "_blank")
     },

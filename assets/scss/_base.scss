@@ -106,3 +106,11 @@ body,html {
     color: #7e7e80 !important;
   }
 }
+.circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px solid #ff6400;
+}

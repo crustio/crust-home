@@ -24,7 +24,7 @@
     "FAQ": "FAQ",
     "About": "About",
     "languages": "EN",
-    "TestNet": "TestNet",
+    "TestNet": "Maxwell",
     "Join Profit Ark": "Join Profit Ark",
     "Join Preview Network": "Join Preview Network",
     "Crust Apps": "Crust Apps",
@@ -52,13 +52,15 @@
     "atoken": "Atoken wallet",
     "rewards_plan": "Rewards Plan",
     "slot_auction": "Slot Auction",
-    "polkadot_apps": "Polkadot apps"
+    "polkadot_apps": "Polkadot apps",
+    "Profit Data": "Profit Data"
   },
   "footer": {
+    "mediamaterials": "Media materials",
     "Success": "Copy Success",
     "Error": "Copy Error",
     "Copy": "Copy",
-    "title": "Follow Us",
+    "title": "Contact Us",
     "Crust": "Crust",
     "WhitePaper": "Tech Whitepaper",
     "EcoWhitePaper": "Economy Whitepaper",
@@ -211,40 +213,116 @@
     "sub": "Time Lines",
     "coreTeam": {
       "title": "2018 Q3",
-      "subtitle": "Core Team",
+      "subtitle": "Team Founded",
       "year": "18",
-      "season": "Q3"
+      "season": "Q3",
+      "descs": [
+        "Concept Design",
+        "Key Technologies Validation"
+      ]
     },
     "prototyping": {
       "title": "2019 Q2",
-      "subtitle": "Proof of concept +<br/> Prototyping",
+      "subtitle": "Proof of concept",
       "year": "19",
-      "season": "Q2"
+      "season": "Q2",
+      "descs": [
+        "Protocol Design",
+        "Crust Chain Prototype"
+      ]
     },
     "alpha": {
       "title": "2020 Q1",
-      "subtitle": "Rocky Testnet",
+      "subtitle": "Rocky DevNet",
       "year": "20",
-      "season": "Q1"
+      "season": "Q1",
+      "descs": [
+        "Open Source",
+        "Initial Version of Crust Chain Implementation",
+        "Launch Rocky DevNet and Open for Developers"
+      ]
     },
     "ark": {
       "title": "2020 Q4",
-      "subtitle": "Maxwell Testnet",
+      "subtitle": "Maxwell CC2 Open TestNet",
       "year": "20",
-      "season": "Q4"
+      "season": "Q4",
+      "descs": [
+        "First Stable Version of MPoW and GPoS",
+        "Launch Open TestNet and Incentivize External Nodes to Join"
+      ]
     },
     "previewNetwork": {
       "title": "2021 Q1",
-      "subtitle": "Preview Network",
+      "subtitle": "Maxwell Preview Network",
       "year": "21",
-      "season": "Q1"
+      "season": "Q2",
+      "descs": [
+        "First Stable Version of DSM",
+        "Launch Preview Network and Enable Cloud Storage Market"
+      ]
     },
     "mainNet": {
-      "title": "2021 Q2",
+      "title": "2021 Q3",
       "subtitle": "Mainnet",
       "year": "21",
-      "season": "Q2"
+      "season": "Q3",
+      "descs": [
+        "Polkadot/Kusama ParaChain Technical Readiness",
+        "Join Polkadot/Kusama Slots Auction and Launch Crust Shadow",
+        "Promote for Use Cases and Get Applications Running on MainNet"
+      ]
+    },
+    "Edge Network": {
+      "title": "2022 Q1",
+      "subtitle": "Edge Network",
+      "year": "22",
+      "season": "Q1",
+      "descs": [
+        "Support Edge Nodes to Join the Network as Sub-Member",
+        "Support Offchain Work Report Roll-up for Higher Scalability"
+      ]
+    },
+    "ParaChain Unique STF Upgrades": {
+      "title": "2022 Q3",
+      "subtitle": "ParaChain Unique STF Upgrades",
+      "year": "22",
+      "season": "Q3",
+      "descs": [
+        "Upgrade ParaChain Related Modules to Support Unique STF",
+        "Define More XCM Interfaces to Better Support ParaChain Ecosystem"
+      ]
+    },
+    "MPoW Storage Proof V2": {
+      "title": "2023 Q1",
+      "subtitle": "MPoW Storage Proof V2",
+      "year": "23",
+      "season": "Q1",
+      "descs": [
+        "Support One More Open-Source TEE Technology like ARM and Risc-V",
+        "Development Version of Zero-Knowledge Proof under MPoW Interfaces"
+      ]
+    },
+    "Scaled Network": {
+      "title": "2023 Q3",
+      "subtitle": "Scaled Network",
+      "year": "23",
+      "season": "Q3",
+      "descs": [
+        "Support Multiple Storage Sharding Chains to Further Scale Up"
+      ]
+    },
+    "Data Computing": {
+      "title": "2024 Q3",
+      "subtitle": "Data Computing",
+      "year": "24",
+      "season": "Q3",
+      "descs": [
+        "Support Data NFT Trading and Computing Scenarios"
+      ]
     }
+
+
   },
   "news": {
     "bannertitle": "News Center",
@@ -325,5 +403,52 @@
         "desc": "Yao got his master’s degree from Shanghai Jiaotong University. He is experienced in Data security and Linux kernel technologies. Yao worked in Cisco IT security department and participated several blockchain projects."
       }
     ]
-  }
+  },
+  "usecase": {
+    "title": "Use Cases",
+    "polkadot": {
+      "link": "https://dotapps.io",
+      "learnMore": "https://dotapps.io",
+      "desc": "Basic Polkadot/Substrate UI for interacting with a node. The main user-facing application, allowing access to all features available on Substrate chains."
+    },
+    "uniswap": {
+      "desc": "One of the most widely used decentralized trading protocol.",
+      "link": "https://uniswap.org/",
+      "learnMore": "https://medium.com/crustnetwork/decentralized-uniswap-interface-hosting-on-ipfs-18a78d1209ac"
+    },
+    "IPFS": {
+      "desc": "The home page for developer documentation for IPFS, the InterPlanetary File System.",
+      "link": "https://docs.ipfs.io/",
+      "learnMore": "https://docs.ipfs.io/"
+    },
+    "SkyeKiwi": {
+      "desc": "A decentralized secret sharing protocol that is capable of sharing files from a single seed phrase to GB size of files, to a few people to hundreds and thousands of people.",
+      "link": "http://skye.kiwi/",
+      "learnMore": "https://skyekiwi.medium.com/overview-of-client-side-skyekiwi-protocol-57cfe7c8a017"
+    },
+    "Socbay": {
+      "desc": "Socbay.io was created as an decentralized open-source video sharing platform based on IPFS and Crust network.",
+      "link": "https://socbay.io/",
+      "learnMore": "https://socbayio.medium.com/socbay-io-project-development-report-76fb4ea41cca"
+    },
+    "Decoo": {
+      "desc": "Decoo makes IPFS Pinning awfully simple and effortless. Store your files by IPFS / Crust Network and make them accessible anywhere, anytime.",
+      "link": "https://decoo.io/",
+      "learnMore": "https://decoo.io/"
+    },
+    "Realy": {
+      "desc": "Create, collect and trade valuable NFT assets of the New Luxury.",
+      "link": "https://realy.pro//",
+      "learnMore": "https://realy.pro/"
+    }
+
+  },
+  "Crust Maxwell": "Crust Maxwell",
+  "Crust Solutions Handbook": "Crust Solutions Handbook",
+  "Crust-based commercial application solution": "Crust-based commercial application solution",
+  "Maxwell incorporates all of the Crust's core features": "Maxwell incorporates all of the Crust's core features:",
+  "Token pledging": "Token pledging",
+  "A decentralized storage market": "A decentralized storage market",
+  "A document retrieval mechanism": "A document retrieval mechanism",
+  "Crust Mainnet is coming soon": "Crust Mainnet is coming soon..."
 }

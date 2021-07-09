@@ -5,20 +5,31 @@
         <div id="global"></div>
         <div class="main-logo">
           <p class="logo" v-html="$t('indexBanner.sub')"></p>
-          <p class="test-net-title" v-html="$t('button.networkTitle')"></p>
           <div class="buttons">
             <button
               class="btn-custom button-width"
               @click="handleClick('build on crust')"
             >
-              {{ $t("button.joinPreviewNetwork") }}
+              {{ $t("Crust Maxwell") }}
             </button>
-            <button
-              class="btn-custom margin-left-25 button-width"
-              @click="handleClick('csmToken')"
-            >
-              {{ $t("button.csmToken") }}
-            </button>
+          </div>
+          <div class="desc">
+            {{ $t("Maxwell incorporates all of the Crust's core features") }}
+
+            <div>
+              <div><span class="circle"></span> {{ $t("Token pledging") }}</div>
+              <div>
+                <span class="circle"></span>
+                {{ $t("A decentralized storage market") }}
+              </div>
+              <div>
+                <span class="circle"></span>
+                {{ $t("A document retrieval mechanism") }}
+              </div>
+            </div>
+            <p>
+              {{ $t("Crust Mainnet is coming soon") }}
+            </p>
           </div>
         </div>
       </div>
@@ -77,13 +88,13 @@
 </template>
 
 <script>
-import jumpTo from "../../utils"
-import DescCard from "./descCard"
 import { outerDit } from "@/config/nav-config"
-import * as THREE from '../../static/script/three'
-import * as globalScript from '../../static/script/global'
-import * as TrackballControls from '../../static/script/TrackballControls'
 import VueScrollTo from "vue-scrollto"
+import jumpTo from "../../utils"
+import * as THREE from "../../static/script/three"
+import * as globalScript from "../../static/script/global"
+import * as TrackballControls from "../../static/script/TrackballControls"
+import DescCard from "./descCard"
 export default {
   components: {
     DescCard,
@@ -114,12 +125,16 @@ export default {
       },
     }
   },
+  mounted() {
+    TrackballControls.initControl(THREE)
+    globalScript.runGlobal(THREE)
+  },
   methods: {
     getZhcnCss() {
       if (this.$store.state.locale === "en") {
-        return ''
+        return ""
       } else {
-        return 'zh-cn'
+        return "zh-cn"
       }
     },
     handleClick(name) {
@@ -138,10 +153,6 @@ export default {
     handleClickCheck() {
       window.open(outerDit.learnMore, "_blank")
     },
-  },
-  mounted() {
-    TrackballControls.initControl(THREE)
-    globalScript.runGlobal(THREE)
   },
   head: {
     script: [
@@ -182,15 +193,20 @@ export default {
           margin-bottom: 2rem;
           width: 635px;
         }
-
-        .test-net-title {
-          opacity: 0.53;
-          font-family: Inter-Regular;
-          font-size: 20px;
+        .desc {
+          padding: 22px 0 0 5px;
+          font-size: 14px;
+          font-family: InterV_Semi-Bold, InterV_Semi;
+          font-weight: bold;
           color: #ff6400;
-          letter-spacing: 0;
-          text-align: left;
-          margin-bottom: 60px;
+          line-height: 2em;
+          p {
+            padding-top: 32px;
+            font-size: 16px;
+            font-weight: 500;
+            font-style: italic;
+            color: #ff6400;
+          }
         }
         .buttons {
           display: flex;
@@ -273,7 +289,7 @@ export default {
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       .main-logo {
         width: 100%;
@@ -289,6 +305,22 @@ export default {
           margin-bottom: 16px;
           opacity: 0.99;
         }
+        .desc {
+          padding: 22px 0 0 5px;
+          font-size: 14px;
+          font-family: InterV_Semi-Bold, InterV_Semi;
+          font-weight: bold;
+          color: #ff6400;
+          line-height: 2em;
+          z-index: 10;
+          p {
+            padding-top: 32px;
+            font-size: 16px;
+            font-weight: 500;
+            font-style: italic;
+            color: #ff6400;
+          }
+        }
 
         .test-net-title {
           opacity: 0.53;
@@ -299,11 +331,11 @@ export default {
           text-align: left;
           margin-bottom: 20px;
           max-width: 200px;
+          margin-top: -40px;
         }
         .buttons {
           display: flex;
           justify-content: flex-start;
-          margin-bottom: 87px;
           opacity: 0.99;
         }
       }
@@ -345,9 +377,9 @@ export default {
           max-width: 474px;
           font-size: 12px;
           line-height: 16px;
-            &.zh-cn {
-              line-height: 26px;
-            }
+          &.zh-cn {
+            line-height: 26px;
+          }
         }
         .btn-custom {
           width: 128px;
