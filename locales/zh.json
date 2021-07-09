@@ -292,12 +292,12 @@
       "learnMore": "https://medium.com/crustnetwork/decentralized-uniswap-interface-hosting-on-ipfs-18a78d1209ac"
     },
     "IPFS": {
-      "desc": "IPFS生态开发者的文档平台",
+      "desc": "IPFS生态开发者的文档平台。",
       "link": "https://docs.ipfs.io/",
       "learnMore": "https://docs.ipfs.io/"
     },
     "SkyeKiwi": {
-      "desc": "一个去中心化秘密分享协议，可以将任意大小的文件加密的分发给任意数量的用户",
+      "desc": "一个去中心化秘密分享协议，可以将任意大小的文件加密的分发给任意数量的用户。",
       "link": "http://skye.kiwi/",
       "learnMore": "https://skyekiwi.medium.com/overview-of-client-side-skyekiwi-protocol-57cfe7c8a017"
     },
@@ -312,7 +312,7 @@
       "learnMore": "https://decoo.io/"
     },
     "Realy": {
-      "desc": "让最新潮的奢侈品以NFT的方式被创造、收集和交易",
+      "desc": "让最新潮的奢侈品以NFT的方式被创造、收集和交易。",
       "link": "https://realy.pro//",
       "learnMore": "https://realy.pro/"
     }
