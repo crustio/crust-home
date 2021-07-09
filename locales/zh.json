@@ -236,7 +236,7 @@
       "year": "22",
       "season": "Q1",
       "descs": [
-        "持边缘节点作为SubMember加入网络",
+        "支持边缘节点作为SubMember加入网络",
         "支持链下工作量报告Roll-up的扩容方案"
       ]
     },
