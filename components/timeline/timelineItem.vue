@@ -137,6 +137,7 @@ export default {
       padding: 15px 0;
       height: 80px;
       font-size: 24px;
+      margin-left: -15px;
       line-height: 1.2em;
     }
     .item {
