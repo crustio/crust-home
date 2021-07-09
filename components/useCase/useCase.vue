@@ -37,11 +37,19 @@ export default {
   },
   data() {
     return {
-      items: ["polkadot", "uniswap", "IPFS", "SkyeKiwi", "Socbay", "Decoo"],
+      items: [
+        "polkadot",
+        "uniswap",
+        "IPFS",
+        "SkyeKiwi",
+        "Socbay",
+        "Decoo",
+        "Realy",
+      ],
       process: 0,
       timer: null,
       swiperOptions: {
-        loop: true,
+        loop: false,
         slidesPerView: "auto",
         spaceBetween: 10,
         centeredSlides: false,
@@ -50,6 +58,20 @@ export default {
           nextEl: ".usecase-next",
           prevEl: ".usecase-prev",
         },
+        // breakpoints: {
+        //   0: {
+        //     slidesPerView: 1,
+        //   },
+        //   800: {
+        //     slidesPerView: 2,
+        //   },
+        //   1000: {
+        //     slidesPerView: 3,
+        //   },
+        //   1280: {
+        //     slidesPerView: 3,
+        //   },
+        // },
       },
     }
   },

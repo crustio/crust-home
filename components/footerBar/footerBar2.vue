@@ -13,6 +13,7 @@
           </a>
           <template v-for="(icon, idx) in icons">
             <div
+              v-if="idx !== 5 || (idx === 5 && locale === 'zh')"
               :key="`icon-${idx}`"
               class="foot-left-top-icon"
               @click="jump(iconNames[idx])"
@@ -99,6 +100,11 @@ export default {
       ],
       weixin: IconWeinxin,
     }
+  },
+  computed: {
+    locale() {
+      return this.$store.state.locale
+    },
   },
   methods: {
     handleCopy() {

@@ -12,6 +12,7 @@
       </div>
       <b-navbar-brand href="#" @click="jump('home')">
         <img
+          style="margin-top: -6px"
           src="../assets/images/logo.svg"
           width="90"
           alt=""

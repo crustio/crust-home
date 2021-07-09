@@ -46,16 +46,17 @@ export default {
   justify-content: space-around;
   align-items: center;
   height: 260px;
-  width: 550px;
+  width: 100%;
+  box-sizing: border-box;
   padding: 0 68px;
   background: #efedea;
   box-shadow: 4px 4px 15px 0px #d8d9d9;
   border-radius: 10px;
   margin: 10px;
   @media (max-width: 1200px) {
-    width: 330px;
-    padding: 0;
-    margin: 10px 0;
+    width: 90%;
+    padding: 0 20px;
+    margin: 20px;
   }
   .logo {
     cursor: pointer;

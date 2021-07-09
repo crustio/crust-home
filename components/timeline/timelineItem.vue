@@ -6,9 +6,9 @@
       <div class="timeline-item-date-year">{{ year }}</div>
       <div class="timeline-item-date-season">{{ season }}</div>
     </div>
-    <div class="timeline-item-line"></div>
     <div class="timeline-item-text-wrapper">
       <div class="sub-title">{{ subtitle }}</div>
+      <div class="timeline-item-line"></div>
       <div class="timeline-item-desc">
         <div class="item" v-for="item in descs" :key="item">
           <span><span class="circle" />&nbsp;{{ item }}</span>
@@ -121,11 +121,15 @@ export default {
     letter-spacing: 0;
     text-align: left;
     position: absolute;
-    top: 152px;
+    top: 144px;
     left: 19px;
     overflow: visible;
     .timeline-item-desc {
       overflow: visible;
+      padding-top: 15px;
+      @media (max-width: 1200px) {
+        font-size: 16px;
+      }
     }
     .sub-title {
       display: flex;
@@ -148,9 +152,9 @@ export default {
     width: 100px;
     height: 8px;
     background: #ff6400;
-    position: absolute;
-    top: 143px;
-    left: 19px;
+    //position: absolute;
+    //top: 160px;
+    //left: 19px;
   }
 
   &:hover {

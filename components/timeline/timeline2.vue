@@ -117,7 +117,7 @@ export default {
           width: calc(100% - 19px);
           height: 1px;
           position: absolute;
-          top: 143px;
+          top: 224px;
           left: 19px;
         }
       }
@@ -164,7 +164,7 @@ export default {
           width: 100%;
           height: 1px;
           position: absolute;
-          top: 102px;
+          top: 174px;
           left: 0px;
         }
 

@@ -267,7 +267,6 @@ export default {
           display: flex;
           align-items: flex-end;
           flex-direction: column;
-          max-width: 403px;
           font-size: 16px;
           font-family: InterV_Semi-Bold, InterV_Semi;
           font-weight: bold;
