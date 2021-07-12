@@ -38,13 +38,13 @@ export default {
   data() {
     return {
       items: [
-        "polkadot",
         "uniswap",
-        "IPFS",
-        "SkyeKiwi",
         "Socbay",
-        "Decoo",
+        "SkyeKiwi",
+        "polkadot",
+        "IPFS",
         "Realy",
+        "Decoo",
       ],
       process: 0,
       timer: null,
