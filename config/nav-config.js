@@ -49,7 +49,7 @@ const outerDit = {
   "free storage": "https://fs.crust.network",
   mediamaterials:
     "https://ipfs.decoo.io/ipfs/Qme9uUpunio7heGDnnfsptYWzjLJgvD2hkbLGcvehPz5EK?filename=CrustLogo.zip",
-  dotask: "https://www.dotask.cc/node/crust",
+  dotask: "https://www.coinask.io/n/crust",
 }
 const outerList = Object.keys(outerDit)
 module.exports = {
