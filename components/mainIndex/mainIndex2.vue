@@ -27,9 +27,9 @@
                 {{ $t("A document retrieval mechanism") }}
               </div>
             </div>
-            <p>
-              {{ $t("Crust Mainnet is coming soon") }}
-            </p>
+<!--            <p>-->
+<!--              {{ $t("Crust Mainnet is coming soon") }}-->
+<!--            </p>-->
           </div>
         </div>
       </div>

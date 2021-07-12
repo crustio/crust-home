@@ -60,7 +60,7 @@
           </div>
           <div class="dec-cloud-top-right">
             <span class="prefix-text">{{ $t(`Crust-based commercial application solution`)}}</span>
-            <button class="btn-custom cloud-grants-btn" @click="handleApplyNow">
+            <button class="btn-custom cloud-grants-btn" @click="handleHandbookClick">
               {{ $t("Crust Solutions Handbook") }}
             </button>
           </div>
@@ -175,6 +175,10 @@ export default {
   },
   destroyed() {},
   methods: {
+    handleHandbookClick (){
+      const pdfName = this.$store.state.locale === "en" ? "crust_solutions_handbook-en.pdf" : "crust_solutions_handbook-ch.pdf"
+      window.open(`${outerDit.download}${pdfName}`, "_blank")
+    },
     getZhcnCss() {
       if (this.$store.state.locale === "en") {
         return ''

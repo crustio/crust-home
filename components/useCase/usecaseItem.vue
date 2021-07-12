@@ -1,8 +1,8 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" @mouseover="onImageHover" @mouseleave="onImageLeave">
     <div class="logo">
       <img
-        :src="`/image/${name}.png`"
+        :src="imgSrc || `/image/usecases/${name}.png`"
         :alt="name"
         width="100"
         @click="handleClick($t(`usecase.${name}.link`))"
@@ -28,11 +28,19 @@ export default {
     },
   },
   data() {
-    return {}
+    return {
+      imgSrc: "",
+    }
   },
   computed: {},
   watch: {},
   methods: {
+    onImageHover() {
+      this.imgSrc = `/image/usecases/${this.name}_active.png`
+    },
+    onImageLeave() {
+      this.imgSrc = `/image/usecases/${this.name}.png`
+    },
     handleClick(link) {
       window.open(link, "_blank")
     },
