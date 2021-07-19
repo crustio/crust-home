@@ -1,5 +1,6 @@
 {
   "button": {
+    "visitMore": "Visit More",
     "learnMore": "Learn More",
     "checkOnGithub": "Check Our Github",
     "joinArk": "Join Profit Ark",
@@ -450,5 +451,6 @@
   "Token pledging": "Token staking",
   "A decentralized storage market": "A decentralized storage market",
   "A document retrieval mechanism": "A document retrieval mechanism",
-  "Crust Mainnet is coming soon": "Crust Mainnet is coming soon..."
+  "Crust Mainnet is coming soon": "Crust Mainnet is coming soon...",
+  "Mainnet Launch Plan": "Mainnet Launch Plan"
 }

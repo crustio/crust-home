@@ -63,6 +63,9 @@
             <button class="btn-custom cloud-grants-btn" @click="handleHandbookClick">
               {{ $t("Crust Solutions Handbook") }}
             </button>
+            <button class="btn-custom cloud-grants-btn" @click="handleBuildOnCrust">
+            {{ $t("button.buildOnCrust") }}
+          </button>
           </div>
         </div>
         <div class="dec-cloud-bottom">
@@ -99,10 +102,12 @@
           </swiper>
         </div>
         <div class="dec-apply-now">
-          <span class="prefix-text">{{ $t(`decentralized.apply-now-prefix`)}}</span>
-<!--          <p class="check-more-title" v-html="$t('decentralized.checkMore')"></p>-->
-          <button class="btn-custom cloud-grants-btn" @click="handleApplyNow">
-            {{ $t("button.CrustGrants") }}
+          <span class="prefix-text">{{ $t(`Crust-based commercial application solution`)}}</span>
+            <button class="btn-custom cloud-grants-btn" @click="handleHandbookClick">
+              {{ $t("Crust Solutions Handbook") }}
+            </button>
+            <button class="btn-custom cloud-grants-btn" @click="handleBuildOnCrust">
+            {{ $t("button.buildOnCrust") }}
           </button>
         </div>
       </div>
@@ -175,6 +180,11 @@ export default {
   },
   destroyed() {},
   methods: {
+    handleBuildOnCrust(){
+      let location =
+          this.$store.state.locale === "en" ? "https://wiki.crust.network/docs/en/buildGettingStarted" :"https://wiki.crust.network/docs/zh-CN/buildGettingStarted"
+      window.open(location, "_blank")
+    },
     handleHandbookClick (){
       const pdfName = this.$store.state.locale === "en" ? "crust_solutions_handbook-en.pdf" : "crust_solutions_handbook-ch.pdf"
       window.open(`${outerDit.download}${pdfName}`, "_blank")
@@ -415,7 +425,8 @@ export default {
           padding-right: 10px;
         }
         .cloud-grants-btn {
-          width: 128px;
+          width: auto;
+          padding: 0 20px;
           margin-top: 20px;
           align-self: center;
         }

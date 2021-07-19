@@ -27,9 +27,11 @@
                 {{ $t("A document retrieval mechanism") }}
               </div>
             </div>
-<!--            <p>-->
-<!--              {{ $t("Crust Mainnet is coming soon") }}-->
-<!--            </p>-->
+            <p>
+              <span class="pointer" @click="handleMainnetPlanClick">
+                {{ $t("Mainnet Launch Plan") }}
+              </span>
+            </p>
           </div>
         </div>
       </div>
@@ -130,6 +132,13 @@ export default {
     globalScript.runGlobal(THREE)
   },
   methods: {
+    handleMainnetPlanClick() {
+      const linkName =
+        this.$store.state.locale === "en"
+          ? "mainnet_plan_medium_en"
+          : "mainnet_plan_medium_zh"
+      jumpTo(linkName)
+    },
     getZhcnCss() {
       if (this.$store.state.locale === "en") {
         return ""
@@ -163,6 +172,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.pointer {
+  cursor: pointer;
+  text-decoration: underline;
+}
 @media screen and (min-width: 1200px) {
   .main-index {
     margin-top: -60px;
@@ -318,6 +331,8 @@ export default {
             font-size: 16px;
             font-weight: 500;
             font-style: italic;
+            cursor: pointer;
+            text-decoration: underline;
             color: #ff6400;
           }
         }
