@@ -13,7 +13,11 @@
       class="btn-custom"
       @click="handleClick($t(`usecase.${name}.learnMore`))"
     >
-      {{ $t("button.learnMore") }}
+      {{
+        ["polkadot", "IPFS", "Realy", "Decoo"].indexOf(name) === -1
+          ? $t("button.learnMore")
+          : $t("button.visitMore")
+      }}
     </button>
   </div>
 </template>

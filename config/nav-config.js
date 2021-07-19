@@ -50,6 +50,8 @@ const outerDit = {
   mediamaterials:
     "https://ipfs.decoo.io/ipfs/Qme9uUpunio7heGDnnfsptYWzjLJgvD2hkbLGcvehPz5EK?filename=CrustLogo.zip",
   dotask: "https://www.coinask.io/n/crust",
+  mainnet_plan_medium_zh: "https://medium.com/@CrustNetwork",
+  mainnet_plan_medium_en: "https://medium.com/@CrustNetwork"
 }
 const outerList = Object.keys(outerDit)
 module.exports = {
