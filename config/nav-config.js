@@ -50,7 +50,7 @@ const outerDit = {
   mediamaterials:
     "https://ipfs.decoo.io/ipfs/Qme9uUpunio7heGDnnfsptYWzjLJgvD2hkbLGcvehPz5EK?filename=CrustLogo.zip",
   dotask: "https://www.coinask.io/n/crust",
-  mainnet_plan_medium_zh: "https://medium.com/crustnetwork/big-announcement-crust-mainnet-launch-timeline-c2bd2dc0d490",
+  mainnet_plan_medium_zh: "https://www.yuque.com/qm003f/thyzgp/rs6o07",
   mainnet_plan_medium_en: "https://medium.com/crustnetwork/big-announcement-crust-mainnet-launch-timeline-c2bd2dc0d490"
 }
 const outerList = Object.keys(outerDit)
