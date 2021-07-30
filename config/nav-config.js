@@ -13,7 +13,8 @@ const innerList = [
 // }
 const outerDit = {
   "join profit ark": "https://ark.crust.network/",
-  "join preview network": "https://wiki.crust.network/docs/zh-CN/previewNetworkMaxwell",
+  "join preview network": "https://wiki-maxwell.crust.network/docs/zh-CN/previewNetworkMaxwell",
+  "join preview network_en": "https://wiki-maxwell.crust.network/docs/en/previewNetworkMaxwell",
   "csmtoken": "https://csm.crust.network/#/cru/info",
   github: "https://github.com/crustio",
   wiki: "https://wiki.crust.network/zh-CN",
@@ -22,7 +23,7 @@ const outerDit = {
   telegram: "https://t.me/CrustNetwork",
   discord: "https://discord.gg/Jbw2PAUSCR",
   explorer: "http://explorer.crust.network/",
-  "crust apps": "https://apps.crust.network/",
+  "crust apps": "https://apps.crust.network/?rpc=wss%3A%2F%2Fapi-maxwell.crust.network#/explorer/",
   "blockchain explorer": "https://crust.subscan.io/",
   "storage explorer": " https://splorer.crust.network",
   pdfBucket:
@@ -32,8 +33,6 @@ const outerDit = {
   clouden: "https://github.com/crustio/crust/wiki/Crust-Cloud-Testing-Guide",
   cloud: "https://github.com/crustio/crust/wiki/Crust-Cloud-%E6%B5%8B%E8%AF%95%E6%89%8B%E5%86%8C",
   learnMore: "https://github.com/crustio/crust",
-  "join preview network_en": "https://wiki.crust.network/docs/en/previewNetworkMaxwell",
-  "join preview network_zh": "https://wiki.crust.network/docs/zh-CN/previewNetworkMaxwell",
   wiki_en: "https://wiki.crust.network/en",
   wiki_zh: "https://wiki.crust.network/zh-CN",
   wallet_wiki_en: "https://wiki.crust.network/docs/en/crustWallet",
@@ -51,7 +50,9 @@ const outerDit = {
     "https://ipfs.decoo.io/ipfs/Qme9uUpunio7heGDnnfsptYWzjLJgvD2hkbLGcvehPz5EK?filename=CrustLogo.zip",
   dotask: "https://www.coinask.io/n/crust",
   mainnet_plan_medium_zh: "https://www.yuque.com/qm003f/thyzgp/rs6o07",
-  mainnet_plan_medium_en: "https://medium.com/crustnetwork/big-announcement-crust-mainnet-launch-timeline-c2bd2dc0d490"
+  mainnet_plan_medium_en: "https://medium.com/crustnetwork/big-announcement-crust-mainnet-launch-timeline-c2bd2dc0d490",
+  cru_claim_en: "https://wiki.crust.network/docs/en/claims",
+  cru_claim_zh: "https://wiki.crust.network/docs/zh-CN/claims",
 }
 const outerList = Object.keys(outerDit)
 module.exports = {

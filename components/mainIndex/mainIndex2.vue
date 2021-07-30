@@ -7,6 +7,13 @@
           <p class="logo" v-html="$t('indexBanner.sub')"></p>
           <div class="buttons">
             <button
+                class="btn-custom button-width"
+                @click="claimCru"
+            >
+              {{ $t("Claim CRU") }}
+            </button>
+            &nbsp;&nbsp;
+            <button
               class="btn-custom button-width"
               @click="handleClick('build on crust')"
             >
@@ -144,6 +151,13 @@ export default {
         return ""
       } else {
         return "zh-cn"
+      }
+    },
+    claimCru () {
+      if (this.$store.state.locale === "en") {
+        window.open(outerDit.cru_claim_en, "_blank")
+      } else {
+        window.open(outerDit.cru_claim_zh, "_blank")
       }
     },
     handleClick(name) {
