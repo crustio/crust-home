@@ -2,6 +2,9 @@
 let target = "http://192.168.50.7:18081"
 
 export default {
+  server: {
+    port: 8888
+  },
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
