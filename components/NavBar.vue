@@ -118,6 +118,7 @@ export default {
           children: [
             "WhitePaper",
             "EcoWhitePaper",
+            "Analysis of Economic Model",
             "Wiki",
             "Crust Solutions Handbook",
             "CSM Lightpaper",
@@ -149,6 +150,12 @@ export default {
           name += "_en"
         }
       }
+      if (name === "analysis of economic model") {
+        if (isEn) {
+          return window.open(outerDit.analysis_of_economic_model_en, "_blank")
+        }
+        return window.open(outerDit.analysis_of_economic_model_zh, "_blank")
+      }
       if (name === "ecowhitepaper" || name === "whitepaper") {
         if (isEn) {
           name += "_en"
@@ -160,7 +167,7 @@ export default {
         return window.open(`${outerDit.download}${pdfName}`, "_blank")
       }
       if (name === 'csm lightpaper'){
-        // https://ipfs.decoo.io/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=LT%20paper.(ZH).1_compressed.pdf
+        // https://ipfs-hk.decoo.io/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=LT%20paper.(ZH).1_compressed.pdf
         const url = isEn ? outerDit.csm_lightpaper_en : outerDit.csm_lightpaper_zh
         return window.open(url, '_blank')
       }
