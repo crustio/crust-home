@@ -41,18 +41,20 @@ const outerDit = {
   "crust grants": "https://decloudf.com/",
   "dev team": "https://www.linkedin.com/company/clouderium/mycompany/",
   "dcf grants": "https://decloudf.com?scrollto=description",
-  csm_lightpaper_en: "https://ipfs.decoo.io/ipfs/QmYVRP7puUhGvQPuThHK2mtQgj2nUAoJYkBgXYxwiaC8Dq?filename=Crust%20Shadow%20lightpaper202105.pdf",
-  csm_lightpaper_zh: "https://ipfs.decoo.io/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=LT%20paper.(ZH).1_compressed.pdf",
+  csm_lightpaper_en: "https://ipfs-hk.decoo.io/ipfs/QmYVRP7puUhGvQPuThHK2mtQgj2nUAoJYkBgXYxwiaC8Dq?filename=Crust%20Shadow%20lightpaper202105.pdf",
+  csm_lightpaper_zh: "https://ipfs-hk.decoo.io/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=Crust Shadow lightpaper中文版202105.pdf",
   rewards_plan_en:"https://crustnetwork.medium.com/crust-updates-kusama-parachain-slot-auction-rewards-2f6b32c682ec",
   rewards_plan_zh:"https://mp.weixin.qq.com/s/xtLCalg9fnvoierQTNFDfQ",
   "free storage": "https://fs.crust.network",
   mediamaterials:
-    "https://ipfs.decoo.io/ipfs/Qme9uUpunio7heGDnnfsptYWzjLJgvD2hkbLGcvehPz5EK?filename=CrustLogo.zip",
+    "https://ipfs-hk.decoo.io/ipfs/Qme9uUpunio7heGDnnfsptYWzjLJgvD2hkbLGcvehPz5EK?filename=CrustLogo.zip",
   dotask: "https://www.coinask.io/n/crust",
   mainnet_plan_medium_zh: "https://www.yuque.com/qm003f/thyzgp/rs6o07",
   mainnet_plan_medium_en: "https://medium.com/crustnetwork/big-announcement-crust-mainnet-launch-timeline-c2bd2dc0d490",
   cru_claim_en: "https://wiki.crust.network/docs/en/claims",
   cru_claim_zh: "https://wiki.crust.network/docs/zh-CN/claims",
+  "analysis_of_economic_model_en": "https://ipfs-hk.decoo.io/ipfs/QmPeoZuvhq8G5SQ95KJ35xGVLP3pHtF2hahrtFsjTaZbFk?filename=Analysis of Crust Network Economic Model.pdf",
+  "analysis_of_economic_model_zh": "https://ipfs-hk.decoo.io/ipfs/QmTeYZVYucgF94cU9Bfuew6shWiTESYKYjDFntG9xK5Hru?filename=解析Crust Network经济模型.pdf",
 }
 const outerList = Object.keys(outerDit)
 module.exports = {

@@ -7,7 +7,7 @@
       @click="handleTogglePlay"
       preload="auto">
       <source
-        src="https://ipfs.decoo.io/ipfs/QmX5pzx4HwMuSFmhS5mwP5nNxJVZJNk6SedyZjgNmwr5qo"
+        src="https://ipfs-hk.decoo.io/ipfs/QmX5pzx4HwMuSFmhS5mwP5nNxJVZJNk6SedyZjgNmwr5qo"
         type="video/mp4"
       >
     </video>
