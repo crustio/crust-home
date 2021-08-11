@@ -76,11 +76,11 @@ export default {
   components: {},
   data() {
     return {
-      titles: ["Resourcese", "forum", "JoinUs"],
+      titles: ["Resourcese", "forum", "Developers"],
       items: [
         ["WhitePaper", "EcoWhitePaper", "FAQ", "mediamaterials"],
         ["Twitter", "Telegram", "Discord"],
-        ["Github"],
+        ["Crust Grants", "Github"],
       ],
       iconNames: [
         "telegram",
