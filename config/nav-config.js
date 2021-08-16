@@ -55,6 +55,8 @@ const outerDit = {
   cru_claim_zh: "https://wiki.crust.network/docs/zh-CN/claims",
   "analysis_of_economic_model_en": "https://ipfs-hk.decoo.io/ipfs/QmPeoZuvhq8G5SQ95KJ35xGVLP3pHtF2hahrtFsjTaZbFk?filename=Analysis of Crust Network Economic Model.pdf",
   "analysis_of_economic_model_zh": "https://ipfs-hk.decoo.io/ipfs/QmTeYZVYucgF94cU9Bfuew6shWiTESYKYjDFntG9xK5Hru?filename=解析Crust Network经济模型.pdf",
+  "crust_mainnet": "https://wiki.crust.network/docs/en/crustOverview",
+  "crust_mainnet_zh": "https://wiki.crust.network/docs/zh-CN/crustOverview"
 }
 const outerList = Object.keys(outerDit)
 module.exports = {
