@@ -8,9 +8,9 @@
           <div class="buttons">
             <button
                 class="btn-custom button-width"
-                @click="claimCru"
+                @click="crustMainnet"
             >
-              {{ $t("Claim CRU") }}
+              {{ $t("Crust Mainnet") }}
             </button>
             &nbsp;&nbsp;
             <button
@@ -153,11 +153,11 @@ export default {
         return "zh-cn"
       }
     },
-    claimCru () {
+    crustMainnet () {
       if (this.$store.state.locale === "en") {
-        window.open(outerDit.cru_claim_en, "_blank")
+        window.open(outerDit.crust_mainnet, "_blank")
       } else {
-        window.open(outerDit.cru_claim_zh, "_blank")
+        window.open(outerDit.crust_mainnet_zh, "_blank")
       }
     },
     handleClick(name) {
