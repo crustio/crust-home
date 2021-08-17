@@ -15,7 +15,7 @@
             &nbsp;&nbsp;
             <button
               class="btn-custom button-width"
-              @click="handleClick('build on crust')"
+              @click="handleClick('join preview network')"
             >
               {{ $t("Crust Maxwell") }}
             </button>
@@ -161,14 +161,7 @@ export default {
       }
     },
     handleClick(name) {
-      if (name === "build on crust") {
-        VueScrollTo.scrollTo(document.querySelector(".dec-connect"))
-        return
-      }
-      if (
-        name === "join preview network" &&
-        this.$store.state.locale === "en"
-      ) {
+      if (this.$store.state.locale === "en") {
         name += "_en"
       }
       jumpTo(name)
