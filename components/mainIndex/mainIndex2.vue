@@ -46,9 +46,9 @@
         <div class="container description">
           <div class="description-left">
             <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
-            <p class="content color-main" :class="getZhcnCss()">
-              {{ $t("crust.title") + $t(`crust.content.text1`) }}
-            </p>
+            <auto-video/>
+            <br>
+            <br>
             <button class="btn-custom" @click="handleClick('Check Our Github')">
               {{ $t("button.checkOnGithub") }}
             </button>
@@ -69,9 +69,8 @@
       <div class="description">
         <div class="description-left">
           <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
-          <p class="content color-main" :class="getZhcnCss()">
-            {{ $t("crust.title") + $t(`crust.content.text1`) }}
-          </p>
+          <auto-video/>
+          <br>
           <button class="btn-custom" @click="handleClickCheck()">
             {{ $t("button.checkOnGithub") }}
           </button>
@@ -104,9 +103,11 @@ import * as THREE from "../../static/script/three"
 import * as globalScript from "../../static/script/global"
 import * as TrackballControls from "../../static/script/TrackballControls"
 import DescCard from "./descCard"
+import autoVideo from "./autoVideo"
 export default {
   components: {
     DescCard,
+    autoVideo
   },
   data() {
     return {
@@ -263,7 +264,7 @@ export default {
           flex-direction: column;
           justify-content: center;
           .sub-title {
-            margin-bottom: 56px;
+            margin-bottom: 32px;
           }
           .content {
             margin-bottom: 40px;
@@ -274,7 +275,7 @@ export default {
           }
           .btn-custom {
             width: 200px;
-            margin-bottom: 137px;
+            margin-bottom: 80px;
           }
         }
         .description-right {
@@ -406,6 +407,7 @@ export default {
         .btn-custom {
           width: 128px;
           margin-bottom: 20px;
+          align-self: center;
         }
       }
       .description-right {
