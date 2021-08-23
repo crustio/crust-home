@@ -57,7 +57,7 @@ export default {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 260px;
+  height: 210px;
   width: 100%;
   box-sizing: border-box;
   padding: 0 68px;
@@ -74,7 +74,7 @@ export default {
     cursor: pointer;
   }
   .desc {
-    font-size: 14px;
+    font-size: 16px;
     color: #6f6f6f;
     line-height: 19px;
     text-align: center;

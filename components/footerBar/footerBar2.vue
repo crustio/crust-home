@@ -80,7 +80,7 @@ export default {
       items: [
         ["WhitePaper", "EcoWhitePaper", "FAQ", "mediamaterials"],
         ["Twitter", "Telegram", "Discord"],
-        ["Crust Grants", "Github"],
+        ["Crust Bounty", "Crust Grants", "Github"],
       ],
       iconNames: [
         "telegram",

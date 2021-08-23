@@ -1,5 +1,12 @@
 <template>
   <div>
+    <div
+      v-if="showVideo"
+      class="m-video-container"
+      @click="handleCloseDemoVideo"
+    >
+      <dVideo :source="videoLink" />
+    </div>
     <div class="container-fluid main-index">
       <div class="container main">
         <div id="global"></div>
@@ -30,12 +37,21 @@
         <div class="container description">
           <div class="description-left">
             <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
-            <auto-video />
-            <br />
-            <br />
-            <button class="btn-custom" @click="handleClick('Check Our Github')">
-              {{ $t("button.checkOnGithub") }}
-            </button>
+            <p class="content color-main" :class="getZhcnCss()">
+              {{ $t("crust.title") + $t(`crust.content.text1`) }}
+            </p>
+            <div class="btn-wrapper">
+              <button
+                class="btn-custom"
+                @click="handleClick('Check Our Github')"
+              >
+                {{ $t("button.checkOnGithub") }}
+              </button>
+              <button class="btn-custom" @click="handleDemoVideoClick">
+                <i class="icon-play" v-html="iconPlay"></i
+                >{{ $t("button.introductionVideo") }}
+              </button>
+            </div>
           </div>
           <div class="description-right">
             <div class="description-right-left">
@@ -53,11 +69,18 @@
       <div class="description">
         <div class="description-left">
           <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
-          <auto-video class="video" />
-          <br />
-          <button class="btn-custom" @click="handleClickCheck()">
-            {{ $t("button.checkOnGithub") }}
-          </button>
+          <p class="content color-main" :class="getZhcnCss()">
+            {{ $t("crust.title") + $t(`crust.content.text1`) }}
+          </p>
+          <div class="btn-wrapper">
+            <button class="btn-custom" @click="handleClick('Check Our Github')">
+              {{ $t("button.checkOnGithub") }}
+            </button>
+            <button class="btn-custom" @click="handleDemoVideoClick">
+              <i class="icon-play" v-html="iconPlay"></i
+              >{{ $t("button.introductionVideo") }}
+            </button>
+          </div>
         </div>
       </div>
       <swiper class="swiper" :options="swiperOptions">
@@ -81,20 +104,22 @@
 
 <script>
 import { outerDit } from "@/config/nav-config"
-import VueScrollTo from "vue-scrollto"
+import IconPlay from "@/assets/svgs/icon-play.svg?raw"
 import jumpTo from "../../utils"
 import * as THREE from "../../static/script/three"
 import * as globalScript from "../../static/script/global"
 import * as TrackballControls from "../../static/script/TrackballControls"
+import dVideo from "../decentralized/dVideo"
 import DescCard from "./descCard"
-import autoVideo from "./autoVideo"
 export default {
   components: {
     DescCard,
-    autoVideo,
+    dVideo,
   },
   data() {
     return {
+      showVideo: false,
+      iconPlay: IconPlay,
       swiperOptions: {
         loop: false,
         slidesPerView: 3,
@@ -119,11 +144,24 @@ export default {
       },
     }
   },
+  computed: {
+    videoLink() {
+      return this.$store.state.locale === "en"
+        ? "https://ipfs-hk.decoo.io/ipfs/QmS99gVeX5RyXThjMyp7NtXDQ4JUT6iDEsniF1S6sQuVPX"
+        : "https://ipfs-hk.decoo.io/ipfs/QmTCcWgLFAU9Y8uK7oMonWBEh9nvscpS6rfAtKaRheZVmG"
+    },
+  },
   mounted() {
     TrackballControls.initControl(THREE)
     globalScript.runGlobal(THREE)
   },
   methods: {
+    handleDemoVideoClick() {
+      this.showVideo = true
+    },
+    handleCloseDemoVideo() {
+      this.showVideo = false
+    },
     handleMainnetPlanClick() {
       const linkName =
         this.$store.state.locale === "en"
@@ -164,6 +202,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.icon-play {
+  /deep/ svg {
+    margin-right: 8px;
+    margin-bottom: 2px;
+    width: 16px;
+    height: 16px;
+    fill: white;
+    &:hover {
+      fill: #000;
+    }
+  }
+}
 .pointer {
   cursor: pointer;
   text-decoration: underline;
@@ -252,7 +302,7 @@ export default {
           flex-direction: column;
           justify-content: center;
           .sub-title {
-            margin-bottom: 32px;
+            margin-bottom: 56px;
           }
           .content {
             margin-bottom: 40px;
@@ -261,9 +311,15 @@ export default {
               line-height: 26px;
             }
           }
-          .btn-custom {
-            width: 200px;
-            margin-bottom: 80px;
+          .btn-wrapper {
+            display: flex;
+            margin-bottom: 137px;
+            justify-content: space-between;
+            .btn-custom {
+              padding-left: 20px;
+              padding-right: 20px;
+              min-width: 200px;
+            }
           }
         }
         .description-right {
@@ -394,10 +450,13 @@ export default {
             line-height: 26px;
           }
         }
-        .btn-custom {
-          width: 128px;
+        .btn-wrapper {
           margin-bottom: 20px;
-          align-self: center;
+          .btn-custom {
+            min-width: 128px;
+            padding-left: 20px;
+            padding-right: 20px;
+          }
         }
       }
       .description-right {
@@ -425,6 +484,20 @@ export default {
       background-color: $mainColor;
     }
   }
+}
+.m-video-container {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 10vw;
+  background: rgba(33, 33, 33, 0.2);
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {

@@ -1,6 +1,6 @@
 {
   "button": {
-    "visitMore": "Visit More",
+    "visitMore": "Visit",
     "learnMore": "Learn More",
     "checkOnGithub": "Check Our Github",
     "joinArk": "Join Profit Ark",
@@ -15,7 +15,8 @@
     "applyNow": "Apply Now",
     "contributeNow": "Contribute Now",
     "applyForGrants": "Apply for Grants",
-    "freeStorage": "Free Storage Access"
+    "freeStorage": "Free Storage Access",
+    "introductionVideo": "Crust Introduction Video"
   },
   "header": {
     "CRU Token": "CRU Token",
@@ -64,7 +65,8 @@
     "Analysis of Economic Model": "Analysis of Economic Model"
   },
   "footer": {
-    "mediamaterials": "Media materials",
+    "Crust Bounty": "Crust Bounty",
+    "mediamaterials": "Media Materials",
     "Success": "Copy Success",
     "Error": "Copy Error",
     "Copy": "Copy",
@@ -74,7 +76,7 @@
     "EcoWhitePaper": "Economy Whitepaper",
     "Github": "Github",
     "FAQ": "FAQ",
-    "forum": "Forum",
+    "forum": "Community",
     "Twitter": "Twitter",
     "Telegram": "Telegram",
     "Discord": "Discord",

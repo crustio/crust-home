@@ -8,7 +8,8 @@
           </div>
           <div class="dec-top-right">
             <button class="btn-custom" @click="handleDemoVideoClick">
-              <i v-html="iconPlay" class="icon-play"></i>{{ $t("button.demoVideo") }}
+              <i class="icon-play" v-html="iconPlay"></i
+              >{{ $t("button.demoVideo") }}
             </button>
           </div>
         </div>
@@ -38,17 +39,11 @@
                 content2="QmUmfSj43T9fsPSaEgGcrgHH5Wq8KFv48oVXnfY4FXDJZt"
               />
             </swiper-slide>
-            <div slot="pagination" class="swiper-pagination swiper-pagination-connnct"></div>
+            <div
+              slot="pagination"
+              class="swiper-pagination swiper-pagination-connnct"
+            ></div>
           </swiper>
-          <div class="center w-100" style="text-align: center;">
-            <button
-                class="btn-custom"
-                style="margin-top: 42px"
-                @click="handleFreeStorageClick"
-            >
-            {{ $t("button.freeStorage") }}
-          </button>
-          </div>
         </div>
       </div>
     </div>
@@ -59,13 +54,18 @@
             {{ $t(`decentralized.title2`) }}
           </div>
           <div class="dec-cloud-top-right">
-            <span class="prefix-text">{{ $t(`Crust-based commercial application solution`)}}</span>
-            <button class="btn-custom cloud-grants-btn" @click="handleHandbookClick">
+            <button
+              class="btn-custom cloud-grants-btn"
+              @click="handleHandbookClick"
+            >
               {{ $t("Crust Solutions Handbook") }}
             </button>
-            <button class="btn-custom cloud-grants-btn" @click="handleBuildOnCrust">
-            {{ $t("button.buildOnCrust") }}
-          </button>
+            <button
+              class="btn-custom cloud-grants-btn"
+              @click="handleBuildOnCrust"
+            >
+              {{ $t("button.buildOnCrust") }}
+            </button>
           </div>
         </div>
         <div class="dec-cloud-bottom">
@@ -98,33 +98,45 @@
                 :content="$t(`decentralized.SecuredSubTitle`)"
               />
             </swiper-slide>
-            <div slot="pagination" class="swiper-pagination swiper-pagination-cloud"></div>
+            <div
+              slot="pagination"
+              class="swiper-pagination swiper-pagination-cloud"
+            ></div>
           </swiper>
         </div>
         <div class="dec-apply-now">
-          <span class="prefix-text">{{ $t(`Crust-based commercial application solution`)}}</span>
-            <button class="btn-custom cloud-grants-btn" @click="handleHandbookClick">
-              {{ $t("Crust Solutions Handbook") }}
-            </button>
-            <button class="btn-custom cloud-grants-btn" @click="handleBuildOnCrust">
+          <button
+            class="btn-custom cloud-grants-btn"
+            @click="handleHandbookClick"
+          >
+            {{ $t("Crust Solutions Handbook") }}
+          </button>
+          <button
+            class="btn-custom cloud-grants-btn"
+            @click="handleBuildOnCrust"
+          >
             {{ $t("button.buildOnCrust") }}
           </button>
         </div>
       </div>
-<!--      <p class="check-more-title-full" v-html="$t('decentralized.checkMore')"></p>-->
+      <!--      <p class="check-more-title-full" v-html="$t('decentralized.checkMore')"></p>-->
     </div>
-    <div class="m-video-container" @click="handleCloseDemoVideo" v-if="showVideo">
+    <div
+      v-if="showVideo"
+      class="m-video-container"
+      @click="handleCloseDemoVideo"
+    >
       <dVideo></dVideo>
     </div>
   </div>
 </template>
 
 <script>
-import DConnectCard from "./DConnectCard"
-import DCloudCard from "./DCloudCard"
 import IconPlay from "@/assets/svgs/icon-play.svg?raw"
 import { outerDit } from "@/config/nav-config"
-import dVideo from './dVideo'
+import DConnectCard from "./DConnectCard"
+import DCloudCard from "./DCloudCard"
+import dVideo from "./dVideo"
 export default {
   name: "Decentralized2",
   components: { DConnectCard, DCloudCard, dVideo },
@@ -180,33 +192,32 @@ export default {
   },
   destroyed() {},
   methods: {
-    handleBuildOnCrust(){
-      let location =
-          this.$store.state.locale === "en" ? "https://wiki.crust.network/docs/en/buildGettingStarted" :"https://wiki.crust.network/docs/zh-CN/buildGettingStarted"
+    handleBuildOnCrust() {
+      const location =
+        this.$store.state.locale === "en"
+          ? "https://wiki.crust.network/docs/en/buildGettingStarted"
+          : "https://wiki.crust.network/docs/zh-CN/buildGettingStarted"
       window.open(location, "_blank")
     },
-    handleHandbookClick (){
-      const pdfName = this.$store.state.locale === "en" ? "crust_solutions_handbook-en.pdf" : "crust_solutions_handbook-ch.pdf"
+    handleHandbookClick() {
+      const pdfName =
+        this.$store.state.locale === "en"
+          ? "crust_solutions_handbook-en.pdf"
+          : "crust_solutions_handbook-ch.pdf"
       window.open(`${outerDit.download}${pdfName}`, "_blank")
     },
     getZhcnCss() {
       if (this.$store.state.locale === "en") {
-        return ''
+        return ""
       } else {
-        return 'zh-cn'
+        return "zh-cn"
       }
     },
     handleFreeStorageClick() {
-      window.open(
-        outerDit["free storage"],
-        "_blank"
-      )
+      window.open(outerDit["free storage"], "_blank")
     },
     handleCrustGrantsClick() {
-      window.open(
-        outerDit["crust grants"],
-        "_blank"
-      )
+      window.open(outerDit["crust grants"], "_blank")
     },
     handleBuildClick() {
       window.open(
@@ -217,22 +228,24 @@ export default {
     handleDemoVideoClick() {
       this.showVideo = true
     },
-    handleCloseDemoVideo(){
+    handleCloseDemoVideo() {
       this.showVideo = false
     },
     handleApplyNow() {
       window.open(
-        outerDit[this.$store.state.locale === "en" ? "dcf grants" : "dcf grants"],
+        outerDit[
+          this.$store.state.locale === "en" ? "dcf grants" : "dcf grants"
+        ],
         "_blank"
       )
-    }
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.icon-play{
-  /deep/ svg{
+.icon-play {
+  /deep/ svg {
     margin-right: 8px;
     margin-bottom: 2px;
     width: 16px;
@@ -241,20 +254,19 @@ export default {
   }
 }
 
-.m-video-container{
+.m-video-container {
   position: fixed;
   z-index: 100;
   width: 100vw;
   height: 100vh;
   padding: 0 10vw;
-  background: rgba(33,33,33, 0.2);
+  background: rgba(33, 33, 33, 0.2);
   left: 0;
   top: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -307,7 +319,7 @@ export default {
           font-size: 16px;
           font-family: InterV_Semi-Bold, InterV_Semi;
           font-weight: bold;
-          color: #0F0F0F;
+          color: #0f0f0f;
           line-height: 40px;
           margin-right: 40px;
         }
@@ -316,7 +328,6 @@ export default {
           align-self: center;
         }
       }
-
     }
     .check-more-title-full {
       padding-top: 40px;
@@ -368,14 +379,13 @@ export default {
     border: 2px solid $secondary;
     padding-left: 20px;
     padding-right: 20px;
-    &:hover{
+    &:hover {
       color: #afafaf !important;
-      /deep/ svg{
+      /deep/ svg {
         fill: #afafaf !important;
       }
     }
   }
-
 }
 
 @media screen and (max-width: 1200px) {
@@ -419,7 +429,7 @@ export default {
           font-size: 12px;
           font-family: InterV_Semi-Bold, InterV_Semi;
           font-weight: bold;
-          color: #0F0F0F;
+          color: #0f0f0f;
           line-height: 1.3;
           padding-left: 10px;
           padding-right: 10px;
@@ -439,11 +449,9 @@ export default {
           margin-top: 24px;
           margin-bottom: 10px;
         }
-
       }
-
     }
-    .check-more-title-full{
+    .check-more-title-full {
       display: none;
     }
 
@@ -462,7 +470,6 @@ export default {
     /deep/ .swiper-pagination-bullet-active {
       background-color: $mainColor;
     }
-
   }
 
   .dec-connect {
@@ -515,22 +522,19 @@ export default {
     }
   }
 
-  .m-video-container{
+  .m-video-container {
     padding: unset;
   }
 
   .btn-custom {
     border: 2px solid $secondary;
     width: 160px;
-    &:hover{
+    &:hover {
       color: #afafaf !important;
-      /deep/ svg{
+      /deep/ svg {
         fill: #afafaf !important;
       }
     }
   }
-
 }
-
-
 </style>

@@ -103,7 +103,7 @@ export default {
       }
     }
     .swiper-slide {
-      width: 600px;
+      width: 500px;
     }
   }
 }
