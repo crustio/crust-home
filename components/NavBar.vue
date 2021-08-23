@@ -4,8 +4,8 @@
       <div class="auction-tool-bar">
         <b-navbar-nav class="ml-auto">
           <b-navbar-nav class="ml-auto">
-            <b-nav-item href="#" @click="openLink('Profit Data')">{{
-              $t(`header["Profit Data"]`)
+            <b-nav-item href="#" @click="jump('CRU Token')">{{
+              $t(`header["CRU Token"]`)
             }}</b-nav-item>
           </b-navbar-nav>
         </b-navbar-nav>
@@ -26,6 +26,7 @@
           <template v-for="item in navList">
             <b-nav-item-dropdown
               v-if="item.hasChild"
+              :key="item.name"
               :text="item.name === 'lang' ? locale : $t(`header.${item.name}`)"
               :class="{
                 active:
@@ -35,19 +36,18 @@
               }"
               menu-class="drop"
               right
-              :key="item.name"
             >
               <template v-for="child in item.children">
-                <b-dropdown-item :key="child" @click="jump(child)" href="#">{{
+                <b-dropdown-item :key="child" href="#" @click="jump(child)">{{
                   $t(`header.${child}`)
                 }}</b-dropdown-item>
               </template>
             </b-nav-item-dropdown>
             <b-nav-item
+              v-else
+              :key="item.name"
               :active="item.name.toLowerCase() === activeNav"
               @click="jump(item.name)"
-              :key="item.name"
-              v-else
               >{{ $t(`header.${item.name}`) }}</b-nav-item
             >
           </template>
@@ -65,37 +65,6 @@ export default {
   data() {
     return {
       activeNav: "home",
-      slot_auction: [
-        {
-          name: "polkadot_apps",
-          location: "https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/parachains/crowdloan"
-        },
-        {
-          name: "nutbox",
-          location: "https://polkadot.nutbox.io/#/crowdloan/kusama/parachain/2012"
-        },
-        {
-          name: "okex",
-          location: "https://www.ouyi.cc/earn/slotauction"
-        },
-        {
-          name: "kraken",
-          location: "https://www.kraken.com/sign-in?redirect=%252Fu%252Ffunding%252Fparachains"
-        },
-        {
-          name: "math_wallet",
-          location: "https://cloud.mathwallet.xyz/#/auction"
-        },
-        {
-          name: "hotbit",
-          location: "https://www.hotbit.io/slotauction/detail/2",
-        },
-        {
-          name: "atoken",
-          location: "",
-          disabled: true
-        },
-      ],
       navList: [
         {
           name: "Home",
@@ -105,27 +74,33 @@ export default {
           name: "TestNet",
           hasChild: true,
           children: [
-            "Join Preview Network",
+            "Crust Network",
+            "Crust Wallet",
             "Blockchain Explorer",
             "Storage Explorer",
-            "Crust Apps",
-            "Crust Wallet",
+            "Crust Maxwell",
+          ],
+        },
+        {
+          name: "Build",
+          hasChild: true,
+          children: [
+            "Github",
+            "Build on Crust",
+            "Crust Grants",
+            "Crust Bounty",
           ],
         },
         {
           name: "Documents",
           hasChild: true,
           children: [
+            "Wiki",
             "WhitePaper",
             "EcoWhitePaper",
-            "Analysis of Economic Model",
-            "Wiki",
-            "Crust Solutions Handbook",
             "CSM Lightpaper",
+            "FAQ",
           ],
-        },
-        {
-          name: "FAQ",
         },
         {
           name: "lang",
@@ -134,73 +109,6 @@ export default {
         },
       ],
     }
-  },
-  methods: {
-    openLink(location) {
-      if (location === "Profit Data") {
-        location = "https://apps.crust.network/#/csmStaking"
-      }
-      window.open(location, "_blank")
-    },
-    jump(name) {
-      name = name.toLowerCase()
-      const isEn = this.$store.state.locale === "en"
-      if (name === "join preview network" || name === "wiki") {
-        if (isEn) {
-          name += "_en"
-        }
-      }
-      if (name === "analysis of economic model") {
-        if (isEn) {
-          return window.open(outerDit.analysis_of_economic_model_en, "_blank")
-        }
-        return window.open(outerDit.analysis_of_economic_model_zh, "_blank")
-      }
-      if (name === "ecowhitepaper" || name === "whitepaper") {
-        if (isEn) {
-          name += "_en"
-        }
-        return window.open(`${outerDit.pdfBucket}${name}.pdf`, "_blank")
-      }
-      if (name === "crust solutions handbook") {
-        const pdfName = isEn ? "crust_solutions_handbook-en.pdf" : "crust_solutions_handbook-ch.pdf"
-        return window.open(`${outerDit.download}${pdfName}`, "_blank")
-      }
-      if (name === 'csm lightpaper'){
-        // https://ipfs-hk.decoo.io/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=LT%20paper.(ZH).1_compressed.pdf
-        const url = isEn ? outerDit.csm_lightpaper_en : outerDit.csm_lightpaper_zh
-        return window.open(url, '_blank')
-      }
-
-      if (name === "zh" || name === "en") {
-        // 切换语言
-        this.$i18n.locale = name
-        // 将当前语言保存到cookie 中，
-        document.cookie = "locale=" + name
-        return this.$store.commit("SET_LANG", name)
-      }
-      if (name === "crust grants") {
-        return jumpTo('dcf grants')
-      }
-
-      if (name === "crust cloud") {
-        if (this.$route.name !== "home") {
-          this.$router.push("/#product")
-        }
-        return this.$scrollTo(document.querySelector("#product"))
-      }
-      if (name === "crust wallet") {
-        return window.open(outerDit[this.$store.state.locale === "en" ? "wallet_wiki_en" : "wallet_wiki_zh"], "_blank")
-      }
-      this.activeNav = name
-      if (outerList.indexOf(name) > -1) {
-        return jumpTo(name)
-      }
-      if (name === "home") {
-        return this.$router.push("/")
-      }
-      this.$router.push(name)
-    },
   },
   computed: {
     routerName() {
@@ -219,6 +127,50 @@ export default {
       this.activeNav = this.routerName
     },
   },
+  methods: {
+    jump(name) {
+      const isZh = this.$store.state.locale === "zh"
+      name = name.toLowerCase()
+      if (name === "zh" || name === "en") {
+        this.$i18n.locale = name
+        document.cookie = "locale=" + name
+        return this.$store.commit("SET_LANG", name)
+      }
+      if (name === "analysis of economic model") {
+        if (!isZh) {
+          return window.open(outerDit.analysis_of_economic_model_en, "_blank")
+        }
+        return window.open(outerDit.analysis_of_economic_model_zh, "_blank")
+      }
+      if (name === "ecowhitepaper" || name === "whitepaper") {
+        if (!isZh) {
+          name += "_en"
+        }
+        return window.open(`${outerDit.pdfBucket}${name}.pdf`, "_blank")
+      }
+      if (name === "crust solutions handbook") {
+        const pdfName = !isZh
+          ? "crust_solutions_handbook-en.pdf"
+          : "crust_solutions_handbook-ch.pdf"
+        return window.open(`${outerDit.download}${pdfName}`, "_blank")
+      }
+      if (name === "csm lightpaper") {
+        // https://ipfs-hk.decoo.io/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=LT%20paper.(ZH).1_compressed.pdf
+        const url = !isZh
+          ? outerDit.csm_lightpaper_en
+          : outerDit.csm_lightpaper_zh
+        return window.open(url, "_blank")
+      }
+      if (outerList.includes(name)) {
+        name = isZh ? name + "_zh" : name
+        return jumpTo(name)
+      }
+      if (name === "home") {
+        return this.$router.push("/")
+      }
+      this.$router.push(name)
+    },
+  },
 }
 </script>
 
@@ -233,7 +185,7 @@ export default {
   width: auto;
   max-height: 100%;
   .nav-item {
-    padding-left: 10px!important;
+    padding-left: 10px !important;
   }
 }
 .navbar {
@@ -262,9 +214,9 @@ export default {
         }
       }
       .nav-link {
-        color: #fff!important;
+        color: #fff !important;
         &:hover {
-          color: #ff6400!important;
+          color: #ff6400 !important;
           border-bottom: 2px solid #ff6400;
         }
         &:focus {

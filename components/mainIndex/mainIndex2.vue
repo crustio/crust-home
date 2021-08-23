@@ -6,10 +6,7 @@
         <div class="main-logo">
           <p class="logo" v-html="$t('indexBanner.sub')"></p>
           <div class="buttons">
-            <button
-                class="btn-custom button-width"
-                @click="crustMainnet"
-            >
+            <button class="btn-custom button-width" @click="crustMainnet">
               {{ $t("Crust Mainnet") }}
             </button>
             &nbsp;&nbsp;
@@ -21,24 +18,11 @@
             </button>
           </div>
           <div class="desc">
-            {{ $t("Maxwell incorporates all of the Crust's core features") }}
-
-            <div>
-              <div><span class="circle"></span> {{ $t("Token pledging") }}</div>
-              <div>
-                <span class="circle"></span>
-                {{ $t("A decentralized storage market") }}
-              </div>
-              <div>
-                <span class="circle"></span>
-                {{ $t("A document retrieval mechanism") }}
-              </div>
+            <div class="capacity">
+              <span class="number">2,303,401,205</span>
+              <span class="unit">GB</span>
             </div>
-            <p>
-              <span class="pointer" @click="handleMainnetPlanClick">
-                {{ $t("Mainnet Launch Plan") }}
-              </span>
-            </p>
+            <div>Globally distributed available storage capacity.</div>
           </div>
         </div>
       </div>
@@ -46,9 +30,9 @@
         <div class="container description">
           <div class="description-left">
             <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
-            <auto-video/>
-            <br>
-            <br>
+            <auto-video />
+            <br />
+            <br />
             <button class="btn-custom" @click="handleClick('Check Our Github')">
               {{ $t("button.checkOnGithub") }}
             </button>
@@ -69,8 +53,8 @@
       <div class="description">
         <div class="description-left">
           <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
-          <auto-video/>
-          <br>
+          <auto-video class="video" />
+          <br />
           <button class="btn-custom" @click="handleClickCheck()">
             {{ $t("button.checkOnGithub") }}
           </button>
@@ -107,7 +91,7 @@ import autoVideo from "./autoVideo"
 export default {
   components: {
     DescCard,
-    autoVideo
+    autoVideo,
   },
   data() {
     return {
@@ -154,7 +138,7 @@ export default {
         return "zh-cn"
       }
     },
-    crustMainnet () {
+    crustMainnet() {
       if (this.$store.state.locale === "en") {
         window.open(outerDit.crust_mainnet, "_blank")
       } else {
@@ -219,14 +203,18 @@ export default {
           font-size: 14px;
           font-family: InterV_Semi-Bold, InterV_Semi;
           font-weight: bold;
-          color: #ff6400;
+          color: #ffffff;
           line-height: 2em;
-          p {
-            padding-top: 32px;
-            font-size: 16px;
-            font-weight: 500;
-            font-style: italic;
-            color: #ff6400;
+          margin-top: 20px;
+          .capacity {
+            font-family: "Orbitron", sans-serif;
+            padding-bottom: 10px;
+            .number {
+              font-size: 48px;
+            }
+            .unit {
+              font-size: 24px;
+            }
           }
         }
         .buttons {
@@ -293,6 +281,9 @@ export default {
   }
   .desc-mobile {
     display: none;
+    .video {
+      display: none;
+    }
   }
 }
 
@@ -329,7 +320,6 @@ export default {
         .desc {
           padding: 22px 0 0 5px;
           font-size: 14px;
-          font-family: InterV_Semi-Bold, InterV_Semi;
           font-weight: bold;
           color: #ff6400;
           line-height: 2em;

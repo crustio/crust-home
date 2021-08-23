@@ -18,6 +18,12 @@
     "freeStorage": "Free Storage Access"
   },
   "header": {
+    "CRU Token": "CRU Token",
+    "Build": "Build",
+    "Crust Network": "Crust Network",
+    "Build on Crust": "Build on Crust",
+    "Crust Bounty": "Crust Bounty",
+    "Crust Maxwell": "Crust Maxwell",
     "Home": "Home",
     "community": "Forum",
     "communityTitle": "Community",
@@ -25,7 +31,7 @@
     "FAQ": "FAQ",
     "About": "About",
     "languages": "EN",
-    "TestNet": "Maxwell",
+    "TestNet": "Get Started",
     "Join Profit Ark": "Join Profit Ark",
     "Join Preview Network": "Join Preview Network",
     "Crust Apps": "Crust Apps",

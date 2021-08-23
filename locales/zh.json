@@ -18,6 +18,11 @@
     "freeStorage": "体验免费存储"
   },
   "header": {
+    "Build": "构建",
+    "Crust Network": "Crust Network",
+    "Build on Crust": "开始构建",
+    "Crust Bounty": "Crust Bounty",
+    "Crust Maxwell": "Crust Maxwell",
     "Github": "Github",
     "ZH": "中文",
     "EN": "EN",
@@ -31,7 +36,7 @@
     "FAQ": "FAQ",
     "about": "关于我们",
     "languages": "中文",
-    "TestNet": "预览网",
+    "TestNet": "立即开始",
     "Join Profit Ark": "加入方舟计划",
     "Join Preview Network": "加入预览网",
     "Crust Apps": "Crust Apps",
