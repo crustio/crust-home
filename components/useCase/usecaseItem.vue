@@ -4,7 +4,6 @@
       <img
         :src="imgSrc || `/image/usecases/${name}.png`"
         :alt="name"
-        width="100"
         @click="handleClick($t(`usecase.${name}.link`))"
       />
     </div>
@@ -72,6 +71,10 @@ export default {
   }
   .logo {
     cursor: pointer;
+    img {
+      max-width: 100px;
+      max-height: 50px;
+    }
   }
   .desc {
     font-size: 16px;

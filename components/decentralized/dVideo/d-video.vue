@@ -24,7 +24,7 @@ export default {
     source: {
       type: String,
       default:
-        "https://ipfs-hk.decoo.io/ipfs/QmX5pzx4HwMuSFmhS5mwP5nNxJVZJNk6SedyZjgNmwr5qo",
+        "https://ipfs-hk.decoo.io/ipfs/QmaQNWgfWUqZqaMLXZKJNMU6gWyskEwMzsgCmtGRBwooaQ",
     },
   },
   data() {

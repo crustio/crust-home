@@ -27,7 +27,7 @@ const outerDit = {
   csmtoken: "https://csm.crust.network/#/cru/info",
 
   wiki: "https://wiki.crust.network/zh-CN",
-  twitter: "https://twitter.com/CommunityCrust",
+  twitter: "https://twitter.com/CrustNetwork",
   medium: "https://medium.com/@CrustNetwork",
   telegram: "https://t.me/CrustNetwork",
   discord: "https://discord.gg/Jbw2PAUSCR",

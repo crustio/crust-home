@@ -452,7 +452,25 @@
       "desc": "Create, collect and trade valuable NFT assets of the New Luxury.",
       "link": "https://realy.pro//",
       "learnMore": "https://realy.pro/"
+    },
+    "Sinso": {
+      "desc": "Sinso is based on Web3 technology and aims to build Sinso DAC ecosystem,Establish the era of human decentralized medical care.",
+      "link": "https://sinso2021.medium.com/distributed-image-cloud-based-on-curst-3460a18f0d79",
+      "learnMore": "https://sinso2021.medium.com/distributed-image-cloud-based-on-curst-3460a18f0d79"
+    },
+    "Bluna": {
+      "desc": "Bluna is a platform where people can create, store and trade immersive digital works for Metaverse which has to be immersive, creatable and tokenized.",
+      "link": "https://medium.com/@bluna.io/bluna-future-of-metaverse-b7fc96fcff6a",
+      "learnMore": "https://medium.com/@bluna.io/bluna-future-of-metaverse-b7fc96fcff6a"
+    },
+    "CruTransfer": {
+      "desc": "CruTransfer is the simplest and the most effective platform to share your different types of files over the internet.",
+      "link": "https://crutransferme.medium.com/",
+      "learnMore": "https://crutransferme.medium.com/"
     }
+
+
+
 
   },
   "Crust Maxwell": "Crust Maxwell",
@@ -465,5 +483,7 @@
   "Crust Mainnet is coming soon": "Crust Mainnet is coming soon...",
   "Mainnet Launch Plan": "Mainnet Launch Plan",
   "Claim CRU": "Claim CRU",
-  "Crust Mainnet": "Crust Mainnet"
+  "Crust Mainnet": "Crust Mainnet",
+  "Globally distributed available storage capacity": "Globally distributed available storage capacity."
+
 }

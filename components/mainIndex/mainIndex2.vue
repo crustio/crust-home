@@ -26,10 +26,12 @@
           </div>
           <div class="desc">
             <div class="capacity">
-              <span class="number">2,303,401,205</span>
+              <Capacity class="number" />
               <span class="unit">GB</span>
             </div>
-            <div>Globally distributed available storage capacity.</div>
+            <div class="intro">
+              {{ $t("Globally distributed available storage capacity") }}
+            </div>
           </div>
         </div>
       </div>
@@ -111,10 +113,12 @@ import * as globalScript from "../../static/script/global"
 import * as TrackballControls from "../../static/script/TrackballControls"
 import dVideo from "../decentralized/dVideo"
 import DescCard from "./descCard"
+import Capacity from "./Capacity"
 export default {
   components: {
     DescCard,
     dVideo,
+    Capacity,
   },
   data() {
     return {
@@ -265,6 +269,9 @@ export default {
             .unit {
               font-size: 24px;
             }
+            .intro {
+              font-size: 18px;
+            }
           }
         }
         .buttons {
@@ -357,15 +364,16 @@ export default {
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
+      padding-bottom: 100px;
       .main-logo {
         width: 100%;
         display: flex;
         flex-direction: column;
         .logo {
           font-family: InterV_Semi-Bold;
-          font-size: 32px;
+          font-size: 24px;
           color: #ffffff;
           letter-spacing: 0;
           text-align: left;
@@ -374,20 +382,24 @@ export default {
           opacity: 0.99;
         }
         .desc {
-          padding: 22px 0 0 5px;
+          padding: 36px 0 0 5px;
           font-size: 14px;
           font-weight: bold;
-          color: #ff6400;
+          color: #fff;
           line-height: 2em;
           z-index: 10;
-          p {
-            padding-top: 32px;
-            font-size: 16px;
-            font-weight: 500;
-            font-style: italic;
-            cursor: pointer;
-            text-decoration: underline;
-            color: #ff6400;
+          .capacity {
+            font-family: "Orbitron", sans-serif;
+            padding-bottom: 10px;
+            .number {
+              font-size: 28px;
+            }
+            .unit {
+              font-size: 18px;
+            }
+            .intro {
+              font-size: 18px;
+            }
           }
         }
 
@@ -453,6 +465,7 @@ export default {
         .btn-wrapper {
           margin-bottom: 20px;
           .btn-custom {
+            margin-bottom: 10px;
             min-width: 128px;
             padding-left: 20px;
             padding-right: 20px;
