@@ -14,7 +14,7 @@
     "CrustGrants": "Crust Grants",
     "applyNow": "Apply Now",
     "contributeNow": "Contribute Now",
-    "applyForGrants": "Apply for Grants",
+    "applyForGrants": "Crust Ecosystem Growth Program",
     "freeStorage": "Free Storage Access",
     "introductionVideo": "Crust Introduction Video"
   },
@@ -157,9 +157,9 @@
     "SecuredSubTitle": "Developers are able to build Cloud storage applications with Crust/IPFS Network. Without maintaining storage clusters, developers only need to integrate the SDK of Crust/IPFS into applications to provide users with stable storage services.",
     "apply-now-prefix": "Apply for Crust Grants and join us for building the Web 3.0 decentralized cloud ecosystem.",
     "dev-team": "Crust is an Open Source Protocol",
-    "dev-team-intro": "Crust is an open source project funded by Decentralized Cloud Foundation. It is under active development and maintenance by <a class='btn-link' href='https://www.linkedin.com/company/clouderium/mycompany' target='_blank' style='text-decoration:underline !important;color: white !important'>Clouderium Technologies</a>. Clouderium is specialized in research and development of trusted computing, blockchain, and cloud storage.",
+    "dev-team-intro": "Crust is an open source project funded by DCF (Decentralized Cloud Foundation). In align with Crust technical stack, DCF also funds and supports multiple open source projects like Encrypted IPFS. Crust is under active development and maintenance by global development teams.",
     "foundation": "Decentralized Cloud Foundation",
-    "foundation-intro": "DCF (Decentralized Cloud Foundation) funds and incubates teams and projects, to build decentralized cloud infrastructure and applications of Web3.0. Crust Network is the fundamental project that DCF mainly supports."
+    "foundation-intro": "DCF (Decentralized Cloud Foundation )funds and incubates teams and projects, to build decentralized cloud technologies and applications of Web3.0. Crust Network is the fundamental project that DCF mainly supports."
   },
   "productMatrix": {
     "title": "Product Matrix",

@@ -3,58 +3,60 @@
     <div class="container" style="height: 500px; position: relative">
       <div class="left-c full-width">
         <span class="dev-team">{{ $t("decentralized.dev-team") }}</span>
-        <span class="dev-team-intro" :class="getZhcnCss()" v-html="$t('decentralized.dev-team-intro')"></span>
-        <button class="btn-custom apply-now" @click="handleApplyDevTeamClick">
-          {{ $t("button.contributeNow") }}
-        </button>
+        <span
+          class="dev-team-intro"
+          :class="getZhcnCss()"
+          v-html="$t('decentralized.dev-team-intro')"
+        ></span>
+        <TeamWrapper />
       </div>
       <div class="right-c full-width">
-        <span class="dev-team" :class="getZhcnCss()">{{ $t("decentralized.foundation") }}</span>
-        <span class="dev-team-intro" :class="getZhcnCss()">{{ $t("decentralized.foundation-intro") }}</span>
-        <button class="btn-custom apply-now" @click="handleApplyFoundationClick">
+        <span class="dev-team" :class="getZhcnCss()">{{
+          $t("decentralized.foundation")
+        }}</span>
+        <span class="dev-team-intro" :class="getZhcnCss()">{{
+          $t("decentralized.foundation-intro")
+        }}</span>
+        <button
+          class="btn-custom apply-now"
+          @click="handleApplyFoundationClick"
+        >
           {{ $t("button.applyForGrants") }}
         </button>
       </div>
     </div>
-
-
-
   </div>
 </template>
 <script>
 import { outerDit } from "@/config/nav-config"
+import TeamWrapper from "./TeamWrapper"
 export default {
   name: "DevTeam",
-  components: {},
+  components: {
+    TeamWrapper,
+  },
   data() {
     return {}
   },
   methods: {
     handleApplyDevTeamClick() {
-      window.open(
-        outerDit["github"],
-        "_blank"
-      )
+      window.open(outerDit.github, "_blank")
     },
     handleApplyFoundationClick() {
-      window.open(
-        outerDit["crust grants"],
-        "_blank"
-      )
+      window.open(outerDit["crust grants"], "_blank")
     },
     getZhcnCss() {
       if (this.$store.state.locale === "en") {
-        return ''
+        return ""
       } else {
-        return 'zh-cn'
+        return "zh-cn"
       }
     },
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>
 @media screen and (min-width: 1200px) {
-
   .all-c {
     background-image: url("~/assets/images/back-devteam.jpg");
     background-repeat: no-repeat;
@@ -85,7 +87,7 @@ export default {
         font-size: 36px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 56px;
         margin-bottom: 24px;
       }
@@ -93,7 +95,7 @@ export default {
         font-size: 16px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 22px;
         max-width: 642px;
         margin-bottom: 50px;
@@ -102,15 +104,15 @@ export default {
         }
       }
       .apply-now {
-        width: 200px;
+        width: 300px;
         height: 40px;
         border-radius: 26px;
-        border: 2px solid #FFFFFF;
+        border: 2px solid #ffffff;
         font-size: 16px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
         line-height: 19px;
-        background: #FC7823;
+        background: #fc7823;
         &:hover {
           background-color: white;
         }
@@ -127,10 +129,10 @@ export default {
         height: 100%;
       }
       .apply-now {
-        width: 200px;
+        width: 300px;
         height: 40px;
         border-radius: 26px;
-        border: 2px solid #FFFFFF;
+        border: 2px solid #ffffff;
         font-size: 16px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
@@ -147,7 +149,7 @@ export default {
         font-size: 16px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 22px;
         max-width: 50%;
         margin-bottom: 24px;
@@ -163,7 +165,7 @@ export default {
         font-size: 36px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 56px;
         margin-bottom: 24px;
         position: absolute;
@@ -200,7 +202,7 @@ export default {
         font-size: 14px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 56px;
         margin-top: 10px;
       }
@@ -209,7 +211,7 @@ export default {
         height: 115px;
         font-size: 12px;
         font-family: InterV;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 15px;
         margin-bottom: 5px;
         &.zh-cn {
@@ -223,13 +225,13 @@ export default {
         width: 128px;
         height: 34px;
         border-radius: 26px;
-        border: 2px solid #FFFFF0;
+        border: 2px solid #fffff0;
         font-size: 12px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 15px;
-        background: #FC7823;
+        background: #fc7823;
         &:hover {
           background-color: white;
           color: black;
@@ -249,11 +251,11 @@ export default {
         width: 128px;
         height: 34px;
         border-radius: 26px;
-        border: 2px solid #FFFFF0;
+        border: 2px solid #fffff0;
         font-size: 12px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 15px;
         position: absolute;
         right: 0;
@@ -267,7 +269,7 @@ export default {
       .dev-team-intro {
         font-size: 12px;
         font-family: InterV;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 15px;
         max-width: 270px;
         position: absolute;
@@ -284,7 +286,7 @@ export default {
         height: 56px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 56px;
         margin-bottom: 24px;
         position: absolute;
