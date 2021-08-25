@@ -146,7 +146,7 @@ export default {
       }
     }
     .swiper-slide {
-      width: 150px;
+      width: 160px;
     }
   }
 }
