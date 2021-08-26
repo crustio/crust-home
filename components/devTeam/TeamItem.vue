@@ -1,13 +1,20 @@
 <template>
-  <a
-    :href="team.link"
-    class="image-wrapper"
-    target="_blank"
-    @mouseenter="onImageHover"
-    @mouseleave="onImageLeave"
-  >
-    <img :src="imgSrc || `/image/devteam/${team.name}.png`" :alt="team.name" />
-  </a>
+  <div>
+    <a
+      v-b-tooltip.hover
+      :href="team.link"
+      class="image-wrapper"
+      target="_blank"
+      :title="`${team.name} Team`"
+      @mouseenter="onImageHover"
+      @mouseleave="onImageLeave"
+    >
+      <img
+        :src="imgSrc || `/image/devteam/${team.name}.png`"
+        :alt="team.name"
+      />
+    </a>
+  </div>
 </template>
 <script>
 export default {
@@ -40,7 +47,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .image-wrapper {
-  width: 80px;
   display: inline-block;
+  img {
+    width: 80px;
+    @media screen and (max-width: 1200px) {
+      width: 48px;
+    }
+  }
 }
 </style>

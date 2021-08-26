@@ -143,9 +143,9 @@
     "SecuredSubTitle": "开发者可以基于Crust/IPFS网络开发云存储应用。开发者无需维护存储集群，只需在应用上集成Crust/IPFS的SDK，即可为用户提供稳定的存储服务。",
     "apply-now-prefix": "申请Crust Grants，共建Web 3.0 分布式云生态",
     "dev-team": "Crust是⼀个开源项⽬",
-    "dev-team-intro": "Crust是⼀个开源项⽬，由Decentralized Cloud Foundation资助。<a class='btn-link' href='https://www.linkedin.com/company/clouderium/mycompany' target='_blank' style='text-decoration:underline !important;color: white !important'>Clouderium Technologies</a>正在积极开发和维护Crust的相关代码。 Clouderium专⻔从事可信计算、区块链和云存储的研究与开发。",
-    "foundation": "基金会",
-    "foundation-intro": "DCF（Decentralized Cloud Foundation）资助并孵化团队和项⽬，以构建Web3.0下的分布式云基础架构和应⽤程序。Crust Network是DCF主要⽀持的基础项⽬。"
+    "dev-team-intro": "Crust是一个由DCF基金会（Decentralized Cloud Foundation）资助的开源项目。同时，DCF基金会还资助和支持了若干相关技术栈下的开源项目，例如Encrypted IPFS。在多个全球技术团队的参与下，Crust项目正处于高度积极和活跃的开发进程中。",
+    "foundation": "DCF基金会",
+    "foundation-intro": "DCF基金会（Decentralized Cloud Foundation）旨在资助和孵化创新性团队及其项目，以支持他们在Web3.0愿景下构建去中心化云存储相关的技术与应用。Crust Network就是DCF基金会目前重点支持的项目。"
   },
   "productMatrix": {
     "title": "产品矩阵",
@@ -435,5 +435,7 @@
   "Mainnet Launch Plan": "主网上线计划",
   "Claim CRU": "认领CRU",
   "Crust Mainnet": "Crust 主网",
-  "Globally distributed available storage capacity": "全球分布的可用存储容量"
+  "Globally distributed available storage capacity": "全球分布的可用存储容量",
+  "A decentralized storage network of Web3.0 ecosystem": "一个Web3.0生态的去中心化存储网络",
+  "An encrypted storage layer of IPFS that supports customized encryptor": "一个支持定制化加密的IPFS隐私存储层"
 }
