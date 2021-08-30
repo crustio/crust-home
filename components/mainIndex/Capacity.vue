@@ -17,10 +17,9 @@ export default {
   computed: {},
   watch: {},
   mounted() {
-    // need to request api
-
+    // this is fake data, need to request api
     setTimeout(() => {
-      this.endVal = "2303401205"
+      this.endVal = 2303401205
     }, 1000)
   },
 }
