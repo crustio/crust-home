@@ -19,7 +19,7 @@ export default {
   mounted() {
     // this is fake data, need to request api
     setTimeout(() => {
-      this.endVal = 888333000
+      this.endVal = 1008873
     }, 1000)
   },
 }
