@@ -1,5 +1,5 @@
 <template>
-  <div v-if="modalShow" class="wrapper">
+  <div v-if="modalShow && $store.state.locale === 'en'" class="wrapper">
     <div class="desc">
       We use cookies to offer you a better browsing experience, analyze site
       traffic, personalize content, and serve targeted advertisements. If you
@@ -15,7 +15,7 @@ export default {
   name: "CookieAccept",
   data() {
     return {
-      modalShow: true,
+      modalShow: false,
     }
   },
   mounted() {
