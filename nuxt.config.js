@@ -1,9 +1,6 @@
-
-let target = "http://192.168.50.7:18081"
-
 export default {
   server: {
-    port: 8888
+    port: 8888,
   },
   /*
    ** Nuxt rendering mode
@@ -47,6 +44,12 @@ export default {
         rel: "stylesheet",
         href: "//at.alicdn.com/t/font_1432256_b1321qx6myb.css",
       },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Orbitron&display=swap",
+      },
     ],
     script: [
       { src: `//at.alicdn.com/t/font_1432256_b1321qx6myb.js`, async: true },
@@ -71,7 +74,12 @@ export default {
   /*
    ** Global CSS
    */
-  css: ["~assets/scss/global.scss", "~assets/fonts/nasalization/font.css", "~assets/fonts/inter/inter.css", "~assets/fonts/orbitron/orbitron.css"],
+  css: [
+    "~assets/scss/global.scss",
+    "~assets/fonts/nasalization/font.css",
+    "~assets/fonts/inter/inter.css",
+    "~assets/fonts/orbitron/orbitron.css",
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -133,19 +141,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    proxy: true
-  },
-  proxy: {
-    '/api': {
-      target,
-      pathRewrite: {
-        '^/api': '/api'
-      }
-    },
-    '/cityjson': {
-      target: 'http://pv.sohu.com/',
-      pathRewrite: { '^/cityjson': '/cityjson' }
-    }
+    proxy: true,
   },
   /*
    ** Build configuration

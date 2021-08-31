@@ -18,6 +18,11 @@
     "freeStorage": "体验免费存储"
   },
   "header": {
+    "Build": "构建",
+    "Crust Network": "Crust Network",
+    "Build on Crust": "开始构建",
+    "Crust Bounty": "Crust Bounty",
+    "Crust Maxwell": "Crust Maxwell",
     "Github": "Github",
     "ZH": "中文",
     "EN": "EN",
@@ -31,7 +36,7 @@
     "FAQ": "FAQ",
     "about": "关于我们",
     "languages": "中文",
-    "TestNet": "预览网",
+    "TestNet": "立即开始",
     "Join Profit Ark": "加入方舟计划",
     "Join Preview Network": "加入预览网",
     "Crust Apps": "Crust Apps",
@@ -55,9 +60,11 @@
     "rewards_plan": "查看奖励计划",
     "polkadot_apps": "Polkadot apps",
     "Profit Data": "数据创造价值",
-    "Analysis of Economic Model": "解析经济模型"
+    "Analysis of Economic Model": "解析经济模型",
+    "introductionVideo": "Crust介绍视频"
   },
   "footer": {
+    "Crust Bounty": "Crust Bounty",
     "mediamaterials": "媒体资料",
     "Success": "复制成功",
     "Error": "复制失败",
@@ -136,9 +143,9 @@
     "SecuredSubTitle": "开发者可以基于Crust/IPFS网络开发云存储应用。开发者无需维护存储集群，只需在应用上集成Crust/IPFS的SDK，即可为用户提供稳定的存储服务。",
     "apply-now-prefix": "申请Crust Grants，共建Web 3.0 分布式云生态",
     "dev-team": "Crust是⼀个开源项⽬",
-    "dev-team-intro": "Crust是⼀个开源项⽬，由Decentralized Cloud Foundation资助。<a class='btn-link' href='https://www.linkedin.com/company/clouderium/mycompany' target='_blank' style='text-decoration:underline !important;color: white !important'>Clouderium Technologies</a>正在积极开发和维护Crust的相关代码。 Clouderium专⻔从事可信计算、区块链和云存储的研究与开发。",
-    "foundation": "基金会",
-    "foundation-intro": "DCF（Decentralized Cloud Foundation）资助并孵化团队和项⽬，以构建Web3.0下的分布式云基础架构和应⽤程序。Crust Network是DCF主要⽀持的基础项⽬。"
+    "dev-team-intro": "Crust是一个由DCF基金会（Decentralized Cloud Foundation）资助的开源项目。同时，DCF基金会还资助和支持了若干相关技术栈下的开源项目，例如Encrypted IPFS。在多个全球技术团队的参与下，Crust项目正处于高度积极和活跃的开发进程中。",
+    "foundation": "DCF基金会",
+    "foundation-intro": "DCF基金会（Decentralized Cloud Foundation）旨在资助和孵化创新性团队及其项目，以支持他们在Web3.0愿景下构建去中心化云存储相关的技术与应用。Crust Network就是DCF基金会目前重点支持的项目。"
   },
   "productMatrix": {
     "title": "产品矩阵",
@@ -319,6 +326,21 @@
       "desc": "让最新潮的奢侈品以NFT的方式被创造、收集和交易。",
       "link": "https://realy.pro//",
       "learnMore": "https://realy.pro/"
+    },
+    "Sinso": {
+      "desc": "Sinso基于Web3技术，旨在构建Sinso DAC生态系统，建立人类去中心化医疗时代。",
+      "link": "https://sinso2021.medium.com/distributed-image-cloud-based-on-curst-3460a18f0d79",
+      "learnMore": "https://sinso2021.medium.com/distributed-image-cloud-based-on-curst-3460a18f0d79"
+    },
+    "Bluna": {
+      "desc": "Bluna 是一个为 Metaverse 创建、存储和交易沉浸式数字作品平台。",
+      "link": "https://medium.com/@bluna.io/bluna-future-of-metaverse-b7fc96fcff6a",
+      "learnMore": "https://medium.com/@bluna.io/bluna-future-of-metaverse-b7fc96fcff6a"
+    },
+    "CruTransfer": {
+      "desc": "CruTransfer是一个快速共享不同类型文件的有效平台。",
+      "link": "https://crutransferme.medium.com/",
+      "learnMore": "https://crutransferme.medium.com/"
     }
 
   },
@@ -412,5 +434,8 @@
   "Crust Mainnet is coming soon": "Crust主网即将上线...",
   "Mainnet Launch Plan": "主网上线计划",
   "Claim CRU": "认领CRU",
-  "Crust Mainnet": "Crust 主网"
+  "Crust Mainnet": "Crust 主网",
+  "Globally distributed available storage capacity": "全球分布的可用存储容量",
+  "A decentralized storage network of Web3.0 ecosystem": "一个Web3.0生态的去中心化存储网络",
+  "An encrypted storage layer of IPFS that supports customized encryptor": "一个支持定制化加密的IPFS隐私存储层"
 }

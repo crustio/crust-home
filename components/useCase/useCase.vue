@@ -45,6 +45,9 @@ export default {
         "IPFS",
         "Realy",
         "Decoo",
+        "Sinso",
+        "Bluna",
+        "CruTransfer",
       ],
       process: 0,
       timer: null,
@@ -103,7 +106,7 @@ export default {
       }
     }
     .swiper-slide {
-      width: 600px;
+      width: 500px;
     }
   }
 }

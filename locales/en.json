@@ -1,6 +1,6 @@
 {
   "button": {
-    "visitMore": "Visit More",
+    "visitMore": "Visit",
     "learnMore": "Learn More",
     "checkOnGithub": "Check Our Github",
     "joinArk": "Join Profit Ark",
@@ -14,10 +14,17 @@
     "CrustGrants": "Crust Grants",
     "applyNow": "Apply Now",
     "contributeNow": "Contribute Now",
-    "applyForGrants": "Apply for Grants",
-    "freeStorage": "Free Storage Access"
+    "applyForGrants": "Crust Ecosystem Growth Program",
+    "freeStorage": "Free Storage Access",
+    "introductionVideo": "Crust Introduction Video"
   },
   "header": {
+    "CRU Token": "CRU Token",
+    "Build": "Build",
+    "Crust Network": "Crust Network",
+    "Build on Crust": "Build on Crust",
+    "Crust Bounty": "Crust Bounty",
+    "Crust Maxwell": "Crust Maxwell",
     "Home": "Home",
     "community": "Forum",
     "communityTitle": "Community",
@@ -25,7 +32,7 @@
     "FAQ": "FAQ",
     "About": "About",
     "languages": "EN",
-    "TestNet": "Maxwell",
+    "TestNet": "Get Started",
     "Join Profit Ark": "Join Profit Ark",
     "Join Preview Network": "Join Preview Network",
     "Crust Apps": "Crust Apps",
@@ -58,7 +65,8 @@
     "Analysis of Economic Model": "Analysis of Economic Model"
   },
   "footer": {
-    "mediamaterials": "Media materials",
+    "Crust Bounty": "Crust Bounty",
+    "mediamaterials": "Media Materials",
     "Success": "Copy Success",
     "Error": "Copy Error",
     "Copy": "Copy",
@@ -68,7 +76,7 @@
     "EcoWhitePaper": "Economy Whitepaper",
     "Github": "Github",
     "FAQ": "FAQ",
-    "forum": "Forum",
+    "forum": "Community",
     "Twitter": "Twitter",
     "Telegram": "Telegram",
     "Discord": "Discord",
@@ -149,9 +157,9 @@
     "SecuredSubTitle": "Developers are able to build Cloud storage applications with Crust/IPFS Network. Without maintaining storage clusters, developers only need to integrate the SDK of Crust/IPFS into applications to provide users with stable storage services.",
     "apply-now-prefix": "Apply for Crust Grants and join us for building the Web 3.0 decentralized cloud ecosystem.",
     "dev-team": "Crust is an Open Source Protocol",
-    "dev-team-intro": "Crust is an open source project funded by Decentralized Cloud Foundation. It is under active development and maintenance by <a class='btn-link' href='https://www.linkedin.com/company/clouderium/mycompany' target='_blank' style='text-decoration:underline !important;color: white !important'>Clouderium Technologies</a>. Clouderium is specialized in research and development of trusted computing, blockchain, and cloud storage.",
+    "dev-team-intro": "Crust is an open source project funded by DCF (Decentralized Cloud Foundation). In align with Crust technical stack, DCF also funds and supports multiple open source projects like Encrypted IPFS. Crust is under active development and maintenance by global development teams.",
     "foundation": "Decentralized Cloud Foundation",
-    "foundation-intro": "DCF (Decentralized Cloud Foundation) funds and incubates teams and projects, to build decentralized cloud infrastructure and applications of Web3.0. Crust Network is the fundamental project that DCF mainly supports."
+    "foundation-intro": "DCF (Decentralized Cloud Foundation )funds and incubates teams and projects, to build decentralized cloud technologies and applications of Web3.0. Crust Network is the fundamental project that DCF mainly supports."
   },
   "productMatrix": {
     "title": "Product Matrix",
@@ -444,7 +452,25 @@
       "desc": "Create, collect and trade valuable NFT assets of the New Luxury.",
       "link": "https://realy.pro//",
       "learnMore": "https://realy.pro/"
+    },
+    "Sinso": {
+      "desc": "Sinso is based on Web3 technology and aims to build Sinso DAC ecosystem,Establish the era of human decentralized medical care.",
+      "link": "https://sinso2021.medium.com/distributed-image-cloud-based-on-curst-3460a18f0d79",
+      "learnMore": "https://sinso2021.medium.com/distributed-image-cloud-based-on-curst-3460a18f0d79"
+    },
+    "Bluna": {
+      "desc": "Bluna is a platform where people can create, store and trade immersive digital works for Metaverse which has to be immersive, creatable and tokenized.",
+      "link": "https://medium.com/@bluna.io/bluna-future-of-metaverse-b7fc96fcff6a",
+      "learnMore": "https://medium.com/@bluna.io/bluna-future-of-metaverse-b7fc96fcff6a"
+    },
+    "CruTransfer": {
+      "desc": "CruTransfer is the simplest and the most effective platform to share your different types of files over the internet.",
+      "link": "https://crutransferme.medium.com/",
+      "learnMore": "https://crutransferme.medium.com/"
     }
+
+
+
 
   },
   "Crust Maxwell": "Crust Maxwell",
@@ -457,5 +483,7 @@
   "Crust Mainnet is coming soon": "Crust Mainnet is coming soon...",
   "Mainnet Launch Plan": "Mainnet Launch Plan",
   "Claim CRU": "Claim CRU",
-  "Crust Mainnet": "Crust Mainnet"
+  "Crust Mainnet": "Crust Mainnet",
+  "Globally distributed available storage capacity": "Globally distributed available storage capacity.",
+  "A decentralized storage network of Web3.0 ecosystem": "A decentralized storage network of Web3.0 ecosystem"
 }

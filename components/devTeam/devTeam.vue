@@ -1,60 +1,64 @@
 <template>
   <div class="container-fluid all-c no-padding">
-    <div class="container" style="height: 500px; position: relative">
+    <div class="container" style="height: 100%; position: relative">
       <div class="left-c full-width">
         <span class="dev-team">{{ $t("decentralized.dev-team") }}</span>
-        <span class="dev-team-intro" :class="getZhcnCss()" v-html="$t('decentralized.dev-team-intro')"></span>
-        <button class="btn-custom apply-now" @click="handleApplyDevTeamClick">
-          {{ $t("button.contributeNow") }}
-        </button>
+        <span
+          class="dev-team-intro"
+          :class="getZhcnCss()"
+          v-html="$t('decentralized.dev-team-intro')"
+        ></span>
+        <TeamWrapper />
       </div>
       <div class="right-c full-width">
-        <span class="dev-team" :class="getZhcnCss()">{{ $t("decentralized.foundation") }}</span>
-        <span class="dev-team-intro" :class="getZhcnCss()">{{ $t("decentralized.foundation-intro") }}</span>
-        <button class="btn-custom apply-now" @click="handleApplyFoundationClick">
-          {{ $t("button.applyForGrants") }}
-        </button>
+        <div>
+          <p class="dev-team" :class="getZhcnCss()">
+            {{ $t("decentralized.foundation") }}
+          </p>
+          <p class="dev-team-intro" :class="getZhcnCss()">
+            {{ $t("decentralized.foundation-intro") }}
+          </p>
+          <button
+            class="btn-custom apply-now"
+            @click="handleApplyFoundationClick"
+          >
+            {{ $t("button.applyForGrants") }}
+          </button>
+        </div>
       </div>
     </div>
-
-
-
   </div>
 </template>
 <script>
 import { outerDit } from "@/config/nav-config"
+import TeamWrapper from "./TeamWrapper"
 export default {
   name: "DevTeam",
-  components: {},
+  components: {
+    TeamWrapper,
+  },
   data() {
     return {}
   },
   methods: {
     handleApplyDevTeamClick() {
-      window.open(
-        outerDit["github"],
-        "_blank"
-      )
+      window.open(outerDit.github, "_blank")
     },
     handleApplyFoundationClick() {
-      window.open(
-        outerDit["crust grants"],
-        "_blank"
-      )
+      window.open(outerDit["crust grants"], "_blank")
     },
     getZhcnCss() {
       if (this.$store.state.locale === "en") {
-        return ''
+        return ""
       } else {
-        return 'zh-cn'
+        return "zh-cn"
       }
     },
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>
 @media screen and (min-width: 1200px) {
-
   .all-c {
     background-image: url("~/assets/images/back-devteam.jpg");
     background-repeat: no-repeat;
@@ -85,7 +89,7 @@ export default {
         font-size: 36px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 56px;
         margin-bottom: 24px;
       }
@@ -93,7 +97,7 @@ export default {
         font-size: 16px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 22px;
         max-width: 642px;
         margin-bottom: 50px;
@@ -102,21 +106,22 @@ export default {
         }
       }
       .apply-now {
-        width: 200px;
+        width: 300px;
         height: 40px;
         border-radius: 26px;
-        border: 2px solid #FFFFFF;
+        border: 2px solid #ffffff;
         font-size: 16px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
         line-height: 19px;
-        background: #FC7823;
+        background: #fc7823;
         &:hover {
           background-color: white;
         }
       }
       position: absolute;
-      clip-path: polygon(0 0, 90% 0, 10% 100%, 0 99%);
+      clip-path: polygon(0 0, 60% 0, 40% 100%, 0% 100%);
+      background-color: rgb(252, 120, 35);
     }
     .right-c {
       display: flex;
@@ -127,10 +132,10 @@ export default {
         height: 100%;
       }
       .apply-now {
-        width: 200px;
+        width: 300px;
         height: 40px;
         border-radius: 26px;
-        border: 2px solid #FFFFFF;
+        border: 2px solid #ffffff;
         font-size: 16px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
@@ -147,7 +152,7 @@ export default {
         font-size: 16px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 22px;
         max-width: 50%;
         margin-bottom: 24px;
@@ -163,7 +168,7 @@ export default {
         font-size: 36px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 56px;
         margin-bottom: 24px;
         position: absolute;
@@ -171,15 +176,16 @@ export default {
         top: 410px;
       }
       position: absolute;
-      clip-path: polygon(90% 0, 100% 0%, 100% 99%, 10% 100%);
+      clip-path: polygon(100% 0, 60% 0, 40% 100%, 100% 100%);
+      background-color: #1f1f1f;
     }
   }
 }
 @media screen and (max-width: 1200px) {
   .all-c {
     position: relative;
-    height: 506px;
-    background-image: url("~/assets/images/back-devteam-mobile.jpg");
+    height: 660px;
+    background-image: url("~/assets/images/back-devteam-mobile.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -200,36 +206,29 @@ export default {
         font-size: 14px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 56px;
         margin-top: 10px;
       }
       .dev-team-intro {
-        width: 270px;
         height: 115px;
         font-size: 12px;
-        font-family: InterV;
-        color: #FFFFFF;
+        font-family: InterV_Semi-Bold, InterV_Semi;
+        color: #ffffff;
         line-height: 15px;
         margin-bottom: 5px;
-        &.zh-cn {
-          width: 219px;
-          margin-bottom: 0;
-          margin-top: 10px;
-          line-height: 18px;
-        }
       }
       .apply-now {
         width: 128px;
         height: 34px;
         border-radius: 26px;
-        border: 2px solid #FFFFF0;
+        border: 2px solid #fffff0;
         font-size: 12px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 15px;
-        background: #FC7823;
+        background: #fc7823;
         &:hover {
           background-color: white;
           color: black;
@@ -239,25 +238,21 @@ export default {
     }
     .right-c {
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       text-align: right;
       &.full-width {
-        width: calc(100% - 30px);
-        height: 100%;
+        height: 640px;
       }
       .apply-now {
-        width: 128px;
+        padding: 0 20px;
         height: 34px;
         border-radius: 26px;
-        border: 2px solid #FFFFF0;
+        border: 2px solid #fffff0;
         font-size: 12px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 15px;
-        position: absolute;
-        right: 0;
-        top: 449px;
         background: #1f1f1f;
         &:hover {
           background-color: white;
@@ -267,34 +262,15 @@ export default {
       .dev-team-intro {
         font-size: 12px;
         font-family: InterV;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 15px;
-        max-width: 270px;
-        position: absolute;
-        top: 341px;
-        right: 0;
-        &.zh-cn {
-          max-width: 236px;
-          top: 362px;
-          line-height: 18px;
-        }
       }
       .dev-team {
         font-size: 14px;
-        height: 56px;
         font-family: InterV_Semi-Bold, InterV_Semi;
         font-weight: bold;
-        color: #FFFFFF;
-        line-height: 56px;
-        margin-bottom: 24px;
-        position: absolute;
-        right: 0;
-        top: 277px;
-        &.zh-cn {
-          top: 293px;
-        }
+        color: #ffffff;
       }
-      position: absolute;
     }
   }
 }

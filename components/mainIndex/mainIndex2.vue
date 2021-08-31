@@ -1,15 +1,19 @@
 <template>
   <div>
+    <div
+      v-if="showVideo"
+      class="m-video-container"
+      @click="handleCloseDemoVideo"
+    >
+      <dVideo :source="videoLink" />
+    </div>
     <div class="container-fluid main-index">
       <div class="container main">
         <div id="global"></div>
         <div class="main-logo">
           <p class="logo" v-html="$t('indexBanner.sub')"></p>
           <div class="buttons">
-            <button
-                class="btn-custom button-width"
-                @click="crustMainnet"
-            >
+            <button class="btn-custom button-width" @click="crustMainnet">
               {{ $t("Crust Mainnet") }}
             </button>
             &nbsp;&nbsp;
@@ -21,24 +25,13 @@
             </button>
           </div>
           <div class="desc">
-            {{ $t("Maxwell incorporates all of the Crust's core features") }}
-
-            <div>
-              <div><span class="circle"></span> {{ $t("Token pledging") }}</div>
-              <div>
-                <span class="circle"></span>
-                {{ $t("A decentralized storage market") }}
-              </div>
-              <div>
-                <span class="circle"></span>
-                {{ $t("A document retrieval mechanism") }}
-              </div>
+            <div class="capacity">
+              <Capacity class="number" />
+              <span class="unit">TB</span>
             </div>
-            <p>
-              <span class="pointer" @click="handleMainnetPlanClick">
-                {{ $t("Mainnet Launch Plan") }}
-              </span>
-            </p>
+            <div class="intro">
+              {{ $t("Globally distributed available storage capacity") }}
+            </div>
           </div>
         </div>
       </div>
@@ -46,12 +39,21 @@
         <div class="container description">
           <div class="description-left">
             <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
-            <auto-video/>
-            <br>
-            <br>
-            <button class="btn-custom" @click="handleClick('Check Our Github')">
-              {{ $t("button.checkOnGithub") }}
-            </button>
+            <p class="content color-main" :class="getZhcnCss()">
+              {{ $t("crust.title") + $t(`crust.content.text1`) }}
+            </p>
+            <div class="btn-wrapper">
+              <button
+                class="btn-custom"
+                @click="handleClick('Check Our Github')"
+              >
+                {{ $t("button.checkOnGithub") }}
+              </button>
+              <button class="btn-custom" @click="handleDemoVideoClick">
+                <i class="icon-play" v-html="iconPlay"></i
+                >{{ $t("button.introductionVideo") }}
+              </button>
+            </div>
           </div>
           <div class="description-right">
             <div class="description-right-left">
@@ -69,11 +71,18 @@
       <div class="description">
         <div class="description-left">
           <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
-          <auto-video/>
-          <br>
-          <button class="btn-custom" @click="handleClickCheck()">
-            {{ $t("button.checkOnGithub") }}
-          </button>
+          <p class="content color-main" :class="getZhcnCss()">
+            {{ $t("crust.title") + $t(`crust.content.text1`) }}
+          </p>
+          <div class="btn-wrapper">
+            <button class="btn-custom" @click="handleClick('Check Our Github')">
+              {{ $t("button.checkOnGithub") }}
+            </button>
+            <button class="btn-custom" @click="handleDemoVideoClick">
+              <i class="icon-play" v-html="iconPlay"></i
+              >{{ $t("button.introductionVideo") }}
+            </button>
+          </div>
         </div>
       </div>
       <swiper class="swiper" :options="swiperOptions">
@@ -97,20 +106,24 @@
 
 <script>
 import { outerDit } from "@/config/nav-config"
-import VueScrollTo from "vue-scrollto"
+import IconPlay from "@/assets/svgs/icon-play.svg?raw"
 import jumpTo from "../../utils"
 import * as THREE from "../../static/script/three"
 import * as globalScript from "../../static/script/global"
 import * as TrackballControls from "../../static/script/TrackballControls"
+import dVideo from "../decentralized/dVideo"
 import DescCard from "./descCard"
-import autoVideo from "./autoVideo"
+import Capacity from "./Capacity"
 export default {
   components: {
     DescCard,
-    autoVideo
+    dVideo,
+    Capacity,
   },
   data() {
     return {
+      showVideo: false,
+      iconPlay: IconPlay,
       swiperOptions: {
         loop: false,
         slidesPerView: 3,
@@ -135,11 +148,24 @@ export default {
       },
     }
   },
+  computed: {
+    videoLink() {
+      return this.$store.state.locale === "en"
+        ? "https://ipfs-hk.decoo.io/ipfs/QmS99gVeX5RyXThjMyp7NtXDQ4JUT6iDEsniF1S6sQuVPX"
+        : "https://ipfs-hk.decoo.io/ipfs/QmTCcWgLFAU9Y8uK7oMonWBEh9nvscpS6rfAtKaRheZVmG"
+    },
+  },
   mounted() {
     TrackballControls.initControl(THREE)
     globalScript.runGlobal(THREE)
   },
   methods: {
+    handleDemoVideoClick() {
+      this.showVideo = true
+    },
+    handleCloseDemoVideo() {
+      this.showVideo = false
+    },
     handleMainnetPlanClick() {
       const linkName =
         this.$store.state.locale === "en"
@@ -154,7 +180,7 @@ export default {
         return "zh-cn"
       }
     },
-    crustMainnet () {
+    crustMainnet() {
       if (this.$store.state.locale === "en") {
         window.open(outerDit.crust_mainnet, "_blank")
       } else {
@@ -180,6 +206,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.icon-play {
+  /deep/ svg {
+    margin-right: 8px;
+    margin-bottom: 2px;
+    width: 16px;
+    height: 16px;
+    fill: white;
+    &:hover {
+      fill: #000;
+    }
+  }
+}
 .pointer {
   cursor: pointer;
   text-decoration: underline;
@@ -219,14 +257,21 @@ export default {
           font-size: 14px;
           font-family: InterV_Semi-Bold, InterV_Semi;
           font-weight: bold;
-          color: #ff6400;
+          color: #ffffff;
           line-height: 2em;
-          p {
-            padding-top: 32px;
-            font-size: 16px;
-            font-weight: 500;
-            font-style: italic;
-            color: #ff6400;
+          margin-top: 20px;
+          .capacity {
+            font-family: "Orbitron", sans-serif;
+            padding-bottom: 10px;
+            .number {
+              font-size: 48px;
+            }
+            .unit {
+              font-size: 24px;
+            }
+            .intro {
+              font-size: 18px;
+            }
           }
         }
         .buttons {
@@ -264,7 +309,7 @@ export default {
           flex-direction: column;
           justify-content: center;
           .sub-title {
-            margin-bottom: 32px;
+            margin-bottom: 56px;
           }
           .content {
             margin-bottom: 40px;
@@ -273,9 +318,15 @@ export default {
               line-height: 26px;
             }
           }
-          .btn-custom {
-            width: 200px;
-            margin-bottom: 80px;
+          .btn-wrapper {
+            display: flex;
+            margin-bottom: 137px;
+            justify-content: space-between;
+            .btn-custom {
+              padding-left: 20px;
+              padding-right: 20px;
+              min-width: 200px;
+            }
           }
         }
         .description-right {
@@ -293,6 +344,9 @@ export default {
   }
   .desc-mobile {
     display: none;
+    .video {
+      display: none;
+    }
   }
 }
 
@@ -310,15 +364,16 @@ export default {
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
+      padding-bottom: 100px;
       .main-logo {
         width: 100%;
         display: flex;
         flex-direction: column;
         .logo {
           font-family: InterV_Semi-Bold;
-          font-size: 32px;
+          font-size: 24px;
           color: #ffffff;
           letter-spacing: 0;
           text-align: left;
@@ -327,21 +382,24 @@ export default {
           opacity: 0.99;
         }
         .desc {
-          padding: 22px 0 0 5px;
+          padding: 36px 0 0 5px;
           font-size: 14px;
-          font-family: InterV_Semi-Bold, InterV_Semi;
           font-weight: bold;
-          color: #ff6400;
+          color: #fff;
           line-height: 2em;
           z-index: 10;
-          p {
-            padding-top: 32px;
-            font-size: 16px;
-            font-weight: 500;
-            font-style: italic;
-            cursor: pointer;
-            text-decoration: underline;
-            color: #ff6400;
+          .capacity {
+            font-family: "Orbitron", sans-serif;
+            padding-bottom: 10px;
+            .number {
+              font-size: 28px;
+            }
+            .unit {
+              font-size: 18px;
+            }
+            .intro {
+              font-size: 18px;
+            }
           }
         }
 
@@ -404,10 +462,14 @@ export default {
             line-height: 26px;
           }
         }
-        .btn-custom {
-          width: 128px;
+        .btn-wrapper {
           margin-bottom: 20px;
-          align-self: center;
+          .btn-custom {
+            margin-bottom: 10px;
+            min-width: 128px;
+            padding-left: 20px;
+            padding-right: 20px;
+          }
         }
       }
       .description-right {
@@ -435,6 +497,20 @@ export default {
       background-color: $mainColor;
     }
   }
+}
+.m-video-container {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 10vw;
+  background: rgba(33, 33, 33, 0.2);
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
