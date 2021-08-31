@@ -58,6 +58,7 @@
         </div>
       </div>
     </div>
+    <CookieAccept />
   </div>
 </template>
 
@@ -69,11 +70,14 @@ import IconTwitter from "@/assets/svgs/icon-twitter.svg?raw"
 import IconWeinxin from "@/assets/svgs/icon-weixin.svg?raw"
 import IconDiscord from "@/assets/svgs/icon-discord.svg?raw"
 import IconDotAsk from "@/assets/svgs/icon-dotask.svg?raw"
-
 import { outerDit } from "@/config/nav-config"
+import CookieAccept from "../CookieAccept"
+
 import jumpTo from "~/utils"
 export default {
-  components: {},
+  components: {
+    CookieAccept,
+  },
   data() {
     return {
       titles: ["Resourcese", "forum", "Developers"],
