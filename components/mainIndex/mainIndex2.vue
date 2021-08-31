@@ -27,7 +27,7 @@
           <div class="desc">
             <div class="capacity">
               <Capacity class="number" />
-              <span class="unit">GB</span>
+              <span class="unit">TB</span>
             </div>
             <div class="intro">
               {{ $t("Globally distributed available storage capacity") }}
