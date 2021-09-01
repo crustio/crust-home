@@ -18,7 +18,7 @@ const outerDit = {
   "build on crust": "https://wiki.crust.network/docs/en/buildGettingStarted",
   "build on crust_zh":
     "https://wiki.crust.network/docs/zh-CN/buildGettingStarted",
-  "crust grants": "https://decoudf.com/",
+  "crust grants": "https://decloudf.com/",
   "crust grants_zh": "https://decloudf.com/",
   "crust bounty": "https://decloudf.com/",
   "crust bounty_zh": "https://decloudf.com/",
