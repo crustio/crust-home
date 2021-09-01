@@ -50,7 +50,7 @@ export default {
       window.open(outerDit.github, "_blank")
     },
     handleApplyFoundationClick() {
-      window.open("https://decoudf.com/#growth", "_blank")
+      window.open("https://decloudf.com/#growth", "_blank")
     },
     getZhcnCss() {
       if (this.$store.state.locale === "en") {
