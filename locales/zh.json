@@ -15,7 +15,8 @@
     "applyNow": "立即申请",
     "contributeNow": "贡献代码",
     "applyForGrants": "申请资助",
-    "freeStorage": "体验免费存储"
+    "freeStorage": "体验免费存储",
+    "storageUser": "存储用户"
   },
   "header": {
     "Build": "构建",

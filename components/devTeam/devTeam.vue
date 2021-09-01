@@ -19,6 +19,7 @@
             {{ $t("decentralized.foundation-intro1") }}(&nbsp;<a
               href="https://decloudf.com/"
               class="link"
+              target="_blank"
               >Decentralized Cloud Foundation</a
             >&nbsp;){{ $t("decentralized.foundation-intro2") }}
           </p>
