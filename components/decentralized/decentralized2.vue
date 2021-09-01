@@ -390,6 +390,7 @@ export default {
     &.btn-right {
       width: 200px;
       padding: 0.5rem 0;
+      margin-bottom: 1rem;
     }
     &:hover {
       color: #afafaf !important;
