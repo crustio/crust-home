@@ -7,9 +7,12 @@
             {{ $t(`decentralized.title`) }}
           </div>
           <div class="dec-top-right">
-            <button class="btn-custom" @click="handleDemoVideoClick">
+            <button class="btn-custom btn-right" @click="handleDemoVideoClick">
               <i class="icon-play" v-html="iconPlay"></i
               >{{ $t("button.demoVideo") }}
+            </button>
+            <button class="btn-custom btn-right" @click="handleStorageUserClick">
+              {{ $t("button.storageUser") }}
             </button>
           </div>
         </div>
@@ -192,6 +195,11 @@ export default {
   },
   destroyed() {},
   methods: {
+    handleStorageUserClick() {
+      const address =
+        "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/storage_files"
+      window.open(address, "_blank")
+    },
     handleBuildOnCrust() {
       const location =
         this.$store.state.locale === "en"
@@ -358,10 +366,10 @@ export default {
         }
         .dec-top-right {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           flex-wrap: wrap;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
           max-width: 600px;
         }
       }
@@ -379,6 +387,10 @@ export default {
     border: 2px solid $secondary;
     padding-left: 20px;
     padding-right: 20px;
+    &.btn-right {
+      width: 200px;
+      padding: 0.5rem 0;
+    }
     &:hover {
       color: #afafaf !important;
       /deep/ svg {

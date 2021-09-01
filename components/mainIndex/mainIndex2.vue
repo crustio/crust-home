@@ -43,15 +43,15 @@
               {{ $t("crust.title") + $t(`crust.content.text1`) }}
             </p>
             <div class="btn-wrapper">
+              <button class="btn-custom" @click="handleDemoVideoClick">
+                <i class="icon-play" v-html="iconPlay"></i
+                >{{ $t("button.introductionVideo") }}
+              </button>
               <button
                 class="btn-custom"
                 @click="handleClick('Check Our Github')"
               >
                 {{ $t("button.checkOnGithub") }}
-              </button>
-              <button class="btn-custom" @click="handleDemoVideoClick">
-                <i class="icon-play" v-html="iconPlay"></i
-                >{{ $t("button.introductionVideo") }}
               </button>
             </div>
           </div>

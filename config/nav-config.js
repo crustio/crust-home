@@ -35,7 +35,7 @@ const outerDit = {
   "crust apps":
     "https://apps.crust.network/?rpc=wss%3A%2F%2Fapi-maxwell.crust.network#/explorer/",
   "blockchain explorer": "https://crust.subscan.io/",
-  "storage explorer": " https://splorer.crust.network",
+  "storage explorer": " https://crust.subscan.io/",
   pdfBucket:
     "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/",
   extractDocs: "https://crust-data.oss-cn-shanghai.aliyuncs.com/external_docs/",

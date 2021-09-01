@@ -22,7 +22,7 @@
           </template>
         </div>
         <div class="foot-left-bottom">
-          COPYRIGHT © CRUST 2021 ALL RIGHTS RESERVED.
+          Copyright © Decentralised Cloud Foundation 2021 All Rights Reserved
         </div>
       </div>
       <div class="foot-right">
