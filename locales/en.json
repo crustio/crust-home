@@ -16,7 +16,8 @@
     "contributeNow": "Contribute Now",
     "applyForGrants": "Crust Ecosystem Growth Program",
     "freeStorage": "Free Storage Access",
-    "introductionVideo": "Crust Introduction Video"
+    "introductionVideo": "Introduction",
+    "storageUser": "Storage User"
   },
   "header": {
     "CRU Token": "CRU Token",
@@ -103,7 +104,7 @@
   },
   "crust": {
     "title": "CRUST",
-    "sub": "What is Crust",
+    "sub": "What is Crust?",
     "content": {
       "text1": " provides a decentralized storage network of Web3.0 ecosystem. It supports multiple storage layer protocols such as IPFS, and exposes storage interfaces to application layer. Crust’s technical stack is also capable of supporting a decentralized computing layer. It is designed to build a decentralized cloud ecosystem that values data privacy and ownership.",
       "text2": "<span class='font-weight-bold'>CRUST</span> provides a <a class='btn-link'>decentralized storage network</a> of <a class='btn-link'>Web3.0</a> ecosystem. It supports multiple storage layer protocols such as <a class='btn-link'>IPFS</a>, and exposes storage interfaces to application layer. Crust's technical stack is also capable of supporting a decentralized computing layer. It is designed to build a <a class='btn-link'>decentralized cloud</a> ecosystem that values data <a class='btn-link'>privacy and ownership</a>.",
@@ -159,7 +160,8 @@
     "dev-team": "Crust is an Open Source Protocol",
     "dev-team-intro": "Crust is an open source project funded by DCF (Decentralized Cloud Foundation). In align with Crust technical stack, DCF also funds and supports multiple open source projects like Encrypted IPFS. Crust is under active development and maintenance by global development teams.",
     "foundation": "Decentralized Cloud Foundation",
-    "foundation-intro": "DCF (Decentralized Cloud Foundation )funds and incubates teams and projects, to build decentralized cloud technologies and applications of Web3.0. Crust Network is the fundamental project that DCF mainly supports."
+    "foundation-intro1": "DCF ",
+    "foundation-intro2": " funds and incubates \n teams and projects, to build decentralized cloud technologies and applications of Web3.0. Crust Network is the fundamental project that DCF mainly supports."
   },
   "productMatrix": {
     "title": "Product Matrix",

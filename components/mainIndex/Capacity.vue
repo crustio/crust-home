@@ -1,10 +1,12 @@
 <template>
   <countTo
+    v-if="endVal"
     :start-val="startVal"
     :end-val="endVal"
     :decimals="3"
     :duration="3000"
   />
+  <span v-else>> 1,000,000.000</span>
 </template>
 <script>
 import countTo from "vue-count-to"

@@ -16,7 +16,11 @@
             {{ $t("decentralized.foundation") }}
           </p>
           <p class="dev-team-intro" :class="getZhcnCss()">
-            {{ $t("decentralized.foundation-intro") }}
+            {{ $t("decentralized.foundation-intro1") }}(&nbsp;<a
+              href="https://decloudf.com/"
+              class="link"
+              >Decentralized Cloud Foundation</a
+            >&nbsp;){{ $t("decentralized.foundation-intro2") }}
           </p>
           <button
             class="btn-custom apply-now"
@@ -45,7 +49,7 @@ export default {
       window.open(outerDit.github, "_blank")
     },
     handleApplyFoundationClick() {
-      window.open(outerDit["crust grants"], "_blank")
+      window.open("https://decoudf.com/#growth", "_blank")
     },
     getZhcnCss() {
       if (this.$store.state.locale === "en") {
@@ -58,6 +62,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.link {
+  color: #fc7823;
+  &:hover {
+    color: #ff6b00;
+  }
+}
 @media screen and (min-width: 1200px) {
   .all-c {
     background-image: url("~/assets/images/back-devteam.jpg");
@@ -65,7 +75,7 @@ export default {
     background-position: center;
     background-size: cover;
     position: relative;
-    height: 500px;
+    height: 540px;
 
     .container {
       @media (min-width: 1270px) {

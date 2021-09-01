@@ -224,15 +224,20 @@ export default {
           border-bottom: 2px solid #ff6400;
         }
         &.active {
-          font-family: InterV_Extra-Bold;
           color: #ff6400;
           border-bottom: 2px solid #ff6400;
         }
       }
     }
-    .dropdown-menu {
-      background-color: $navBgColor;
-    }
   }
+}
+</style>
+<style lang="scss">
+.nav-link {
+  font-family: InterV_Semi-Bold;
+  font-weight: 500;
+}
+.dropdown-menu {
+  background-color: $navBgColor;
 }
 </style>

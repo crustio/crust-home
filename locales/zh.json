@@ -145,7 +145,8 @@
     "dev-team": "Crust是⼀个开源项⽬",
     "dev-team-intro": "Crust是一个由DCF基金会（Decentralized Cloud Foundation）资助的开源项目。同时，DCF基金会还资助和支持了若干相关技术栈下的开源项目，例如Encrypted IPFS。在多个全球技术团队的参与下，Crust项目正处于高度积极和活跃的开发进程中。",
     "foundation": "DCF基金会",
-    "foundation-intro": "DCF基金会（Decentralized Cloud Foundation）旨在资助和孵化创新性团队及其项目，以支持他们在Web3.0愿景下构建去中心化云存储相关的技术与应用。Crust Network就是DCF基金会目前重点支持的项目。"
+    "foundation-intro1": "DCF基金会 ",
+    "foundation-intro2": " 旨在资助和孵化创新性团队及其项目，以支持他们在Web3.0愿景下构建去中心化云存储相关的技术与应用。Crust Network就是DCF基金会目前重点支持的项目。"
   },
   "productMatrix": {
     "title": "产品矩阵",
