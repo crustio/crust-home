@@ -13,6 +13,8 @@ const outerDit = {
     "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc-crust.decoo.io#/explorer",
   "crust maxwell_zh":
     "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc-crust.decoo.io#/explore",
+  "crust maxwell_en":
+    "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc-crust.decoo.io#/explore",
   github: "https://github.com/crustio",
   github_zh: "https://github.com/crustio",
   "build on crust": "https://wiki.crust.network/docs/en/buildGettingStarted",
@@ -48,6 +50,7 @@ const outerDit = {
   wiki_zh: "https://wiki.crust.network/zh-CN",
   wallet_wiki_en: "https://wiki.crust.network/docs/en/crustWallet",
   wallet_wiki_zh: "https://wiki.crust.network/docs/zh-CN/crustWallet",
+  "check our github_en": "https://github.com/crustio",
   "check our github": "https://github.com/crustio",
   "crust grants": "https://decloudf.com/",
   "dev team": "https://www.linkedin.com/company/clouderium/mycompany/",
@@ -72,8 +75,8 @@ const outerDit = {
     "https://ipfs-hk.decoo.io/ipfs/QmPeoZuvhq8G5SQ95KJ35xGVLP3pHtF2hahrtFsjTaZbFk?filename=Analysis of Crust Network Economic Model.pdf",
   analysis_of_economic_model_zh:
     "https://ipfs-hk.decoo.io/ipfs/QmTeYZVYucgF94cU9Bfuew6shWiTESYKYjDFntG9xK5Hru?filename=解析Crust Network经济模型.pdf",
-  crust_mainnet: "https://wiki.crust.network/docs/en/crustOverview",
-  crust_mainnet_zh: "https://wiki.crust.network/docs/zh-CN/crustOverview",
+  crust_mainnet: "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/explorer",
+  crust_mainnet_zh: "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/explorer",
 }
 const outerList = Object.keys(outerDit)
 module.exports = {
