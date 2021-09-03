@@ -5,13 +5,17 @@
     </div>
     <div class="repo-wrapper">
       <div>
-        <a href="">Crust Network</a>
+        <a href="https://github.com/crustio/crust" target="_blank"
+          >Crust Network</a
+        >
         <p>
           {{ $t("A decentralized storage network of Web3.0 ecosystem") }}
         </p>
       </div>
       <div>
-        <a href="">Encrypted IPFS</a>
+        <a href="https://github.com/crustio/encrypted-ipfs" target="_blank"
+          >Encrypted IPFS</a
+        >
         <p>
           {{
             $t(

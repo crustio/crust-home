@@ -19,7 +19,7 @@
             &nbsp;&nbsp;
             <button
               class="btn-custom button-width"
-              @click="handleClick('join preview network')"
+              @click="handleClick('crust maxwell')"
             >
               {{ $t("Crust Maxwell") }}
             </button>
@@ -321,7 +321,7 @@ export default {
           .btn-wrapper {
             display: flex;
             margin-bottom: 137px;
-            justify-content: space-between;
+            justify-content: space-around;
             .btn-custom {
               padding-left: 20px;
               padding-right: 20px;
