@@ -7,8 +7,8 @@ const outerDit = {
   "crust wallet_zh": "https://wiki.crust.network/docs/zh-CN/crustWallet",
   "blockchain explorer": "https://crust.subscan.io/",
   "blockchain explorer_zh": "https://crust.subscan.io/",
-  "storage explorer": "https://splorer.crust.network",
-  "Storage Explorer_zh": "https://splorer.crust.network/",
+  "storage explorer": "https://crust.subscan.io/storage",
+  "storage explorer_zh": "https://crust.subscan.io/storage",
   "crust maxwell":
     "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc-crust.decoo.io#/explorer",
   "crust maxwell_zh":
@@ -37,7 +37,7 @@ const outerDit = {
   "crust apps":
     "https://apps.crust.network/?rpc=wss%3A%2F%2Fapi-maxwell.crust.network#/explorer/",
   "blockchain explorer": "https://crust.subscan.io/",
-  "storage explorer": " https://crust.subscan.io/",
+  "storage explorer": "https://crust.subscan.io/storage",
   pdfBucket:
     "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/",
   extractDocs: "https://crust-data.oss-cn-shanghai.aliyuncs.com/external_docs/",
