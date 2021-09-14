@@ -50,7 +50,11 @@ export default {
       window.open(outerDit.github, "_blank")
     },
     handleApplyFoundationClick() {
-      window.open("https://decloudf.com/#growth", "_blank")
+      const location =
+        this.$store.state.locale === "en"
+          ? "https://wiki.crust.network/docs/en/ecosystemGrowth"
+          : "https://wiki.crust.network/docs/zh-CN/ecosystemGrowth"
+      window.open(location, "_blank")
     },
     getZhcnCss() {
       if (this.$store.state.locale === "en") {
