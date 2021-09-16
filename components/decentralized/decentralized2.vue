@@ -14,6 +14,9 @@
             <button class="btn-custom btn-right" @click="handleStorageUserClick">
               {{ $t("button.storageUser") }}
             </button>
+            <button class="btn-custom btn-right" @click="handleFreeStorageDiscordClick">
+              {{ $t("button.freeStorageLink") }}
+            </button>
           </div>
         </div>
         <div class="dec-bottom">
@@ -198,6 +201,11 @@ export default {
     handleStorageUserClick() {
       const address =
         "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/storage_files"
+      window.open(address, "_blank")
+    },
+    handleFreeStorageDiscordClick() {
+      const address =
+        "https://discord.gg/WQQHnyKCmn"
       window.open(address, "_blank")
     },
     handleBuildOnCrust() {

@@ -151,7 +151,7 @@ export default {
   computed: {
     videoLink() {
       return this.$store.state.locale === "en"
-        ? "https://ipfs-hk.decoo.io/ipfs/QmS99gVeX5RyXThjMyp7NtXDQ4JUT6iDEsniF1S6sQuVPX"
+        ? "https://ipfs-hk.decoo.io/ipfs/QmdVYW9Dpa26bjZowJQJb5YVtTyodianLn9TCcXeNeixf4?filename=English new.MP4"
         : "https://ipfs-hk.decoo.io/ipfs/QmTCcWgLFAU9Y8uK7oMonWBEh9nvscpS6rfAtKaRheZVmG"
     },
   },

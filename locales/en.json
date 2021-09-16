@@ -17,7 +17,8 @@
     "applyForGrants": "Crust Ecosystem Growth Program",
     "freeStorage": "Free Storage Access",
     "introductionVideo": "Introduction",
-    "storageUser": "Storage User"
+    "storageUser": "Storage User",
+    "freeStorageLink": "Free Storage"
   },
   "header": {
     "CRU Token": "CRU Token",
@@ -94,7 +95,7 @@
   },
   "indexBanner": {
     "title": "Crust",
-    "sub": "Crust Network,<br> Chain to Decentralized Cloud",
+    "sub": "Web3.0 Decentralized Cloud,<br> Encrypt, Replicate & Access Data over IPFS Everywhere!",
     "contentLink1": "Source Code",
     "contentLink2": "TestNet",
     "contentAnd": "and",
