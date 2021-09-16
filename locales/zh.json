@@ -16,7 +16,8 @@
     "contributeNow": "贡献代码",
     "applyForGrants": "申请资助",
     "freeStorage": "体验免费存储",
-    "storageUser": "存储用户"
+    "storageUser": "存储用户",
+    "freeStorageLink": "免费存储"
   },
   "header": {
     "Build": "构建",
@@ -43,6 +44,7 @@
     "Crust Apps": "Crust Apps",
     "Blockchain Explorer": "区块链浏览器",
     "Storage Explorer": "存储浏览器",
+    "Token Swap": "Token Swap",
     "doc": "资料",
     "Crust Cloud": "Crust Cloud",
     "Crust Grants": "Crust Grants",
@@ -92,7 +94,7 @@
   },
   "indexBanner": {
     "title": "Crust",
-    "sub": "Crust Network，<br>链接分布式云",
+    "sub": "Web3.0去中心化云，<br>随时随地通过IPFS加密、备份和访问数据！",
     "contentLink1": "源代码",
     "contentLink2": "测试网",
     "contentAnd": "和",

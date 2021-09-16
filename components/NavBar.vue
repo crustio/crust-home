@@ -1,7 +1,7 @@
 <template>
   <b-navbar fixed="true" toggleable="lg" type="dark" variant="dark">
     <div class="container">
-      <div class="auction-tool-bar">
+      <!-- <div class="auction-tool-bar">
         <b-navbar-nav class="ml-auto">
           <b-navbar-nav class="ml-auto">
             <b-nav-item href="#" @click="jump('CRU Token')">{{
@@ -9,7 +9,7 @@
             }}</b-nav-item>
           </b-navbar-nav>
         </b-navbar-nav>
-      </div>
+      </div> -->
       <b-navbar-brand href="#" @click="jump('home')">
         <img
           style="margin-top: -6px"
@@ -79,6 +79,7 @@ export default {
             "Blockchain Explorer",
             "Storage Explorer",
             "Crust Maxwell",
+            "Token Swap"
           ],
         },
         {

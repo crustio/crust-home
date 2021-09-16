@@ -8,6 +8,8 @@ const outerDit = {
   "blockchain explorer": "https://crust.subscan.io/",
   "blockchain explorer_zh": "https://crust.subscan.io/",
   "storage explorer": "https://splorer.crust.network",
+  "token swap": "https://csm.crust.network/#/swap",
+  "token swap_zh": "https://csm.crust.network/#/swap",
   "Storage Explorer_zh": "https://splorer.crust.network/",
   "crust maxwell":
     "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc-crust.decoo.io#/explorer",
