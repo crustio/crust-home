@@ -144,10 +144,12 @@ export default {
         return window.open(outerDit.analysis_of_economic_model_zh, "_blank")
       }
       if (name === "ecowhitepaper" || name === "whitepaper") {
+        let economicPaperurl = 'https://ipfs-hk.decoo.io/ipfs/Qmdy2Hqdxoq2PuAkvoDZ5SqYjAKym58Gh39Lm5gPChyHwL'
         if (!isZh) {
           name += "_en"
+          economicPaperurl= 'https://ipfs-hk.decoo.io/ipfs/QmRYJN6V5BzwnXp7A2Avcp5WXkgzyunQwqP3Es2Q789phF'
         }
-        return window.open(`${outerDit.pdfBucket}${name}.pdf`, "_blank")
+        return window.open(`${economicPaperurl}`, "_blank")
       }
       if (name === "crust solutions handbook") {
         const pdfName = !isZh
