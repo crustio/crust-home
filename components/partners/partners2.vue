@@ -45,7 +45,6 @@ export default {
         "sevenx",
         "iosg",
         "bitcoin",
-        "bithumb",
         "bitrise",
         "builder",
         "chain",
