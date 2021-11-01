@@ -89,9 +89,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container-fluid {
+  padding-top: 50px;
+}
 @media screen and (min-width: 1200px) {
   .container-fluid {
     background: $secondary;
+    padding-top: 50px;
     .container {
       display: flex;
       flex-direction: column;
