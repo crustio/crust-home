@@ -81,19 +81,16 @@ export default {
   methods: {
     emitScrollListener() {
       const timeLineWrapper = this.$refs.timeLine
-      const timelineWrapperScrollTop = timeLineWrapper.getBoundingClientRect()
-        .top
+      const timelineWrapperScrollTop =
+        timeLineWrapper.getBoundingClientRect().top
       const clientH =
         window.innerHeight || document.documentElement.clientHeight
       if (timelineWrapperScrollTop - clientH < 0 && this.process < 16) {
         return this.start()
       }
-      window.addEventListener(
-        "scroll",
-        () => {
-          this.scrollListener(timeLineWrapper, clientH)
-        }
-      )
+      window.addEventListener("scroll", () => {
+        this.scrollListener(timeLineWrapper, clientH)
+      })
     },
     scrollListener(target, clientH) {
       if (
@@ -189,28 +186,38 @@ export default {
           .img-wrapper {
             width: 50px;
             height: 109px;
-            @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-active");
+            @include bgImage(
+              "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-active"
+            );
           }
           &:nth-child(2n) {
             margin-top: 239px;
             .img-wrapper {
-              @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-bottom-active");
+              @include bgImage(
+                "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-bottom-active"
+              );
             }
           }
           &:nth-child(4) {
             .img-wrapper {
               background-color: red;
-              @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-bottom-active");
+              @include bgImage(
+                "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-bottom-active"
+              );
             }
           }
           &:nth-child(5) {
             .img-wrapper {
-              @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-active");
+              @include bgImage(
+                "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-active"
+              );
             }
           }
           &:nth-child(6) {
             .img-wrapper {
-              @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-bottom");
+              @include bgImage(
+                "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-bottom"
+              );
             }
           }
         }
@@ -259,7 +266,9 @@ export default {
             width: 7rem;
             flex: 0 0 7rem;
             .bg-wrapper {
-              @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-active-v");
+              @include bgImage(
+                "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-active-v"
+              );
               background-repeat: no-repeat;
               background-size: 80%;
               width: 100%;
@@ -285,7 +294,9 @@ export default {
         &:nth-child(7) {
           .col-wrapper {
             .bg-wrapper {
-              @include bgImage("https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-v");
+              @include bgImage(
+                "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/assets/images/timeline-v"
+              );
               background-repeat: no-repeat;
               background-size: 80%;
             }

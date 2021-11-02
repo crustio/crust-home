@@ -79,7 +79,7 @@ export default {
             "Blockchain Explorer",
             "Storage Explorer",
             "Crust Maxwell",
-            "Token Swap"
+            "Token Swap",
           ],
         },
         {
@@ -103,6 +103,11 @@ export default {
             "FAQ",
           ],
         },
+        {
+          name: "Blog",
+          hasChild: false,
+        },
+
         {
           name: "lang",
           hasChild: true,
@@ -144,10 +149,12 @@ export default {
         return window.open(outerDit.analysis_of_economic_model_zh, "_blank")
       }
       if (name === "ecowhitepaper") {
-        let economicPaperurl = 'https://ipfs-hk.decoo.io/ipfs/Qmdy2Hqdxoq2PuAkvoDZ5SqYjAKym58Gh39Lm5gPChyHwL'
+        let economicPaperurl =
+          "https://ipfs-hk.decoo.io/ipfs/Qmdy2Hqdxoq2PuAkvoDZ5SqYjAKym58Gh39Lm5gPChyHwL"
         if (!isZh) {
           name += "_en"
-          economicPaperurl= 'https://ipfs-hk.decoo.io/ipfs/QmRYJN6V5BzwnXp7A2Avcp5WXkgzyunQwqP3Es2Q789phF'
+          economicPaperurl =
+            "https://ipfs-hk.decoo.io/ipfs/QmRYJN6V5BzwnXp7A2Avcp5WXkgzyunQwqP3Es2Q789phF"
         }
         return window.open(`${economicPaperurl}`, "_blank")
       }
@@ -162,6 +169,9 @@ export default {
           ? "crust_solutions_handbook-en.pdf"
           : "crust_solutions_handbook-ch.pdf"
         return window.open(`${outerDit.download}${pdfName}`, "_blank")
+      }
+      if (name === "blog") {
+        return window.open("https://medium.com/crustnetwork/", "_blank")
       }
       if (name === "csm lightpaper") {
         // https://ipfs-hk.decoo.io/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=LT%20paper.(ZH).1_compressed.pdf

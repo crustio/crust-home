@@ -3,6 +3,7 @@
     <mainIndex class="item" />
     <decentralized class="item" />
     <Usecase class="item" />
+    <Blogs class="item" />
     <timeline class="item" />
     <DevTeam class="item" />
     <partners class="item" />
@@ -14,6 +15,7 @@ import timeline from "~/components/timeline"
 import partners from "~/components/partners"
 import decentralized from "~/components/decentralized"
 import Usecase from "~/components/useCase"
+import Blogs from "~/components/blogs"
 export default {
   components: {
     mainIndex,
@@ -21,6 +23,7 @@ export default {
     timeline,
     partners,
     Usecase,
+    Blogs,
   },
 }
 </script>
