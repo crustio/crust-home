@@ -13,7 +13,7 @@
       @click="handleClick($t(`usecase.${name}.learnMore`))"
     >
       {{
-        ["polkadot", "IPFS", "Realy", "Decoo"].indexOf(name) === -1
+       ["polkadot", "IPFS", "Realy", "Decoo", "CrustFiles", "SwitchSwap"].indexOf(name) === -1
           ? $t("button.learnMore")
           : $t("button.visitMore")
       }}
@@ -71,6 +71,11 @@ export default {
   }
   .logo {
     cursor: pointer;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
       max-width: 100px;
       max-height: 50px;

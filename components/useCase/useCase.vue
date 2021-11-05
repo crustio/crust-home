@@ -39,10 +39,13 @@ export default {
     return {
       items: [
         "uniswap",
-        "Socbay",
-        "SkyeKiwi",
+        "RMRK",
         "polkadot",
         "IPFS",
+        "SwitchSwap",
+        "CrustFiles",
+        "Socbay",
+        "SkyeKiwi",
         "Realy",
         "Decoo",
         "Sinso",

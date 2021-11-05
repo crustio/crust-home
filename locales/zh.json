@@ -293,12 +293,12 @@
       "desc": "Polkadot/Substrate UI的用户界面，可以访问Substrate链的全部功能。"
     },
     "uniswap": {
-      "desc": "全球最火热的去中心化交易平台之一。",
+      "desc": "世界上最为广泛使用的De-Fi以及去中心化交易所应用，现已通过Crust Network完成去中心化部署。",
       "link": "https://uniswap.org/",
       "learnMore": "https://medium.com/crustnetwork/decentralized-uniswap-interface-hosting-on-ipfs-18a78d1209ac"
     },
     "IPFS": {
-      "desc": "IPFS生态开发者的文档平台。",
+      "desc": "IPFS Docs是IPFS官方的开发者文档平台，现已在Crust Network完成去中心化部署。",
       "link": "https://docs.ipfs.io/",
       "learnMore": "https://docs.ipfs.io/"
     },
@@ -318,7 +318,7 @@
       "learnMore": "https://decoo.io/"
     },
     "Realy": {
-      "desc": "让最新潮的奢侈品以NFT的方式被创造、收集和交易。",
+      "desc": "REALY是一个基于BSC的潮流品NFT平台，用于创建、收集和交易各类珍贵的“新奢”收藏品，现已集成Crust Network。",
       "link": "https://realy.pro//",
       "learnMore": "https://realy.pro/"
     },
@@ -336,6 +336,21 @@
       "desc": "CruTransfer是一个快速共享不同类型文件的有效平台。",
       "link": "https://crutransferme.medium.com/",
       "learnMore": "https://crutransferme.medium.com/"
+    },
+    "CrustFiles": {
+      "desc": "Crust Files是一个Web3.0风格的IPFS存储应用，你可以轻松地在Crust去中心化存储网络中存储与分享您的文件。",
+      "link": "https://files.crustapps.net/",
+      "learnMore": "https://files.crustapps.net/"
+    },
+    "SwitchSwap": {
+      "desc": "SwitchSwap为基于多链的Web3.0用户群打造，提供了去中心化的NFT资产发行、管理、展示以及交易平台，并采用Crust Network作为NFT元数据存储方案。",
+      "link": "https://switchswap.io/",
+      "learnMore": "https://switchswap.io/"
+    },
+    "RMRK": {
+      "desc": "RMRK是一套基于KUSAMA的NFT模块及标准，旨在为“下一代NFT”提供更多强大特性，现已深度集成Crust Network存储解决方案。",
+      "link": "https://www.rmrk.app/",
+      "learnMore": "https://www.rmrk.app/"
     }
   },
   "news": {
