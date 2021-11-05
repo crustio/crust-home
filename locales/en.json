@@ -417,12 +417,12 @@
       "desc": "Basic Polkadot/Substrate UI for interacting with a node. The main user-facing application, allowing access to all features available on Substrate chains."
     },
     "uniswap": {
-      "desc": "One of the most widely used decentralized trading protocol.",
+      "desc": "One of the most widely used De-Fi and DEX protocol in the world, now decentralized hosted on Crust Network.",
       "link": "https://uniswap.org/",
       "learnMore": "https://medium.com/crustnetwork/decentralized-uniswap-interface-hosting-on-ipfs-18a78d1209ac"
     },
     "IPFS": {
-      "desc": "The home page for developer documentation for IPFS, the InterPlanetary File System.",
+      "desc": "IPFS Docs, the homepage for developer documentation of IPFS, is now decentralized hosted on Crust Network.",
       "link": "https://docs.ipfs.io/",
       "learnMore": "https://docs.ipfs.io/"
     },
@@ -442,7 +442,7 @@
       "learnMore": "https://decoo.io/"
     },
     "Realy": {
-      "desc": "Create, collect and trade valuable NFT assets of the New Luxury.",
+      "desc": "REALY is a BSC-based NFT platform where you can create, collect and trade valuable NFT assets of the New Luxury, now integrating Crust Network.",
       "link": "https://realy.pro//",
       "learnMore": "https://realy.pro/"
     },
@@ -460,6 +460,21 @@
       "desc": "CruTransfer is the simplest and the most effective platform to share your different types of files over the internet.",
       "link": "https://crutransferme.medium.com/",
       "learnMore": "https://crutransferme.medium.com/"
+    },
+    "CrustFiles": {
+      "desc": "Crust Files is a Web3.0 IPFS storage application that helps you to easily store and share files on IPFS via Crust’s decentralized storage network.",
+      "link": "https://files.crustapps.net/",
+      "learnMore": "https://files.crustapps.net/"
+    },
+    "SwitchSwap": {
+      "desc": "SwitchSwap is a platform for multi-chain users to mint, manage, and trade NFTs. It integrates Crust Network as the native NFT metadata storage solution.",
+      "link": "https://switchswap.io/",
+      "learnMore": "https://switchswap.io/"
+    },
+    "RMRK": {
+      "desc": "RMRK is a set of NFTs legos based on KUSAMA that outlines standards and primitives for the next-generation NFTs, now powered with Crust's dStorage for its NFTs metadata storage.",
+      "link": "https://www.rmrk.app/",
+      "learnMore": "https://www.rmrk.app/"
     }
   },
   "blogs": {
