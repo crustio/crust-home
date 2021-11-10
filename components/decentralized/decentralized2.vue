@@ -6,7 +6,7 @@
           <div class="dec-top-left sub-title color-white" :class="getZhcnCss()">
             {{ $t(`decentralized.title`) }}
           </div>
-          <div class="dec-top-right">
+          <!-- <div class="dec-top-right">
             <button class="btn-custom btn-right" @click="handleDemoVideoClick">
               <i class="icon-play" v-html="iconPlay"></i
               >{{ $t("button.demoVideo") }}
@@ -17,32 +17,34 @@
             <button class="btn-custom btn-right" @click="handleFreeStorageDiscordClick">
               {{ $t("button.freeStorageLink") }}
             </button>
-          </div>
+          </div> -->
         </div>
         <div class="dec-bottom">
           <swiper class="swiper" :options="swiperOptions1">
             <swiper-slide>
               <DConnectCard
-                :img-src="require('~/assets/images/ipfs-add.png')"
+                :img-src="require('~/assets/images/market.png')"
                 :title="$t(`decentralized.step-1-1`)"
-                content1="crust-cli pin MyFiles"
-                content2=""
+                :content1="$t(`decentralized.step-1-content1`)"
+                :click="handleDemoVideoClick"
               />
             </swiper-slide>
             <swiper-slide>
               <DConnectCard
-                :img-src="require('~/assets/images/ipfs-place.png')"
+                :img-src="require('~/assets/images/crust_files.png')"
                 :title="$t(`decentralized.step-2-1`)"
-                content1="crust-cli publish"
-                content2="QmUmfSj43T9fsPSaEgGcrgHH5Wq8KFv48oVXnfY4FXDJZt"
+                :content1="$t(`decentralized.step-2-content1`)"
+                :content2="$t(`decentralized.createBy`)"
+                :click="handleDemoVideoClick"
               />
             </swiper-slide>
             <swiper-slide>
               <DConnectCard
-                :img-src="require('~/assets/images/ipfs-get.png')"
+                :img-src="require('~/assets/images/swap@3x.png')"
                 :title="$t(`decentralized.step-3-1`)"
-                content1="ipfs get"
-                content2="QmUmfSj43T9fsPSaEgGcrgHH5Wq8KFv48oVXnfY4FXDJZt"
+                :content1="$t(`decentralized.step-3-content1`)"
+                :content2="$t(`decentralized.createBy`)"
+                :click="handleSwitchswapVideoClick"
               />
             </swiper-slide>
             <div
@@ -134,6 +136,13 @@
     >
       <dVideo></dVideo>
     </div>
+    <div
+      v-if="showSwitchswapVideo"
+      class="m-video-container"
+      @click="handleCloseSwitchswapVideo"
+    >
+      <sVideo></sVideo>
+    </div>
   </div>
 </template>
 
@@ -143,12 +152,15 @@ import { outerDit } from "@/config/nav-config"
 import DConnectCard from "./DConnectCard"
 import DCloudCard from "./DCloudCard"
 import dVideo from "./dVideo"
+import sVideo from "./switchswapVideo"
+
 export default {
   name: "Decentralized2",
-  components: { DConnectCard, DCloudCard, dVideo },
+  components: { DConnectCard, DCloudCard, dVideo, sVideo },
   data() {
     return {
       showVideo: false,
+      showSwitchswapVideo: false,
       iconPlay: IconPlay,
       swiperOptions1: {
         loop: false,
@@ -244,8 +256,14 @@ export default {
     handleDemoVideoClick() {
       this.showVideo = true
     },
+    handleSwitchswapVideoClick() {
+      this.showSwitchswapVideo = true
+    },
     handleCloseDemoVideo() {
       this.showVideo = false
+    },
+    handleCloseSwitchswapVideo() {
+      this.showSwitchswapVideo = false
     },
     handleApplyNow() {
       window.open(
@@ -384,6 +402,7 @@ export default {
     }
     .swiper-slide {
       height: auto;
+      
     }
   }
 
