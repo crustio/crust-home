@@ -1,0 +1,43 @@
+name: master-cd
+
+on:
+  push:
+    branches: [ master ]
+# manual trigger
+  workflow_dispatch:
+
+jobs:
+  build:
+    if: github.repository == 'crustio/crust-home'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+          always-auth: true
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Build bundle
+        run: yarn generate
+
+      - name: Build and push docker
+        run: |
+          docker build -t coderyashiro/crust-web:latest .
+          docker login -u ${{ secrets.DOCKER_HUB_DEV_USER_NAME }} -p ${{ secrets.DOCKER_HUB_DEV_PASSWORD }}
+          docker push coderyashiro/crust-web:latest
+      - name: Upgrade home web
+        uses: fifsky/ssh-action@master
+        with:
+          command: |
+            docker pull coderyashiro/crust-web:latest
+            cd /usr/local/docker/crust-web
+            docker-compose up -d
+          host: ${{ secrets.SSH_DEV_HOST }}
+          user: ${{ secrets.SSH_DEV_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
