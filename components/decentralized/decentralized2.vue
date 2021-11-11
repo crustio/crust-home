@@ -139,6 +139,13 @@
     >
       <dVideo></dVideo>
     </div>
+    <div
+      v-if="showSwitchswapVideo"
+      class="m-video-container"
+      @click="handleCloseSwitchswapVideo"
+    >
+      <sVideo></sVideo>
+    </div>
   </div>
 </template>
 
@@ -148,10 +155,11 @@ import { outerDit } from "@/config/nav-config"
 import DConnectCard from "./DConnectCard"
 import DCloudCard from "./DCloudCard"
 import dVideo from "./dVideo"
+import sVideo from "./sVideo"
 
 export default {
   name: "Decentralized2",
-  components: { DConnectCard, DCloudCard, dVideo },
+  components: { DConnectCard, DCloudCard, dVideo, sVideo },
   data() {
     return {
       showVideo: false,
@@ -270,13 +278,13 @@ export default {
       )
     },
     handleSwitchswapVideoClick() {
-      window.open(
-        "https://youtu.be/Lg5JNUarRac",
-        "_blank"
-      )
+      this.showSwitchswapVideo = true
     },
     handleCloseDemoVideo() {
       this.showVideo = false
+    },
+    handleCloseSwitchswapVideo() {
+      this.showSwitchswapVideo = false
     },
     handleApplyNow() {
       window.open(
