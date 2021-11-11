@@ -13,8 +13,11 @@
     </div>
     <div class="content-bottom">
       <div class="dec-top-right">
-        <button class="btn-custom btn-center" @click="click">
-          <i class="icon-play" v-html="iconPlay"></i>{{ $t("button.learnMore") }}
+        <button class="btn-custom btn-right" @click="clickGoTo">
+          {{ $t("button.goTo") }}
+        </button>
+        <button class="btn-custom btn-right" @click="clickDemoVideo">
+          {{ $t("button.demoVideo") }}
         </button>
       </div>
       <div class="content-font-footer">{{ content2 }}</div>
@@ -22,15 +25,9 @@
   </div>
 </template>
 <script>
-import IconPlay from "@/assets/svgs/icon-play.svg?raw"
 
 export default {
   name: "DConnectCard",
-  data() {
-    return {
-      iconPlay: IconPlay,
-    }
-  },
   props: {
     title: {
       type: String,
@@ -48,11 +45,11 @@ export default {
       type: String,
       default: "",
     },
-    click: {
+    clickGoTo: {
       type: Function,
-      default: () => {
-        console.log('haha')
-      }
+    },
+    clickDemoVideo: {
+      type: Function,
     }
   },
   methods: {
@@ -168,7 +165,7 @@ export default {
     padding-left: 20px;
     padding-right: 20px;
     &.btn-right {
-      width: 200px;
+      width: 120px;
       padding: 0.5rem 0;
       margin-bottom: 1rem;
     }
@@ -182,10 +179,9 @@ export default {
 
   .dec-top-right {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     max-width: 600px;
     position: relative;
   }

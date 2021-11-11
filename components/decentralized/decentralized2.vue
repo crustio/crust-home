@@ -26,7 +26,8 @@
                 :img-src="require('~/assets/images/market.png')"
                 :title="$t(`decentralized.step-1-1`)"
                 :content1="$t(`decentralized.step-1-content1`)"
-                :click="handleDemoVideoClick"
+                :clickDemoVideo="handleDemoVideoClick"
+                :clickGoTo="gotToDSM"
               />
             </swiper-slide>
             <swiper-slide>
@@ -35,7 +36,8 @@
                 :title="$t(`decentralized.step-2-1`)"
                 :content1="$t(`decentralized.step-2-content1`)"
                 :content2="$t(`decentralized.createBy`)"
-                :click="handleDemoVideoClick"
+                :clickDemoVideo="handleDemoVideoClick"
+                :clickGoTo="goToCrustFiles"
               />
             </swiper-slide>
             <swiper-slide>
@@ -44,7 +46,8 @@
                 :title="$t(`decentralized.step-3-1`)"
                 :content1="$t(`decentralized.step-3-content1`)"
                 :content2="$t(`decentralized.createBy`)"
-                :click="handleSwitchswapVideoClick"
+                :clickDemoVideo="handleSwitchswapVideoClick"
+                :clickGoTo="gotToSwitchswap"
               />
             </swiper-slide>
             <div
@@ -248,8 +251,25 @@ export default {
     handleDemoVideoClick() {
       this.showVideo = true
     },
+    gotToDSM() {
+      window.open(
+        "https://apps.crust.network/#/storage",
+        "_blank"
+      )
+    },
+    goToCrustFiles() {
+      window.open(
+        "https://files.crustapps.net",
+        "_blank"
+      )
+    },
+    gotToSwitchswap() {
+      window.open(
+        "https://switchswap.io",
+        "_blank"
+      )
+    },
     handleSwitchswapVideoClick() {
-      this.showSwitchswapVideo = true
       window.open(
         "https://youtu.be/Lg5JNUarRac",
         "_blank"

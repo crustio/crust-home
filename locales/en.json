@@ -10,6 +10,7 @@
     "csmToken": "CSM Token",
     "experienceCrustApps": "Crust Apps",
     "buildOnCrust": "Build On Crust",
+    "goTo": "GO TO",
     "demoVideo": "Demo Video",
     "CrustGrants": "Crust Grants",
     "applyNow": "Apply Now",
@@ -139,7 +140,7 @@
     "threecontent": "With GPoS consensus and MPoW mechanism, Crust is able to support the quantification and consensus of both storage and computing resource usage, and builds ubiquitous decentralized cloud storage and computing capabilities."
   },
   "decentralized": {
-    "title": "Experience now",
+    "title": "Experience Now",
     "createBy": "Created by community",
     "step-1-1": "Decentralized Storage Market",
     "step-1-2": ">> ipfs add crust.png",
