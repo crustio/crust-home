@@ -101,11 +101,12 @@ export default {
   .content {
     display: flex;
     flex-direction: column;
-    font-family: Courier;
+    font-family: Inter-Regular;
     font-size: 16px;
     letter-spacing: 0;
     text-align: center;
-    word-break: break-all;
+    // word-break: break-all;
+    word-wrap: normal;
     background: transparent;
     flex-grow: 1;
     height: 250px;
