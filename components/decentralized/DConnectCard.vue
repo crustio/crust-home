@@ -155,7 +155,6 @@ export default {
     margin: 20px auto;
     @media screen and (max-width: 1200px) {
       left: -20px;
-      width: calc(100% + 40px);
       max-width: calc(100% + 52px);
     }
   }
