@@ -36,7 +36,7 @@
                 :title="$t(`decentralized.step-2-1`)"
                 :content1="$t(`decentralized.step-2-content1`)"
                 :content2="$t(`decentralized.createBy`)"
-                :clickDemoVideo="handleDemoVideoClick"
+                :clickDemoVideo="handleFileVideoClick"
                 :clickGoTo="goToCrustFiles"
               />
             </swiper-slide>
@@ -144,7 +144,14 @@
       class="m-video-container"
       @click="handleCloseSwitchswapVideo"
     >
-      <sVideo></sVideo>
+      <sVideo :source="switchswapVideoSource"></sVideo>
+    </div>
+    <div
+      v-if="showFilesVideo"
+      class="m-video-container"
+      @click="handleCloseFilesVideo"
+    >
+      <sVideo :source="fileVideoSource"></sVideo>
     </div>
   </div>
 </template>
@@ -164,6 +171,9 @@ export default {
     return {
       showVideo: false,
       showSwitchswapVideo: false,
+      showFilesVideo: false,
+      fileVideoSource: '',
+      switchswapVideoSource: '',
       iconPlay: IconPlay,
       swiperOptions1: {
         loop: false,
@@ -278,13 +288,21 @@ export default {
       )
     },
     handleSwitchswapVideoClick() {
+      this.switchswapVideoSource = 'https://ipfs.io/ipfs/QmcYfQ6wjb9hop4LhJ9MZrX8GGiJRm6PxBfnVo2JqzEm9V'
       this.showSwitchswapVideo = true
+    },
+    handleFileVideoClick() {
+      this.fileVideoSource = 'https://ipfs.io/ipfs/QmWf36uY5E8mLD9nQnVxMEymAMhRh1yJ9th2fqQe1UmLqg'
+      this.showFilesVideo = true
     },
     handleCloseDemoVideo() {
       this.showVideo = false
     },
     handleCloseSwitchswapVideo() {
       this.showSwitchswapVideo = false
+    },
+    handleCloseFilesVideo() {
+      this.showFilesVideo = false
     },
     handleApplyNow() {
       window.open(
