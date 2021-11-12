@@ -6,7 +6,7 @@
           <div class="dec-top-left sub-title color-white" :class="getZhcnCss()">
             {{ $t(`decentralized.title`) }}
           </div>
-          <div class="dec-top-right">
+          <!-- <div class="dec-top-right">
             <button class="btn-custom btn-right" @click="handleDemoVideoClick">
               <i class="icon-play" v-html="iconPlay"></i
               >{{ $t("button.demoVideo") }}
@@ -17,32 +17,37 @@
             <button class="btn-custom btn-right" @click="handleFreeStorageDiscordClick">
               {{ $t("button.freeStorageLink") }}
             </button>
-          </div>
+          </div> -->
         </div>
         <div class="dec-bottom">
           <swiper class="swiper" :options="swiperOptions1">
             <swiper-slide>
               <DConnectCard
-                :img-src="require('~/assets/images/ipfs-add.png')"
+                :img-src="require('~/assets/images/market.png')"
                 :title="$t(`decentralized.step-1-1`)"
-                content1="crust-cli pin MyFiles"
-                content2=""
+                :content1="$t(`decentralized.step-1-content1`)"
+                :clickDemoVideo="handleDemoVideoClick"
+                :clickGoTo="gotToDSM"
               />
             </swiper-slide>
             <swiper-slide>
               <DConnectCard
-                :img-src="require('~/assets/images/ipfs-place.png')"
+                :img-src="require('~/assets/images/crust_files.png')"
                 :title="$t(`decentralized.step-2-1`)"
-                content1="crust-cli publish"
-                content2="QmUmfSj43T9fsPSaEgGcrgHH5Wq8KFv48oVXnfY4FXDJZt"
+                :content1="$t(`decentralized.step-2-content1`)"
+                :content2="$t(`decentralized.createBy`)"
+                :clickDemoVideo="handleFileVideoClick"
+                :clickGoTo="goToCrustFiles"
               />
             </swiper-slide>
             <swiper-slide>
               <DConnectCard
-                :img-src="require('~/assets/images/ipfs-get.png')"
+                :img-src="require('~/assets/images/swap@3x.png')"
                 :title="$t(`decentralized.step-3-1`)"
-                content1="ipfs get"
-                content2="QmUmfSj43T9fsPSaEgGcrgHH5Wq8KFv48oVXnfY4FXDJZt"
+                :content1="$t(`decentralized.step-3-content1`)"
+                :content2="$t(`decentralized.createBy`)"
+                :clickDemoVideo="handleSwitchswapVideoClick"
+                :clickGoTo="gotToSwitchswap"
               />
             </swiper-slide>
             <div
@@ -134,6 +139,20 @@
     >
       <dVideo></dVideo>
     </div>
+    <div
+      v-if="showSwitchswapVideo"
+      class="m-video-container"
+      @click="handleCloseSwitchswapVideo"
+    >
+      <sVideo :source="switchswapVideoSource"></sVideo>
+    </div>
+    <div
+      v-if="showFilesVideo"
+      class="m-video-container"
+      @click="handleCloseFilesVideo"
+    >
+      <sVideo :source="fileVideoSource"></sVideo>
+    </div>
   </div>
 </template>
 
@@ -143,12 +162,18 @@ import { outerDit } from "@/config/nav-config"
 import DConnectCard from "./DConnectCard"
 import DCloudCard from "./DCloudCard"
 import dVideo from "./dVideo"
+import sVideo from "./sVideo"
+
 export default {
   name: "Decentralized2",
-  components: { DConnectCard, DCloudCard, dVideo },
+  components: { DConnectCard, DCloudCard, dVideo, sVideo },
   data() {
     return {
       showVideo: false,
+      showSwitchswapVideo: false,
+      showFilesVideo: false,
+      fileVideoSource: '',
+      switchswapVideoSource: '',
       iconPlay: IconPlay,
       swiperOptions1: {
         loop: false,
@@ -244,8 +269,40 @@ export default {
     handleDemoVideoClick() {
       this.showVideo = true
     },
+    gotToDSM() {
+      window.open(
+        "https://apps.crust.network/#/storage",
+        "_blank"
+      )
+    },
+    goToCrustFiles() {
+      window.open(
+        "https://files.crustapps.net",
+        "_blank"
+      )
+    },
+    gotToSwitchswap() {
+      window.open(
+        "https://switchswap.io",
+        "_blank"
+      )
+    },
+    handleSwitchswapVideoClick() {
+      this.switchswapVideoSource = 'https://ipfs.io/ipfs/QmcYfQ6wjb9hop4LhJ9MZrX8GGiJRm6PxBfnVo2JqzEm9V'
+      this.showSwitchswapVideo = true
+    },
+    handleFileVideoClick() {
+      this.fileVideoSource = 'https://ipfs.io/ipfs/QmWf36uY5E8mLD9nQnVxMEymAMhRh1yJ9th2fqQe1UmLqg'
+      this.showFilesVideo = true
+    },
     handleCloseDemoVideo() {
       this.showVideo = false
+    },
+    handleCloseSwitchswapVideo() {
+      this.showSwitchswapVideo = false
+    },
+    handleCloseFilesVideo() {
+      this.showFilesVideo = false
     },
     handleApplyNow() {
       window.open(
@@ -384,6 +441,7 @@ export default {
     }
     .swiper-slide {
       height: auto;
+      
     }
   }
 

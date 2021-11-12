@@ -2,21 +2,30 @@
   <div class="d-connect-card">
     <div class="title" v-html="title" :class="getZhcnCss()"></div>
     <div class="content">
-      <div class="content-top">
+      <!-- <div class="content-top">
         <img :src="require('~/assets/images/icon-content-top.png')" />
-      </div>
-      <div class="content-bottom">
-        <img :src="require('~/assets/images/icon-content-bottom.png')" />
-        <div>
-          <div class="content-font">{{ content1 }}</div>
-          <div class="content-font">{{ content2 }}</div>
-        </div>
+      </div> -->
+      <img class="img-content" :src="imgSrc" />
+      <div>
+        <div class="content-font">{{ content1 }}</div>
+        <!-- <div class="content-font">{{ content2 }}</div> -->
       </div>
     </div>
-    <img class="img-content" :src="imgSrc" />
+    <div class="content-bottom">
+      <div class="dec-top-right">
+        <button class="btn-custom btn-right" @click="clickGoTo">
+          {{ $t("button.goTo") }}
+        </button>
+        <button class="btn-custom btn-right" @click="clickDemoVideo">
+          {{ $t("button.demoVideo") }}
+        </button>
+      </div>
+      <div class="content-font-footer">{{ content2 }}</div>
+    </div>
   </div>
 </template>
 <script>
+
 export default {
   name: "DConnectCard",
   props: {
@@ -36,6 +45,12 @@ export default {
       type: String,
       default: "",
     },
+    clickGoTo: {
+      type: Function,
+    },
+    clickDemoVideo: {
+      type: Function,
+    }
   },
   methods: {
     getZhcnCss() {
@@ -55,7 +70,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px 26px;
+  padding: 20px 20px;
   background: $secondary;
   border: 1px solid #ff6400;
   border-radius: 10px;
@@ -65,31 +80,33 @@ export default {
   }
   .title {
     font-family: InterV_Semi-Bold;
-    font-size: 24px;
-    letter-spacing: -1px;
-    text-align: left;
+    font-size: 20px;
+    // letter-spacing: -1px;
+    text-align: center;
     margin-bottom: 6px;
-    height: 72px;
+    // height: 72px;
     &.en {
       white-space: nowrap;
     }
-    @media screen and (max-width: 1200px) {
-      font-size: 18px;
-      letter-spacing: -0.75px;
-      margin-bottom: 11px;
-      height: auto;
-    }
+    // @media screen and (max-width: 1200px) {
+    //   font-size: 18px;
+    //   letter-spacing: -0.75px;
+    //   margin-bottom: 11px;
+    //   height: auto;
+    // }
   }
   .content {
     display: flex;
     flex-direction: column;
-    font-family: Courier;
+    font-family: Inter-Regular;
     font-size: 16px;
     letter-spacing: 0;
-    text-align: left;
-    word-break: break-all;
+    text-align: center;
+    // word-break: break-all;
+    word-wrap: normal;
     background: transparent;
     flex-grow: 1;
+    height: 250px;
 
     @media screen and (max-width: 1200px) {
       font-size: 12px;
@@ -119,10 +136,7 @@ export default {
         width: 5px;
         height: 14px;
         margin-right: 2px;
-      }
-      .content-font {
-        font-family: Courier;
-      }
+      }     
     }
   }
   img {
@@ -132,15 +146,59 @@ export default {
     max-height: 100%;
   }
   .img-content{
-    position: relative;
-    left: -26px;
-    width: calc(100% + 52px);
-    max-width: calc(100% + 52px);
+    // position: relative;
+    // left: -26px;
+    // width: calc(100% + 52px);
+    // max-width: calc(100% + 52px);
+    // width: 120px;
+    height: 120px;
+    margin: 20px auto;
     @media screen and (max-width: 1200px) {
       left: -20px;
-      width: calc(100% + 40px);
       max-width: calc(100% + 52px);
     }
+  }
+
+  .btn-custom {
+    border: 2px solid $secondary;
+    padding-left: 20px;
+    padding-right: 20px;
+    &.btn-right {
+      width: 120px;
+      padding: 0.5rem 0;
+      margin-bottom: 1rem;
+    }
+    &:hover {
+      color: #afafaf !important;
+      /deep/ svg {
+        fill: #afafaf !important;
+      }
+    }
+  }
+
+  .dec-top-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 600px;
+    position: relative;
+  }
+
+  .icon-play {
+    /deep/ svg {
+      margin-right: 8px;
+      margin-bottom: 2px;
+      width: 16px;
+      height: 16px;
+      fill: white;
+    }
+  }
+
+  .content-font-footer {
+    text-align: right;
+    display: block;
+    height: 10px;
   }
 }
 </style>
