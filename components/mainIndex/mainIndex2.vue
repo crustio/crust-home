@@ -11,31 +11,51 @@
       <div class="container main">
         <div id="global"></div>
         <div class="main-logo">
-          <p class="logo" v-html="$t('indexBanner.sub')"></p>
+          <div class="new-link">
+            <div class="new-link-box">{{$t('indexBanner.new')}}</div>
+            <div class="new-link-info" @click="routeTo('enjoy_action')">
+              <span class="new-link-info-hover">{{$t('indexBanner.newTitle')}}</span>
+              
+              <div v-html="icons[0]"></div>
+            </div>
+          </div>
+          <p class="logo" style="margin-top:80px" v-html="$t('indexBanner.sub')"></p>
+          <!-- <p class="logo logo-sub" v-html="$t('indexBanner.subTitle')"></p> -->
           <div class="buttons">
-            <button class="btn-custom button-width" @click="crustMainnet">
+            <button class="btn-custom-yellow" @click="crustMainnet">
               {{ $t("Crust Mainnet") }}
             </button>
-            &nbsp;&nbsp;
             <button
-              class="btn-custom button-width"
+              class="btn-custom-common"
               @click="handleClick('crust maxwell')"
             >
               {{ $t("Crust Maxwell") }}
             </button>
+          </div>
+          <div class="system-point">
+            <div class="point-icon"><div></div></div>
+            <div
+              class="point-icon-txt"
+              v-html="$t('indexBanner.subInfo')"
+            ></div>
           </div>
           <div class="desc">
             <div class="capacity">
               <Capacity class="number" />
               <span class="unit">TB</span>
             </div>
-            <div class="intro">
+            <!-- <div class="intro">
               {{ $t("Globally distributed available storage capacity") }}
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
-      <div class="back">
+      <!-- <div class="waht-crust">
+        <div class="what-title">{{ $t("crustInfo.title") }}</div>
+        <div class="what-subTitle">{{ $t("crustInfo.subTitle") }}</div>
+      </div> -->
+
+      <!-- <div class="back">
         <div class="container description">
           <div class="description-left">
             <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
@@ -65,9 +85,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
-    <div class="container-fluid desc-mobile">
+    <!-- <div class="container-fluid desc-mobile">
       <div class="description">
         <div class="description-left">
           <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
@@ -100,7 +120,7 @@
           class="swiper-pagination swiper-pagination-desc"
         ></div>
       </swiper>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -114,6 +134,7 @@ import * as TrackballControls from "../../static/script/TrackballControls"
 import dVideo from "../decentralized/dVideo"
 import DescCard from "./descCard"
 import Capacity from "./Capacity"
+import triangle from "@/assets/img/triangle.svg?raw"
 export default {
   components: {
     DescCard,
@@ -122,6 +143,7 @@ export default {
   },
   data() {
     return {
+      icons:[triangle],
       showVideo: false,
       iconPlay: IconPlay,
       swiperOptions: {
@@ -160,6 +182,9 @@ export default {
     globalScript.runGlobal(THREE)
   },
   methods: {
+    routeTo(url){
+      jumpTo(url)
+    },
     handleDemoVideoClick() {
       this.showVideo = true
     },
@@ -226,48 +251,117 @@ export default {
   .main-index {
     margin-top: -60px;
     width: 100%;
-    height: calc(100vh + 553px);
+    // height: calc(100vh + 553px);
     background-color: #141414;
     position: relative;
     overflow: hidden;
     .main {
       width: 100%;
-      height: 100vh;
+      height:900px;
       position: relative;
       display: flex;
       align-items: center;
       flex-direction: row-reverse;
       justify-content: flex-end;
+      .new-link {
+        width: 520px;
+        margin-bottom: 80px;
+        height: 30px;
+      
+       
+        display: flex;
+        // align-items: center;
+        // padding: 10px 16px 8px 4px;
+        cursor: pointer;
+
+        .new-link-box {
+          width: 80px;
+          height: 30px;
+          line-height: 30px;
+          background: #fc7823;
+          border-radius: 5px 0px 0px 5px;
+        font-size: 14px;
+          font-family: Montserrat,"Source Han Sans CN";
+          font-weight: 400;
+          color: #ffffff;
+          text-align: center;
+          // margin-right: 15px;'
+           display: inline-block;
+        }
+        .new-link-info {
+           background: #343434;
+          height: 30px;
+          line-height: 30px;
+          font-size: 16px;
+          font-family: Montserrat,"Source Han Sans CN";
+          font-weight: 400;
+          color: #999999;
+         padding: 0 15px ;
+          display: inline-block;
+           border-bottom-right-radius: 5px;
+           border-top-right-radius: 5px;
+          span {
+            &:first-child{
+              margin-right: 15px;
+            }
+          }
+          div{
+            display: inline-block;
+            width: 6px;
+height: 11px;
+          }
+          .new-link-info-hover{
+                       height: 11px;
+font-size: 14px;
+font-family: Montserrat,"Source Han Sans CN";
+font-weight: 400;
+color: #999999;
+          }
+        }
+
+        &:hover {
+          .new-link-info-hover {
+ 
+            text-decoration: underline;
+            color: #ffffff;
+            span{
+               text-decoration: none;
+            }
+          }
+        }
+      }
       .main-logo {
+        z-index: 9999;
         width: 50%;
         animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
         animation-duration: 0.5s; /* don't forget to set a duration! */
         .logo {
-          font-family: InterV_Semi-Bold;
-          font-size: 44px;
+         font-family: Montserrat-blod,"Source Han Sans CN-blod";
+         font-weight: bold;
+          font-size: 60px;
           color: #ffffff;
           letter-spacing: 0;
           text-align: left;
           line-height: 70px;
-          margin-bottom: 2rem;
-          width: 635px;
+          margin-bottom: 85px;
+          width: 630px;
         }
         .desc {
-          padding: 22px 0 0 5px;
+          padding: 0px 0 0 5px;
           font-size: 14px;
-          font-family: InterV_Semi-Bold, InterV_Semi;
+          font-family: Montserrat;
           font-weight: bold;
           color: #ffffff;
           line-height: 2em;
-          margin-top: 20px;
+          // margin-top: 20px;
           .capacity {
-            font-family: "Orbitron", sans-serif;
+            font-family: Montserrat-blod,"Source Han Sans CN-blod";
             padding-bottom: 10px;
             .number {
-              font-size: 48px;
+              font-size: 60px;
             }
             .unit {
-              font-size: 24px;
+              font-size: 60px;
             }
             .intro {
               font-size: 18px;
@@ -277,10 +371,46 @@ export default {
         .buttons {
           display: flex;
           justify-content: flex-start;
+          .btn-custom-yellow {
+           width: 140px;
+            height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+            background: #fc7823;
+            border: 0;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: Montserrat-blod,"Source Han Sans CN-blod";
+            font-weight: bold;
+            color: #ffffff;
+            margin-right: 30px;
+          }
+          .btn-custom-common {
+           width: 200px;
+             height: 50px;
+                display: flex;
+          justify-content: center;
+          align-items: center;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: Montserrat-blod,"Source Han Sans CN-blod";
+            font-weight: bold;
+            color: #ffffff;
+            background: none;
+            &:hover{
+              background: #FFFFFF;
+border: 2px solid #FFFFFF;
+color: #1F1F1F;
+border-radius: 8px;
+            }
+          }
         }
       }
       #global {
-        margin-left: 40px;
+        margin-left: -220px;
+        margin-top: 65px;
       }
       .margin-left-25 {
         margin-left: 25px;
@@ -348,6 +478,37 @@ export default {
       display: none;
     }
   }
+
+  .system-point {
+    display: flex;
+    height: 20px;
+    align-items: center;
+    margin: 80px 0 37px;
+    .point-icon {
+      width: 16px;
+      height: 16px;
+      background: rgba(252, 120, 35, 0.5);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+        width: 8px;
+        height: 8px;
+        background: #fc7823;
+        border-radius: 50%;
+      }
+    }
+    .point-icon-txt {
+      margin-left: 16px;
+           height: 14px;
+            line-height: 14px;
+font-size: 14px;
+      font-family: 'Montserrat',"Source Han Sans CN";
+      font-weight: 400;
+      color: #ffffff;
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -372,7 +533,8 @@ export default {
         display: flex;
         flex-direction: column;
         .logo {
-          font-family: InterV_Semi-Bold;
+         font-family: Montserrat-blod,"Source Han Sans CN-blod";
+         font-weight: bold;
           font-size: 24px;
           color: #ffffff;
           letter-spacing: 0;
@@ -514,8 +676,13 @@ export default {
 }
 
 .container {
+  z-index: 9999;
   @media (min-width: 1270px) {
     max-width: 1270px;
   }
+}
+
+.waht-crust {
+  background: #fdf7f3;
 }
 </style>

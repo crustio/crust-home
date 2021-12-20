@@ -12,7 +12,7 @@ const outerDit = {
   "token swap_zh": "https://csm.crust.network/#/swap",
   "Storage Explorer_zh": "https://splorer.crust.network/",
   "crust maxwell":
-    "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc-crust.decoo.io#/explorer",
+    "https://apps.crust.network/",
   "crust maxwell_zh":
     "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc-crust.decoo.io#/explore",
   "crust maxwell_en":
@@ -78,8 +78,18 @@ const outerDit = {
     "https://ipfs-hk.decoo.io/ipfs/QmPeoZuvhq8G5SQ95KJ35xGVLP3pHtF2hahrtFsjTaZbFk?filename=Analysis of Crust Network Economic Model.pdf",
   analysis_of_economic_model_zh:
     "https://ipfs-hk.decoo.io/ipfs/QmTeYZVYucgF94cU9Bfuew6shWiTESYKYjDFntG9xK5Hru?filename=解析Crust Network经济模型.pdf",
-  crust_mainnet: "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/explorer",
-  crust_mainnet_zh: "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/explorer",
+  crust_mainnet: "https://swap.crustapps.net/#/swap",
+  crust_mainnet_zh: "https://swap.crustapps.net/#/swap",
+
+  Technology_WP:"https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/whitepaper_en.pdf",
+
+  enjoy_action:"https://crowdloan.parallel.fi/#/auction/contribute/polkadot/2008",
+
+  start_button1:"https://wiki.crust.network/docs/en/buildGettingStarted",
+  start_button2:"https://discord.gg/WQQHnyKCmn",
+  start_button3:"https://wiki.crust.network/docs/en/buildGettingStarted",
+  start_button4:"https://wiki.crust.network/docs/en/buildCrossChainSolution",
+  
 }
 const outerList = Object.keys(outerDit)
 module.exports = {

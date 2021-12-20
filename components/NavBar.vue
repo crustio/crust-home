@@ -24,10 +24,13 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <template v-for="item in navList">
+            
+            <!-- <img v-if="item.name === 'lang'&&$store.state.locale ==='zh'" class="contryImg" src="../assets/images/china-48.png" alt="" :key="item.name">
+            <img v-if="item.name === 'lang'&&$store.state.locale ==='en'" class="contryImg" src="../assets/images/great-britain-48.png" alt="" :key="item.name"> -->
             <b-nav-item-dropdown
               v-if="item.hasChild"
               :key="item.name"
-              :text="item.name === 'lang' ? locale : $t(`header.${item.name}`)"
+              :html="item.name === 'lang' ? locale : $t(`header.${item.name}`)"
               :class="{
                 active:
                   item.children
@@ -36,9 +39,15 @@
               }"
               menu-class="drop"
               right
+              :style="{'padding-left':item.name === 'lang'?'57px':'64px'}"
             >
+            
               <template v-for="child in item.children">
-                <b-dropdown-item :key="child" href="#" @click="jump(child)">{{
+                <b-dropdown-item :key="child" href="#" @click="jump(child)">
+            <span v-if="child ==='EN'&&item.name === 'lang'" class="en"></span>
+            <span v-if="child ==='ZH'&&item.name === 'lang'" class="zh"></span>
+                  {{
+                  
                   $t(`header.${child}`)
                 }}</b-dropdown-item>
               </template>
@@ -51,6 +60,20 @@
               >{{ $t(`header.${item.name}`) }}</b-nav-item
             >
           </template>
+           <!-- <b-nav-item-dropdown
+              key="zh"
+              :html="locale"
+              menu-class="drop"
+              right
+              :style="{'padding-left':'64px'}"
+            >
+            
+            
+                <b-dropdown-item  href="#" @click="jump(child)">
+           
+            <span class="zh"></span>中文</b-dropdown-item>
+            <span class="en"></span>EN</b-dropdown-item>
+            </b-nav-item-dropdown> -->
         </b-navbar-nav>
       </b-collapse>
     </div>
@@ -79,7 +102,7 @@ export default {
             "Blockchain Explorer",
             "Storage Explorer",
             "Crust Maxwell",
-            "Token Swap",
+            // "Token Swap",
           ],
         },
         {
@@ -113,8 +136,14 @@ export default {
           hasChild: true,
           children: ["EN", "ZH"],
         },
-      ],
+      ]
     }
+  },
+  mounted(){
+    this.$nextTick(()=>{
+ this.local=true
+    })
+   
   },
   computed: {
     routerName() {
@@ -125,7 +154,7 @@ export default {
       return name
     },
     locale() {
-      return this.$store.state.locale === "zh" ? "中文" : "EN"
+      return this.$store.state.locale === "zh" ? `<span class="zh-logo"><span>中文` :`<span class="en-logo"><span>EN`
     },
   },
   watch: {
@@ -135,6 +164,7 @@ export default {
   },
   methods: {
     jump(name) {
+      console.log(name)
       const isZh = this.$store.state.locale === "zh"
       name = name.toLowerCase()
       if (name === "zh" || name === "en") {
@@ -180,6 +210,12 @@ export default {
           : outerDit.csm_lightpaper_zh
         return window.open(url, "_blank")
       }
+       if (name === "wiki") {
+         
+        name = isZh ? name + "_zh" : name+"_en"
+        console.log(name)
+        return jumpTo(name)
+      }
       if (outerList.includes(name)) {
         name = isZh ? name + "_zh" : name
         return jumpTo(name)
@@ -195,6 +231,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+    z-index: 99999;
   position: relative;
 }
 .auction-tool-bar {
@@ -209,14 +246,16 @@ export default {
 }
 .navbar {
   background: #141414 !important;
+
   .container {
     @media (min-width: 1270px) {
       max-width: 1270px;
     }
   }
   min-height: 60px;
-  z-index: 10;
+
   .navbar-nav {
+        z-index: 99999;
     font-family: InterV;
     font-size: 16px;
     color: #ffffff;
@@ -234,21 +273,27 @@ export default {
       }
       .nav-link {
         color: #fff !important;
+        font-family: Montserrat, "Source Han Sans CN";
         &:hover {
-          color: #ff6400 !important;
-          border-bottom: 2px solid #ff6400;
+          color: #fc7823 !important;
+          border-bottom: 2px solid #fc7823;
         }
         &:focus {
-          color: #ff6400;
-          border-bottom: 2px solid #ff6400;
+          color: #fc7823;
+          border-bottom: 2px solid #fc7823;
         }
         &.active {
-          color: #ff6400;
-          border-bottom: 2px solid #ff6400;
+          color: #fc7823;
+          border-bottom: 2px solid #fc7823;
         }
       }
     }
   }
+}
+/deep/.contryImg{
+ width: 30px;
+height: 15px;
+padding-left:64px;
 }
 </style>
 <style lang="scss">
@@ -257,6 +302,63 @@ export default {
   font-weight: 500;
 }
 .dropdown-menu {
-  background-color: $navBgColor;
+  background-color: #3B3B3B !important;
+}
+.en{
+  background: url('../assets/images/great-britain-48.png')no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+ width: 30px;
+height: 30px;
+vertical-align: middle;
+margin-top: -4px;
+margin-right: 13px;
+}
+.zh{
+  background: url('../assets/images/china-48.png')no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 30px;
+height: 30px;
+  vertical-align: middle;
+margin-top: -4px;
+margin-right: 13px;
+}
+.zh-logo{
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+  position: relative;
+&::after{
+  position: absolute;
+ width: 30px;
+height: 30px;
+ background: url('../assets/images/china-48.png')no-repeat;
+  background-size: 100% 100%;
+  top: -3px;
+  left: 0;
+  content: '';
+}
+}
+.en-logo{
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+  position: relative;
+&::after{
+  position: absolute;
+ width: 30px;
+height: 30px;
+ background: url('../assets/images/great-britain-48.png')no-repeat;
+  background-size: 100% 100%;
+  top: -3px;
+  left: 0;
+  content: '';
+}
+}
+
+
+.navbar .navbar-nav .nav-item{
+  font-size: 14px;
 }
 </style>
