@@ -140,7 +140,7 @@ export default {
   },
   methods: {
     routeLogo(index){
- window.open(this.urls[index], "_blank")
+ window.open(this.urls[index-1], "_blank")
     },
     routeTo(e) {
       if (e.down) {

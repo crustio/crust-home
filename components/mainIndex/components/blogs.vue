@@ -36,7 +36,7 @@
             <div class="latest-item-title">From Crust Network to...</div>
           </div> -->
         </div>
-        <div class="latest-email">
+        <!-- <div class="latest-email">
           <div class="latest-email-title">{{ $t(`email.title`) }}</div>
           <div class="latest-email-subtitle">{{ $t(`email.subTitle`) }}</div>
           <div class="latest-email-form">
@@ -46,7 +46,7 @@
               <img src="../../../assets/img/logo/subscribe@3x.png" alt="" />
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
