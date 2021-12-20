@@ -52,8 +52,8 @@ export default {
   computed: {
     videoLink() {
       return this.$store.state.locale === "en"
-        ? "https://ipfs-hk.decoo.io/ipfs/QmdVYW9Dpa26bjZowJQJb5YVtTyodianLn9TCcXeNeixf4?filename=English new.MP4"
-        : "https://ipfs-hk.decoo.io/ipfs/QmTCcWgLFAU9Y8uK7oMonWBEh9nvscpS6rfAtKaRheZVmG"
+        ? "https://gw.crustapps.net/ipfs/QmdVYW9Dpa26bjZowJQJb5YVtTyodianLn9TCcXeNeixf4?filename=English new.MP4"
+        : "https://gw.crustapps.net/ipfs/QmTCcWgLFAU9Y8uK7oMonWBEh9nvscpS6rfAtKaRheZVmG"
     },
   },
   components: { dVideo },
@@ -96,8 +96,8 @@ export default {
     routerUrl() {
       let url =
         this.$store.state.locale === "en"
-          ? "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/whitepaper_en.pdf"
-          : "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/whitepaper.pdf"
+          ? "https://gw.crustapps.net/ipfs/QmP9WqDYhreSuv5KJWzWVKZXJ4hc7y9fUdwC4u23SmqL6t"
+          : "https://gw.crustapps.net/ipfs/QmPrU21TrRtWcrWsNmHfBmSvTKZApKCEZrDGncnheMGKsj"
       window.open(url)
     },
   },

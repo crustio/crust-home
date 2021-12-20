@@ -70,9 +70,9 @@ export default {
             {
               title: "list1",
               down: true,
-              url: "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/whitepaper_en.pdf",
+              url: "https://gw.crustapps.net/ipfs/QmP9WqDYhreSuv5KJWzWVKZXJ4hc7y9fUdwC4u23SmqL6t",
               zh_url:
-                "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/whitepaper.pdf",
+                "https://gw.crustapps.net/ipfs/QmPrU21TrRtWcrWsNmHfBmSvTKZApKCEZrDGncnheMGKsj",
             },
             {
               title: "list2",
@@ -88,7 +88,7 @@ export default {
             },
             {
               title: "list4",
-              url:"https://ipfs-hk.decoo.io/ipfs/Qme9uUpunio7heGDnnfsptYWzjLJgvD2hkbLGcvehPz5EK?filename=CrustLogo.zip"
+              url:"https://gw.crustapps.net/ipfs/Qme9uUpunio7heGDnnfsptYWzjLJgvD2hkbLGcvehPz5EK?filename=CrustLogo.zip"
             },
           ],
         },
