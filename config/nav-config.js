@@ -19,9 +19,9 @@ const outerDit = {
     "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc-crust.decoo.io#/explore",
   github: "https://github.com/crustio",
   github_zh: "https://github.com/crustio",
-  "build on crust": "https://wiki.crust.network/docs/en/buildGettingStarted",
+  "build on crust": "https://wiki.crust.network/docs/en/build101",
   "build on crust_zh":
-    "https://wiki.crust.network/docs/zh-CN/buildGettingStarted",
+    "https://wiki.crust.network/docs/en/build101",
   "crust grants": "https://decloudf.com/",
   "crust grants_zh": "https://decloudf.com/",
   "crust bounty": "https://decloudf.com/",
@@ -85,9 +85,9 @@ const outerDit = {
 
   enjoy_action:"https://crowdloan.parallel.fi/#/auction/contribute/polkadot/2008",
 
-  start_button1:"https://wiki.crust.network/docs/en/buildGettingStarted",
+  start_button1:"https://wiki.crust.network/docs/en/build101",
   start_button2:"https://discord.gg/WQQHnyKCmn",
-  start_button3:"https://wiki.crust.network/docs/en/buildGettingStarted",
+  start_button3:"https://wiki.crust.network/docs/en/build101",
   start_button4:"https://wiki.crust.network/docs/en/buildCrossChainSolution",
   
 }
