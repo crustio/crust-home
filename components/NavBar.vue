@@ -180,19 +180,17 @@ export default {
       }
       if (name === "ecowhitepaper") {
         let economicPaperurl =
-          "https://ipfs-hk.decoo.io/ipfs/Qmdy2Hqdxoq2PuAkvoDZ5SqYjAKym58Gh39Lm5gPChyHwL"
+          "https://gw.crustapps.net/ipfs/Qmdy2Hqdxoq2PuAkvoDZ5SqYjAKym58Gh39Lm5gPChyHwL"
         if (!isZh) {
           name += "_en"
           economicPaperurl =
-            "https://ipfs-hk.decoo.io/ipfs/QmRYJN6V5BzwnXp7A2Avcp5WXkgzyunQwqP3Es2Q789phF"
+            "https://gw.crustapps.net/ipfs/QmRYJN6V5BzwnXp7A2Avcp5WXkgzyunQwqP3Es2Q789phF"
         }
         return window.open(`${economicPaperurl}`, "_blank")
       }
       if (name === "whitepaper") {
-        if (!isZh) {
-          name += "_en"
-        }
-        return window.open(`${outerDit.pdfBucket}${name}.pdf`, "_blank")
+        const url = !isZh ? "https://gw.crustapps.net/ipfs/QmP9WqDYhreSuv5KJWzWVKZXJ4hc7y9fUdwC4u23SmqL6t" : "https://gw.crustapps.net/ipfs/QmPrU21TrRtWcrWsNmHfBmSvTKZApKCEZrDGncnheMGKsj"
+        return window.open(`${url}`, "_blank")
       }
       if (name === "crust solutions handbook") {
         const pdfName = !isZh
@@ -204,7 +202,7 @@ export default {
         return window.open("https://medium.com/crustnetwork/", "_blank")
       }
       if (name === "csm lightpaper") {
-        // https://ipfs-hk.decoo.io/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=LT%20paper.(ZH).1_compressed.pdf
+        // https://gw.crustapps.net/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=LT%20paper.(ZH).1_compressed.pdf
         const url = !isZh
           ? outerDit.csm_lightpaper_en
           : outerDit.csm_lightpaper_zh
