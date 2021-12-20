@@ -1,3 +1,5 @@
+import store from './store/index'
+console.log(store)
 export default {
   server: {
     port: 8888,
@@ -79,6 +81,9 @@ export default {
     "~assets/fonts/nasalization/font.css",
     "~assets/fonts/inter/inter.css",
     "~assets/fonts/orbitron/orbitron.css",
+    "~assets/fonts/SourceHanSans/hansans.css",
+    "~assets/fonts/FONT-Montserrat/Montserrat.css",
+    // store.state.locale=='en'? "~assets/fonts/FONT-Montserrat/Montserrat.css":"~assets/fonts/SourceHanSans/hansans.css"
   ],
   /*
    ** Plugins to load before mounting the App
@@ -91,7 +96,7 @@ export default {
     { src: "~/plugins/vue-pdf.js", ssr: false },
   ],
   router: {
-    middleware: "i18n",
+    middleware: "i18n", 
   },
   /*
    ** Auto import components

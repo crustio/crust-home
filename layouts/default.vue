@@ -2,7 +2,7 @@
   <div>
     <nav-bar> </nav-bar>
     <Nuxt />
-    <footer-bar v-show="showFooter"></footer-bar>
+    <!-- <footer-bar v-show="showFooter"></footer-bar> -->
   </div>
 </template>
 <script>
@@ -21,8 +21,8 @@ export default {
     return {
       title:
         this.$store.state.locale === "en"
-          ? "Crust - Chain to Decentralized Cloud"
-          : "Crust - 链接分布式云",
+          ? "Crust Network ,Web3.0 Storage for Metaverse"
+          : "Crust Network ,Web3.0去中心化存储为元宇宙构建",
     }
   },
   computed: {

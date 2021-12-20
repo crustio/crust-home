@@ -71,7 +71,7 @@ export default {
     }
   },
   computed: {},
-  watch: {},
+  watch: {}, 
 }
 </script>
 <style lang="scss" scoped>
@@ -86,7 +86,7 @@ export default {
     }
   }
 
-  .repo-wrapper {
+  .repo-wrapper { 
     padding-top: 32px;
     color: #fff;
     font-family: InterV_Semi-Bold, InterV_Semi;
