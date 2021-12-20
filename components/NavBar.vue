@@ -189,10 +189,8 @@ export default {
         return window.open(`${economicPaperurl}`, "_blank")
       }
       if (name === "whitepaper") {
-        if (!isZh) {
-          name += "_en"
-        }
-        return window.open(`${outerDit.pdfBucket}${name}.pdf`, "_blank")
+        const url = !isZh ? "https://gw.crustapps.net/ipfs/QmP9WqDYhreSuv5KJWzWVKZXJ4hc7y9fUdwC4u23SmqL6t" : "https://gw.crustapps.net/ipfs/QmPrU21TrRtWcrWsNmHfBmSvTKZApKCEZrDGncnheMGKsj"
+        return window.open(`${url}`, "_blank")
       }
       if (name === "crust solutions handbook") {
         const pdfName = !isZh
