@@ -23,13 +23,13 @@
           <!-- <p class="logo logo-sub" v-html="$t('indexBanner.subTitle')"></p> -->
           <div class="buttons">
             <button class="btn-custom-yellow" @click="crustMainnet">
-              {{ $t("Crust Mainnet") }}
+              {{ $t("Get CRU") }}
             </button>
             <button
               class="btn-custom-common"
-              @click="handleClick('crust maxwell')"
+              @click="handleClick('crust mainnet')"
             >
-              {{ $t("Crust Maxwell") }}
+              {{ $t("Crust Mainnet") }}
             </button>
           </div>
           <div class="system-point">

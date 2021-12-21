@@ -147,20 +147,20 @@ export default {
             {
               img: require(`../../../assets/img/5-Who are using Crust/Severless Dapp/ipfs.png`),
               title: "dapp4",
-              button: "learn",
+              button: "vist",
               style: "width: 125px;height: 50px;",
               url: "https://docs.ipfs.io/",
               createUrl:
-                "https://medium.com/crustnetwork/decentralized-websites-with-ipfs-and-crust-9435b5810ae1",
+                "https://docs.ipfs.io/concepts/persistence/#pinning-services",
             },
             {
               img: require(`../../../assets/img/5-Who are using Crust/Severless Dapp/Liquity@3x.png`),
               title: "dapp5",
-              button: "learn",
+              button: "vist",
               style: "width: 173px;height: 40px;",
               url: "https://www.liquity.org/",
               createUrl:
-                "https://medium.com/crustnetwork/decentralized-websites-with-ipfs-and-crust-9435b5810ae1",
+                "https://www.liquity.org/",
             },
           ],
         },
@@ -254,6 +254,16 @@ export default {
               url: "https://decoo.io/",
             },
             {
+              img: require(`../../../assets/img/5-Who are using Crust/IPFS/skyekiwi.png`),
+              title: "ipfs6",
+              button: "learn",
+              create: "create",
+              style: "width: 216px;height: 43px;",
+              url: "https://skye.kiwi/",
+              createUrl:
+                "https://medium.com/crustnetwork/skyekiwi-first-application-accepted-to-crust-grants-program-77071ab5481c",
+            },
+            {
               img: require(`../../../assets/img/5-Who are using Crust/IPFS/SOCBAY@3x.png`),
               title: "ipfs3",
               button: "learn",
@@ -282,16 +292,6 @@ export default {
               url: "https://pan.nashcloud.cn/",
               createUrl:
                 "https://medium.com/crustnetwork/a-brief-introduction-to-crato-the-cloud-storage-solution-of-the-new-era-ed3c0b95502",
-            },
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/IPFS/skyekiwi.png`),
-              title: "ipfs6",
-              button: "learn",
-              create: "create",
-              style: "width: 216px;height: 43px;",
-              url: "https://skye.kiwi/",
-              createUrl:
-                "https://medium.com/crustnetwork/skyekiwi-first-application-accepted-to-crust-grants-program-77071ab5481c",
             },
             {
               img: require(`../../../assets/img/5-Who are using Crust/IPFS/Coldstack@3x.png`),
