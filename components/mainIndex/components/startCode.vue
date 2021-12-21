@@ -237,6 +237,8 @@ jumpTo(url)
             height: 52px;
             background: #fdf7f3;
             border-bottom: 2px solid #e5e5e5;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
             .start-code-tab {
               &:first-child {
                 margin-right: 50px;
@@ -251,6 +253,17 @@ jumpTo(url)
               color: #1f1f1f;
             }
             .start-code-tab-active {
+              position: relative;
+              &::after{
+                height: 4px;
+                width: 100%;
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                content: "";
+                background: #FC7823;
+                border-radius: 10px;
+              }
               color: #fc7823;
               border-bottom: 4px solid#FC7823;
             }

@@ -35,7 +35,7 @@ export default {
       posts: [
         {
           id: "f7ff837ed0ef",
-          title: "Crust’s Cross-Chain dStorage Solution",
+          title: "Crust's Cross-Chain dStorage Solution",
           detectedLanguage: "en",
           content: {
             subtitle: "Introduction",

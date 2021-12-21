@@ -114,11 +114,11 @@ export default {
           children: [
             {
               title: "dev1",
-              url:"https://decloudf.com/"
+              url:"https://gitcoin.co/crustio"
             },
             {
               title: "dev2",
-              url:"https://decloudf.com/"
+              url:"https://github.com/crustio/Crust-Grants-Program"
             },
             {
               title: "dev3",
@@ -259,9 +259,9 @@ export default {
         display: flex;
         justify-content: center;
         .foot-copy-img-logo {
-          flex-basis: 30px;
+          flex-basis: 28px;
           flex-shrink: 0;
-          height: 26px;
+          height: 28px;
           margin: 0 20px;
           cursor: pointer;
           //  &:nth-child(1) {
@@ -275,7 +275,7 @@ export default {
           //   }
           // }
           &:nth-child(1) {
-            background: url("../../../assets/img/main/telegram@3x.png")
+            background: url("../../../assets/img/main/telegram@3x.svg")
               no-repeat;
             opacity: 0.7;
             background-size: 100% 100%;
@@ -284,7 +284,7 @@ export default {
             }
           }
           &:nth-child(2) {
-            background: url("../../../assets/img/main/medium@3x.png") no-repeat;
+            background: url("../../../assets/img/main/medium@3x.svg") no-repeat;
             opacity: 0.7;
             background-size: 100% 100%;
             &:hover {
@@ -292,7 +292,7 @@ export default {
             }
           }
           &:nth-child(3) {
-            background: url("../../../assets/img/main/twitter@3x.png") no-repeat;
+            background: url("../../../assets/img/main/twitter@3x.svg") no-repeat;
             opacity: 0.7;
             background-size: 100% 100%;
             &:hover {
@@ -300,7 +300,7 @@ export default {
             }
           }
           &:nth-child(4) {
-            background: url("../../../assets/img/main/github@3x.png") no-repeat;
+            background: url("../../../assets/img/main/github@3x.svg") no-repeat;
             opacity: 0.7;
             background-size: 100% 100%;
             &:hover {
@@ -308,7 +308,7 @@ export default {
             }
           }
           &:nth-child(5) {
-            background: url("../../../assets/img/main/discord@3x.png") no-repeat;
+            background: url("../../../assets/img/main/discord@3x.svg") no-repeat;
             opacity: 0.7;
             background-size: 100% 100%;
             &:hover {
@@ -316,7 +316,7 @@ export default {
             }
           }
           &:nth-child(6) {
-            background: url("../../../assets/img/main/coinask@3x.png") no-repeat;
+            background: url("../../../assets/img/main/coinask@3x.svg") no-repeat;
             opacity: 0.7;
             background-size: 100% 100%;
             &:hover {
