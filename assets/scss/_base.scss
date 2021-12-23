@@ -4,7 +4,11 @@ body,html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+@media screen and (max-width: 1140px) {
+  body,html {
+    font-size: 12px !important;
+  }
+}
 .big-title {
   font-size: 40px;
   line-height: 1em;

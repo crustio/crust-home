@@ -11,31 +11,58 @@
       <div class="container main">
         <div id="global"></div>
         <div class="main-logo">
-          <p class="logo" v-html="$t('indexBanner.sub')"></p>
+          <div class="new-link">
+            <div class="new-link-box">{{ $t("indexBanner.new") }}</div>
+            <div class="new-link-info" @click="routeTo('enjoy_action')">
+              <span class="new-link-info-hover">{{
+                $t("indexBanner.newTitle")
+              }}</span>
+
+              <div v-html="icons[0]"></div>
+            </div>
+          </div>
+          <p
+            class="logo"
+            style="margin-top: 80px"
+            v-html="$t('indexBanner.sub')"
+          ></p>
+          <p class="logoMobile" v-html="$t('indexBanner.subMobile')"></p>
+          <!-- <p class="logo logo-sub" v-html="$t('indexBanner.subTitle')"></p> -->
           <div class="buttons">
-            <button class="btn-custom button-width" @click="crustMainnet">
+            <button class="btn-custom-yellow" @click="crustMainnet">
               {{ $t("Crust Mainnet") }}
             </button>
-            &nbsp;&nbsp;
             <button
-              class="btn-custom button-width"
+              class="btn-custom-common"
               @click="handleClick('crust maxwell')"
             >
               {{ $t("Crust Maxwell") }}
             </button>
+          </div>
+          <div class="system-point">
+            <div class="point-icon"><div></div></div>
+            <div
+              class="point-icon-txt"
+              v-html="$t('indexBanner.subInfo')"
+            ></div>
           </div>
           <div class="desc">
             <div class="capacity">
               <Capacity class="number" />
               <span class="unit">TB</span>
             </div>
-            <div class="intro">
+            <!-- <div class="intro">
               {{ $t("Globally distributed available storage capacity") }}
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
-      <div class="back">
+      <!-- <div class="waht-crust">
+        <div class="what-title">{{ $t("crustInfo.title") }}</div>
+        <div class="what-subTitle">{{ $t("crustInfo.subTitle") }}</div>
+      </div> -->
+
+      <!-- <div class="back">
         <div class="container description">
           <div class="description-left">
             <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
@@ -65,9 +92,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
-    <div class="container-fluid desc-mobile">
+    <!-- <div class="container-fluid desc-mobile">
       <div class="description">
         <div class="description-left">
           <p class="sub-title color-main">{{ $t("crust.sub") }}</p>
@@ -100,7 +127,7 @@
           class="swiper-pagination swiper-pagination-desc"
         ></div>
       </swiper>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -114,6 +141,7 @@ import * as TrackballControls from "../../static/script/TrackballControls"
 import dVideo from "../decentralized/dVideo"
 import DescCard from "./descCard"
 import Capacity from "./Capacity"
+import triangle from "@/assets/img/triangle.svg?raw"
 export default {
   components: {
     DescCard,
@@ -122,6 +150,7 @@ export default {
   },
   data() {
     return {
+      icons: [triangle],
       showVideo: false,
       iconPlay: IconPlay,
       swiperOptions: {
@@ -160,6 +189,9 @@ export default {
     globalScript.runGlobal(THREE)
   },
   methods: {
+    routeTo(url) {
+      jumpTo(url)
+    },
     handleDemoVideoClick() {
       this.showVideo = true
     },
@@ -222,52 +254,122 @@ export default {
   cursor: pointer;
   text-decoration: underline;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1140px) {
   .main-index {
     margin-top: -60px;
     width: 100%;
-    height: calc(100vh + 553px);
+    // height: calc(100vh + 553px);
     background-color: #141414;
     position: relative;
     overflow: hidden;
     .main {
       width: 100%;
-      height: 100vh;
+      height: 900px;
       position: relative;
       display: flex;
       align-items: center;
       flex-direction: row-reverse;
       justify-content: flex-end;
+      .new-link {
+        width: 520px;
+        margin-bottom: 80px;
+        height: 30px;
+
+        display: flex;
+        // align-items: center;
+        // padding: 10px 16px 8px 4px;
+        cursor: pointer;
+
+        .new-link-box {
+          width: 80px;
+          height: 30px;
+          line-height: 30px;
+          background: #fc7823;
+          border-radius: 5px 0px 0px 5px;
+          font-size: 14px;
+          font-family: Montserrat, "Source Han Sans CN";
+          font-weight: 400;
+          color: #ffffff;
+          text-align: center;
+          // margin-right: 15px;'
+          display: inline-block;
+        }
+        .new-link-info {
+          background: #343434;
+          height: 30px;
+          line-height: 30px;
+          font-size: 16px;
+          font-family: Montserrat, "Source Han Sans CN";
+          font-weight: 400;
+          color: #999999;
+          padding: 0 15px;
+          display: inline-block;
+          border-bottom-right-radius: 5px;
+          border-top-right-radius: 5px;
+          span {
+            &:first-child {
+              margin-right: 15px;
+            }
+          }
+          div {
+            display: inline-block;
+            width: 6px;
+            height: 11px;
+          }
+          .new-link-info-hover {
+            height: 11px;
+            font-size: 14px;
+            font-family: Montserrat, "Source Han Sans CN";
+            font-weight: 400;
+            color: #999999;
+          }
+        }
+
+        &:hover {
+          .new-link-info-hover {
+            text-decoration: underline;
+            color: #ffffff;
+            span {
+              text-decoration: none;
+            }
+          }
+        }
+      }
       .main-logo {
+        z-index: 9999;
         width: 50%;
         animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
         animation-duration: 0.5s; /* don't forget to set a duration! */
         .logo {
-          font-family: InterV_Semi-Bold;
-          font-size: 44px;
+          font-family: Montserrat-blod, "Source Han Sans CN-blod";
+          font-weight: bold;
+          font-size: 60px;
           color: #ffffff;
           letter-spacing: 0;
           text-align: left;
           line-height: 70px;
-          margin-bottom: 2rem;
-          width: 635px;
+          margin-bottom: 85px;
+          width: 630px;
+        }
+        .logoMobile {
+          display: none;
         }
         .desc {
-          padding: 22px 0 0 5px;
+          padding: 0px 0 0 5px;
           font-size: 14px;
-          font-family: InterV_Semi-Bold, InterV_Semi;
+          font-family: Montserrat;
           font-weight: bold;
           color: #ffffff;
           line-height: 2em;
-          margin-top: 20px;
+          // margin-top: 20px;
           .capacity {
-            font-family: "Orbitron", sans-serif;
+            font-family: Montserrat-blod, "Source Han Sans CN-blod";
             padding-bottom: 10px;
             .number {
-              font-size: 48px;
+              font-size: 60px;
             }
             .unit {
-              font-size: 24px;
+              font-size: 60px;
             }
             .intro {
               font-size: 18px;
@@ -277,10 +379,46 @@ export default {
         .buttons {
           display: flex;
           justify-content: flex-start;
+          .btn-custom-yellow {
+            width: 140px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fc7823;
+            border: 0;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: Montserrat-blod, "Source Han Sans CN-blod";
+            font-weight: bold;
+            color: #ffffff;
+            margin-right: 30px;
+          }
+          .btn-custom-common {
+            width: 200px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: Montserrat-blod, "Source Han Sans CN-blod";
+            font-weight: bold;
+            color: #ffffff;
+            background: none;
+            &:hover {
+              background: #ffffff;
+              border: 2px solid #ffffff;
+              color: #1f1f1f;
+              border-radius: 8px;
+            }
+          }
         }
       }
       #global {
-        margin-left: 40px;
+        margin-left: -220px;
+        margin-top: 65px;
       }
       .margin-left-25 {
         margin-left: 25px;
@@ -348,57 +486,185 @@ export default {
       display: none;
     }
   }
+
+  .system-point {
+    display: flex;
+    height: 20px;
+    align-items: center;
+    margin: 80px 0 37px;
+    .point-icon {
+      width: 16px;
+      height: 16px;
+      background: rgba(252, 120, 35, 0.5);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+        width: 8px;
+        height: 8px;
+        background: #fc7823;
+        border-radius: 50%;
+      }
+    }
+    .point-icon-txt {
+      margin-left: 16px;
+      height: 14px;
+      line-height: 14px;
+      font-size: 14px;
+      font-family: "Montserrat", "Source Han Sans CN";
+      font-weight: 400;
+      color: #ffffff;
+    }
+  }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1140px) {
+  html {
+    font-size: 12px !important;
+  }
   .main-index {
-    margin-top: -60px;
+    padding-top: 9rem;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     background-color: #141414;
     position: relative;
     overflow: hidden;
     .main {
       width: 100%;
-      height: 100vh;
+      // height: 100vh;
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      // justify-content: flex-end;
       align-items: center;
-      padding-bottom: 100px;
+      padding: 0;
+      padding-bottom:25px;
+      .new-link {
+        display: flex;
+        // align-items: center;
+        // padding: 10px 16px 8px 4px;
+        cursor: pointer;
+        width: 22rem;
+        height: 1.67rem;
+        background: #343434;
+        border-radius: 0px 5px 5px 0px;
+        margin-bottom: 6.25rem;
+        .new-link-box {
+          width: 2.86rem;
+          height: 1.67rem;
+          line-height: 1.67rem;
+          background: #fc7823;
+          border-radius: 5px 0px 0px 5px;
+          font-size: 10px;
+          font-family: Montserrat, "Source Han Sans CN";
+          font-weight: 400;
+          color: #ffffff;
+          text-align: center;
+          // margin-right: 15px;'
+          display: inline-block;
+        }
+        .new-link-info {
+          background: #343434;
+         width: 18.6rem;
+          height: 1.67rem;
+          font-size: 10/14rem;
+          font-family: Montserrat, "Source Han Sans CN";
+          font-weight: 400;
+          color: #999999;
+          padding-left:0.75rem;
+          display: inline-block;
+          border-bottom-right-radius: 5px;
+          border-top-right-radius: 5px;
+
+          span {
+            &:first-child {
+              margin-right: 0.5rem;
+            }
+          }
+          div {
+            display: inline-block;
+            width: 0.5rem;
+            height: 1.67rem;
+            line-height: 1.67rem;
+            vertical-align: super;
+          }
+          .new-link-info-hover {
+            display: inline-block;
+            width: 16.42rem;
+            font-size: 0.83rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-break: break-all; //英文换行
+            height: 1.67rem;
+          line-height: 1.67rem;
+            font-family: Montserrat, "Source Han Sans CN";
+            font-weight: 400;
+            color: #999999;
+          }
+        }
+
+        &:hover {
+          .new-link-info-hover {
+            text-decoration: underline;
+            color: #ffffff;
+            span {
+              text-decoration: none;
+            }
+          }
+        }
+      }
       .main-logo {
         width: 100%;
         display: flex;
         flex-direction: column;
         .logo {
-          font-family: InterV_Semi-Bold;
-          font-size: 24px;
+          display: none;
+          font-family: Montserrat-blod, "Source Han Sans CN-blod";
+          font-weight: bold;
           color: #ffffff;
           letter-spacing: 0;
           text-align: left;
-          line-height: 2.25rem;
           margin-bottom: 16px;
           opacity: 0.99;
+          width: 21.75rem;
+          height: 9.92rem;
+          font-size: 2.5rem;
+          line-height: 4rem;
+        }
+        .logoMobile {
+          font-family: Montserrat-blod, "Source Han Sans CN-blod";
+          font-weight: bold;
+          color: #ffffff;
+          letter-spacing: 0;
+          text-align: left;
+          margin-bottom:4.58rem;
+          opacity: 0.99;
+          width: 21.75rem;
+          height: 9.92rem;
+          font-size: 2.5rem;
+          line-height: 4rem;
         }
         .desc {
-          padding: 36px 0 0 5px;
+          padding: 11px 0 0 5px;
           font-size: 14px;
           font-weight: bold;
           color: #fff;
           line-height: 2em;
           z-index: 10;
           .capacity {
-            font-family: "Orbitron", sans-serif;
+            font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+              font-weight: bold;
             padding-bottom: 10px;
             .number {
-              font-size: 28px;
+             font-size: 2rem;
             }
             .unit {
-              font-size: 18px;
+             font-size: 2rem;
             }
             .intro {
-              font-size: 18px;
+           font-size: 2rem;
             }
           }
         }
@@ -416,11 +682,85 @@ export default {
         }
         .buttons {
           display: flex;
-          justify-content: flex-start;
-          opacity: 0.99;
+          flex-direction: column;
+          justify-content: center;
+          .btn-custom-yellow {
+            margin: 0 auto;
+            margin-bottom: 2rem;
+            width: 160px;
+            height: 3rem;
+            background: #fc7823;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fc7823;
+            border: 0;
+            border-radius: 5px;
+            font-size: 1.17rem;
+            font-family: Montserrat-blod, "Source Han Sans CN-blod";
+            font-weight: bold;
+            color: #ffffff;
+          }
+          .btn-custom-common {
+            margin: 0 auto;
+            width: 160px;
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: Montserrat-blod, "Source Han Sans CN-blod";
+            font-weight: bold;
+            color: #ffffff;
+            background: none;
+            &:hover {
+              background: #ffffff;
+              border: 2px solid #ffffff;
+              color: #1f1f1f;
+              border-radius: 8px;
+            }
+          }
+        }
+        .system-point {
+          display: flex;
+          height: 20px;
+          align-items: center;
+          margin-top:40px;
+          .point-icon {
+             flex-basis: 16px ;
+flex-shrink: 0 ;
+            height: 16px;
+            background: rgba(252, 120, 35, 0.5);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div {
+              width: 8px;
+              height: 8px;
+              background: #fc7823;
+              border-radius: 50%;
+            }
+          }
+          .point-icon-txt {
+            margin-left: 0.42rem;
+            line-height: 0.83rem;
+            font-family: "Montserrat", "Source Han Sans CN";
+            font-weight: 400;
+            color: #ffffff;
+            height: 0.83rem;
+             transform: scale(0.83);
+             transform-origin: 0 0;
+  font-size: 1rem;
+  white-space: nowrap;
+          }
         }
       }
       #global {
+        display: none;
         position: absolute;
         margin-left: 80px;
         top: -70px;
@@ -514,8 +854,13 @@ export default {
 }
 
 .container {
+  z-index: 9999;
   @media (min-width: 1270px) {
     max-width: 1270px;
   }
+}
+
+.waht-crust {
+  background: #fdf7f3;
 }
 </style>
