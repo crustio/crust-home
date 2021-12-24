@@ -69,7 +69,8 @@
             class="map-github"
             @click="routeTo('https://github.com/crustio')"
           >
-            <img src="../../../assets/img/main/github-w.png" alt="" />
+            <img class="map-pc" src="../../../assets/img/main/github-w.png" alt="" />
+            <img  class="map-mobile" src="../../../assets/img/main/github@3x.png" alt="" />
             {{ $t(`community.github`) }}
           </div>
         </div>
@@ -97,6 +98,172 @@ export default {
 </script>
 
 <style lang="scss">
+@media screen and (max-width: 1140px) {
+  .map-pc{
+    display: none !important;
+  }
+.map-crust {
+  background: #fdf7f3;
+  .map-crust-block {
+    padding-top: 38px;
+    margin: 0 auto;
+    padding-bottom: 98px;
+    .map-title {
+      margin: 77px auto 0;
+      // padding-bottom: 118px;
+      // display: flex;
+      // justify-content: space-between;
+      .map-title-title {
+        // width: 222px;
+        text-align: center;
+       height: 2rem;
+font-size: 2rem;
+        font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+        font-weight: bold;
+        color: #1f1f1f;
+        line-height:  2rem;
+        margin-bottom: 1.92rem;
+      }
+      .map-title-info {
+        text-align: center;
+        font-family: Montserrat, "Source Han Sans CN";
+        font-size: 0.83rem;
+font-family: Montserrat;
+font-weight: 400;
+color: #666666;
+line-height: 1.25rem;
+      }
+    }
+    .map-dev {
+     height: 1.33rem;
+font-size: 1.33rem;
+      font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+      font-weight: bold;
+      color: #1f1f1f;
+      line-height:1.33rem;
+      text-align: center;
+      margin-bottom: 2.67rem;
+    }
+    .map-content {
+      position: relative;
+      .map-content-item {
+        display: none;
+        position: absolute;
+        width: 210px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: #ffffff;
+        box-shadow: 0px 6px 5px 1px rgba(0, 0, 0, 0.05);
+        border-radius: 25px;
+        font-size: 16px;
+        font-family: Montserrat, "Source Han Sans CN";
+        font-weight: 500;
+        color: #1f1f1f;
+        cursor: pointer;
+        &:hover {
+          border: 1px solid #fc7823;
+          color: #fc7823;
+        }
+        &:nth-child(2) {
+          top: 239px;
+          left: 75px;
+        }
+        &:nth-child(3) {
+          top: 126px;
+          left: 528px;
+        }
+        &:nth-child(4) {
+          top: 181px;
+          left: 961px;
+        }
+        &:nth-child(5) {
+          top: 376px;
+          left: 885px;
+        }
+      }
+      img {
+       margin: 0 auto;
+       width: 23.33rem;
+height: 10.92rem;
+      }
+    }
+    .map-network-bottom {
+    
+      margin: 69px auto 0px;
+    }
+    .map-network {
+      .map-network-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &:first-child {
+          margin-bottom: 32px;
+        }
+        // padding-left: 50px;
+        .map-network-item-title {
+           margin: 0 auto;
+          cursor: pointer;
+        height: 1.25rem;
+font-size: 1.17rem;
+          font-family: "Montserrat-blod", "Source Han Sans CN";
+          font-weight: bold;
+          display: inline-block;
+          // text-decoration: underline;
+          border-bottom: 2px solid #fc7823;
+          padding-bottom: 3px;
+          color: #fc7823;
+          line-height: 1.25rem;
+          margin-bottom: 1rem;
+          font-style: italic;
+        }
+        .map-network-item-info {
+           margin: 0 auto;
+          font-family: Montserrat, "Source Han Sans CN";
+         width: 16.5rem;
+font-size: 0.83rem;
+font-weight: 400;
+color: #666666;
+line-height: 1.25rem;
+text-align: center;
+        }
+      }
+    }
+    .map-github {
+      cursor: pointer;
+      margin: 0 auto 0px;
+     width: 20rem;
+height: 3rem;
+border: 1px solid #FC7823;
+border-radius: 1rem;
+    font-size: 0.83rem;
+      font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+      font-weight: 400;
+      color: #FC7823;
+      line-height: 3rem;
+      text-align: center;
+      &:hover {
+        background: #ff6400;
+      }
+      div {
+        display: inline-block;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+      width: 1.75rem;
+height: 1.75rem;
+        margin-right:0.83rem;
+      }
+    }
+  }
+}
+}
+@media screen and (min-width: 1140px) {
+   .map-mobile{
+    display: none !important;
+  }
 .map-crust {
   background: #fdf7f3;
   .map-crust-block {
@@ -252,5 +419,6 @@ export default {
       }
     }
   }
+}
 }
 </style>

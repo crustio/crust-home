@@ -596,7 +596,7 @@ export default {
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            word-break: break-all; //Ëã±ÊñáÊç¢Ë°å
+            word-break: break-all; //”¢Œƒªª––
             height: 1.67rem;
           line-height: 1.67rem;
             font-family: Montserrat, "Source Han Sans CN";

@@ -24,13 +24,13 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <template v-for="item in navList">
-            
+
             <!-- <img v-if="item.name === 'lang'&&$store.state.locale ==='zh'" class="contryImg" src="../assets/images/china-48.png" alt="" :key="item.name">
             <img v-if="item.name === 'lang'&&$store.state.locale ==='en'" class="contryImg" src="../assets/images/great-britain-48.png" alt="" :key="item.name"> -->
             <b-nav-item-dropdown
               v-if="item.hasChild"
               :key="item.name"
-              :html="item.name === 'lang' ? locale : $t(`header.${item.name}`)"
+              :text="item.name === 'lang' ? locale : $t(`header.${item.name}`)"
               :class="{
                 active:
                   item.children
@@ -41,7 +41,7 @@
               right
               :style="{'padding-left':item.name === 'lang'?'57px':'64px'}"
             >
-            
+
               <template v-for="child in item.children">
                 <b-dropdown-item :key="child" href="#" @click="jump(child)">
             <!-- <span v-if="child ==='EN'&&item.name === 'lang'" class="en"></span>
@@ -67,10 +67,10 @@
               right
               :style="{'padding-left':'64px'}"
             >
-            
-            
+
+
                 <b-dropdown-item  href="#" @click="jump(child)">
-           
+
             <span class="zh"></span>中文</b-dropdown-item>
             <span class="en"></span>EN</b-dropdown-item>
             </b-nav-item-dropdown> -->
@@ -143,7 +143,7 @@ export default {
     this.$nextTick(()=>{
  this.local=true
     })
-   
+
   },
   computed: {
     routerName() {
@@ -154,7 +154,7 @@ export default {
       return name
     },
     locale() {
-      return this.$store.state.locale === "zh" ? `中文` :`EN`
+      return this.$store.state.locale === "zh" ? "中文" : "EN"
       // return this.$store.state.locale === "zh" ? `<span class="zh-logo"><span>中文` :`<span class="en-logo"><span>EN`
     },
   },
@@ -181,20 +181,18 @@ export default {
       }
       if (name === "ecowhitepaper") {
         let economicPaperurl =
-          "https://ipfs-hk.decoo.io/ipfs/Qmdy2Hqdxoq2PuAkvoDZ5SqYjAKym58Gh39Lm5gPChyHwL"
+          "https://gw.crustapps.net/ipfs/Qmdy2Hqdxoq2PuAkvoDZ5SqYjAKym58Gh39Lm5gPChyHwL"
         if (!isZh) {
           name += "_en"
           economicPaperurl =
-            "https://ipfs-hk.decoo.io/ipfs/QmRYJN6V5BzwnXp7A2Avcp5WXkgzyunQwqP3Es2Q789phF"
+            "https://gw.crustapps.net/ipfs/QmRYJN6V5BzwnXp7A2Avcp5WXkgzyunQwqP3Es2Q789phF"
         }
         return window.open(`${economicPaperurl}`, "_blank")
       }
       if (name === "whitepaper") {
-        if (!isZh) {
-          name += "_en"
+        const url = !isZh ? "https://gw.crustapps.net/ipfs/QmP9WqDYhreSuv5KJWzWVKZXJ4hc7y9fUdwC4u23SmqL6t" : "https://gw.crustapps.net/ipfs/QmPrU21TrRtWcrWsNmHfBmSvTKZApKCEZrDGncnheMGKsj"
+        return window.open(`${url}`, "_blank")
         }
-        return window.open(`${outerDit.pdfBucket}${name}.pdf`, "_blank")
-      }
       if (name === "crust solutions handbook") {
         const pdfName = !isZh
           ? "crust_solutions_handbook-en.pdf"
@@ -205,14 +203,14 @@ export default {
         return window.open("https://medium.com/crustnetwork/", "_blank")
       }
       if (name === "csm lightpaper") {
-        // https://ipfs-hk.decoo.io/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=LT%20paper.(ZH).1_compressed.pdf
+        // https://gw.crustapps.net/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=LT%20paper.(ZH).1_compressed.pdf
         const url = !isZh
           ? outerDit.csm_lightpaper_en
           : outerDit.csm_lightpaper_zh
         return window.open(url, "_blank")
       }
        if (name === "wiki") {
-         
+
         name = isZh ? name + "_zh" : name+"_en"
         console.log(name)
         return jumpTo(name)

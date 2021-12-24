@@ -171,6 +171,138 @@ export default {
 </script>
 
 <style lang="scss">
+@media screen and (max-width: 1140px) {
+.latest-crust {
+  background: #fdf7f3;
+  .latest-crust-block {
+    padding-top: 72px;
+    margin: 0 auto;
+    padding-bottom: 72px;
+    .latest-title {
+      text-align: center;
+      margin: 73px 0 52px;
+   font-size: 2rem;
+      font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+      font-weight: bold;
+      color: #1f1f1f;
+      line-height: 2rem;
+    }
+    .latest-item {
+      .latest-item-box {
+        cursor: pointer;
+        margin: 0 auto;
+      width: 23.33rem;
+height: 19.58rem;
+        background: #fffcfa;
+        box-shadow: 0px 5px 5px 0px rgba(4, 0, 0, 0.02);
+        border-radius: 15px;
+        padding: 15px;
+        .latest-item-bg {
+          display: flex;
+          align-items: center;
+       height: 13.33rem;
+          img {
+         width: 20rem;
+
+border-radius: 1rem;
+          }
+        }
+        .latest-item-text {
+          height: 0.83rem;
+       font-size: 0.83rem;
+          font-family: Montserrat, "Source Han Sans CN";
+          font-weight: 400;
+          color: #1f1f1f;
+          line-height: 0.83rem;
+          margin-bottom: 0.83rem;
+        }
+        .latest-item-title {
+         width: 15rem;
+          font-size: 1.17rem;
+          font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+          font-weight: bold;
+          color: #fc7823;
+          line-height:1.17rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          word-break: break-all; //英文换行
+        }
+      }
+    }
+    .latest-email {
+      margin-top: 54px;
+      width: 1234px;
+      height: 200px;
+      border-radius: 10px;
+      background: url("../../../assets/img/8-foot/bg.png") no-repeat;
+      background-size: 100% 100%;
+      padding-top: 33px;
+      .latest-email-title {
+        text-align: center;
+        height: 30px;
+        font-size: 30px;
+        font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+        font-weight: bold;
+        color: #ffffff;
+        line-height: 30px;
+      }
+      .latest-email-subtitle {
+        text-align: center;
+        height: 18px;
+        font-size: 18px;
+        font-family: Montserrat, "Source Han Sans CN";
+        font-weight: 400;
+        color: #ffffff;
+        line-height: 18px;
+        margin: 8px 0 32px;
+      }
+      .latest-email-form {
+        display: flex;
+        justify-content: center;
+        input {
+          width: 480px;
+          height: 46px;
+          background: #fdf7f3;
+          border-radius: 8px;
+          padding-left: 26px;
+          font-size: 18px;
+          font-family: Montserrat, "Source Han Sans CN";
+          font-weight: 400;
+          line-height: 46px;
+          border: 0;
+        }
+        .latest-email-form-button {
+          width: 200px;
+          height: 46px;
+          background: #fc7823;
+          border-radius: 8px;
+          font-size: 18px;
+          font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+          font-weight: bold;
+          color: #ffffff;
+          line-height: 46px;
+          text-align: center;
+          margin-left: 46px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          &:hover {
+            background: #ff6400;
+          }
+          img {
+            width: 21px;
+            height: 21px;
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+}
+@media screen and (min-width: 1140px) {
 .latest-crust {
   background: #fdf7f3;
   .latest-crust-block {
@@ -308,5 +440,6 @@ export default {
       }
     }
   }
+}
 }
 </style>

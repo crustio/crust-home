@@ -27,7 +27,7 @@
       <div class="using-pc swiperbox">
         <swiper
           class="swiper"
-          ref="swiper"
+         ref="mySwiper"
           v-if="swiperVisable"
           :options="swiperOptions2"
         >
@@ -69,7 +69,7 @@
         </swiper>
       </div>
       <div class="using-pc using-trun usecase-prev2">
-        <div v-html="icons[0]"></div>
+         <img src="../../../assets/img/arrow.svg" alt="" />
       </div>
       <div class="using-pc using-transition usecase-next2">
         <img src="../../../assets/img/arrow@3x.png" alt="" />
@@ -138,8 +138,10 @@ export default {
       swiperOptions2: {
         loop: true,
         slidesPerView: "auto",
-        autoplay: true,
-        // spaceBetween: 10,
+        autoplay: {
+    disableOnInteraction: false,
+  },
+          initialSlide :1,
         centeredSlides: false,
         centeredSlidesBounds: false,
         navigation: {
@@ -204,20 +206,20 @@ export default {
             {
               img: require(`../../../assets/img/5-Who are using Crust/Severless Dapp/ipfs.png`),
               title: "dapp4",
-              button: "learn",
+              button: "vist",
               style: "width: 125px;height: 50px;",
               url: "https://docs.ipfs.io/",
               createUrl:
-                "https://medium.com/crustnetwork/decentralized-websites-with-ipfs-and-crust-9435b5810ae1",
+                "https://docs.ipfs.io/concepts/persistence/#pinning-services",
             },
             {
               img: require(`../../../assets/img/5-Who are using Crust/Severless Dapp/Liquity@3x.png`),
               title: "dapp5",
-              button: "learn",
+              button: "vist",
               style: "width: 173px;height: 40px;",
               url: "https://www.liquity.org/",
               createUrl:
-                "https://medium.com/crustnetwork/decentralized-websites-with-ipfs-and-crust-9435b5810ae1",
+                "https://www.liquity.org/",
             },
           ],
         },
@@ -398,16 +400,23 @@ export default {
       ],
     }
   },
+   computed: {
+      swiper() {
+        return this.$refs.mySwiper.$swiper
+      }
+    },
   methods: {
     routeTo(url) {
       window.open(url, "_blank")
     },
     setActiveTab(index) {
-      this.$refs["using-content"].scrollLeft = 0
       this.activeTab = index
       this.active = 1
       this.$nextTick(()=>{
- this.$refs.swiper.slideTo(0, 1000, false)
+         console.log('Current Swiper instance object', this.swiper)
+            this.swiper.slideToLoop(0, 1000, false)
+        this.swiper.update()
+       
       })
      
     },
@@ -528,7 +537,7 @@ position: relative;
           display: flex;
           justify-content: center;
           align-items: center;
-          div {
+          img {
             width: 20px;
             height: 20px;
             pointer-events: none;
@@ -570,7 +579,7 @@ position: relative;
     .swiper {
       width: 1140px;
       height: 400px;
-       --swiper-pagination-color: #fc7823;/* 两种都可以 */
+       --swiper-pagination-color: #fc7823;/* ���ֶ����� */
     }
     .swiper-pagination{
       bottom: 10px;
@@ -715,7 +724,7 @@ line-height: 1.25rem;
        .swiper {
       height: 27rem;
       width: 26.67rem;
-       --swiper-pagination-color: #fc7823;/* 两种都可以 */
+       --swiper-pagination-color: #fc7823;/* ���ֶ����� */
     }
     .swiper-pagination{
       bottom: 10px;

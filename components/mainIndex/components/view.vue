@@ -4,11 +4,11 @@
     <experience></experience>
     <startCode></startCode>
     <Polkadot></Polkadot>
-   <platform></platform>
-     <who></who>
- <timeLine></timeLine>
+    <platform></platform>
+    <who></who>
+    <timeLine></timeLine>
     <community></community>
-   <providers></providers>
+    <providers></providers>
     <backed></backed>
     <blogs></blogs>
     <foot></foot>

@@ -200,23 +200,7 @@ export default {
 
 <style lang="scss">
 @media screen and (max-width: 1140px) {
-  .swiper-slide {
-				-webkit-transition: transform 1.0s;
-				-moz-transition: transform 1.0s;
-				-ms-transition: transform 1.0s;
-				-o-transition: transform 1.0s;
-				-webkit-transform: scale(0.7);
-				transform: scale(0.7);
-			}
-			.swiper-slide-active,.swiper-slide-duplicate-active {
-				-webkit-transform: scale(1);
-				transform: scale(1);
-			}
-        .image-wrapper{
-          width: 33.3%;
-      height: 28.6rem;
-      padding-top: 4.5rem;
-      }
+ 
   .time-pc{
     display: none!important;
   }
@@ -248,6 +232,23 @@ height: 6.67rem;
 background: #FC7823;
 border-radius: 1rem;
 }
+ .swiper-slide {
+				-webkit-transition: transform 1.0s;
+				-moz-transition: transform 1.0s;
+				-ms-transition: transform 1.0s;
+				-o-transition: transform 1.0s;
+				-webkit-transform: scale(0.7);
+				transform: scale(0.7);
+			}
+			.swiper-slide-active,.swiper-slide-duplicate-active {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+        .image-wrapper{
+          width: 33.3%;
+      height: 28.6rem;
+      padding-top: 4.5rem;
+      }
       .time-line-bottom {
         margin-top: 51px;
         .time-line-bottom-title {

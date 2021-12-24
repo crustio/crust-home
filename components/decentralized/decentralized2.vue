@@ -234,10 +234,7 @@ export default {
       window.open(address, "_blank")
     },
     handleBuildOnCrust() {
-      const location =
-        this.$store.state.locale === "en"
-          ? "https://wiki.crust.network/docs/en/buildGettingStarted"
-          : "https://wiki.crust.network/docs/zh-CN/buildGettingStarted"
+      const location = 'https://wiki.crust.network/docs/en/build101'
       window.open(location, "_blank")
     },
     handleHandbookClick() {

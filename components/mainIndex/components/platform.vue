@@ -57,11 +57,11 @@
       </swiper>
          <div class="swiper-tool">
            <div class="platform-trun usecase-prev">
-            <div v-html="icons[0]"></div>
+             <img src="../../../assets/img/arrow.svg" alt="" />
           </div>
          
           <div class=" platform-transition usecase-next">
-            <img src="../../../assets/img/arrow@3x.png" alt="" />
+            <img src="../../../assets/img/arr_right.svg" alt="" />
           </div>
         </div>
     </div>
@@ -70,9 +70,6 @@
      
 <script>
 var timer
-import jumpTo from "../../../utils"
-import arrow from "@/assets/img/arrow.svg?raw"
-import triangle from "@/assets/img/triangle.svg?raw"
 export default {
   data() {
     return {
@@ -106,7 +103,6 @@ export default {
         //   },
         // },
       },
-      icons: [arrow, triangle],
       active: 1,
       listData: [
         {
@@ -247,7 +243,7 @@ export default {
           display: flex;
           justify-content: center;
           align-items: center;
-          div {
+          img {
             width: 20px;
             height: 20px;
           }
