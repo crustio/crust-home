@@ -1,7 +1,7 @@
 <template>
   <div id="content" class="main">
     <mainIndex class="item" />
-   <!-- <decentralized class="item" />
+    <!-- <decentralized class="item" />
      <Usecase class="item" />
     <Blogs class="item" />
     <timeline class="item" />
@@ -26,26 +26,36 @@ export default {
     partners,
     Usecase,
     Blogs,
-    mainPage
+    mainPage,
   },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .main {
   .item {
     /*padding: 30px;*/
   }
-  @media screen and (min-width: 1140px){
-    html{
+  @media screen and (min-width: 1140px) {
+    html {
       font-size: 12px;
     }
-     .mainpage{
-        position: absolute;
-    width: 100%;
-    top: 900px;
+    .mainpage {
+      position: absolute;
+      width: 100%;
+      top: 900px;
+    }
   }
-  }
- 
+
 }
+  @media screen and (max-width: 1140px) and (min-width: 640px) {
+    html {
+      font-size: 24px !important;
+    }
+  }
+  @media screen and (max-width: 640px) and (min-width: 320px) {
+    html {
+      font-size: 12px !important;
+    }
+  }
 </style>

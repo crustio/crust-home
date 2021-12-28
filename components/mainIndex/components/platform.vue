@@ -374,16 +374,17 @@ export default {
 .platform-crust {
   background: #fdf7f3;
   .platform-crust-block {
-    padding-top: 72px;
+    padding-top: 3.33rem;
     margin: 0 auto;
     position: relative;
     // height: 1247px;
     .platform-top {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 56px;
+       width: 23.33rem;
+           margin: 0 auto 2rem;
       .platform-title {
+         
      height: 1.5rem;
+ 
 font-size: 1.5rem;
         line-height:1.5rem;
         font-family: "Montserrat-blod", "Source Han Sans CN-blod";
@@ -449,7 +450,7 @@ font-size: 1.5rem;
       }
     .swiper {
       // width: 1140px;
-      height: 27rem;
+      height: 28rem;
       width: 26.67rem;
        --swiper-pagination-color: #fc7823;
     }
@@ -482,14 +483,13 @@ border-radius: 1rem;
         // }
 
         .platform-content-item-logo {
-          margin: 30px auto 0;
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 50px;
+          height: 7.83rem;
           img {
-            height: 50px;
-            max-width: 248px;
+            height: 2.5rem;
+            max-width: 23.33rem;
             cursor: pointer;
           }
         }
@@ -504,7 +504,7 @@ border-radius: 1rem;
         .platform-content-item-info {
           margin: 0 auto;
           // width: 270px;
-          height: 8.33rem;
+          height: 8.83rem;
           display: flex;
           align-items: center;
           padding: 0 0.92rem;

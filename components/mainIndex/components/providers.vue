@@ -88,13 +88,9 @@ export default {
     background: #fdf7f3;
     .providers-crust-block {
       margin: 0 auto;
-      padding-bottom: 60px;
       .providers-item {
-        padding-top: 6px;
 
-        //     &:first-child{
-        // margin-bottom: 6px;
-        //     }
+         
         // &:last-child{
         //   .providers-item-info{
         //     padding-left: 44px;
@@ -110,6 +106,9 @@ export default {
           }
         }
         .providers-item-info {
+             &:first-child{
+        margin-bottom: 3.42rem;
+            }
           .providers-item-info-title {
             font-size: 1.33rem;
             font-family: "Montserrat-blod", "Source Han Sans CN-blod";
@@ -125,7 +124,7 @@ export default {
             font-family: Montserrat, "Source Han Sans CN";
             font-weight: 400;
             color: #666;
-            margin: 0 auto;
+            margin: 0.83rem auto 1.67rem;
           }
           .providers-item-info-bitton {
             margin: 0 auto;
@@ -138,10 +137,12 @@ export default {
             font-family: "Montserrat-blod", "Source Han Sans CN-blod";
             font-weight: 500;
             color: #fc7823;
-            line-height: 3rem;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             &:hover {
               background: #ff6400;
+              color:#fff;
             }
           }
         }

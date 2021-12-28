@@ -326,7 +326,7 @@ export default {
   .experience-crust {
   background: #fdf7f3;
   .experience-crust-block {
-    padding-top: 112px;
+    padding-top: 6.58rem;
     margin: 0 auto;
     // width: 1140px;
     // height: 1247px;
@@ -346,7 +346,7 @@ color: #1F1F1F;
     .experience-swiper {
  --swiper-pagination-color: #fc7823;
       .image-wrapper{
-      height: 28.6rem;
+      height: 30.6rem;
       padding-top: 4.5rem;
       }
       .experience-item-block {
@@ -415,29 +415,29 @@ line-height: 1.25rem;
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 160px;
-          height: 36px;
-          line-height: 36px;
-          border: 2px solid #fc7823;
-          border-radius: 8px;
+        width: 10.67rem;
+height: 3rem;
+          line-height:  3rem;
+          border:0.17rem solid #fc7823;
+          border-radius: 1rem;
           text-align: center;
-          font-size: 14px;
+          font-size: 0.83rem;
           font-family: "Montserrat-blod", "Source Han Sans CN-blod";
           font-weight: bold;
           color: #fc7823;
           span {
-            margin-left: 12px;
-            font-size: 12px;
+            margin-left: 0.75rem;
+            font-size: 1rem;
           }
           &:hover {
             background: #fc7823;
-            border: 2px solid #fc7823;
+            border: 0.17rem solid #fc7823;
             color: #ffffff;
           }
         }
         .experience-item-create {
-          margin-top: 18px;
-          font-size: 11px;
+          margin-top: 1rem;
+          font-size: 0.83rem;
           text-align: right;
         }
       }

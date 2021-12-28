@@ -34,7 +34,7 @@
             </button>
             <button
               class="btn-custom-common"
-              @click="handleClick('crust maxwell')"
+              @click="crustMacell()"
             >
               {{ $t("Crust Maxwell") }}
             </button>
@@ -219,6 +219,9 @@ export default {
         window.open(outerDit.crust_mainnet_zh, "_blank")
       }
     },
+     crustMacell() {
+     window.open(outerDit['crust maxwellIndex'], "_blank")
+    },
     handleClick(name) {
       if (this.$store.state.locale === "en") {
         name += "_en"
@@ -341,7 +344,7 @@ export default {
         animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
         animation-duration: 0.5s; /* don't forget to set a duration! */
         .logo {
-          font-family: Montserrat-blod, "Source Han Sans CN-blod";
+          font-family: 'Montserrat-blod', "Source Han Sans CN-blod";
           font-weight: bold;
           font-size: 60px;
           color: #ffffff;
@@ -520,9 +523,7 @@ export default {
 }
 
 @media screen and (max-width: 1140px) {
-  html {
-    font-size: 12px !important;
-  }
+ 
   .main-index {
     padding-top: 9rem;
     width: 100%;
@@ -596,7 +597,7 @@ export default {
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            word-break: break-all; //Ó¢ÎÄ»»ÐÐ
+            word-break: break-all; //Ó¢ï¿½Ä»ï¿½ï¿½ï¿½
             height: 1.67rem;
           line-height: 1.67rem;
             font-family: Montserrat, "Source Han Sans CN";
@@ -621,27 +622,27 @@ export default {
         flex-direction: column;
         .logo {
           display: none;
-          font-family: Montserrat-blod, "Source Han Sans CN-blod";
+          font-family: 'Montserrat-blod', "Source Han Sans CN-blod";
           font-weight: bold;
           color: #ffffff;
           letter-spacing: 0;
           text-align: left;
           margin-bottom: 16px;
           opacity: 0.99;
-          width: 21.75rem;
+          width: 23.33rem;
           height: 9.92rem;
           font-size: 2.5rem;
           line-height: 4rem;
         }
         .logoMobile {
-          font-family: Montserrat-blod, "Source Han Sans CN-blod";
+          font-family: 'Montserrat-blod', "Source Han Sans CN-blod";
           font-weight: bold;
           color: #ffffff;
           letter-spacing: 0;
           text-align: left;
           margin-bottom:4.58rem;
           opacity: 0.99;
-          width: 21.75rem;
+          width: 23.33rem;
           height: 9.92rem;
           font-size: 2.5rem;
           line-height: 4rem;
@@ -687,32 +688,30 @@ export default {
           .btn-custom-yellow {
             margin: 0 auto;
             margin-bottom: 2rem;
-            width: 160px;
-            height: 3rem;
-            background: #fc7823;
-            border-radius: 8px;
+        width: 13.33rem;
+height: 3rem;
+background: #FC7823;
+border-radius: 1rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #fc7823;
             border: 0;
-            border-radius: 5px;
             font-size: 1.17rem;
-            font-family: Montserrat-blod, "Source Han Sans CN-blod";
+            font-family: "Montserrat-blod", "Source Han Sans CN-blod";
             font-weight: bold;
             color: #ffffff;
           }
           .btn-custom-common {
             margin: 0 auto;
-            width: 160px;
-            height: 3rem;
+          width: 13.33rem;
+height: 3rem;
+border:0.17rem  solid #FFFFFF;
+border-radius: 1rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 2px solid #ffffff;
-            border-radius: 5px;
-            font-size: 16px;
-            font-family: Montserrat-blod, "Source Han Sans CN-blod";
+            font-size: 1.17rem;
+            font-family: "Montserrat-blod", "Source Han Sans CN-blod";
             font-weight: bold;
             color: #ffffff;
             background: none;

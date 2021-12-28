@@ -8,12 +8,15 @@
             <div class="backed-item-bg"></div>
           </div>
         </div>
-        <swiper class="experience-swiper backed-mobile" :options="swiperOptions">
+        <swiper class="backed-swiper backed-mobile" :options="swiperOptions">
           <swiper-slide
-           v-for="item in 18" :key="item"
-            class="backed-item-img"
+            v-for="(item,index) in logoArr"
+            :key="index"
+            class="backed-swiper-slide"
           >
-          <div class="backed-item-bg"></div>
+            <div class="backed-item-img">
+              <img :src="item.img"  alt="">
+            </div>
           </swiper-slide>
           <div slot="pagination" class="swiper-pagination"></div>
         </swiper>
@@ -29,11 +32,72 @@ export default {
       swiperOptions: {
         loop: true,
         slidesPerView: "auto",
-        // autoplay:true,
+        autoplay:true,
         // spaceBetween: 10,
         centeredSlides: false,
         centeredSlidesBounds: false,
+        // pagination: {
+        //   el: ".swiper-pagination",
+        // },
       },
+      logoArr:[
+        {
+          img: require(`../../../assets/img/7-Strong investor backing/W3.png`),
+          style: "width: 7.25rem;height: 2.5rem;",
+        },
+         {
+          img: require(`../../../assets/img/7-Strong investor backing/substrate.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/DFG@3x.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/NGC@3x.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/HASH@3x.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/SevenX@3x.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/IOSG@3x.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/Bitcoin.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/比升资本.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/CHAIN.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        },{
+          img: require(`../../../assets/img/7-Strong investor backing/bitscale@3x.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/AU21.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/SNZ.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/3Commas@3x.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/共识实验室.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/orgin.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/太和资本.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        }, {
+          img: require(`../../../assets/img/7-Strong investor backing/水滴资本.png`),
+          style: "width: 7.25rem;height: 2.5rem;"
+        },
+      ]
     }
   },
   methods: {},
@@ -52,165 +116,176 @@ export default {
       margin: 0 auto;
       .backed-title {
         text-align: center;
-      height: 2rem;
-font-size: 2rem;
+        height: 2rem;
+        font-size: 2rem;
         font-family: "Montserrat-blod", "Source Han Sans CN-blod";
         font-weight: bold;
         color: #1f1f1f;
         line-height: 2rem;
       }
-        .backed-item-img {
-          width: 8.5rem;
-          height: 4rem;
-          border-radius: 15px;
-          margin-bottom: 25px;
-          border: 1px solid #e2e2e2;
-          margin-right: 34px;
-          &:nth-child(5n) {
-            margin-right: 0;
-          }
+      .backed-swiper {
+        height: 9.58rem;
+        --swiper-pagination-color: #fc7823;
+      }
+      .backed-item-img {
+        width: 8.5rem;
+        height: 4rem;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        img{
+          height: 2.5rem;
+          max-width: 8.5rem;
+        }
+      }
+      .backed-swiper-slide {
+          height: 9.58rem;
           display: flex;
+          align-items: center;      
           justify-content: center;
-          align-items: center;
-          overflow: hidden;
+        width: 50%;
+        &:nth-child(5n) {
+          margin-right: 0;
+        }
 
-          &:nth-child(1) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/W3.png")
-                no-repeat center;
-              background-size: 146px 50px;
-            }
-          }
-          &:nth-child(2) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/substrate.png")
-                no-repeat center;
-              background-size: 184px 40px;
-            }
-          }
-          &:nth-child(3) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/DFG@3x.png")
-                no-repeat center;
-              background-size: 139px 51px;
-            }
-          }
-          &:nth-child(4) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/NGC@3x.png")
-                no-repeat center;
-              background-size: 127px 41px;
-            }
-          }
-          &:nth-child(5) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/HASH@3x.png")
-                no-repeat center;
-              background-size: 154px 16px;
-            }
-          }
-          &:nth-child(6) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/SevenX@3x.png")
-                no-repeat center;
-              background-size: 148px 40px;
-            }
-          }
-          &:nth-child(7) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/IOSG@3x.png")
-                no-repeat center;
-              background-size: 110px 51px;
-            }
-          }
-          &:nth-child(8) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/Bitcoin.png")
-                no-repeat center;
-              background-size: 170px 24px;
-            }
-          }
-          &:nth-child(9) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/比升资本.png")
-                no-repeat center;
-              background-size: 77px 55px;
-            }
-          }
-          &:nth-child(10) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/CHAIN.png")
-                no-repeat center;
-              background-size: 93px 80px;
-            }
-          }
-
-          &:nth-child(11) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/bitscale@3x.png")
-                no-repeat center;
-              background-size: 127px 49px;
-            }
-          }
-          &:nth-child(12) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/AU21.png")
-                no-repeat center;
-              background-size: 170px 28px;
-            }
-          }
-
-          &:nth-child(13) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/SNZ.png")
-                no-repeat center;
-              background-size: 89px 48px;
-            }
-          }
-
-          &:nth-child(14) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/3Commas@3x.png")
-                no-repeat center;
-              background-size: 140px 35px;
-            }
-          }
-          &:nth-child(15) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/共识实验室.png")
-                no-repeat center;
-              background-size: 168px 44px;
-            }
-          }
-
-          &:nth-child(16) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/orgin.png")
-                no-repeat center;
-              background-size: 107px 85px;
-            }
-          }
-          &:nth-child(17) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/太和资本.png")
-                no-repeat center;
-              background-size: 145px 43px;
-            }
-          }
-          &:nth-child(18) {
-            .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/水滴资本.png")
-                no-repeat center;
-              background-size: 49px 90px;
-            }
-          }
-
+        &:nth-child(1) {
           .backed-item-bg {
-            width: 184px;
-            height: 86px;
+            background: url("../../../assets/img/7-Strong investor backing/W3.png")
+              no-repeat center;
+            background-size: 146px 50px;
           }
         }
-      
+        &:nth-child(2) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/substrate.png")
+              no-repeat center;
+            background-size: 184px 40px;
+          }
+        }
+        &:nth-child(3) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/DFG@3x.png")
+              no-repeat center;
+            background-size: 139px 51px;
+          }
+        }
+        &:nth-child(4) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/NGC@3x.png")
+              no-repeat center;
+            background-size: 127px 41px;
+          }
+        }
+        &:nth-child(5) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/HASH@3x.png")
+              no-repeat center;
+            background-size: 154px 16px;
+          }
+        }
+        &:nth-child(6) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/SevenX@3x.png")
+              no-repeat center;
+            background-size: 148px 40px;
+          }
+        }
+        &:nth-child(7) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/IOSG@3x.png")
+              no-repeat center;
+            background-size: 110px 51px;
+          }
+        }
+        &:nth-child(8) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/Bitcoin.png")
+              no-repeat center;
+            background-size: 170px 24px;
+          }
+        }
+        &:nth-child(9) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/比升资本.png")
+              no-repeat center;
+            background-size: 77px 55px;
+          }
+        }
+        &:nth-child(10) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/CHAIN.png")
+              no-repeat center;
+            background-size: 93px 80px;
+          }
+        }
+
+        &:nth-child(11) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/bitscale@3x.png")
+              no-repeat center;
+            background-size: 127px 49px;
+          }
+        }
+        &:nth-child(12) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/AU21.png")
+              no-repeat center;
+            background-size: 170px 28px;
+          }
+        }
+
+        &:nth-child(13) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/SNZ.png")
+              no-repeat center;
+            background-size: 89px 48px;
+          }
+        }
+
+        &:nth-child(14) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/3Commas@3x.png")
+              no-repeat center;
+            background-size: 140px 35px;
+          }
+        }
+        &:nth-child(15) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/共识实验室.png")
+              no-repeat center;
+            background-size: 168px 44px;
+          }
+        }
+
+        &:nth-child(16) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/orgin.png")
+              no-repeat center;
+            background-size: 107px 85px;
+          }
+        }
+        &:nth-child(17) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/太和资本.png")
+              no-repeat center;
+            background-size: 145px 43px;
+          }
+        }
+        &:nth-child(18) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/水滴资本.png")
+              no-repeat center;
+            background-size: 49px 90px;
+          }
+        }
+
+        .backed-item-bg {
+          width: 184px;
+          height: 86px;
+        }
+      }
     }
   }
 }

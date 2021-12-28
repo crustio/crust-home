@@ -96,8 +96,8 @@
   },
   "indexBanner": {
     "title": "Crust",
-    "sub": "Crust Network ,<br/>Web3.0去中心化存储 为元宇宙构建",
-    "subMobile": "Crust Network ,<br/>Web3.0去中心化存储 为元宇宙构建",
+    "sub": "Crust Network ,<br/>Web3.0去中心化存储为元宇宙构建",
+    "subMobile": "Crust Network ,<br/>Web3.0去中心化存储为元宇宙构建",
     "subTitle": "Web3.0去中心化存储 为元宇宙构建",
     "subInfo":"全球分布的可用存储容量",
     "contentLink1": "源代码",
@@ -616,6 +616,7 @@
   "community":{
     "title":"<span style='color:#FC7823'>Crust</span>  社区",
     "subTitle":"Crust是由DCF（去中心化云基金会）支持和资助的开源项目。在Crust之外，DCF也支持了多个相关技术栈的开源项目，Encrypted IPFS即是其中之一。<br/>目前，Crust由分布全球的多个技术社区团队进行开发和维护。",
+    "subTitle_mobile":"Crust是由DCF（去中心化云基金会）支持和资助的开源项目。在Crust之外，DCF也支持了多个相关技术栈的开源项目，Encrypted IPFS即是其中之一。目前，Crust由分布全球的多个技术社区团队进行开发和维护。",
     "dev":"开发团队",
     "team1":"Sediment-tech 团队",
     "team2":"Switchswap 团队",

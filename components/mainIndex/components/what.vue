@@ -151,14 +151,15 @@ export default {
   .what-crust {
     background: #fdf7f3;
     .what-block {
-      padding-top: 72px;
+      padding-top: 2.67rem;
       margin: 0 auto;
       // width: 1240px;
       // height: 1247px;
       width: 100%;
       .what-title {
-        margin: 0px auto 30px;
-        height: 19px;
+        margin: 0px auto 1.92rem;
+        height: 2rem;
+        line-height: 2rem;
         font-size: 2rem;
         font-family: "Montserrat-blod", "Source Han Sans CN-blod";
         font-weight: bold;
@@ -171,34 +172,30 @@ export default {
       .what-subTitleMobile {
         margin: 0 auto;
         width: 100%;
-        padding: 0 20px;
+        padding: 0 1.67rem;
         font-family: 'Montserrat', "Source Han Sans CN";
         font-weight: 400;
         line-height: 3em;
         text-align: center;
-
-        width: 280px;
         font-size: 0.83rem;
         color: #666666;
-        line-height: 15px;
+        line-height: 1.25rem;
       }
       .what-button {
-        margin: 54px auto 132px;
-        width: 128px;
-        height: 3rem;
+        margin: 3.17rem auto 5.67rem;
+      width: 10.67rem;
+height: 3rem;
+background: #FC7823;
+border-radius: 1rem;
         line-height: 3rem;
-        background: #fc7823;
-        border-radius: 8px;
-        background: #fc7823;
-        border-radius: 8px;
         text-align: center;
-        font-size: 10px;
+        font-size: 0.83rem;
         font-family: "Montserrat-blod", "Source Han Sans CN-blod";
         font-weight: bold;
         color: #ffffff;
         span {
           margin-left: 11px;
-          font-size: 10px;
+         font-size: 0.83rem;
         }
       }
       .what-info-pc{
@@ -316,7 +313,7 @@ export default {
         }
       }
       .what-bg {
-        margin-top: 72px;
+        margin-top: 5.33rem;
        
         .what-bg-button-yellow {
           text-align: center;
@@ -332,9 +329,9 @@ height: 3.17rem;
           color: #ffffff;
           margin-bottom: 1.92rem;
           img {
-            width: 21px;
-            height: 21px;
-            margin-right: 10px;
+           width: 1.75rem;
+height: 1.75rem;
+            margin-right: 0.83rem;
           }
           &:hover {
             background: #ff6400;

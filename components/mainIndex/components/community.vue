@@ -4,7 +4,8 @@
       <div class="map-crust-block">
         <div class="map-title">
           <div class="map-title-title" v-html="$t(`community.title`)"></div>
-          <div class="map-title-info" v-html="$t(`community.subTitle`)"></div>
+          <div class="map-title-info map-pc" v-html="$t(`community.subTitle`)"></div>
+          <div class="map-title-info map-mobile" v-html="$t(`community.subTitle_mobile`)"></div>
         </div>
         <div class="map-dev">{{ $t(`community.dev`) }}</div>
         <div class="map-content">
@@ -105,11 +106,11 @@ export default {
 .map-crust {
   background: #fdf7f3;
   .map-crust-block {
-    padding-top: 38px;
     margin: 0 auto;
-    padding-bottom: 98px;
+    padding-bottom: 3.42rem;
+    padding-top: 5.33rem;
     .map-title {
-      margin: 77px auto 0;
+      margin: 0 auto 0;
       // padding-bottom: 118px;
       // display: flex;
       // justify-content: space-between;
@@ -132,6 +133,7 @@ font-family: Montserrat;
 font-weight: 400;
 color: #666666;
 line-height: 1.25rem;
+     margin-bottom: 5.08rem;
       }
     }
     .map-dev {
@@ -145,7 +147,9 @@ font-size: 1.33rem;
       margin-bottom: 2.67rem;
     }
     .map-content {
-      position: relative;
+     margin: 0 auto;
+       width: 23.33rem;
+height: 10.92rem;
       .map-content-item {
         display: none;
         position: absolute;
@@ -190,7 +194,7 @@ height: 10.92rem;
     }
     .map-network-bottom {
     
-      margin: 69px auto 0px;
+      margin: 2.25rem auto 0px;
     }
     .map-network {
       .map-network-item {
@@ -198,7 +202,7 @@ height: 10.92rem;
         flex-direction: column;
         justify-content: center;
         &:first-child {
-          margin-bottom: 32px;
+          margin-bottom: 2.08rem;
         }
         // padding-left: 50px;
         .map-network-item-title {
@@ -231,7 +235,7 @@ text-align: center;
     }
     .map-github {
       cursor: pointer;
-      margin: 0 auto 0px;
+      margin: 1.67rem auto 0px;
      width: 20rem;
 height: 3rem;
 border: 1px solid #FC7823;
@@ -244,6 +248,7 @@ border-radius: 1rem;
       text-align: center;
       &:hover {
         background: #ff6400;
+        color:#fff;
       }
       div {
         display: inline-block;

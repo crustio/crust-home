@@ -104,12 +104,13 @@ export default {
 .Polkadot-crust {
   background: #fdf7f3;
   .Polkadot-crust-block {
-    padding-top: 72px;
+    padding-top: 13.92rem;
     margin: 0 auto;
     // height: 1247px;
     .Polkadot-title {
-      margin-bottom: 80px;
+      margin:0 auto 3.3rem;
       text-align: center;
+        width: 23.33rem;
       p {
         font-family: "Montserrat-blod", "Source Han Sans CN-blod";
         font-weight: bold;
@@ -117,6 +118,7 @@ export default {
       line-height: 1.5rem;
 font-size: 1.5rem;
         color: #1f1f1f;
+        width: 21rem;
         // &:last-child {
         //   font-size: 40px;
         //   line-height: 40px;
@@ -127,19 +129,18 @@ font-size: 1.5rem;
     }
     .Polkadot-info {
     
-      height: 295px;
+      // height: 295px;
       .Polkadot-info-dot {
-        padding-top: 25px;
         .Polkadot-info-dot-title {
       margin: 0 auto;
           line-height:  1.17rem;
         height: 1.17rem;
 font-size: 1.5rem;
-padding-left: 1.75rem;
+width: 23.33rem;
           font-family: "Montserrat-blod", "Source Han Sans CN-blod";
           font-weight: bold;
           color: #1f1f1f;
-          margin-bottom: 56px;
+          margin-bottom: 1.25rem;
         }
         .Polkadot-info-dot-info {
           margin: 0 auto;
@@ -155,6 +156,8 @@ line-height: 1.25rem;
       }
       .Polkadot-info-img {
         margin: 0 auto;
+         width: 23.42rem;
+height: 13.75rem;
         img {
          width: 23.42rem;
 height: 13.75rem;

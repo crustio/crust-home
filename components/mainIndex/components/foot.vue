@@ -27,8 +27,11 @@
           </div>
         </div>
         <div class="foot-copy">
-          <div class="foot-copy-txt">
+          <div class="foot-copy-txt foot-pc">
             Copyright © Decentralized Cloud Foundation 2021 All Rights Reserved
+          </div>
+          <div class="foot-copy-txt foot-copy-txt-top foot-mobile">
+            Copyright © Decentralized Cloud Foundation<br/> 2021 All Rights Reserved
           </div>
           <div class="foot-copy-img">
             <!-- <div v-html="item" v-for="item in icons" :key="item"></div> -->
@@ -39,8 +42,14 @@
               @click="routeLogo(item-1)"
             ></div>
           </div>
-          <div class="foot-copy-txt">{{ $t(`foot.privacy`) }}</div>
+             <div class="foot-copy-txt foot-pc">{{ $t(`foot.privacy`) }}</div>
+          <div class="foot-copy-txt  foot-pc">{{ $t(`foot.Terms`) }}</div>
+    
+          <div class="foot-mobile ">
+             <div class="foot-copy-txt">{{ $t(`foot.privacy`) }}</div>
+             <div class="foot-point"></div>
           <div class="foot-copy-txt">{{ $t(`foot.Terms`) }}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -178,14 +187,17 @@ export default {
 
 <style lang="scss">
 @media screen and (max-width: 1140px) {
+  .foot-pc{
+    display: none !important;
+  }
 .foot-crust {
   background: #fdede2;
   .foot-crust-block {
-    padding-top: 72px;
+    padding-top: 2.67rem;
     margin: 0 auto;
     .foot-nav {
-      padding-top: 90px;
-      margin-left: 1.75rem;
+      width: 23.33rem;
+      margin: 0 auto;
       border-bottom: 0.17rem solid #dfd9d9;
       .foot-nav-logo {
         display: none;
@@ -197,8 +209,9 @@ export default {
         }
       }
       .foot-nav-item {
-       
+       margin-bottom: 1.17rem;
         .foot-nav-item-title {
+
      font-size: 1rem;
           font-family: "Montserrat-blod", "Source Han Sans CN-blod";
           font-weight: bold;
@@ -224,7 +237,7 @@ font-size: 0.83rem;
       }
     }
     .foot-copy {
-   
+   padding: 1.17rem 0 17.42rem;
       .foot-copy-txt {
       width: 17rem;
 font-size: 0.75rem;
@@ -234,6 +247,10 @@ font-size: 0.75rem;
         color: #666666;
         line-height: 1rem;
         margin: 0 auto;
+        text-align: center;
+      }
+      .foot-copy-txt-top{
+         width: 23.33rem;
       }
       .foot-copy-img {
        width: 17rem;
@@ -317,11 +334,27 @@ height: 1.08rem;
           margin: 0 20px;
         }
       }
+      .foot-mobile{
+        width: 23.33rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        .foot-point{
+          width: 0.17rem;
+height: 0.17rem;
+background: #666666;
+border-radius: 50%;
+        }
+      }
     }
   }
 }
 }
 @media screen and (min-width: 1140px) {
+  .foot-mobile{
+    display: none !important;
+  }
 .foot-crust {
   background: #fdede2;
   .foot-crust-block {
@@ -391,6 +424,7 @@ height: 1.08rem;
       height: 100px;
       align-items: center;
       .foot-copy-txt {
+        
         height: 13px;
         font-size: 12px;
         font-family: Montserrat, "Source Han Sans CN";

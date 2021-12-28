@@ -175,12 +175,13 @@ export default {
 .latest-crust {
   background: #fdf7f3;
   .latest-crust-block {
-    padding-top: 72px;
+    padding-top: 2.67rem;
     margin: 0 auto;
     padding-bottom: 72px;
     .latest-title {
       text-align: center;
-      margin: 73px 0 52px;
+      margin:0 auto 2rem;
+      width: 13rem;
    font-size: 2rem;
       font-family: "Montserrat-blod", "Source Han Sans CN-blod";
       font-weight: bold;
@@ -190,7 +191,7 @@ export default {
     .latest-item {
       .latest-item-box {
         cursor: pointer;
-        margin: 0 auto;
+        margin: 0 auto 2.67rem;
       width: 23.33rem;
 height: 19.58rem;
         background: #fffcfa;
@@ -200,6 +201,7 @@ height: 19.58rem;
         .latest-item-bg {
           display: flex;
           align-items: center;
+          justify-content: center;
        height: 13.33rem;
           img {
          width: 20rem;

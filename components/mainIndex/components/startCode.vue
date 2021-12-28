@@ -192,13 +192,12 @@ jumpTo(url)
 .start-crust {
   background: #fdf7f3;
   .start-crust-block {
-    padding-top: 180px;
+    padding-top:7.33rem;
     margin: 0 auto;
     // height: 1247px;
-    padding-bottom: 39px;
     .start-title {
       text-align: center;
-      margin: 0 auto;
+      margin: 0 auto 2.33rem;
  width: 19.83rem;
 font-size: 2rem;
 line-height: 2.5rem;
@@ -212,7 +211,7 @@ line-height: 2.5rem;
         .start-code-left-top {
             margin: 0 auto;
         width: 23.67rem;
-height: 25.83rem;
+height: 26rem;
 background: #FFFFFF;
           border: 1px solid #e5e5e5;
           border-radius: 10px;
@@ -284,7 +283,7 @@ color: #FC7823;
                height: 0.17rem;
                 width: 100%;
                 position: absolute;
-                bottom: 3px;
+                bottom: 0.17rem;
                 left: 0;
                 content: "";
                 background: #FC7823;
@@ -297,6 +296,7 @@ color: #FC7823;
         }
       }
       .start-code-right {
+        margin-top: 2rem;
         .start-code-right-butto {
           margin: 0 auto;
        width: 23.67rem;
@@ -311,9 +311,6 @@ color: #FC7823;
           padding-left: 1.67rem;
           cursor: pointer;
           margin-bottom: 1rem;
-          img {
-            margin: 0 19px 0 16px;
-          }
           div {
             display: inline-block;
           }
@@ -329,9 +326,9 @@ height: 1.75rem;
         .start-code-right-info {
           font-family: Montserrat, "Source Han Sans CN";
           font-weight: 400;
-        width: 17.25rem;
+        width: 20rem;
         margin-left: 3.08rem;
-          height: 3.17rem;
+        margin-top: 3.5rem;
 font-size: 0.83rem;
 color: #666666;
 line-height: 1.25rem;
