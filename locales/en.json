@@ -98,7 +98,8 @@
   },
   "indexBanner": {
     "title": "Crust",
-    "sub": "Crust Network,<br/>Web3.0 Storage for<br/> Metaverse",
+    "sub": "Crust Network,<br/>Web3.0 Storage for<br/>the Metaverse",
+    "subMobile": "Crust Network,<br/>Web3.0 Storage for the Metaverse",
     "subTitle": "Web3.0 Storage for Metaverse",
     "subInfo":"Globally distributed available storage capacity.",
     "contentLink1": "Source Code",
@@ -490,8 +491,7 @@
   "blogs": {
     "title": "Blogs"
   },
-  "Crust Mainnet": "Crust Mainnet",
-  "Get CRU": "Get CRU",
+  "Crust Maxwell": "Crust Mainnet",
   "Crust Solutions Handbook": "Crust Solutions Handbook",
   "Crust-based commercial application solution": "Crust-based commercial application solution",
   "Maxwell incorporates all of the Crust's core features": "Maxwell incorporates all of the Crust's core features:",
@@ -501,21 +501,26 @@
   "Crust Mainnet is coming soon": "Crust Mainnet is coming soon...",
   "Mainnet Launch Plan": "Mainnet Launch Plan",
   "Claim CRU": "Claim CRU",
+  "Crust Mainnet": "Get CRU",
   "Globally distributed available storage capacity": "Globally distributed available storage capacity.",
   "A decentralized storage network of Web3.0 ecosystem": "A decentralized storage network of Web3.0 ecosystem",
   "crustInfo":{
     "title":"What is <span style='color:#FC7823'>Crust</span>",
-    "subTitle":"Crust provides a Web3.0 decentralized storage network for Metaverse. It is designed to realize core values of decentralization,<br/> privacy and assurance. Crust supports multiple storage-layer protocols such as IPFS, and exposes instant accessible on-chain storage<br/> functions to users. Crustʼs technical stack is also capable of supporting data manipulating and computing.",
+    "subTitle":"Crust provides a Web3.0 decentralized storage network for the Metaverse. It is designed to realize core values of decentralization,<br/> privacy and assurance. Crust supports multiple storage-layer protocols such as IPFS, and exposes instant accessible on-chain storage<br/> functions to users. Crustʼs technical stack is also capable of supporting data manipulating and computing.",
+    "subTitleMobile":"Crust provides a Web3.0 decentralized storage network for the metaverse. It is designed to realize core values of decentralization, privacy and assurance. Crust supports multiple storage-layer protocols such as IPFS, and exposes instant accessible on-chain storage functions to users. Crustʼs technical stack is also capable of supporting data manipulating and computing.",
     "button":"Introduction",
     "title1":"Decentralization  & Privacy",
     "subTitle1":"Meaningful Proof of Work",
-    "subInfo1":"Crust uses a trust-less and low-cost TEE-based<br/>technology called MPoW to validate and<br/>manage storage resources to form up the<br/>decentralized storage network. Backed by<br/>MPoW, Crust is an open network that allows<br/>any storage servers to join. Files stored on<br/>Crust are encrypted to keep privacy.",
+    "subInfo1":"Crust uses a trust-less and low-cost TEE-based<br/>technology called MPoW to validate and<br/>manage storage resources to build the<br/>decentralized storage network. Backed by<br/>MPoW, Crust is an open network that allows<br/>any storage servers to join. Files stored on<br/>Crust are encrypted to guarantee privacy.",
+    "mobile_subInfo1":"Crust uses a trust-less and low-cost TEE-based technology called MPoW to validate and manage storage resources to build the decentralized storage network. Backed by MPoW, Crust is an open network that allows any storage servers to join. Files stored on Crust are encrypted to guarantee privacy.",
     "title2":"Safety & Efficiency",
     "subTitle2":"Guaranteed Proof of Stake",
     "subInfo2":"Crust is a blockchain network with <br/>PoS-derived consensus called GPoS. With<br/> GPoS consensus, the network is safe, robust<br/> and efficient. It is guaranteed and secured by<br/> both token assets and storage resources .",
+    "mobile_subInfo2":"Crust is a blockchain network with PoS-derived consensus called GPoS. With GPoS consensus, the network is safe, robust and efficient. It is guaranteed and secured by both token assets and storage resources .",
     "title3":"Availability & Assurance",
     "subTitle3":"On-chain Storage Market",
-    "subInfo3":"Crust provides on-chain storage market called<br/> DSM (Decentralized Storage Market). Through<br/> DSM, users can easily upload files and place<br/> storage orders in the network. Files are stored<br/> with multiple replicas to provide high availability.<br/> In addition. Crust provides storage assurance pool<br/> for customized or permanent storage of high<br/> value files in like NFT metadata .",
+    "subInfo3":"Crust provides an on-chain storage market called<br/> DSM (Decentralized Storage Market). Through<br/> DSM, users can easily upload files and place<br/> storage orders in the network. Files are stored<br/> with multiple replicas to provide high availability.<br/> In addition. Crust provides storage assurance pool<br/> for customized or permanent storage of high<br/> value files in like NFT metadata .",
+    "mobile_subInfo3":"Crust provides an on-chain storage market called DSM (Decentralized Storage Market). Through DSM, users can easily upload files and place storage orders in the network. Files are stored with multiple replicas to provide high availability. In addition. Crust provides storage assurance pool for customized or permanent storage of high value files .",
     "github":"Contribute on Github",
     "tech":"Technology Whitepaper"
   },
@@ -541,6 +546,8 @@
     "saveButton":"Request for Free Storage",
     "crustApi":"Crust storage API",
     "crustChainApi":"Crust cross-chain storage API",
+    "crustApi_mobile":"Crust",
+    "crustChainApi_mobile":"Crust cross-chain",
     "crustInfo":"Get a Crust account and follow the code sample to learn how to use Crust storage API to store a file .",
     "crustChainINfo":"Crust cross-chain storage API supports storage requests from existing accounts of various public chains. Crust provides two major cross-chain interfaces: a native cross-chain communication pallet called xStorage based on Polkadot XCMP to support Polkadot Parachains; and a Web3.0 IPFS remote pinning service to support any Web3.0 account. Follow the code sample to learn how to use Crust cross-chain storage API ."
   },
@@ -561,7 +568,8 @@
     "info5":"NEAR is the network for a world reimagined. Through simple, secure, and scalable technology millions are able to invent and explore new experiences .",
     "info6":"Flow is a new blockchain built for the next generation of apps, games, and the digital assets that power them .",
     "info7":"HECO is a decentralized and energy efficient public chain for developers .",
-    "info8":"Moonriver is an Ethereum-compatible smart contract parachain on Kusama and provides a permanently incentivized canary network ."
+    "info8":"Moonriver is an Ethereum-compatible smart contract parachain on Kusama and provides a permanently incentivized canary network .",
+    "info9":"OEC (a.k.a. OKExChain) is a fast, high-performance, open-source smart contract platform backed by OKEx to land large-scale digital assets and Dapps."
 
   },
   "who":{
@@ -633,7 +641,7 @@
     "list61":"Polkadot/Kusama ParaChain Technical Readiness",
     "list62":"Promote for Use Cases and Get Applications Running on MainNet",
     "time7":"2022 Q2",
-    "title7":"Cross-Chain DStorage Interfaces",
+    "title7":"Cross-Chain DStorage <br/>Interfaces",
     "list71":"Implement Crust-Based Web3.0 IPFS Gateway and Pinning Service",
     "list72":"Upgrade Polkadot ParaChain Related Modules to Support Unique STF",
     "time8":"2022 Q4",
@@ -652,6 +660,7 @@
   "community":{
     "title":"<span style='color:#FC7823'>Crust</span> community",
     "subTitle":"Crust is an open source project funded by DCF (Decentralized Cloud Foundation). In align with Crust technical stack, DCF also funds<br/> and supports multiple open source projects like Encrypted IPFS. Crust is under active development and<br/> maintenance by global development teams.",
+    "subTitle_mobile":"Crust is an open source project funded by DCF (Decentralized Cloud Foundation). In align with Crust technical stack, DCF also funds and supports multiple open source projects like Encrypted IPFS. Crust is under active development and maintenance by global development teams.",
     "dev":"Developers",
     "team1":"Sediment-tech Team",
     "team2":"Switchswap Team",
@@ -668,7 +677,7 @@
     "info1":"Crust network is a great decentralized storage network  by allowing anyone to participate as a storage provider and get the reward from  protocol fairly.",
     "button1":"Provide storage resources",
     "title2":"Decentralized cloud foundation",
-    "info2":"DCF ( Decentralized Cloud Foundation ) funds and incubates teams and projects to build decentralized cloud technologies and applications of Web3.0. Crust Network is the fundamental project that DCF mainly supports.",
+    "info2":"DCF ( <a class='providers-link' href='https://decloudf.com/' target='_blank' style='font-style: italic;'>Decentralized Cloud Foundation</a> ) funds and incubates teams and projects to build decentralized cloud technologies and applications of Web3.0. Crust Network is the fundamental project that DCF mainly supports.",
     "button2":"Crust Ecosystem Growth Program"
   },
   "backed":"Backed by",

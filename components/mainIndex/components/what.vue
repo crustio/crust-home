@@ -10,11 +10,33 @@
     <div class="what-block">
       <div class="what-title" v-html="$t('crustInfo.title')"></div>
       <div class="what-subTitle" v-html="$t('crustInfo.subTitle')"></div>
+      <div
+        class="what-subTitleMobile"
+        v-html="$t('crustInfo.subTitleMobile')"
+      ></div>
       <div class="what-button" @click="handleDemoVideoClick">
         {{ $t("crustInfo.button") }}<span>▶</span>
       </div>
-      <div class="what-info">
+      <div class="what-info what-info-pc">
         <div class="what-item" v-for="(item, index) in infoData" :key="index">
+          <div class="what-item-icon">
+            <!-- <div v-html="item.icon"></div> -->
+            <div class="what-item-icon-bg">
+              <img :src="item.icon" alt="" />
+            </div>
+          </div>
+          <div class="what-item-subTitle">
+            {{ $t(`crustInfo.${item.subTitle}`) }}
+          </div>
+          <div class="what-item-title">{{ $t(`crustInfo.${item.title}`) }}</div>
+          <div
+            class="what-item-info"
+            v-html="$t(`crustInfo.${item.info}`)"
+          ></div>
+        </div>
+      </div>
+      <div class="what-info what-info-mobile">
+        <div class="what-item" v-for="(item, index) in infoDataMobile" :key="index">
           <div class="what-item-icon">
             <!-- <div v-html="item.icon"></div> -->
             <div class="what-item-icon-bg">
@@ -52,8 +74,8 @@ export default {
   computed: {
     videoLink() {
       return this.$store.state.locale === "en"
-        ? "https://gw.crustapps.net/ipfs/QmdVYW9Dpa26bjZowJQJb5YVtTyodianLn9TCcXeNeixf4?filename=English new.MP4"
-        : "https://gw.crustapps.net/ipfs/QmTCcWgLFAU9Y8uK7oMonWBEh9nvscpS6rfAtKaRheZVmG"
+        ? "https://ipfs-hk.decoo.io/ipfs/QmdVYW9Dpa26bjZowJQJb5YVtTyodianLn9TCcXeNeixf4?filename=English new.MP4"
+        : "https://ipfs-hk.decoo.io/ipfs/QmTCcWgLFAU9Y8uK7oMonWBEh9nvscpS6rfAtKaRheZVmG"
     },
   },
   components: { dVideo },
@@ -81,6 +103,26 @@ export default {
           info: "subInfo3",
         },
       ],
+       infoDataMobile: [
+        {
+          icon: require(`../../../assets/img/2-What is Crust-icon/Privacy.svg`),
+          title: "title1",
+          subTitle: "subTitle1",
+          info: "mobile_subInfo1",
+        },
+        {
+          icon: require(`../../../assets/img/2-What is Crust-icon/Decentralization.svg`),
+          title: "title2",
+          subTitle: "subTitle2",
+          info: "mobile_subInfo2",
+        },
+        {
+          icon: require(`../../../assets/img/2-What is Crust-icon/Assurance.svg`),
+          title: "title3",
+          subTitle: "subTitle3",
+          info: "mobile_subInfo3",
+        },
+      ],
     }
   },
   methods: {
@@ -96,8 +138,8 @@ export default {
     routerUrl() {
       let url =
         this.$store.state.locale === "en"
-          ? "https://gw.crustapps.net/ipfs/QmP9WqDYhreSuv5KJWzWVKZXJ4hc7y9fUdwC4u23SmqL6t"
-          : "https://gw.crustapps.net/ipfs/QmPrU21TrRtWcrWsNmHfBmSvTKZApKCEZrDGncnheMGKsj"
+          ? "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/whitepaper_en.pdf"
+          : "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/whitepaper.pdf"
       window.open(url)
     },
   },
@@ -105,60 +147,72 @@ export default {
 </script>
 
 <style lang="scss">
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1140px) {
   .what-crust {
     background: #fdf7f3;
     .what-block {
-      padding-top: 72px;
+      padding-top: 2.67rem;
       margin: 0 auto;
       // width: 1240px;
       // height: 1247px;
       width: 100%;
       .what-title {
-        margin: 0px auto 30px;
-        font-size: 60px;
+        margin: 0px auto 1.92rem;
+        height: 2rem;
+        line-height: 2rem;
+        font-size: 2rem;
         font-family: "Montserrat-blod", "Source Han Sans CN-blod";
         font-weight: bold;
         color: #1f1f1f;
         text-align: center;
       }
       .what-subTitle {
+        display: none !important;
+      }
+      .what-subTitleMobile {
         margin: 0 auto;
         width: 100%;
-        padding: 0 20px;
-        font-size: 18px;
-        font-family: Montserrat, "Source Han Sans CN";
+        padding: 0 1.67rem;
+        font-family: 'Montserrat', "Source Han Sans CN";
         font-weight: 400;
-        color: #1f1f1f;
         line-height: 3em;
         text-align: center;
+        font-size: 0.83rem;
+        color: #666666;
+        line-height: 1.25rem;
       }
       .what-button {
-        margin: 54px auto 132px;
-        width: 90%;
-        height: 100px;
-        line-height: 100px;
-        background: #fc7823;
-        border-radius: 8px;
+        margin: 3.17rem auto 5.67rem;
+      width: 10.67rem;
+height: 3rem;
+background: #FC7823;
+border-radius: 1rem;
+        line-height: 3rem;
         text-align: center;
-        font-size: 18px;
+        font-size: 0.83rem;
         font-family: "Montserrat-blod", "Source Han Sans CN-blod";
         font-weight: bold;
         color: #ffffff;
         span {
-          margin-left: 15px;
-          font-size: 10px;
+          margin-left: 11px;
+         font-size: 0.83rem;
         }
+      }
+      .what-info-pc{
+        display: none;
       }
       .what-info {
         // display: flex;
         // justify-content: space-between;
         .what-item {
-          // width:100%;
-          // height: 550px;
+          margin: 0 auto;
+          position: relative;
+          width: 23.33rem;
           background: #ffffff;
           box-shadow: 0px 4px 9px 1px rgba(252, 120, 35, 0.05);
           border-radius: 10px;
+          margin-bottom: 5.67rem;
+          padding-top: 4.67rem;
           &:hover {
             .what-item-icon-bg {
               background: radial-gradient(
@@ -180,8 +234,8 @@ export default {
           }
           .what-item-icon {
             .what-item-icon-bg {
-              width: 120px;
-              height: 120px;
+              width: 5rem;
+              height: 5rem;
               background: #ffffff;
               box-shadow: 0px 4px 9px 1px rgba(252, 120, 35, 0.1);
               border-radius: 50%;
@@ -189,9 +243,12 @@ export default {
               justify-content: center;
               align-items: center;
             }
-            margin: -60px auto 40px;
-            width: 120px;
-            height: 120px;
+            position: absolute;
+            top: -2.5rem;
+            left: 50%;
+            margin-left: -2.5rem;
+            width: 5rem;
+            height: 5rem;
             background: #ffffff;
             box-shadow: 0px 4px 9px 1px rgba(252, 120, 35, 0.1);
             border-radius: 50%;
@@ -199,39 +256,39 @@ export default {
             justify-content: center;
             align-items: center;
             img {
-              width: 50px;
-              height: 50px;
+              width: 2.67rem;
+              height: 2.67rem;
             }
             svg {
-              width: 50px;
-              height: 50px;
+              width: 2.67rem;
+              height: 2.67rem;
             }
           }
           .what-item-subTitle {
             margin: 0 auto;
             text-align: center;
-            height: 16px;
-            font-size: 16px;
             font-family: Montserrat, "Source Han Sans CN";
             font-weight: 400;
-            color: #1f1f1f;
-            line-height: 16px;
+            height: 1rem;
+            font-size: 1rem;
+            color: #666666;
+            line-height: 1rem;
           }
           .what-item-title {
-            margin: 16px auto 82px;
-            width: 343px;
-            height: 88px;
-            font-size: 40px;
+            height: 1.5rem;
+            font-size: 1.5rem;
+            color: #fc7823;
+            line-height: 2rem;
+            text-align: center;
+            margin: 0.42rem auto 1.66rem;
             font-family: "Montserrat-blod", "Source Han Sans CN-blod";
             font-weight: bold;
-            color: #1f1f1f;
-            line-height: 48px;
             position: relative;
             &::after {
               position: absolute;
               width: 56px;
               height: 3px;
-              background: #cccccc;
+              background: #fc7823;
               border-radius: 2px;
               bottom: -22px;
               left: 50%;
@@ -240,42 +297,41 @@ export default {
             }
           }
           .what-item-info {
-            margin: 0 auto;
-            height: 205px;
-            font-size: 13px;
+            padding: 2.58rem 1rem 3.67rem;
             font-family: Montserrat, "Source Han Sans CN";
             font-weight: 400;
-            color: #666666;
-            line-height: 20px;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.83rem;
+            font-family: Montserrat;
+            font-weight: 400;
+            color: #666666;
+            line-height: 1.25rem;
           }
         }
       }
       .what-bg {
-        margin-top: 72px;
-        width: 1240px;
-        height: 120px;
-        // background: url("../../../assets/img/12/bg.png") no-repeat;
-        background-size: 100% 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin-top: 5.33rem;
+       
         .what-bg-button-yellow {
           text-align: center;
-          margin: 0 20px;
-          width: 280px;
-          height: 50px;
-          line-height: 50px;
+          margin: 0 auto;
+         width: 18.83rem;
+height: 3.17rem;
+          line-height:  3.17rem;
           background: #fc7823;
-          border-radius: 8px;
-          font-size: 18px;
+          border-radius: 1rem;
+          font-size: 0.83rem;
           font-family: Montserrat, "Source Han Sans CN";
           font-weight: 400;
           color: #ffffff;
+          margin-bottom: 1.92rem;
           img {
-            width: 21px;
-            height: 21px;
-            margin-right: 10px;
+           width: 1.75rem;
+height: 1.75rem;
+            margin-right: 0.83rem;
           }
           &:hover {
             background: #ff6400;
@@ -283,16 +339,16 @@ export default {
         }
         .what-bg-button-black {
           text-align: center;
-          margin: 0 20px;
-          width: 282px;
-          height: 52px;
-          line-height: 50px;
-          border: 2px solid #ffffff;
-          border-radius: 8px;
-          font-size: 18px;
+         margin: 0 auto;
+        width: 18.83rem;
+height: 3.17rem;
+          line-height:  3.17rem;
+          border: 2px solid #ff6400;
+          border-radius: 1rem;
+          font-size: 0.83rem;
           font-family: Montserrat, "Source Han Sans CN";
           font-weight: 400;
-          color: #ffffff;
+          color: #ff6400;
           &:hover {
             background: #ff6400;
             color: #fff;
@@ -302,7 +358,7 @@ export default {
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1140px) {
   .what-crust {
     background: #fdf7f3;
     .what-block {
@@ -331,6 +387,9 @@ export default {
         color: #666666;
         line-height: 24px;
       }
+      .what-subTitleMobile,.what-info-mobile {
+        display: none !important;
+      }
       .what-button {
         cursor: pointer;
         margin: 39px auto 120px;
@@ -353,6 +412,9 @@ export default {
         &:hover {
           background: #ff6400;
         }
+      }
+      .what-info-mobile{
+        display: none;
       }
       .what-info {
         display: flex;

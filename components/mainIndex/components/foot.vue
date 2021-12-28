@@ -27,8 +27,11 @@
           </div>
         </div>
         <div class="foot-copy">
-          <div class="foot-copy-txt">
-            Copyright © Decentralised Cloud Foundation 2021 All Rights Reserved
+          <div class="foot-copy-txt foot-pc">
+            Copyright © Decentralized Cloud Foundation 2021 All Rights Reserved
+          </div>
+          <div class="foot-copy-txt foot-copy-txt-top foot-mobile">
+            Copyright © Decentralized Cloud Foundation<br/> 2021 All Rights Reserved
           </div>
           <div class="foot-copy-img">
             <!-- <div v-html="item" v-for="item in icons" :key="item"></div> -->
@@ -36,11 +39,17 @@
               class="foot-copy-img-logo"
               v-for="item in $store.state.locale === 'zh' ? 6 : 5"
               :key="item"
-              @click="routeLogo(item)"
+              @click="routeLogo(item-1)"
             ></div>
           </div>
-          <div class="foot-copy-txt">{{ $t(`foot.privacy`) }}</div>
+             <div class="foot-copy-txt foot-pc">{{ $t(`foot.privacy`) }}</div>
+          <div class="foot-copy-txt  foot-pc">{{ $t(`foot.Terms`) }}</div>
+    
+          <div class="foot-mobile ">
+             <div class="foot-copy-txt">{{ $t(`foot.privacy`) }}</div>
+             <div class="foot-point"></div>
           <div class="foot-copy-txt">{{ $t(`foot.Terms`) }}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -70,9 +79,9 @@ export default {
             {
               title: "list1",
               down: true,
-              url: "https://gw.crustapps.net/ipfs/QmP9WqDYhreSuv5KJWzWVKZXJ4hc7y9fUdwC4u23SmqL6t",
+              url: "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/whitepaper_en.pdf",
               zh_url:
-                "https://gw.crustapps.net/ipfs/QmPrU21TrRtWcrWsNmHfBmSvTKZApKCEZrDGncnheMGKsj",
+                "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/whitepaper.pdf",
             },
             {
               title: "list2",
@@ -88,7 +97,7 @@ export default {
             },
             {
               title: "list4",
-              url:"https://gw.crustapps.net/ipfs/Qme9uUpunio7heGDnnfsptYWzjLJgvD2hkbLGcvehPz5EK?filename=CrustLogo.zip"
+              url:"https://ipfs-hk.decoo.io/ipfs/Qme9uUpunio7heGDnnfsptYWzjLJgvD2hkbLGcvehPz5EK?filename=CrustLogo.zip"
             },
           ],
         },
@@ -140,7 +149,7 @@ export default {
   },
   methods: {
     routeLogo(index){
- window.open(this.urls[index-1], "_blank")
+ window.open(this.urls[index], "_blank")
     },
     routeTo(e) {
       if (e.down) {
@@ -177,6 +186,175 @@ export default {
 </script>
 
 <style lang="scss">
+@media screen and (max-width: 1140px) {
+  .foot-pc{
+    display: none !important;
+  }
+.foot-crust {
+  background: #fdede2;
+  .foot-crust-block {
+    padding-top: 2.67rem;
+    margin: 0 auto;
+    .foot-nav {
+      width: 23.33rem;
+      margin: 0 auto;
+      border-bottom: 0.17rem solid #dfd9d9;
+      .foot-nav-logo {
+        display: none;
+        width: 327px;
+        padding-left: 26px;
+        img {
+          width: 187px;
+          height: 46px;
+        }
+      }
+      .foot-nav-item {
+       margin-bottom: 1.17rem;
+        .foot-nav-item-title {
+
+     font-size: 1rem;
+          font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+          font-weight: bold;
+          color: #1f1f1f;
+          line-height:1rem;
+          margin-bottom: 1.42rem;
+        }
+        .foot-nav-item-list {
+          .foot-nav-item-lis-item {
+            cursor: pointer;
+          height: 0.83rem;
+font-size: 0.83rem;
+            font-family: Montserrat, "Source Han Sans CN";
+            font-weight: 400;
+            color: #1f1f1f;
+            line-height: 0.83rem;
+            margin-bottom: 0.83rem;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .foot-copy {
+   padding: 1.17rem 0 17.42rem;
+      .foot-copy-txt {
+      width: 17rem;
+font-size: 0.75rem;
+        font-size: 12px;
+        font-family: Montserrat, "Source Han Sans CN";
+        font-weight: 400;
+        color: #666666;
+        line-height: 1rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .foot-copy-txt-top{
+         width: 23.33rem;
+      }
+      .foot-copy-img {
+       width: 17rem;
+        margin:1.27rem auto 2rem;
+        display: flex;
+        justify-content: center;
+        .foot-copy-img-logo {
+          flex-basis:1.33rem;
+          flex-shrink: 0;
+height: 1.08rem;
+          margin: 0 0.625REM;
+          cursor: pointer;
+          //  &:nth-child(1) {
+          //     background: url("../../../assets/img/main/WeChat@3x.png")
+
+          //     no-repeat;
+          //       opacity: 0.7;
+          //   background-size: 100% 100%;
+          //   &:hover {
+          //      opacity: 1;
+          //   }
+          // }
+          &:nth-child(1) {
+            background: url("../../../assets/img/8-foot/telegram.svg")
+              no-repeat;
+            opacity: 0.7;
+            background-size: 100% 100%;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          &:nth-child(2) {
+            background: url("../../../assets/img/8-foot/medium.svg") no-repeat;
+            opacity: 0.7;
+            background-size: 100% 100%;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          &:nth-child(3) {
+            background: url("../../../assets/img/8-foot/twitter.svg") no-repeat;
+            opacity: 0.7;
+            background-size: 100% 100%;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          &:nth-child(4) {
+            background: url("../../../assets/img/8-foot/github.svg") no-repeat;
+            opacity: 0.7;
+            background-size: 100% 100%;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          &:nth-child(5) {
+            background: url("../../../assets/img/8-foot/discord.svg") no-repeat;
+            opacity: 0.7;
+            background-size: 100% 100%;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          &:nth-child(6) {
+            background: url("../../../assets/img/8-foot/coinask.svg") no-repeat;
+            opacity: 0.7;
+            background-size: 100% 100%;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+        img {
+          width: 30px;
+          height: 26px;
+          margin: 0 20px;
+        }
+        svg {
+          width: 30px;
+          height: 26px;
+          margin: 0 20px;
+        }
+      }
+      .foot-mobile{
+        width: 23.33rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        .foot-point{
+          width: 0.17rem;
+height: 0.17rem;
+background: #666666;
+border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+}
+@media screen and (min-width: 1140px) {
+  .foot-mobile{
+    display: none !important;
+  }
 .foot-crust {
   background: #fdede2;
   .foot-crust-block {
@@ -246,6 +424,7 @@ export default {
       height: 100px;
       align-items: center;
       .foot-copy-txt {
+        
         height: 13px;
         font-size: 12px;
         font-family: Montserrat, "Source Han Sans CN";
@@ -259,9 +438,9 @@ export default {
         display: flex;
         justify-content: center;
         .foot-copy-img-logo {
-          flex-basis: 28px;
+          flex-basis: 30px;
           flex-shrink: 0;
-          height: 28px;
+          height: 26px;
           margin: 0 20px;
           cursor: pointer;
           //  &:nth-child(1) {
@@ -275,7 +454,7 @@ export default {
           //   }
           // }
           &:nth-child(1) {
-            background: url("../../../assets/img/main/telegram@3x.svg")
+            background: url("../../../assets/img/8-foot/telegram.svg")
               no-repeat;
             opacity: 0.7;
             background-size: 100% 100%;
@@ -284,7 +463,7 @@ export default {
             }
           }
           &:nth-child(2) {
-            background: url("../../../assets/img/main/medium@3x.svg") no-repeat;
+            background: url("../../../assets/img/8-foot/medium.svg") no-repeat;
             opacity: 0.7;
             background-size: 100% 100%;
             &:hover {
@@ -292,7 +471,7 @@ export default {
             }
           }
           &:nth-child(3) {
-            background: url("../../../assets/img/main/twitter@3x.svg") no-repeat;
+            background: url("../../../assets/img/8-foot/twitter.svg") no-repeat;
             opacity: 0.7;
             background-size: 100% 100%;
             &:hover {
@@ -300,7 +479,7 @@ export default {
             }
           }
           &:nth-child(4) {
-            background: url("../../../assets/img/main/github@3x.svg") no-repeat;
+            background: url("../../../assets/img/8-foot/github.svg") no-repeat;
             opacity: 0.7;
             background-size: 100% 100%;
             &:hover {
@@ -308,7 +487,7 @@ export default {
             }
           }
           &:nth-child(5) {
-            background: url("../../../assets/img/main/discord@3x.svg") no-repeat;
+            background: url("../../../assets/img/8-foot/discord.svg") no-repeat;
             opacity: 0.7;
             background-size: 100% 100%;
             &:hover {
@@ -316,7 +495,7 @@ export default {
             }
           }
           &:nth-child(6) {
-            background: url("../../../assets/img/main/coinask@3x.svg") no-repeat;
+            background: url("../../../assets/img/8-foot/coinask.svg") no-repeat;
             opacity: 0.7;
             background-size: 100% 100%;
             &:hover {
@@ -337,5 +516,6 @@ export default {
       }
     }
   }
+}
 }
 </style>

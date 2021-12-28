@@ -38,6 +38,7 @@ export default {
 </script>
 
 <style lang="scss">
+@media screen and (min-width: 1140px) {
 .Polkadot-crust {
   background: #fdf7f3;
   .Polkadot-crust-block {
@@ -98,4 +99,73 @@ export default {
     }
   }
 }
+}
+@media screen and (max-width: 1140px) {
+.Polkadot-crust {
+  background: #fdf7f3;
+  .Polkadot-crust-block {
+    padding-top: 13.92rem;
+    margin: 0 auto;
+    // height: 1247px;
+    .Polkadot-title {
+      margin:0 auto 3.3rem;
+      text-align: center;
+        width: 23.33rem;
+      p {
+        font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+        font-weight: bold;
+        margin-bottom: 0;
+      line-height: 1.5rem;
+font-size: 1.5rem;
+        color: #1f1f1f;
+        width: 21rem;
+        // &:last-child {
+        //   font-size: 40px;
+        //   line-height: 40px;
+        //   height: 40px;
+        //   color: #1f1f1f;
+        // }
+      }
+    }
+    .Polkadot-info {
+    
+      // height: 295px;
+      .Polkadot-info-dot {
+        .Polkadot-info-dot-title {
+      margin: 0 auto;
+          line-height:  1.17rem;
+        height: 1.17rem;
+font-size: 1.5rem;
+width: 23.33rem;
+          font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+          font-weight: bold;
+          color: #1f1f1f;
+          margin-bottom: 1.25rem;
+        }
+        .Polkadot-info-dot-info {
+          margin: 0 auto;
+          width: 22.58rem;
+          font-family: Montserrat, "Source Han Sans CN";
+          font-weight: 400;
+          font-size: 0.83rem;
+font-family: Montserrat;
+font-weight: 400;
+color: #666666;
+line-height: 1.25rem;
+        }
+      }
+      .Polkadot-info-img {
+        margin: 0 auto;
+         width: 23.42rem;
+height: 13.75rem;
+        img {
+         width: 23.42rem;
+height: 13.75rem;
+        }
+      }
+    }
+  }
+}
+}
+
 </style>

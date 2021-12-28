@@ -5,12 +5,7 @@
       <div class="platform-top">
         <div class="platform-title" v-html="$t(`web3.title`)"></div>
         <div class="platform-hadle">
-          <div class="platform-trun usecase-prev">
-            <div v-html="icons[0]"></div>
-          </div>
-          <div class="platform-trun platform-transition usecase-next">
-            <img src="../../../assets/img/arrow@3x.png" alt="" />
-          </div>
+          
         </div>
       </div>
       <!-- <div class="platform-content" ref="platform-content">
@@ -56,30 +51,43 @@
             </div>
           </div>
         </swiper-slide>
-        <!--        <div slot="pagination" class="swiper-pagination"></div>-->
+      <div slot="pagination" class="swiper-pagination"></div>
+       
+               
       </swiper>
+         <div class="swiper-tool">
+           <div class="platform-trun usecase-prev">
+             <img src="../../../assets/img/arrow.svg" alt="" />
+          </div>
+         
+          <div class=" platform-transition usecase-next">
+            <img src="../../../assets/img/arr_right.svg" alt="" />
+          </div>
+        </div>
     </div>
   </div>
 </template>
      
 <script>
 var timer
-import jumpTo from "../../../utils"
-import arrow from "@/assets/img/arrow.svg?raw"
-import triangle from "@/assets/img/triangle.svg?raw"
 export default {
   data() {
     return {
       swiperOptions: {
-        loop: false,
+       loop: true,
         slidesPerView: "auto",
-        spaceBetween: 10,
+        autoplay:true,
+        // spaceBetween: 10,
         centeredSlides: false,
         centeredSlidesBounds: false,
         navigation: {
           nextEl: ".usecase-next",
           prevEl: ".usecase-prev",
         },
+        pagination: {
+    el: '.swiper-pagination',
+    clickable:true
+  },
         // breakpoints: {
         //   0: {
         //     slidesPerView: 1,
@@ -95,7 +103,6 @@ export default {
         //   },
         // },
       },
-      icons: [arrow, triangle],
       active: 1,
       listData: [
         {
@@ -169,6 +176,15 @@ export default {
           medium:
             "https://medium.com/crustnetwork/crust-network-integrates-with-moonriver-to-bring-web3-ipfs-storage-to-the-kusama-ecosystem-b73d934293bf",
         },
+         {
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/OEC-01.png`),
+          title: "info9",
+          button: "more",
+          style: "width:200px;height:83px;",
+          url: "https://www.okex.com/oec",
+          medium:
+            "https://medium.com/okex-blog",
+        },
       ],
     }
   },
@@ -181,12 +197,14 @@ export default {
 </script>
 
 <style lang="scss">
+@media screen and (min-width: 1140px) {
 .platform-crust {
   background: #fdf7f3;
   .platform-crust-block {
     padding-top: 72px;
     margin: 0 auto;
     width: 1140px;
+    position: relative;
     // height: 1247px;
     .platform-top {
       display: flex;
@@ -200,9 +218,15 @@ export default {
         font-weight: bold;
         color: #1f1f1f;
       }
-      .platform-hadle {
-        display: flex;
+      
+    }
+    .swiper-tool {
         .platform-trun {
+          z-index: 99;
+          position: absolute;
+          bottom:0;
+          left: 25%;
+          margin-left: -20px;
           width: 40px;
           height: 40px;
           background: #ffffff;
@@ -214,32 +238,49 @@ export default {
             box-shadow: 0px 2px 5px 0px rgba(252, 120, 35, 0.15);
           }
           &:first-child {
-            margin-right: 56px;
+            // margin-right: 56px;
           }
           display: flex;
           justify-content: center;
           align-items: center;
-          div {
+          img {
             width: 20px;
             height: 20px;
           }
         }
         .platform-transition {
+          z-index: 99;
+          position: absolute;
+          bottom:0;
+          right: 25%;
+          margin-right: -20px;
+          width: 40px;
+          height: 40px;
+          background: #ffffff;
+          box-shadow: 0px 2px 5px 0px rgba(4, 0, 0, 0.15);
+          border-radius: 20px;
+          cursor: pointer;
+             display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            border: 1px solid #fc7823;
+            box-shadow: 0px 2px 5px 0px rgba(252, 120, 35, 0.15);
+          }
           img {
             width: 20px;
             height: 20px;
             //  transform: rotate(180deg);
           }
-          box-shadow: 0px 2px 5px 0px rgba(4, 0, 0, 0.15);
-          &:hover {
-            border: 1px solid #fc7823;
-            box-shadow: 0px ​-2px 5px 0px rgba(252, 120, 35, 0.15);
-          }
         }
       }
-    }
     .swiper {
       width: 1140px;
+      height: 390px;
+       --swiper-pagination-color: #fc7823;
+    }
+    .swiper-pagination{
+      bottom: 10px;
     }
     .swiper-slide {
       width: 260px;
@@ -301,6 +342,7 @@ export default {
           font-weight: 400;
           color: #1f1f1f;
           line-height: 20px;
+           text-align: center;
         }
         .platform-content-item-button {
           cursor: pointer;
@@ -326,6 +368,178 @@ export default {
       }
     }
   }
+}
+}
+@media screen and (max-width: 1140px) {
+.platform-crust {
+  background: #fdf7f3;
+  .platform-crust-block {
+    padding-top: 3.33rem;
+    margin: 0 auto;
+    position: relative;
+    // height: 1247px;
+    .platform-top {
+       width: 23.33rem;
+           margin: 0 auto 2rem;
+      .platform-title {
+         
+     height: 1.5rem;
+ 
+font-size: 1.5rem;
+        line-height:1.5rem;
+        font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+        font-weight: bold;
+        color: #1f1f1f;
+      }
+      
+    }
+    .swiper-tool {
+      display: none;
+        .platform-trun {
+          z-index: 99;
+          position: absolute;
+          bottom:0;
+          left: 25%;
+          margin-left: -20px;
+          width: 40px;
+          height: 40px;
+          background: #ffffff;
+          box-shadow: 0px 2px 5px 0px rgba(4, 0, 0, 0.15);
+          border-radius: 20px;
+          cursor: pointer;
+          &:hover {
+            border: 1px solid #fc7823;
+            box-shadow: 0px 2px 5px 0px rgba(252, 120, 35, 0.15);
+          }
+          &:first-child {
+            // margin-right: 56px;
+          }
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          div {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        .platform-transition {
+          z-index: 99;
+          position: absolute;
+          bottom:0;
+          right: 25%;
+          margin-right: -20px;
+          width: 40px;
+          height: 40px;
+          background: #ffffff;
+          box-shadow: 0px 2px 5px 0px rgba(4, 0, 0, 0.15);
+          border-radius: 20px;
+          cursor: pointer;
+             display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            border: 1px solid #fc7823;
+            box-shadow: 0px 2px 5px 0px rgba(252, 120, 35, 0.15);
+          }
+          img {
+            width: 20px;
+            height: 20px;
+            //  transform: rotate(180deg);
+          }
+        }
+      }
+    .swiper {
+      // width: 1140px;
+      height: 28rem;
+      width: 26.67rem;
+       --swiper-pagination-color: #fc7823;
+    }
+    .swiper-pagination{
+      bottom: 10px;
+    }
+    .swiper-slide {
+    width: 26.67rem;
+    height: 27rem;
+      display:flex;
+      justify-content: center;
+      // margin-right: 34px !important;
+    }
+    .platform-content {
+      // width: 1140px;
+      display: flex;
+      overflow: hidden;
+      // flex-wrap: wrap;
+      .platform-content-item {
+       width: 23.33rem;
+height: 23.42rem;
+       background: #FFFFFF;
+box-shadow: 0rem 0rem 1rem 0rem rgba(252, 120, 35, 0.05);
+border-radius: 1rem;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        // &:last-child {
+        //   margin-right: 0px;
+        // }
+
+        .platform-content-item-logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 7.83rem;
+          img {
+            height: 2.5rem;
+            max-width: 23.33rem;
+            cursor: pointer;
+          }
+        }
+        &:nth-child(2) {
+          .platform-content-item-logo {
+            img {
+              width: 248px;
+              height: 30px;
+            }
+          }
+        }
+        .platform-content-item-info {
+          margin: 0 auto;
+          // width: 270px;
+          height: 8.83rem;
+          display: flex;
+          align-items: center;
+          padding: 0 0.92rem;
+         font-size: 0.83rem;
+          font-family: Montserrat, "Source Han Sans CN";
+          font-weight: 400;
+          color: #1f1f1f;
+         line-height: 1.25rem;
+           text-align: center;
+        }
+        .platform-content-item-button {
+          cursor: pointer;
+          margin: 0 auto;
+        width: 10.67rem;
+height: 3rem;
+border: 1px solid #FC7823;
+border-radius: 1rem;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.83rem;
+          font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+          font-weight: bold;
+          color: #fc7823;
+        }
+      }
+      &:last-child {
+        .platform-content-item {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
 }
 </style>
 

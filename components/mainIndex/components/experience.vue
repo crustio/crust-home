@@ -66,6 +66,55 @@
           </div>
         </div>
       </div>
+       <swiper class="experience-swiper" :options="swiperOptions">
+        <swiper-slide
+          v-for="(item, index) in listData"
+          :key="index"
+          class="image-wrapper"
+        >
+          <div
+          class="experience-item-block"
+        >
+         <div class="experience-item-img" @click="routeTo(item.url)">
+            <img :src="item.img" alt="" />
+          </div>
+          <div class="experience-item-title" @click="routeTo(item.url)">
+            {{ $t(`express.${item.title}`) }}
+            <img src="../../../assets/img/click.png" alt="" />
+          </div>
+         
+          <div
+            class="experience-item-subTitle"
+            v-html="$t(`express.${item.subTitle}`)"
+          ></div>
+          <div
+            class="experience-item-buttom"
+            v-if="index == 0"
+            @click="handleDemoVideoClick()"
+          >
+            {{ $t(`express.${item.button}`) }}<span>▶</span>
+          </div>
+          <div
+            class="experience-item-buttom"
+            v-if="index == 1"
+            @click="handleFileVideoClick()"
+          >
+            {{ $t(`express.${item.button}`) }}<span>▶</span>
+          </div>
+          <div
+            class="experience-item-buttom"
+            v-if="index == 2"
+            @click="handleSwitchswapVideoClick()"
+          >
+            {{ $t(`express.${item.button}`) }}<span>▶</span>
+          </div>
+          <div class="experience-item-create" v-if="item.create">
+            {{ $t(`express.${item.create}`) }}
+          </div>
+        </div>
+        </swiper-slide>
+               <div slot="pagination" class="swiper-pagination"></div>
+      </swiper>
     </div>
   </div>
 </template>
@@ -77,6 +126,16 @@ export default {
   components: { dVideo, sVideo },
   data() {
     return {
+        swiperOptions: {
+       loop: true,
+        slidesPerView: "auto",
+        // autoplay:true,
+        // spaceBetween: 10,
+        centeredSlides: false,
+        centeredSlidesBounds: false,
+        pagination: {
+    el: '.swiper-pagination',
+  }},
       showVideo: false,
       showSwitchswapVideo: false,
       showFilesVideo: false,
@@ -148,7 +207,10 @@ export default {
 </script>
 
 <style lang="scss">
-.experience-crust {
+
+
+@media screen and (min-width: 1140px) {
+  .experience-crust {
   background: #fdf7f3;
   .experience-crust-block {
     padding-top: 112px;
@@ -164,6 +226,9 @@ export default {
       color: #1f1f1f;
       line-height: 64px;
       text-align: center;
+    }
+    .experience-swiper{
+     display: none !important;
     }
     .experience-item {
       display: flex;
@@ -255,5 +320,129 @@ export default {
       }
     }
   }
+}
+}
+@media screen and (max-width: 1140px) {
+  .experience-crust {
+  background: #fdf7f3;
+  .experience-crust-block {
+    padding-top: 6.58rem;
+    margin: 0 auto;
+    // width: 1140px;
+    // height: 1247px;
+    .experience-title {
+      // margin-bottom: 56px;
+     height: 2rem;
+font-size: 2rem;
+color: #1F1F1F;
+      font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+      font-weight: bold;
+      line-height:2rem;
+      text-align: center;
+    }
+    .experience-item{
+       display: none !important;
+    }
+    .experience-swiper {
+ --swiper-pagination-color: #fc7823;
+      .image-wrapper{
+      height: 30.6rem;
+      padding-top: 4.5rem;
+      }
+      .experience-item-block {
+        margin: auto auto;
+        padding: 0 1rem;
+        padding-top: 4.25rem;
+      width: 23.33rem;
+height: 20.83rem;
+background: #FFFFFF;
+box-shadow: 0rem 0rem 1rem 0rem rgba(252, 120, 35, 0.05);
+border-radius: 1rem;
+position: relative;
+ .experience-item-img {
+   position: absolute;
+   top: -2.5rem;
+   left: 50%;
+   margin-left: -2.5rem;
+        width: 5rem;
+height: 5rem;
+background: #FFFFFF;
+box-shadow: 0rem 0rem 1rem 0rem rgba(252, 120, 35, 0.1);
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+          img {
+            cursor: pointer;
+           height: 2.67rem;
+          }
+        }
+        .experience-item-title {
+          cursor: pointer;
+          // width: 315px;
+        height: 1.25rem;
+font-size: 1.17rem;
+color: #1F1F1F;
+line-height: 2rem;
+          font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+          font-weight: bold;
+          text-decoration: underline;
+          text-align: center;
+          img {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+          }
+        }
+       
+        .experience-item-subTitle {
+          margin: 0 auto;
+          font-family: Montserrat, "Source Han Sans CN";
+          font-weight: 400;
+         font-size: 0.83rem;
+font-family: Montserrat;
+color: #666666;
+line-height: 1.25rem;
+          height: 9rem;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .experience-item-buttom {
+          cursor: pointer;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        width: 10.67rem;
+height: 3rem;
+          line-height:  3rem;
+          border:0.17rem solid #fc7823;
+          border-radius: 1rem;
+          text-align: center;
+          font-size: 0.83rem;
+          font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+          font-weight: bold;
+          color: #fc7823;
+          span {
+            margin-left: 0.75rem;
+            font-size: 1rem;
+          }
+          &:hover {
+            background: #fc7823;
+            border: 0.17rem solid #fc7823;
+            color: #ffffff;
+          }
+        }
+        .experience-item-create {
+          margin-top: 1rem;
+          font-size: 0.83rem;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
 }
 </style>
