@@ -96,7 +96,8 @@
   },
   "indexBanner": {
     "title": "Crust",
-    "sub": "Crust Network ,<br/>Web3.0去中心化存储 为元宇宙构建",
+    "sub": "Crust Network ,<br/>Web3.0去中心化存储为元宇宙构建",
+    "subMobile": "Crust Network ,<br/>Web3.0去中心化存储为元宇宙构建",
     "subTitle": "Web3.0去中心化存储 为元宇宙构建",
     "subInfo":"全球分布的可用存储容量",
     "contentLink1": "源代码",
@@ -446,8 +447,7 @@
       }
     ]
   },
-  "Crust Mainnet": "Crust 主网",
-  "Get CRU": "获取CRU",
+  "Crust Maxwell": "Crust 主网",
   "Crust Solutions Handbook": "Crust商业应用解决方案",
   "Crust-based commercial application solution": "基于Crust的商业应用解决方案，介绍具体应用场景及实现路径",
   "Maxwell incorporates all of the Crust's core features": "Maxwell预览网集成了Crust的所有核心功能：",
@@ -457,23 +457,27 @@
   "Crust Mainnet is coming soon": "Crust主网即将上线...",
   "Mainnet Launch Plan": "主网上线计划",
   "Claim CRU": "认领CRU",
+  "Crust Mainnet": "获取CRU",
   "Globally distributed available storage capacity": "全球分布的可用存储容量",
   "A decentralized storage network of Web3.0 ecosystem": "一个Web3.0生态的去中心化存储网络",
   "An encrypted storage layer of IPFS that supports customized encryptor": "一个支持定制化加密的IPFS隐私存储层",
   "crustInfo":{
     "title":"<span style='color:#FC7823'>Crust</span> 是什么",
     "subTitle":"Crust为元宇宙提供了一个Web3.0的去中心化存储网络，以实现去中心化、隐私性、存储保障等三大核心价值。<br/>Crust使用IPFS作为底层存储协议，并向用户开放通过链上即刻触达的应用层接口。<br/>在数据存储之外，Crust的技术栈还可进一步支持数据处理及计算服务。",
+    "subTitleMobile":"Crust为元宇宙提供了一个Web3.0的去中心化存储网络，以实现去中心化、隐私性、存储保障等三大核心价值。Crust使用IPFS作为底层存储协议，并向用户开放通过链上即刻触达的应用层接口。在数据存储之外，Crust的技术栈还可进一步支持数据处理及计算服务。",
     "button":"介绍",
     "title1":"去中心化&隐私",
     "subTitle1":"有意义的工作量证明",
     "subInfo1":"Crust使用一种无需信任、低能耗的基于TEE技<br/>术的MPoW共识机制，并借助该机制验证和管<br/>理去中心化存储网络内的所有存储资源。Crust<br/>也因此得以构建一个允许任何存储资源随时加<br/>入的开放网络。存储在Crust的文件会被加密以<br/>保全隐私性。",
+    "mobile_subInfo1":"Crust使用一种无需信任、低能耗的基于TEE技术的MPoW共识机制，并借助该机制验证和管理去中心化存储网络内的所有存储资源。Crust也因此得以构建一个允许任何存储资源随时加入的开放网络。存储在Crust的文件会被加密以保全隐私性。",
     "title2":"安全&高效",
     "subTitle2":"有担保的权益共识证明",
     "subInfo2":"Crust区块链基于有担保的权益证明（GPoS）<br/>达成共识。这一机制脱胎于权益证明（PoS）<br/>但拥有更多优势：安全、健壮、高效。GPoS<br/>要求用户既提供Token作为担保，也提供存储<br/>资源作为担保。",
-    "title3":"可用性&存储保证",
+    "mobile_subInfo2":"Crust区块链基于有担保的权益证明（GPoS）成共识。这一机制脱胎于权益证明（PoS）但拥有更多优势：安全、健壮、高效。GPoS要求用户既提供Token作为担保，也提供存储资源作为担保。",  
+      "title3":"可用性&存储保证",
     "subTitle3":"链上存储市场",
     "subInfo3":"Crust在链上构建了去中心化的存储市场（DSM），<br/>您可以轻松上传文件和发起存储订单。文件将会以多<br/>副本方式被去中心化网络存储。此外，您可以设置更<br/>大的存储保证池来为元宇宙中的高价值文件（例如<br/>NFT元数据）提供近乎永久的存储保障。",
-   
+    "mobile_subInfo3":"Crust在链上构建了去中心化的存储市场（DSM），您可以轻松上传文件和发起存储订单。文件将会以多副本方式被去中心化网络存储。此外，您可以设置更大的存储保证池来为元宇宙中的高价值文件（例如NFT元数据）提供近乎永久的存储保障。",
     "github":"在 GitHub 贡献",
     "tech":"技术白皮书"
   },
@@ -499,6 +503,8 @@
     "saveButton":"申请免费存储空间",
     "crustApi":"Crust storage API",
     "crustChainApi":"Crust cross-chain storage API",
+    "crustApi_mobile":"Crust",
+    "crustChainApi_mobile":"Crust cross-chain",
     "crustInfo":"获取Crust账户并参考演示代码，学习如何使用Crust<br/>存储接口存储文件。",
     "crustChainINfo":"Crust跨链存储接口支持从各种公链发起存储请求。<br/>Crust支持两种跨链存储接口：针对Polkadot平行链、基于<br/>Polkadot XCMP协议的原生跨链通信模块xStorage；针对任<br/>意Web3账户接入的Web3 IPFS remote pinning service。<br/>参考演示代码，学习如何使用Crust跨链存储接口存储文件。"
   },
@@ -519,7 +525,8 @@
     "info5":"NEAR为“重新想象”的世界打造了简单、安全、可扩展的全新公链平台体验。",
     "info6":"Flow是一个全新的、专门为服务下一代数字资产打造区块链生态。",
     "info7":"对开发者而言HECO是一个绝佳的节能且去中心化的公链平台。",
-    "info8":"Moonriver在Kusama上建立了支持以太坊兼容智能合约的平行链，为各类创新应用提供永久激励的测试环境。"
+    "info8":"Moonriver在Kusama上建立了支持以太坊兼容智能合约的平行链，为各类创新应用提供永久激励的测试环境。",
+    "info9":"OEC（又称OKExChain）是一个由OKEx支持的快速、高性能、开源的智能合约平台，用于获取大规模数字资产和DAPP。"
   },
   "who":{
     "title":"谁在使用<span style='color:#FC7823'>Crust</span>",
@@ -609,6 +616,7 @@
   "community":{
     "title":"<span style='color:#FC7823'>Crust</span>  社区",
     "subTitle":"Crust是由DCF（去中心化云基金会）支持和资助的开源项目。在Crust之外，DCF也支持了多个相关技术栈的开源项目，Encrypted IPFS即是其中之一。<br/>目前，Crust由分布全球的多个技术社区团队进行开发和维护。",
+    "subTitle_mobile":"Crust是由DCF（去中心化云基金会）支持和资助的开源项目。在Crust之外，DCF也支持了多个相关技术栈的开源项目，Encrypted IPFS即是其中之一。目前，Crust由分布全球的多个技术社区团队进行开发和维护。",
     "dev":"开发团队",
     "team1":"Sediment-tech 团队",
     "team2":"Switchswap 团队",

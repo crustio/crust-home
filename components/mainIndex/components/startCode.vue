@@ -5,7 +5,7 @@
       <div class="start-code">
         <div class="start-code-left">
           <div class="start-code-left-top">
-            <div class="start-code-left-tab">
+            <div class="start-code-left-tab start-pc">
               <div
                 @click="activeTab = 1"
                 :class="{
@@ -23,6 +23,26 @@
                 }"
               >
                 {{ $t(`storage.crustChainApi`) }}
+              </div>
+            </div>
+            <div class="start-code-left-tab  start-mobile">
+              <div
+                @click="activeTab = 1"
+                :class="{
+                  'start-code-tab': true,
+                  'start-code-tab-active': activeTab == 1,
+                }"
+              >
+                {{ $t(`storage.crustApi_mobile`) }}
+              </div>
+              <div
+                @click="activeTab = 2"
+                :class="{
+                  'start-code-tab': true,
+                  'start-code-tab-active': activeTab == 2,
+                }"
+              >
+                {{ $t(`storage.crustChainApi_mobile`) }}
               </div>
             </div>
             <div class="start-code-content">
@@ -130,14 +150,12 @@ import { <span style="color:#c0392b">KeyringPair</span> } from &#39;@polkadot/ke
             {{ $t(`storage.saveButton`) }}
           </div>
           <div
-            class="start-code-right-info"
-            style="width: 389px"
+            class="start-code-right-info start-code-right-info1"
             v-if="activeTab == 1"
             v-html="$t(`storage.crustInfo`)"
           ></div>
           <div
-            class="start-code-right-info"
-            style="width: 482px"
+            class="start-code-right-info start-code-right-info2"
             v-if="activeTab == 2"
             v-html="$t(`storage.crustChainINfo`)"
           ></div>
@@ -167,6 +185,163 @@ jumpTo(url)
 </script>
 
 <style lang="scss">
+@media screen and (max-width: 1140px) {
+  .start-pc{
+    display: none !important;
+  }
+.start-crust {
+  background: #fdf7f3;
+  .start-crust-block {
+    padding-top:7.33rem;
+    margin: 0 auto;
+    // height: 1247px;
+    .start-title {
+      text-align: center;
+      margin: 0 auto 2.33rem;
+ width: 19.83rem;
+font-size: 2rem;
+line-height: 2.5rem;
+      font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+      font-weight: bold;
+      color: #1f1f1f;
+    }
+    .start-code {
+     
+      .start-code-left {
+        .start-code-left-top {
+            margin: 0 auto;
+        width: 23.67rem;
+height: 26rem;
+background: #FFFFFF;
+          border: 1px solid #e5e5e5;
+          border-radius: 10px;
+          .start-code-content {
+            margin-top: 1rem;
+            height: 21.92rem;
+            overflow-y: scroll;
+            overflow-x: scroll;
+            .start-code-main {
+              padding-left: 1.08rem;
+              p {
+              font-size: 0.83rem;
+              transform: scale(0.83);
+             transform-origin: 0 0;
+                font-family: Montserrat, "Source Han Sans CN" !important;
+                font-weight: 400;
+                // color: #1F1F1F;
+               line-height: 1.33rem;
+              }
+            }
+            &::-webkit-scrollbar {
+              /*滚动条整体样式*/
+              width: 0px; /*高宽分别对应横竖滚动条的尺寸*/
+              height: 0px;
+            }
+            &::-webkit-scrollbar-thumb {
+              /*滚动条里面小方块*/
+              border-radius: 10px;
+              box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+              background: #003752;
+            }
+            &::-webkit-scrollbar-track {
+              /*滚动条里面轨道*/
+              box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+              border-radius: 10px;
+              background: #072038;
+            }
+            /*滚动条右下角颜色块*/
+            &::-webkit-scrollbar-corner {
+              background-color: #071e35;
+            }
+          }
+
+          .start-code-left-tab {
+            display: flex;
+            height: 2.83rem;
+            background: #fdf7f3;
+            border-bottom:1px solid #e5e5e5;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            .start-code-tab {
+            
+
+            font-size: 1.17rem;
+
+              cursor: pointer;
+              padding: 0 1.33rem;
+              line-height: 2.83rem;
+  height: 2.83rem;
+              font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+              font-weight: bold;
+              color: #1f1f1f;
+            }
+            .start-code-tab-active {
+              position: relative;
+            
+color: #FC7823;
+              &::after{
+               height: 0.17rem;
+                width: 100%;
+                position: absolute;
+                bottom: 0.17rem;
+                left: 0;
+                content: "";
+                background: #FC7823;
+                border-radius: 10px;
+              }
+              // color: #fc7823;
+              // border-bottom: 4px solid#FC7823;
+            }
+          }
+        }
+      }
+      .start-code-right {
+        margin-top: 2rem;
+        .start-code-right-butto {
+          margin: 0 auto;
+       width: 23.67rem;
+        height: 3rem;
+          background: #fdf7f3;
+          border-radius: 8px;
+          font-size: 1rem;
+          font-family: Montserrat, "Source Han Sans CN";
+          font-weight: 500;
+          color: #fc7823;
+         line-height: 3rem;
+          padding-left: 1.67rem;
+          cursor: pointer;
+          margin-bottom: 1rem;
+          div {
+            display: inline-block;
+          }
+          img {
+           width: 1.75rem;
+height: 1.75rem;
+            margin-right: 0.83rem;
+          }
+          &:hover {
+            background: #fdede2;
+          }
+        }
+        .start-code-right-info {
+          font-family: Montserrat, "Source Han Sans CN";
+          font-weight: 400;
+        width: 20rem;
+        margin-left: 3.08rem;
+        margin-top: 3.5rem;
+font-size: 0.83rem;
+color: #666666;
+line-height: 1.25rem;
+        }
+      }
+    }
+  }
+}
+}
+@media screen and (min-width: 1140px) {
+  .start-mobile{
+    display: none !important;
+  }
 .start-crust {
   background: #fdf7f3;
   .start-crust-block {
@@ -254,6 +429,7 @@ jumpTo(url)
             }
             .start-code-tab-active {
               position: relative;
+              color:#FC7823;
               &::after{
                 height: 4px;
                 width: 100%;
@@ -264,8 +440,8 @@ jumpTo(url)
                 background: #FC7823;
                 border-radius: 10px;
               }
-              color: #fc7823;
-              border-bottom: 4px solid#FC7823;
+              // color: #fc7823;
+              // border-bottom: 4px solid#FC7823;
             }
           }
         }
@@ -315,8 +491,15 @@ jumpTo(url)
           padding:0 15px;
           padding-left: 30px;
         }
+        .start-code-right-info1{
+          width: 389px;
+        }
+        .start-code-right-info2{
+          width: 482px;
+        }
       }
     }
   }
+}
 }
 </style>

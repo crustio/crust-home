@@ -3,7 +3,7 @@
     <div class="using-crust-block">
       <div class="using-title" v-html="$t(`who.title`)"></div>
 
-      <div class="using-tab">
+      <div class="using-pc using-tab">
         <div
           @click="setActiveTab(index)"
           :class="{
@@ -16,7 +16,7 @@
           <span> {{ $t(`who.${item.name}`) }}</span>
         </div>
       </div>
-      <div class="using-intro">
+      <div class="using-pc using-intro">
         <div class="using-intro-title">
           {{ $t(`who.${listData[activeTab].title}`) }}
         </div>
@@ -24,52 +24,113 @@
           {{ $t(`who.${listData[activeTab].info}`) }}
         </div>
       </div>
-
-      <swiper class="swiper" :options="swiperOptions">
-        <swiper-slide
-          v-for="(item, index) in listData[activeTab].children"
-          :key="index"
-          class="image-wrapper"
+      <div class="using-pc swiperbox">
+        <swiper
+          class="swiper"
+          ref="mySwiper"
+          v-if="swiperVisable"
+          :options="swiperOptions2"
         >
-          <div class="using-content" ref="using-content">
-            <template>
-              <div class="using-content-item">
-                <div class="using-content-item-logo">
-                  <img
-                    :src="item.img"
-                    alt=""
-                    :style="item.style ? item.style : ''"
-                    @click="routeTo(item.url)"
-                  />
+          <swiper-slide
+            v-for="(item, index) in listData[activeTab].children"
+            :key="index"
+            class="image-wrapper"
+          >
+            <div class="using-content" ref="using-content">
+              <template>
+                <div class="using-content-item">
+                  <div class="using-content-item-logo">
+                    <img
+                      :src="item.img"
+                      alt=""
+                      :style="item.style ? item.style : ''"
+                      @click="routeTo(item.url)"
+                    />
+                  </div>
+                  <div
+                    class="using-content-item-info"
+                    v-html="$t(`who.${item.title}`)"
+                  ></div>
+                  <div
+                    class="using-content-item-button"
+                    v-html="$t(`who.${item.button}`)"
+                    @click="routeTo(item.createUrl ? item.createUrl : item.url)"
+                  ></div>
+                  <div
+                    class="using-content-item-create"
+                    v-if="item.create"
+                    v-html="$t(`who.${item.create}`)"
+                  ></div>
                 </div>
-                <div
-                  class="using-content-item-info"
-                  v-html="$t(`who.${item.title}`)"
-                ></div>
-                <div
-                  class="using-content-item-button"
-                  v-html="$t(`who.${item.button}`)"
-                  @click="routeTo(item.createUrl ? item.createUrl : item.url)"
-                ></div>
-                <div
-                  class="using-content-item-create"
-                  v-if="item.create"
-                  v-html="$t(`who.${item.create}`)"
-                ></div>
+              </template>
+            </div>
+          </swiper-slide>
+          <div slot="pagination" class="swiper-pagination"></div>
+        </swiper>
+      </div>
+      <div class="using-pc using-trun usecase-prev2">
+        <img src="../../../assets/img/arrow.svg" alt="" />
+      </div>
+      <div class="using-pc using-transition usecase-next2">
+        <img src="../../../assets/img/arrow@3x.png" alt="" />
+      </div>
+      <div class="using-mobile">
+        <div
+          class="using-swiper-item"
+          v-for="(item, index) in listData"
+          :key="index"
+        >
+          <div
+            class="using-swiper-item-name"
+            v-html="$t(`who.${item.name}`)"
+          ></div>
+          <div
+            class="using-swiper-item-title"
+            v-html="$t(`who.${listData[activeTab].title}`)"
+          ></div>
+          <div
+            class="using-swiper-item-subTitle"
+            v-html="$t(`who.${listData[activeTab].info}`)"
+          ></div>
+          <swiper class="swiper" ref="swiper" :options="swiperOptions2">
+            <swiper-slide
+              v-for="(item1, index1) in item.children"
+              :key="index1"
+              class="image-wrapper"
+            >
+              <div class="using-content" ref="using-content">
+                <template>
+                  <div class="using-content-item">
+                    <div class="using-content-item-logo">
+                      <img
+                        :src="item1.img"
+                        alt=""
+                        :style="item1.style ? item1.style : ''"
+                        @click="routeTo(item1.url)"
+                      />
+                    </div>
+                    <div
+                      class="using-content-item-info"
+                      v-html="$t(`who.${item1.title}`)"
+                    ></div>
+                    <div
+                      class="using-content-item-button"
+                      v-html="$t(`who.${item1.button}`)"
+                      @click="
+                        routeTo(item1.createUrl ? item1.createUrl : item1.url)
+                      "
+                    ></div>
+                    <div
+                      class="using-content-item-create"
+                      v-if="item1.create"
+                      v-html="$t(`who.${item1.create}`)"
+                    ></div>
+                  </div>
+                </template>
               </div>
-            </template>
-          </div>
-        </swiper-slide>
-        <!--        <div slot="pagination" class="swiper-pagination"></div>-->
-      </swiper>
-      <div class="using-trun-item">
-        <div class="using-hadle">
-          <div class="using-trun usecase-prev2">
-            <div v-html="icons[0]"></div>
-          </div>
-          <div class="using-transition usecase-next2">
-            <img src="../../../assets/img/arrow@3x.png" alt="" />
-          </div>
+            </swiper-slide>
+            <div slot="pagination" class="swiper-pagination"></div>
+          </swiper>
         </div>
       </div>
     </div>
@@ -83,15 +144,23 @@ var timer
 export default {
   data() {
     return {
-      swiperOptions: {
-        loop: false,
+      swiperVisable: true,
+      swiperOptions2: {
+        loop: true,
         slidesPerView: "auto",
-        spaceBetween: 10,
+        autoplay: {
+          disableOnInteraction: false,
+        },
+        initialSlide: 1,
         centeredSlides: false,
         centeredSlidesBounds: false,
         navigation: {
           nextEl: ".usecase-next2",
           prevEl: ".usecase-prev2",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
         // breakpoints: {
         //   0: {
@@ -159,8 +228,7 @@ export default {
               button: "vist",
               style: "width: 173px;height: 40px;",
               url: "https://www.liquity.org/",
-              createUrl:
-                "https://www.liquity.org/",
+              createUrl: "https://www.liquity.org/",
             },
           ],
         },
@@ -254,16 +322,6 @@ export default {
               url: "https://decoo.io/",
             },
             {
-              img: require(`../../../assets/img/5-Who are using Crust/IPFS/skyekiwi.png`),
-              title: "ipfs6",
-              button: "learn",
-              create: "create",
-              style: "width: 216px;height: 43px;",
-              url: "https://skye.kiwi/",
-              createUrl:
-                "https://medium.com/crustnetwork/skyekiwi-first-application-accepted-to-crust-grants-program-77071ab5481c",
-            },
-            {
               img: require(`../../../assets/img/5-Who are using Crust/IPFS/SOCBAY@3x.png`),
               title: "ipfs3",
               button: "learn",
@@ -292,6 +350,16 @@ export default {
               url: "https://pan.nashcloud.cn/",
               createUrl:
                 "https://medium.com/crustnetwork/a-brief-introduction-to-crato-the-cloud-storage-solution-of-the-new-era-ed3c0b95502",
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/IPFS/skyekiwi.png`),
+              title: "ipfs6",
+              button: "learn",
+              create: "create",
+              style: "width: 216px;height: 43px;",
+              url: "https://skye.kiwi/",
+              createUrl:
+                "https://medium.com/crustnetwork/skyekiwi-first-application-accepted-to-crust-grants-program-77071ab5481c",
             },
             {
               img: require(`../../../assets/img/5-Who are using Crust/IPFS/Coldstack@3x.png`),
@@ -341,248 +409,408 @@ export default {
       ],
     }
   },
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.$swiper
+    },
+  },
   methods: {
     routeTo(url) {
       window.open(url, "_blank")
     },
     setActiveTab(index) {
-      this.$refs["using-content"].scrollLeft = 0
       this.activeTab = index
       this.active = 1
+      this.$nextTick(() => {
+        console.log("Current Swiper instance object", this.swiper)
+        this.swiper.slideToLoop(0, 1000, false)
+        this.swiper.update()
+      })
     },
   },
 }
 </script>
 
 <style lang="scss">
-.using-crust {
-  background: #fdf7f3;
-  .using-crust-block {
-    padding-top: 137px;
-    margin: 0 auto;
-    width: 1140px;
-
-    .using-title {
-      // width: 672px;
-      height: 46px;
-      font-size: 48px;
-      line-height: 32px;
-      font-family: "Montserrat-blod", "Source Han Sans CN-blod";
-      font-weight: bold;
-      color: #1f1f1f;
-    }
-    .using-tab {
-      margin: 32px 0 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      // padding: 4px 10px;
+@media screen and (min-width: 1140px) {
+  .using-mobile {
+    display: none !important;
+  }
+  .using-crust {
+    background: #fdf7f3;
+    .using-crust-block {
+      padding-top: 137px;
+      margin: 0 auto;
       width: 1140px;
-      height: 60px;
-      background: #ffffff;
-      border-radius: 10px;
-      .using-tab-item {
-        cursor: pointer;
-        width: 30%;
+      position: relative;
+      .using-title {
+        // width: 672px;
+        height: 46px;
+        font-size: 48px;
+        line-height: 32px;
+        font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+        font-weight: bold;
+        color: #1f1f1f;
+      }
+      .using-tab {
+        margin: 32px 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // padding: 4px 10px;
+        width: 1140px;
         height: 60px;
+        background: #ffffff;
+        border-radius: 10px;
+        .using-tab-item {
+          cursor: pointer;
+          width: 30%;
+          height: 60px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span {
+            display: inline-block;
+            height: 60px;
+            line-height: 60px;
+            font-size: 18px;
+            font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+            font-weight: bold;
+            color: #1f1f1f;
+          }
+        }
+        .using-tab-item-active {
+          span {
+            border-radius: 8px;
+            color: #fc7823;
+            position: relative;
+            &::after {
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              margin-left: calc(-50% + 3px);
+              height: 4px;
+              background: #fc7823;
+              border-radius: 2px;
+              width: calc(100% - 6px);
+              content: "";
+            }
+          }
+        }
+      }
+      .using-intro {
+        // display: flex;
+        // justify-content: space-between;
+        margin-bottom: 8px;
+        .using-intro-title {
+          width: 1140px;
+          text-align: center;
+          font-size: 36px;
+          font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+          font-weight: bold;
+          color: #fc7823;
+          line-height: 48px;
+
+          height: 35px;
+          margin-bottom: 29px;
+        }
+        .using-intro-info {
+          width: 1008px;
+          margin: 0 auto;
+          text-align: center;
+          height: 130px;
+          font-size: 16px;
+          font-family: Montserrat, "Source Han Sans CN";
+          font-weight: 400;
+          color: #666666;
+          line-height: 24px;
+        }
+      }
+      .using-trun {
+        z-index: 99;
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        margin-left: -20px;
+        width: 40px;
+        height: 40px;
+        background: #ffffff;
+        box-shadow: 0px 2px 5px 0px rgba(165, 131, 131, 0.15);
+        border-radius: 20px;
+        cursor: pointer;
 
         display: flex;
         justify-content: center;
         align-items: center;
-        span {
-          display: inline-block;
-          height: 60px;
-          line-height: 60px;
-          font-size: 18px;
-          font-family: "Montserrat-blod", "Source Han Sans CN-blod";
-          font-weight: bold;
-          color: #1f1f1f;
+        img {
+          width: 20px;
+          height: 20px;
+          pointer-events: none;
+        }
+        &:hover {
+          border: 1px solid #fc7823;
+          box-shadow: 0px 2px 5px 0px rgba(252, 120, 35, 0.15);
+        }
+        &:first-child {
+          margin-right: 56px;
         }
       }
-      .using-tab-item-active {
-        span {
-          border-radius: 8px;
-          color: #fc7823;
-          position: relative;
-          &::after {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            margin-left: calc(-50% + 3px);
-            height: 4px;
-            background: #fc7823;
-            border-radius: 2px;
-            width: calc(100% - 6px);
-            content: "";
+      .using-transition {
+        z-index: 99;
+        position: absolute;
+        bottom: 0;
+        right: 25%;
+        margin-right: -20px;
+        width: 40px;
+        height: 40px;
+        background: #ffffff;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        box-shadow: 0px 2px 5px 0px rgba(165, 131, 131, 0.15);
+        &:hover {
+          border: 1px solid #fc7823;
+          box-shadow: 0px 2px 5px 0px rgba(252, 120, 35, 0.15);
+        }
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .swiper {
+        width: 1140px;
+        height: 400px;
+        --swiper-pagination-color: #fc7823; /* ���ֶ����� */
+      }
+      .swiper-pagination {
+        bottom: 10px;
+      }
+      .swiper-slide {
+        width: 260px;
+        margin-right: 34px !important;
+      }
+      .using-content {
+        width: 1140px;
+        display: flex;
+        overflow: hidden;
+
+        .using-content-item {
+          flex-basis: 260px;
+          flex-shrink: 0;
+          height: 315px;
+          background: #fffcfa;
+          box-shadow: 0px 5px 5px 0px rgba(4, 0, 0, 0.02);
+          border-radius: 15px;
+          margin-right: 20px;
+          margin-bottom: 40px;
+          padding-bottom: 50px;
+          // display: flex;
+          // flex-direction: column;
+          // justify-content: space-between;
+          &:last-child {
+            // margin-right: 20px;
+          }
+          .using-content-item-logo {
+            margin: 30px auto 0;
+            display: flex;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            img {
+              cursor: pointer;
+              height: 50px;
+            }
+          }
+          .using-content-item-info {
+            margin: 0 auto;
+            // width: 270px;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            padding: 0 14px;
+            width: 260px;
+            flex: 1;
+            font-size: 12px;
+            font-family: Montserrat, "Source Han Sans CN";
+            font-weight: 400;
+            color: #1f1f1f;
+            line-height: 20px;
+            text-align: center;
+          }
+          .using-content-item-button {
+            cursor: pointer;
+            margin: 0 auto;
+            width: 160px;
+            height: 36px;
+            border: 2px solid #fc7823;
+            border-radius: 8px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+            font-weight: bold;
+            color: #fc7823;
+          }
+          .using-content-item-create {
+            margin-top: 15px;
+            padding-right: 10px;
+            height: 13px;
+            font-size: 12px;
+            font-family: Montserrat, "Source Han Sans CN";
+            font-weight: 400;
+            color: #1f1f1f;
+            line-height: 20px;
+            text-align: right;
+          }
+        }
+        &:last-child {
+          .using-content-item {
+            margin-right: 0px;
           }
         }
       }
     }
-    .using-intro {
-      // display: flex;
-      // justify-content: space-between;
-      margin-bottom: 8px;
-      .using-intro-title {
-        width: 1140px;
-        text-align: center;
-        font-size: 36px;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .using-pc {
+    display: none !important;
+  }
+  .using-crust {
+    background: #fdf7f3;
+    .using-crust-block {
+      padding-top: 4.92rem;
+      margin: 0 auto;
+      position: relative;
+      .using-title {
+        width: 23.33rem;  
+        height: 2rem;
+        line-height: 2rem;
+        font-size: 2rem;
         font-family: "Montserrat-blod", "Source Han Sans CN-blod";
         font-weight: bold;
-        color: #fc7823;
-        line-height: 48px;
-
-        height: 35px;
-        margin-bottom: 29px;
+        color: #1f1f1f;
+        margin: 2.75rem auto 2.67rem;
       }
-      .using-intro-info {
-        width: 1008px;
-        margin: 0 auto;
-        text-align: center;
-        height: 130px;
-        font-size: 16px;
-        font-family: Montserrat, "Source Han Sans CN";
-        font-weight: 400;
-        color: #666666;
-        line-height: 24px;
-      }
-    }
-    .using-trun-item {
-      width: 1140px;
-      display: flex;
-      justify-content: flex-end;
-      margin-top: 12px;
-      .using-hadle {
-        display: flex;
-        .using-trun {
-          width: 40px;
-          height: 40px;
-          background: #ffffff;
-          box-shadow: 0px 2px 5px 0px rgba(165, 131, 131, 0.15);
-          border-radius: 20px;
-          cursor: pointer;
-
-          &:hover {
-            border: 1px solid #fc7823;
-            box-shadow: 0px 2px 5px 0px rgba(252, 120, 35, 0.15);
-          }
-          &:first-child {
-            margin-right: 56px;
-          }
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          div {
-            width: 20px;
-            height: 20px;
+      .using-swiper-item {
+        &:last-child{
+          .swiper{
+           margin-bottom: 0!important;
           }
         }
-        .using-transition {
-          width: 40px;
-          height: 40px;
-          background: #ffffff;
-          border-radius: 20px;
-          cursor: pointer;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          box-shadow: 0px 2px 5px 0px rgba(165, 131, 131, 0.15);
-          &:hover {
-            border: 1px solid #fc7823;
-            box-shadow: 0px 2px 5px 0px rgba(252, 120, 35, 0.15);
-          }
-          img {
-            width: 20px;
-            height: 20px;
-          }
-        }
-      }
-    }
-    .swiper {
-      width: 1140px;
-    }
-    .swiper-slide {
-      width: 260px;
-      margin-right: 34px !important;
-    }
-    .using-content {
-      width: 1140px;
-      display: flex;
-      overflow: hidden;
-
-      .using-content-item {
-        flex-basis: 260px;
-        flex-shrink: 0;
-        height: 315px;
-        background: #fffcfa;
-        box-shadow: 0px 5px 5px 0px rgba(4, 0, 0, 0.02);
-        border-radius: 15px;
-        margin-right: 20px;
-        margin-bottom: 40px;
-        padding-bottom: 50px;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
-        &:last-child {
-          // margin-right: 20px;
-        }
-        .using-content-item-logo {
-          margin: 30px auto 0;
-          display: flex;
-          height: 50px;
-          justify-content: center;
-          align-items: center;
-          img {
-            cursor: pointer;
-            height: 50px;
-          }
-        }
-        .using-content-item-info {
+        .using-swiper-item-name {
           margin: 0 auto;
-          // width: 270px;
-          height: 160px;
-          display: flex;
-          align-items: center;
-          padding: 0 14px;
-          width: 260px;
-          flex: 1;
-          font-size: 12px;
-          font-family: Montserrat, "Source Han Sans CN";
-          font-weight: 400;
-          color: #1f1f1f;
-          line-height: 20px;
-        }
-        .using-content-item-button {
-          cursor: pointer;
-          margin: 0 auto;
-          width: 160px;
-          height: 36px;
-          border: 2px solid #fc7823;
-          border-radius: 8px;
-          text-align: center;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 14px;
+          width: 23.33rem;
+          height: 1.33rem;
+          line-height: 1.33rem;
+          font-size: 1.33rem;
           font-family: "Montserrat-blod", "Source Han Sans CN-blod";
           font-weight: bold;
-          color: #fc7823;
-        }
-        .using-content-item-create {
-          margin-top: 15px;
-          padding-right: 10px;
-          height: 13px;
-          font-size: 12px;
-          font-family: Montserrat, "Source Han Sans CN";
-          font-weight: 400;
           color: #1f1f1f;
-          line-height: 20px;
-          text-align: right;
         }
-      }
-      &:last-child {
-        .using-content-item {
-          margin-right: 0px;
+        .using-swiper-item-title {
+          margin: 0.67rem auto 2.08rem;
+          width: 23.33rem;
+          height: 1.25rem;
+          font-size: 1.17rem;
+          font-family: Montserrat;
+          font-weight: bold;
+          color: #fc7823;
+          line-height: 1.25rem;
+        }
+        .using-swiper-item-subTitle {
+          margin: 0 auto;
+          width: 23.33rem;
+          font-size: 0.83rem;
+          font-family: Montserrat;
+          font-weight: 400;
+          color: #666666;
+          line-height: 1.25rem;
+        }
+        .swiper {
+          margin: 3.33rem auto 4.58rem;
+          height: 28rem;
+          width: 26.67rem;
+          --swiper-pagination-color: #fc7823; /* ���ֶ����� */
+        }
+        .swiper-pagination {
+          bottom: 10px;
+        }
+        .swiper-slide {
+          height: 23.42rem;
+          width: 26.67rem;
+          display: flex;
+          justify-content: center;
+        }
+        .using-content {
+          .using-content-item {
+            width: 23.33rem;
+            height: 23.42rem;
+            background: #ffffff;
+            box-shadow: 0rem 0rem 1rem 0rem rgba(252, 120, 35, 0.05);
+            border-radius: 1rem;
+            .using-content-item-logo {
+              height: 7.83rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              img {
+                cursor: pointer;
+                height: 2.58rem;
+              }
+            }
+            .using-content-item-info {
+              margin: 0 auto;
+              height: 8.33rem;
+              display: flex;
+              align-items: center;
+              padding: 0 1.25rem;
+              font-size: 0.83rem;
+              font-family: Montserrat, "Source Han Sans CN";
+              font-weight: 400;
+              color: #1f1f1f;
+              line-height: 1.25rem;
+              text-align: center;
+            }
+            .using-content-item-button {
+              cursor: pointer;
+              margin: 0 auto;
+              width: 10.67rem;
+              height: 3rem;
+              border: 1px solid #fc7823;
+              border-radius: 1rem;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 0.83rem;
+              font-family: "Montserrat-blod", "Source Han Sans CN-blod";
+              font-weight: bold;
+              color: #fc7823;
+            }
+            .using-content-item-create {
+              margin-top: 15px;
+              padding-right: 10px;
+              height: 13px;
+              font-size: 12px;
+              font-family: Montserrat, "Source Han Sans CN";
+              font-weight: 400;
+              color: #1f1f1f;
+              line-height: 20px;
+              text-align: right;
+            }
+          }
+          &:last-child {
+            .using-content-item {
+              margin-right: 0px;
+            }
+          }
         }
       }
     }

@@ -14,11 +14,12 @@ const outerDit = {
   "crust mainnet": "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/explorer",
   "crust mainnet_en": "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/explorer",
   "crust maxwell":
-    "https://apps.crust.network/?rpc=wss%3A%2F%2Fapi-maxwell.crust.network#/explorer",
+    "https://apps.crust.network/?rpc=wss%3A%2F%2Fapi-maxwell.crust.network#/",
+    "crust maxwellIndex":"https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/",
   "crust maxwell_zh":
-    "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc-crust.decoo.io#/explore",
+    "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/explorer",
   "crust maxwell_en":
-    "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc-crust.decoo.io#/explore",
+    "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/explorer",
   github: "https://github.com/crustio",
   github_zh: "https://github.com/crustio",
   "build on crust": "https://wiki.crust.network/docs/en/build101",
@@ -88,7 +89,7 @@ const outerDit = {
   enjoy_action:"https://crowdloan.parallel.fi/#/auction/contribute/polkadot/2008",
 
   start_button1:"https://wiki.crust.network/docs/en/build101",
-  start_button2:"https://discord.gg/WQQHnyKCmn",
+  start_button2:"https://github.com/crustio/free-storage#-apply-process",
   start_button3:"https://wiki.crust.network/docs/en/build101",
   start_button4:"https://wiki.crust.network/docs/en/buildCrossChainSolution",
   
