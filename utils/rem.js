@@ -1,25 +1,18 @@
-(function(doc, win) {
-    var docEl = doc.documentElement,
-      isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
-      dpr = isIOS ? Math.min(win.devicePixelRatio, 3) : 1,
-      dpr = window.top === window.self ? dpr : 1, //被iframe引用时，禁止缩放
-      dpr = 1,
-      scale = 1 / dpr,
-      resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
-    docEl.dataset.dpr = dpr;
-    var metaEl = doc.createElement('meta');
-    metaEl.name = 'viewport';
-    metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
-    docEl.firstElementChild.appendChild(metaEl);
-    var recalc = function() {
-      var width = docEl.clientWidth;
-      if (width / dpr > 750) {
-          width = 750 * dpr;
-      }
-      // 乘以100，px : rem = 100 : 1
-      docEl.style.fontSize = width / 26.67 + 'px';
-    };
-    recalc()
-    if (!doc.addEventListener) return;
-    win.addEventListener(resizeEvt, recalc, false);
-})(document, window);
+(function(){
+	function w () {
+		var r = document.documentElement;
+		var a = r.getBoundingClientRect().width;
+    if(a>1139){
+      return
+    }
+		if (a > 750) {
+			a = 750;
+		};
+		rem = a / 26.666;
+    console.log(r.style)
+    r.setAttribute('style', 'font-size: '+rem + 'px!important');
+    console.log(rem)
+	};
+	var t;
+	w();
+})();

@@ -15,7 +15,7 @@
             class="backed-swiper-slide"
           >
             <div class="backed-item-img">
-              <img :src="item.img"  alt="">
+              <img :src="item.img" :style="item.style"  alt="">
             </div>
           </swiper-slide>
           <div slot="pagination" class="swiper-pagination"></div>
@@ -32,7 +32,9 @@ export default {
       swiperOptions: {
         loop: true,
         slidesPerView: "auto",
-        autoplay:true,
+        //  autoplay: {
+        //   disableOnInteraction: false,
+        // },
         // spaceBetween: 10,
         centeredSlides: false,
         centeredSlidesBounds: false,
@@ -43,59 +45,59 @@ export default {
       logoArr:[
         {
           img: require(`../../../assets/img/7-Strong investor backing/W3.png`),
-          style: "width: 7.25rem;height: 2.5rem;",
+          style: "width: 7.3rem;height: 2.5rem;",
         },
          {
           img: require(`../../../assets/img/7-Strong investor backing/substrate.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 9.2rem;height: 2rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/DFG@3x.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 6.95rem;height: 2.55rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/NGC@3x.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 6.35rem;height: 2.05rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/HASH@3x.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 7.7rem;height: 0.8rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/SevenX@3x.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 7.4rem;height: 2rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/IOSG@3x.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 5.5rem;height: 2.5rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/Bitcoin.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 8.5rem;height: 1.2rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/比升资本.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 3.85rem;height: 2.75rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/CHAIN.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 4.65rem;height: 4rem;"
         },{
           img: require(`../../../assets/img/7-Strong investor backing/bitscale@3x.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 6.35rem;height: 2.45rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/AU21.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 8.5rem;height: 1.4rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/SNZ.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width:4.45rem;height: 2.4rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/3Commas@3x.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 7rem;height: 1.75rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/共识实验室.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 8.4rem;height: 2.2rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/orgin.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 5.35rem;height: 4.25rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/太和资本.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 7.25rem;height: 2.15rem;"
         }, {
           img: require(`../../../assets/img/7-Strong investor backing/水滴资本.png`),
-          style: "width: 7.25rem;height: 2.5rem;"
+          style: "width: 2.45rem;height: 4.5rem;"
         },
       ]
     }
@@ -128,7 +130,7 @@ export default {
         --swiper-pagination-color: #fc7823;
       }
       .backed-item-img {
-        width: 8.5rem;
+       width: 11.6rem;
         height: 4rem;
         border-radius: 15px;
         display: flex;
@@ -137,7 +139,7 @@ export default {
         overflow: hidden;
         img{
           height: 2.5rem;
-          max-width: 8.5rem;
+          // max-width: 8.5rem;
         }
       }
       .backed-swiper-slide {

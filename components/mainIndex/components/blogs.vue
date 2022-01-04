@@ -6,7 +6,7 @@
         <div class="latest-item">
           <div class="latest-item-box" @click="routeTo(profileURL + item.uniqueSlug)" v-for="(item,index) in posts" :key="index">
             <div class="latest-item-bg">
-              <img v-bind:src="
+              <img v-if="item.virtuals.previewImage.imageId" v-bind:src="
               'https://cdn-images-1.medium.com/fit/t/800/480/' +
               item.virtuals.previewImage.imageId
             " alt="" />
@@ -203,10 +203,11 @@ height: 19.58rem;
           align-items: center;
           justify-content: center;
        height: 13.33rem;
+       margin-bottom: 1rem;
           img {
          width: 20rem;
-
-border-radius: 1rem;
+max-height: 13.33rem;
+border-radius: 0.67rem;
           }
         }
         .latest-item-text {

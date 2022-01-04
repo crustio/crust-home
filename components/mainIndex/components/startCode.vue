@@ -1,7 +1,8 @@
 <template>
   <div class="start-crust">
     <div class="start-crust-block">
-      <div class="start-title" v-html="$t('storage.title')"></div>
+      <div class="start-title start-pc" v-html="$t('storage.title')"></div>
+      <div class="start-title start-mobile" v-html="$t('storage.title_mobile')"></div>
       <div class="start-code">
         <div class="start-code-left">
           <div class="start-code-left-top">
@@ -198,8 +199,8 @@ jumpTo(url)
     .start-title {
       text-align: center;
       margin: 0 auto 2.33rem;
- width: 19.83rem;
-font-size: 2rem;
+ width: 23.33rem;
+font-size: 1.5rem;
 line-height: 2.5rem;
       font-family: "Montserrat-blod", "Source Han Sans CN-blod";
       font-weight: bold;
@@ -266,7 +267,7 @@ background: #FFFFFF;
             
 
             font-size: 1.17rem;
-
+white-space: nowrap;
               cursor: pointer;
               padding: 0 1.33rem;
               line-height: 2.83rem;
@@ -283,11 +284,11 @@ color: #FC7823;
                height: 0.17rem;
                 width: 100%;
                 position: absolute;
-                bottom: 0.17rem;
+                bottom: 0;
                 left: 0;
                 content: "";
                 background: #FC7823;
-                border-radius: 10px;
+                border-radius: 0.8rem;
               }
               // color: #fc7823;
               // border-bottom: 4px solid#FC7823;
@@ -319,16 +320,16 @@ color: #FC7823;
 height: 1.75rem;
             margin-right: 0.83rem;
           }
-          &:hover {
+          &:active {
             background: #fdede2;
           }
         }
         .start-code-right-info {
           font-family: Montserrat, "Source Han Sans CN";
           font-weight: 400;
-        width: 20rem;
-        margin-left: 3.08rem;
-        margin-top: 3.5rem;
+        width: 23.33rem;
+        padding-left: 1.67rem;
+        margin: 3.5rem auto 0;
 font-size: 0.83rem;
 color: #666666;
 line-height: 1.25rem;

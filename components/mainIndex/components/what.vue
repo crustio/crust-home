@@ -15,7 +15,7 @@
         v-html="$t('crustInfo.subTitleMobile')"
       ></div>
       <div class="what-button" @click="handleDemoVideoClick">
-        {{ $t("crustInfo.button") }}<span>▶</span>
+        {{ $t("crustInfo.button") }}<span></span>
       </div>
       <div class="what-info what-info-pc">
         <div class="what-item" v-for="(item, index) in infoData" :key="index">
@@ -186,7 +186,7 @@ export default {
       width: 10.67rem;
 height: 3rem;
 background: #FC7823;
-border-radius: 1rem;
+border-radius: 0.67rem;
         line-height: 3rem;
         text-align: center;
         font-size: 0.83rem;
@@ -195,7 +195,13 @@ border-radius: 1rem;
         color: #ffffff;
         span {
           margin-left: 11px;
-         font-size: 0.83rem;
+        display: inline-block;
+        vertical-align: middle;
+              width: 0;
+              height: 0;
+              border-top: 0.46rem solid transparent;
+              border-left: 0.58rem solid #fff;
+              border-bottom: 0.46rem solid transparent;
         }
       }
       .what-info-pc{
@@ -213,7 +219,7 @@ border-radius: 1rem;
           border-radius: 10px;
           margin-bottom: 5.67rem;
           padding-top: 4.67rem;
-          &:hover {
+          &:active {
             .what-item-icon-bg {
               background: radial-gradient(
                 circle,
@@ -305,6 +311,7 @@ border-radius: 1rem;
             align-items: center;
             justify-content: center;
             font-size: 0.83rem;
+            -webkit-text-size-adjust: none;
             font-family: Montserrat;
             font-weight: 400;
             color: #666666;
@@ -322,7 +329,7 @@ border-radius: 1rem;
 height: 3.17rem;
           line-height:  3.17rem;
           background: #fc7823;
-          border-radius: 1rem;
+          border-radius: 0.67rem;
           font-size: 0.83rem;
           font-family: Montserrat, "Source Han Sans CN";
           font-weight: 400;
@@ -333,7 +340,7 @@ height: 3.17rem;
 height: 1.75rem;
             margin-right: 0.83rem;
           }
-          &:hover {
+          &:active {
             background: #ff6400;
           }
         }
@@ -343,13 +350,13 @@ height: 1.75rem;
         width: 18.83rem;
 height: 3.17rem;
           line-height:  3.17rem;
-          border: 2px solid #ff6400;
-          border-radius: 1rem;
+          border: 0.17rem solid #ff6400;
+          border-radius: 0.67rem;
           font-size: 0.83rem;
           font-family: Montserrat, "Source Han Sans CN";
           font-weight: 400;
           color: #ff6400;
-          &:hover {
+          &:active {
             background: #ff6400;
             color: #fff;
           }
@@ -407,7 +414,12 @@ height: 3.17rem;
         font-weight: 400;
         span {
           margin-left: 10px;
-          font-size: 23px;
+          display: inline-block;
+              width: 0;
+              height: 0;
+              border-top: 0.46rem solid transparent;
+              border-left: 0.58rem solid #fff;
+              border-bottom: 0.46rem solid transparent;
         }
         &:hover {
           background: #ff6400;
