@@ -280,7 +280,7 @@ export default {
           ? "https://gw.crustapps.net/ipfs/QmP9WqDYhreSuv5KJWzWVKZXJ4hc7y9fUdwC4u23SmqL6t"
           : "https://gw.crustapps.net/ipfs/QmPrU21TrRtWcrWsNmHfBmSvTKZApKCEZrDGncnheMGKsj"
         return window.open(`${url}`, "_blank")
-      }
+        }
       if (name === "crust solutions handbook") {
         const pdfName = !isZh
           ? "crust_solutions_handbook-en.pdf"

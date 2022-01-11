@@ -22,7 +22,7 @@
           </template>
         </div>
         <div class="foot-left-bottom">
-          Copyright © Decentralised Cloud Foundation 2021 All Rights Reserved
+          {{ `Copyright © Decentralised Cloud Foundation ${new Date().getFullYear()} All Rights Reserved` }}
         </div>
       </div>
       <div class="foot-right">
