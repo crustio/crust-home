@@ -172,7 +172,6 @@ export default {
       window.onresize = null;
     },
   mounted() {
-     console.log(document.body.clientWidth)
      this.$nextTick(()=>{
  if(document.body.clientWidth>1140){
        this.pcShow=true
@@ -191,8 +190,6 @@ export default {
         if(this.swiper.realIndex){
  this.active = this.swiper.realIndex
         }
-       
-        console.log(this.swiper)
       })
     },
     setActive(index) {
@@ -227,7 +224,6 @@ export default {
           return
         }
         let distance =240 
-        console.log(distance)
         var timer = setInterval(() => {
           num += 10
           if (distance < num) {

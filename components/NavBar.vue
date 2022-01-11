@@ -342,7 +342,7 @@ export default {
 
   .navbar-nav {
     z-index: 99999;
-    font-family: InterV;
+    font-family: Montserrat, "Source Han Sans CN";
     font-size: 16px;
     color: #ffffff;
     letter-spacing: 0;
@@ -353,6 +353,7 @@ export default {
           .dropdown-toggle {
             span {
               color: red !important;
+              font-family: Montserrat, "Source Han Sans CN";
             }
           }
         }
@@ -360,6 +361,9 @@ export default {
       .nav-link {
         color: #fff !important;
         font-family: Montserrat, "Source Han Sans CN";
+        span{
+          font-family: Montserrat, "Source Han Sans CN";
+        }
         &:hover {
           color: #fc7823 !important;
           border-bottom: 2px solid #fc7823;
@@ -386,6 +390,9 @@ export default {
 .nav-link {
   font-family: InterV_Semi-Bold;
   font-weight: 500;
+  span{
+    font-family: Montserrat, "Source Han Sans CN";
+  }
 }
 .dropdown-menu {
   background-color: #3b3b3b !important;
@@ -445,6 +452,7 @@ export default {
 
 .navbar .navbar-nav .nav-item {
   font-size: 14px;
+  font-family: Montserrat, "Source Han Sans CN";
 }
 @media screen and (max-width: 1139px) {
    .navModal{
