@@ -28,11 +28,11 @@
         </div>
         <div class="foot-copy">
           <div class="foot-copy-txt foot-pc">
-            Copyright © Decentralized Cloud Foundation 2021 All Rights Reserved
+            {{`Copyright © Decentralized Cloud Foundation ${new Date().getFullYear()} All Rights Reserved`}}
           </div>
           <div class="foot-copy-txt foot-copy-txt-top foot-mobile">
             Copyright © Decentralized Cloud Foundation<br />
-            2021 All Rights Reserved
+            {{`${new Date().getFullYear()} All Rights Reserved`}}
           </div>
           <div class="foot-copy-img">
             <!-- <div v-html="item" v-for="item in icons" :key="item"></div> -->
