@@ -422,7 +422,6 @@ export default {
       this.activeTab = index
       this.active = 1
       this.$nextTick(() => {
-        console.log("Current Swiper instance object", this.swiper)
         this.swiper.slideToLoop(0, 1000, false)
         this.swiper.update()
       })
