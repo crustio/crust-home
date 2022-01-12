@@ -129,11 +129,12 @@ font-size: 2rem;
         text-align: center;
         font-family: Montserrat, "Source Han Sans CN";
         font-size: 0.83rem;
+        width: 23.33rem;
 font-family: Montserrat;
 font-weight: 400;
 color: #666666;
 line-height: 1.25rem;
-     margin-bottom: 5.08rem;
+     margin:0 auto 5.08rem;
       }
     }
     .map-dev {
@@ -238,15 +239,15 @@ text-align: center;
       margin: 1.67rem auto 0px;
      width: 20rem;
 height: 3rem;
-border: 1px solid #FC7823;
-border-radius: 1rem;
+border: 0.17rem solid #FC7823;
+border-radius: 0.67rem;
     font-size: 0.83rem;
       font-family: "Montserrat-blod", "Source Han Sans CN-blod";
       font-weight: 400;
       color: #FC7823;
       line-height: 3rem;
       text-align: center;
-      &:hover {
+      &:active {
         background: #ff6400;
         color:#fff;
       }

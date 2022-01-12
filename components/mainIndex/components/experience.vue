@@ -45,21 +45,21 @@
             v-if="index == 0"
             @click="handleDemoVideoClick()"
           >
-            {{ $t(`express.${item.button}`) }}<span>▶</span>
+            {{ $t(`express.${item.button}`) }}<span></span>
           </div>
           <div
             class="experience-item-buttom"
             v-if="index == 1"
             @click="handleFileVideoClick()"
           >
-            {{ $t(`express.${item.button}`) }}<span>▶</span>
+            {{ $t(`express.${item.button}`) }}<span></span>
           </div>
           <div
             class="experience-item-buttom"
             v-if="index == 2"
             @click="handleSwitchswapVideoClick()"
           >
-            {{ $t(`express.${item.button}`) }}<span>▶</span>
+            {{ $t(`express.${item.button}`) }}<span></span>
           </div>
           <div class="experience-item-create" v-if="item.create">
             {{ $t(`express.${item.create}`) }}
@@ -92,21 +92,21 @@
             v-if="index == 0"
             @click="handleDemoVideoClick()"
           >
-            {{ $t(`express.${item.button}`) }}<span>▶</span>
+            {{ $t(`express.${item.button}`) }}<span></span>
           </div>
           <div
             class="experience-item-buttom"
             v-if="index == 1"
             @click="handleFileVideoClick()"
           >
-            {{ $t(`express.${item.button}`) }}<span>▶</span>
+            {{ $t(`express.${item.button}`) }}<span></span>
           </div>
           <div
             class="experience-item-buttom"
             v-if="index == 2"
             @click="handleSwitchswapVideoClick()"
           >
-            {{ $t(`express.${item.button}`) }}<span>▶</span>
+            {{ $t(`express.${item.button}`) }}<span></span>
           </div>
           <div class="experience-item-create" v-if="item.create">
             {{ $t(`express.${item.create}`) }}
@@ -304,12 +304,20 @@ export default {
           color: #fc7823;
           span {
             margin-left: 12px;
-            font-size: 12px;
+             display: inline-block;
+              width: 0;
+              height: 0;
+              border-top: 8px solid transparent;
+              border-left: 10px solid #fc7823;
+              border-bottom: 8px solid transparent;
           }
           &:hover {
             background: #fc7823;
             border: 2px solid #fc7823;
             color: #ffffff;
+            span{
+               border-left:10px solid #fff;
+            }
           }
         }
         .experience-item-create {
@@ -333,7 +341,7 @@ export default {
     .experience-title {
       // margin-bottom: 56px;
      height: 2rem;
-font-size: 2rem;
+font-size: 1.5rem;
 color: #1F1F1F;
       font-family: "Montserrat-blod", "Source Han Sans CN-blod";
       font-weight: bold;
@@ -357,7 +365,7 @@ color: #1F1F1F;
 height: 20.83rem;
 background: #FFFFFF;
 box-shadow: 0rem 0rem 1rem 0rem rgba(252, 120, 35, 0.05);
-border-radius: 1rem;
+border-radius: 0.67rem;
 position: relative;
  .experience-item-img {
    position: absolute;
@@ -415,11 +423,12 @@ line-height: 1.25rem;
           display: flex;
           align-items: center;
           justify-content: center;
+     white-space: nowrap;
         width: 10.67rem;
 height: 3rem;
           line-height:  3rem;
           border:0.17rem solid #fc7823;
-          border-radius: 1rem;
+          border-radius: 0.67rem;
           text-align: center;
           font-size: 0.83rem;
           font-family: "Montserrat-blod", "Source Han Sans CN-blod";
@@ -427,12 +436,20 @@ height: 3rem;
           color: #fc7823;
           span {
             margin-left: 0.75rem;
-            font-size: 1rem;
+            display: inline-block;
+              width: 0;
+              height: 0;
+              border-top: 0.46rem solid transparent;
+              border-left: 0.58rem solid #fc7823;
+              border-bottom: 0.46rem solid transparent;
           }
-          &:hover {
+          &:active {
             background: #fc7823;
             border: 0.17rem solid #fc7823;
             color: #ffffff;
+            span{
+                border-left: 0.58rem solid #fff;
+            }
           }
         }
         .experience-item-create {

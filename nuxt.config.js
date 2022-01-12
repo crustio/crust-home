@@ -68,6 +68,29 @@ export default {
           gtag('config', 'UA-160270407-1');
         `,
       },
+      {
+        // Global site tag (gtag.js) - Google Analytics
+        type: "text/javascript",
+        // GA_MEASUREMENT_ID 替换为你刚刚注册得到的媒体资源ID
+        innerHTML: `(function(){
+          function w () {
+            var r = document.documentElement;
+            var a = r.getBoundingClientRect().width;
+            if(a>1139){
+              return
+            }
+            if (a > 750) {
+              a = 750;
+            };
+            rem = a / 26.666;
+            console.log(r.style)
+            r.setAttribute('style', 'font-size: '+rem + 'px!important');
+            console.log(rem)
+          };
+          var t;
+          w();
+        })();`,
+      },
     ],
     __dangerouslyDisableSanitizers: ["script"],
   },
@@ -88,10 +111,11 @@ export default {
    ** https://nuxtjs.org/guide/plugins
    */
   plugins: [
+    // { src: "~/utils/rem.js", ssr: false },
     "~/plugins/i18n.js",
     "~/plugins/clipboard2.js",
     "~/plugins/vue-awesome-swiper.js",
-    { src: "~/plugins/vue-pdf.js", ssr: false },
+    { src: "~/plugins/vue-pdf.js", ssr: false }
   ],
   router: {
     middleware: "i18n", 

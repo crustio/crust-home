@@ -118,7 +118,7 @@ export default {
       line-height: 1.5rem;
 font-size: 1.5rem;
         color: #1f1f1f;
-        width: 21rem;
+        width: 23.33rem;
         // &:last-child {
         //   font-size: 40px;
         //   line-height: 40px;
@@ -144,7 +144,7 @@ width: 23.33rem;
         }
         .Polkadot-info-dot-info {
           margin: 0 auto;
-          width: 22.58rem;
+          width: 23.33rem;
           font-family: Montserrat, "Source Han Sans CN";
           font-weight: 400;
           font-size: 0.83rem;

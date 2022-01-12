@@ -488,7 +488,7 @@
     "cardButton1":"演示视频",
     "cardTip1":"由技术社区开发",
     "cardTitle2":"Crust files",
-    "cardSubTitle2":"去中心化的文件存储应用，支持Web3.0身份<br/>登录以及端到端文件加密。",
+    "cardSubTitle2":"[新发布!] Crust Files 你的第一个Web3.0私人元宇宙网盘，现已上线5000万美元用户奖励计划！",
     "cardButton2":"演示视频",
     "cardTip2":"由技术社区开发",
     "cardTitle3":"Switchswap",
@@ -498,6 +498,7 @@
   },
   "storage":{
     "title":"开始使用<span style='color:#FC7823'>Crust</span>存储接口",
+    "title_mobile":"开始使用<br/><span style='color:#FC7823'>Crust</span>存储接口",
     "devButton":"开发指南",
     "crossButton":"Crust跨链存储",
     "saveButton":"申请免费存储空间",

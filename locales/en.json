@@ -531,7 +531,7 @@
     "cardButton1":"Watch Demo",
     "cardTip1":"Created by community",
     "cardTitle2":"Crust files",
-    "cardSubTitle2":"Your first personal Web3.0 storage in Metaverse, with multi-wallet access and ene-to-end encryption.",
+    "cardSubTitle2":"[Newly Launched!] Crust Files Your first personal Web3.0 storage in the Metaverse, now with $50,000,000 user rewards!",
     "cardButton2":"Watch Demo",
     "cardTip2":"Created by community",
     "cardTitle3":"Switchswap",
@@ -541,6 +541,7 @@
   },
   "storage":{
     "title":"Start using <span style='color:#FC7823'>Crust</span> storage interfaces",
+    "title_mobile":"Start using <span style='color:#FC7823'>Crust</span> storage interfaces",
     "devButton":"Dev Guidance ",
     "crossButton":"Crust Cross-Chain dStorage",
     "saveButton":"Request for Free Storage",

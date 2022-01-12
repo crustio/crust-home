@@ -172,7 +172,6 @@ export default {
       window.onresize = null;
     },
   mounted() {
-     console.log(document.body.clientWidth)
      this.$nextTick(()=>{
  if(document.body.clientWidth>1140){
        this.pcShow=true
@@ -191,8 +190,6 @@ export default {
         if(this.swiper.realIndex){
  this.active = this.swiper.realIndex
         }
-       
-        console.log(this.swiper)
       })
     },
     setActive(index) {
@@ -227,7 +224,6 @@ export default {
           return
         }
         let distance =240 
-        console.log(distance)
         var timer = setInterval(() => {
           num += 10
           if (distance < num) {
@@ -287,12 +283,12 @@ export default {
         height: 21.42rem;
         background: #ffffff;
         box-shadow: 0rem 0rem 1rem 0rem rgba(252, 120, 35, 0.05);
-        border-radius: 1rem;
+        border-radius: 0.67rem;
         .time-item-block {
           width: 6.67rem;
           height: 6.67rem;
           background: #fc7823;
-          border-radius: 1rem;
+          border-radius: 0.67rem;
           display: flex;
           flex-direction: column;
           justify-content: center;

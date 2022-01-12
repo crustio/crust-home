@@ -522,13 +522,13 @@ export default {
   }
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1139px) {
  
   .main-index {
-    padding-top: 9rem;
+    padding-top: 7.5rem;
     width: 100%;
     // height: 100vh;
-    background-color: #141414;
+    background-color: #1f1f1f;
     position: relative;
     overflow: hidden;
     .main {
@@ -588,7 +588,7 @@ export default {
             width: 0.5rem;
             height: 1.67rem;
             line-height: 1.67rem;
-            vertical-align: super;
+            vertical-align: top;
           }
           .new-link-info-hover {
             display: inline-block;
@@ -606,7 +606,7 @@ export default {
           }
         }
 
-        &:hover {
+        &:active {
           .new-link-info-hover {
             text-decoration: underline;
             color: #ffffff;
@@ -635,7 +635,7 @@ export default {
           line-height: 4rem;
         }
         .logoMobile {
-          font-family: 'Montserrat-blod', "Source Han Sans CN-blod";
+          font-family: "Montserrat-blod", "Source Han Sans CN-blod";
           font-weight: bold;
           color: #ffffff;
           letter-spacing: 0;
@@ -691,7 +691,7 @@ export default {
         width: 13.33rem;
 height: 3rem;
 background: #FC7823;
-border-radius: 1rem;
+border-radius: 0.67rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -706,7 +706,7 @@ border-radius: 1rem;
           width: 13.33rem;
 height: 3rem;
 border:0.17rem  solid #FFFFFF;
-border-radius: 1rem;
+border-radius: 0.67rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -715,9 +715,9 @@ border-radius: 1rem;
             font-weight: bold;
             color: #ffffff;
             background: none;
-            &:hover {
+            &:active {
               background: #ffffff;
-              border: 2px solid #ffffff;
+              border: 0.17rem solid #ffffff;
               color: #1f1f1f;
               border-radius: 8px;
             }

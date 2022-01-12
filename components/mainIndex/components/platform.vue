@@ -3,7 +3,7 @@
   <div class="platform-crust">
     <div class="platform-crust-block">
       <div class="platform-top">
-        <div class="platform-title" v-html="$t(`web3.title`)"></div>
+        <div :class="{'platform-title':true,iscenter:$store.state.locale === 'zh'?true:false}"  v-html="$t(`web3.title`)"></div>
         <div class="platform-hadle">
           
         </div>
@@ -474,7 +474,7 @@ font-size: 1.5rem;
 height: 23.42rem;
        background: #FFFFFF;
 box-shadow: 0rem 0rem 1rem 0rem rgba(252, 120, 35, 0.05);
-border-radius: 1rem;
+border-radius: 0.67rem;
         // display: flex;
         // flex-direction: column;
         // justify-content: space-between;
@@ -520,8 +520,8 @@ border-radius: 1rem;
           margin: 0 auto;
         width: 10.67rem;
 height: 3rem;
-border: 1px solid #FC7823;
-border-radius: 1rem;
+border: 0.17rem solid #FC7823;
+border-radius: 0.67rem;
           text-align: center;
           display: flex;
           justify-content: center;

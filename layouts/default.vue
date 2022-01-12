@@ -14,15 +14,12 @@ export default {
     NavBar,
     footerBar,
   },
-  mounted() {
-    console.log(this.$route)
-  },
   head() {
     return {
       title:
         this.$store.state.locale === "en"
-          ? "Crust Network ,Web3.0 Storage for Metaverse"
-          : "Crust Network ,Web3.0去中心化存储为元宇宙构建",
+          ? "Crust Network, Web3.0 Storage for Metaverse"
+          : "Crust Network, Web3.0去中心化存储为元宇宙构建",
     }
   },
   computed: {
@@ -34,12 +31,14 @@ export default {
 </script>
 <style>
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Source Sans Pro", -apple-system,Montserrat, "Source Han Sans CN", BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  
+-webkit-text-size-adjust:none;
+  /* -webkit-text-size-adjust: 100%; */
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;

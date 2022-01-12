@@ -97,7 +97,7 @@ export default {
         //   }
         // }
         .providers-link {
-          font-size: 16px;
+          font-size: 0.83rem !important;
           font-family: "Montserrat-Italic", "Source Han Sans CN";
           font-weight: 400;
           color: #fc7823;
@@ -125,6 +125,12 @@ export default {
             font-weight: 400;
             color: #666;
             margin: 0.83rem auto 1.67rem;
+            text-align: center;
+            text{
+              a{
+                 font-size: 0.83rem !important;
+              }
+            }
           }
           .providers-item-info-bitton {
             margin: 0 auto;
@@ -132,7 +138,7 @@ export default {
             width: 20rem;
             height: 3rem;
             border: 0.17rem solid #fc7823;
-            border-radius: 1rem;
+            border-radius: 0.67rem;
             font-size: 0.83rem;
             font-family: "Montserrat-blod", "Source Han Sans CN-blod";
             font-weight: 500;
@@ -140,7 +146,7 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
-            &:hover {
+            &:active {
               background: #ff6400;
               color:#fff;
             }

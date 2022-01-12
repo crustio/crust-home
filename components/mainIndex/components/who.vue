@@ -1,7 +1,7 @@
 <template>
   <div class="using-crust">
     <div class="using-crust-block">
-      <div class="using-title" v-html="$t(`who.title`)"></div>
+      <div :class="{'using-title':true,iscenter:$store.state.locale === 'zh'?true:false}" v-html="$t(`who.title`)"></div>
 
       <div class="using-pc using-tab">
         <div
@@ -422,7 +422,6 @@ export default {
       this.activeTab = index
       this.active = 1
       this.$nextTick(() => {
-        console.log("Current Swiper instance object", this.swiper)
         this.swiper.slideToLoop(0, 1000, false)
         this.swiper.update()
       })
@@ -754,7 +753,7 @@ export default {
             height: 23.42rem;
             background: #ffffff;
             box-shadow: 0rem 0rem 1rem 0rem rgba(252, 120, 35, 0.05);
-            border-radius: 1rem;
+            border-radius: 0.67rem;
             .using-content-item-logo {
               height: 7.83rem;
               display: flex;
@@ -783,8 +782,8 @@ export default {
               margin: 0 auto;
               width: 10.67rem;
               height: 3rem;
-              border: 1px solid #fc7823;
-              border-radius: 1rem;
+              border: 0.17rem solid #fc7823;
+              border-radius: 0.67rem;
               text-align: center;
               display: flex;
               justify-content: center;
@@ -795,15 +794,16 @@ export default {
               color: #fc7823;
             }
             .using-content-item-create {
-              margin-top: 15px;
-              padding-right: 10px;
-              height: 13px;
-              font-size: 12px;
+              margin-top: 1rem;
+              padding: 0 1.25rem;
+              height:1rem;
+             font-size: 0.83rem;
               font-family: Montserrat, "Source Han Sans CN";
               font-weight: 400;
               color: #1f1f1f;
-              line-height: 20px;
+              line-height:1rem;
               text-align: right;
+              
             }
           }
           &:last-child {
