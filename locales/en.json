@@ -474,8 +474,8 @@
     },
     "CrustFiles": {
       "desc": "Crust Files is a Web3.0 IPFS storage application that helps you to easily store and share files on IPFS via Crust’s decentralized storage network.",
-      "link": "https://files.crustapps.net/",
-      "learnMore": "https://files.crustapps.net/"
+      "link": "https://crustfiles.io/",
+      "learnMore": "https://crustfiles.io/"
     },
     "SwitchSwap": {
       "desc": "SwitchSwap is a platform for multi-chain users to mint, manage, and trade NFTs. It integrates Crust Network as the native NFT metadata storage solution.",

@@ -311,7 +311,7 @@ export default {
               button: "vist",
               create: "create",
               style: "width: 173px;height: 24px;",
-              url: "https://files.crustapps.net/",
+              url: "https://crustfiles.io/",
             },
             {
               img: require(`../../../assets/img/5-Who are using Crust/IPFS/decoo.png`),
