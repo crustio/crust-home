@@ -357,8 +357,8 @@
     },
     "CrustFiles": {
       "desc": "Crust Files是一个Web3.0风格的IPFS存储应用，你可以轻松地在Crust去中心化存储网络中存储与分享您的文件。",
-      "link": "https://files.crustapps.net/",
-      "learnMore": "https://files.crustapps.net/"
+      "link": "https://crustfiles.io/",
+      "learnMore": "https://crustfiles.io/"
     },
     "SwitchSwap": {
       "desc": "SwitchSwap为基于多链的Web3.0用户群打造，提供了去中心化的NFT资产发行、管理、展示以及交易平台，并采用Crust Network作为NFT元数据存储方案。",

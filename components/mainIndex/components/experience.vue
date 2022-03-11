@@ -153,7 +153,7 @@ export default {
           subTitle: "cardSubTitle2",
           button: "cardButton2",
           create: "cardTip2",
-          url: "https://files.crustapps.net",
+          url: "https://crustfiles.io",
         },
         {
           img: require(`../../../assets/img/3-Experience now/swap.png`),
