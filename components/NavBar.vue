@@ -339,7 +339,7 @@ export default {
     }
   }
   min-height: 60px;
-
+padding: 0.5rem 1rem 0 !important;
   .navbar-nav {
     z-index: 99999;
     font-family: Montserrat, "Source Han Sans CN";

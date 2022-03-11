@@ -32,14 +32,11 @@
             <button class="btn-custom-yellow" @click="crustMainnet">
               {{ $t("Crust Mainnet") }}
             </button>
-            <button
-              class="btn-custom-common"
-              @click="crustMacell()"
-            >
+            <button class="btn-custom-common" @click="crustMacell()">
               {{ $t("Crust Maxwell") }}
             </button>
           </div>
-          <div class="system-point">
+          <!-- <div class="system-point">
             <div class="point-icon"><div></div></div>
             <div
               class="point-icon-txt"
@@ -51,10 +48,8 @@
               <Capacity class="number" />
               <span class="unit">TB</span>
             </div>
-            <!-- <div class="intro">
-              {{ $t("Globally distributed available storage capacity") }}
-            </div> -->
-          </div>
+          
+          </div> -->
         </div>
       </div>
       <!-- <div class="waht-crust">
@@ -94,6 +89,130 @@
         </div>
       </div> -->
     </div>
+    <div class="numlist">
+      <div class="numListBox">
+      <div class="numListItem">
+        <div class="numListItemName" v-html="$t('header.Storage_capacity')">Storage<br />capacity :</div>
+        <div class="numListItemValue">
+          <countTo
+            :start-val="sVal"
+            :end-val="endList[0]"
+            :decimals="2"
+            :autoplay="true"
+            :duration="3000"
+          /><span class="unit">TB</span>
+          
+        </div>
+      </div>
+      <div class="numListItem">
+        <div class="numListItemName" v-html="$t('header.Globally_distributed_storage_nodes')">
+        
+        </div>
+        <div class="numListItemValue">
+          <countTo
+            :start-val="sVal"
+            :end-val="endList[1]"
+            :autoplay="true"
+            :duration="3000"
+          />
+        </div>
+      </div>
+      <div class="numListItem">
+        <div class="numListItemName" v-html="$t('header.Real-time_storage_fee')"></div>
+        <div class="numListItemValue">$<countTo
+            :start-val="sVal"
+            :end-val="endList[2]"
+            :autoplay="true"
+            :decimals="3"
+            :duration="3000"
+          /><span class="unit">/GB /Year</span></div>
+      </div>
+      <div class="numListItem">
+        <div class="numListItemName" v-html="$t('header.Storage_orders')"></div>
+        <div class="numListItemValue">
+           <countTo
+            :start-val="sVal"
+            :end-val="endList[3]"
+            :autoplay="true"
+            :duration="3000"
+          />
+        </div>
+      </div>
+      <!-- <div class="numListItem"></div>
+      <div class="numListItem"></div>
+      <div class="numListItem"></div> -->
+      </div>
+      <div class="numListSwiper">
+       <swiper class="swiper" :options="swiperOptions">
+        <swiper-slide
+          class="image-wrapper"
+        >
+          <div class="numListItem">
+        <div class="numListItemName" v-html="$t('header.Storage_capacity')">Storage<br />capacity :</div>
+        <div class="numListItemValue">
+          <countTo
+            :start-val="sVal"
+            :end-val="endList[0]"
+            :decimals="2"
+            :autoplay="true"
+            :duration="3000"
+          /><span class="unit">TB</span>
+          
+        </div>
+      </div>
+        </swiper-slide>
+         <swiper-slide
+          class="image-wrapper"
+        >
+         <div class="numListItem">
+        <div class="numListItemName" v-html="$t('header.Globally_distributed_storage_nodes')">
+        
+        </div>
+        <div class="numListItemValue">
+          <countTo
+            :start-val="sVal"
+            :end-val="endList[1]"
+            :autoplay="true"
+            :duration="3000"
+          />
+        </div>
+      </div>
+        </swiper-slide>
+         <swiper-slide
+          class="image-wrapper"
+        >
+          <div class="numListItem">
+        <div class="numListItemName" v-html="$t('header.Real-time_storage_fee')"></div>
+        <div class="numListItemValue">$<countTo
+            :start-val="sVal"
+            :end-val="endList[2]"
+            :autoplay="true"
+            :decimals="3"
+            :duration="3000"
+          /><span class="unit">/GB /Year</span></div>
+      </div>
+        </swiper-slide>
+         <swiper-slide
+          class="image-wrapper"
+        >
+          <div class="numListItem">
+        <div class="numListItemName" v-html="$t('header.Storage_orders')"></div>
+        <div class="numListItemValue">
+           <countTo
+            :start-val="sVal"
+            :end-val="endList[3]"
+            :autoplay="true"
+            :duration="3000"
+          />
+        </div>
+      </div>
+        </swiper-slide>
+       
+               
+      </swiper>
+      </div>
+    </div>
+     
     <!-- <div class="container-fluid desc-mobile">
       <div class="description">
         <div class="description-left">
@@ -142,38 +261,30 @@ import dVideo from "../decentralized/dVideo"
 import DescCard from "./descCard"
 import Capacity from "./Capacity"
 import triangle from "@/assets/img/triangle.svg?raw"
+import countTo from "vue-count-to"
 export default {
   components: {
     DescCard,
     dVideo,
     Capacity,
+    countTo,
   },
   data() {
     return {
+      sVal: 0,
+      endList: [0,0,0,0],
       icons: [triangle],
       showVideo: false,
       iconPlay: IconPlay,
       swiperOptions: {
-        loop: false,
-        slidesPerView: 3,
-        spaceBetween: 50,
-        pagination: {
-          el: ".swiper-pagination-desc",
+     loop: true,
+        slidesPerView: "auto",
+       autoplay: {
+          disableOnInteraction: false,
         },
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-          },
-          800: {
-            slidesPerView: 2,
-          },
-          1000: {
-            slidesPerView: 3,
-          },
-          1280: {
-            slidesPerView: 3,
-          },
-        },
+        // spaceBetween: 10,
+        centeredSlides: false,
+        centeredSlidesBounds: false,
       },
     }
   },
@@ -187,8 +298,23 @@ export default {
   mounted() {
     TrackballControls.initControl(THREE)
     globalScript.runGlobal(THREE)
+    this.$nextTick(()=>{
+      setTimeout(() => {
+        this.endList = [2000000.56, 2000, 0, 0]
+        this.getOrderPrice()
+        this.getOrderTotal()
+      }, 1000);
+      
+    })
+    
   },
   methods: {
+    getOrderPrice(){
+      this.endList[2]=0.003
+    },
+    getOrderTotal(){
+      this.endList[3]=123000
+    },
     routeTo(url) {
       jumpTo(url)
     },
@@ -219,8 +345,8 @@ export default {
         window.open(outerDit.crust_mainnet_zh, "_blank")
       }
     },
-     crustMacell() {
-     window.open(outerDit['crust maxwellIndex'], "_blank")
+    crustMacell() {
+      window.open(outerDit["crust maxwellIndex"], "_blank")
     },
     handleClick(name) {
       if (this.$store.state.locale === "en") {
@@ -257,7 +383,73 @@ export default {
   cursor: pointer;
   text-decoration: underline;
 }
+@media screen and (max-width: 1440px)and (min-width: 1140px){
+ .numlist{
+   padding: 0 !important;
+ }
+}
 @media screen and (min-width: 1140px) {
+  .numlist {
+    padding: 0 20px;
+    position: absolute;
+    top: 710px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #fc7823;
+    z-index: 999999;
+   
+    .numListBox{
+      margin: 0 auto;
+      max-width: 1440px;
+       height: 100px;
+       display: flex;
+    justify-content: space-between;
+    }
+    .numListSwiper{
+      display: none;
+    }
+    .numListItem {
+      border-right: 2px solid #131313;
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      justify-content: center;
+      // padding: 0 28px;
+      width: 29%;
+      &:nth-child(2) {
+        width: 23%;
+      }
+      &:nth-child(3) {
+        width: 27%;
+      }
+      &:nth-child(4) {
+        width: 21%;
+        border-right: 0;
+      }
+      .numListItemName {
+        font-size: 14px;
+        font-family: Montserrat;
+        font-weight: 400;
+        color: #131313;
+        line-height: 18px;
+        margin-right: 20px;
+        white-space: nowrap;
+      }
+      .numListItemValue {
+        height: 36px;
+        line-height: 36px;
+        font-size: 36px;
+        font-family: "Montserrat-blod";
+        font-weight: bold;
+        color: #131313;
+        white-space: nowrap;
+        .unit{
+          font-size: 16px;
+        }
+      }
+    }
+  }
   .main-index {
     margin-top: -60px;
     width: 100%;
@@ -267,7 +459,7 @@ export default {
     overflow: hidden;
     .main {
       width: 100%;
-      height: 900px;
+      height: 810px;
       position: relative;
       display: flex;
       align-items: center;
@@ -344,7 +536,7 @@ export default {
         animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
         animation-duration: 0.5s; /* don't forget to set a duration! */
         .logo {
-          font-family: 'Montserrat-blod', "Source Han Sans CN-blod";
+          font-family: "Montserrat-blod", "Source Han Sans CN-blod";
           font-weight: bold;
           font-size: 60px;
           color: #ffffff;
@@ -420,8 +612,8 @@ export default {
         }
       }
       #global {
-        margin-left: -220px;
-        margin-top: 65px;
+        margin-left: -228px;
+        margin-top: 940px;
       }
       .margin-left-25 {
         margin-left: 25px;
@@ -431,6 +623,7 @@ export default {
         padding: 0.5rem 0;
       }
     }
+
     .back {
       position: absolute;
       bottom: 0;
@@ -523,7 +716,60 @@ export default {
 }
 
 @media screen and (max-width: 1139px) {
- 
+    .numlist {
+    width: 100%;
+    background: #fc7823;
+    z-index: 999999;
+  
+    .numListItem {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      justify-content: center;
+      padding: 1rem 0;
+      // padding: 0 28px;
+
+      // width: 29%;
+      // &:nth-child(2) {
+      //   width: 23%;
+      // }
+      // &:nth-child(3) {
+      //   width: 27%;
+      // }
+      // &:nth-child(4) {
+      //   width: 21%;
+      //   border-right: 0;
+      // }
+      .numListItemName {
+        font-size: 1rem;
+        font-family: Montserrat;
+        font-weight: 400;
+        color: #131313;
+        line-height: 1.2rem;
+        margin-right: 1rem;
+        text-align: right;
+      }
+      .numListItemValue {
+        height: 2rem;
+        line-height: 2rem;
+        font-size: 2rem;
+        font-family: "Montserrat-blod";
+        font-weight: bold;
+        color: #131313;
+        white-space: nowrap;
+        .unit{
+          font-size: 1rem;
+        }
+      }
+    }
+    .numListBox{
+      display: none;
+    }
+    .numListSwiper{
+     
+    }
+  }
   .main-index {
     padding-top: 7.5rem;
     width: 100%;
@@ -540,7 +786,7 @@ export default {
       // justify-content: flex-end;
       align-items: center;
       padding: 0;
-      padding-bottom:25px;
+      padding-bottom: 25px;
       .new-link {
         display: flex;
         // align-items: center;
@@ -567,13 +813,13 @@ export default {
         }
         .new-link-info {
           background: #343434;
-         width: 18.6rem;
+          width: 18.6rem;
           height: 1.67rem;
           font-size: 10/14rem;
           font-family: Montserrat, "Source Han Sans CN";
           font-weight: 400;
           color: #999999;
-          padding-left:0.75rem;
+          padding-left: 0.75rem;
           display: inline-block;
           border-bottom-right-radius: 5px;
           border-top-right-radius: 5px;
@@ -599,7 +845,7 @@ export default {
             white-space: nowrap;
             word-break: break-all; //Ӣ�Ļ���
             height: 1.67rem;
-          line-height: 1.67rem;
+            line-height: 1.67rem;
             font-family: Montserrat, "Source Han Sans CN";
             font-weight: 400;
             color: #999999;
@@ -622,7 +868,7 @@ export default {
         flex-direction: column;
         .logo {
           display: none;
-          font-family: 'Montserrat-blod', "Source Han Sans CN-blod";
+          font-family: "Montserrat-blod", "Source Han Sans CN-blod";
           font-weight: bold;
           color: #ffffff;
           letter-spacing: 0;
@@ -640,7 +886,7 @@ export default {
           color: #ffffff;
           letter-spacing: 0;
           text-align: left;
-          margin-bottom:4.58rem;
+          margin-bottom: 4.58rem;
           opacity: 0.99;
           width: 23.33rem;
           height: 9.92rem;
@@ -656,16 +902,16 @@ export default {
           z-index: 10;
           .capacity {
             font-family: "Montserrat-blod", "Source Han Sans CN-blod";
-              font-weight: bold;
+            font-weight: bold;
             padding-bottom: 10px;
             .number {
-             font-size: 2rem;
+              font-size: 2rem;
             }
             .unit {
-             font-size: 2rem;
+              font-size: 2rem;
             }
             .intro {
-           font-size: 2rem;
+              font-size: 2rem;
             }
           }
         }
@@ -688,10 +934,10 @@ export default {
           .btn-custom-yellow {
             margin: 0 auto;
             margin-bottom: 2rem;
-        width: 13.33rem;
-height: 3rem;
-background: #FC7823;
-border-radius: 0.67rem;
+            width: 13.33rem;
+            height: 3rem;
+            background: #fc7823;
+            border-radius: 0.67rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -703,10 +949,10 @@ border-radius: 0.67rem;
           }
           .btn-custom-common {
             margin: 0 auto;
-          width: 13.33rem;
-height: 3rem;
-border:0.17rem  solid #FFFFFF;
-border-radius: 0.67rem;
+            width: 13.33rem;
+            height: 3rem;
+            border: 0.17rem solid #ffffff;
+            border-radius: 0.67rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -727,10 +973,10 @@ border-radius: 0.67rem;
           display: flex;
           height: 20px;
           align-items: center;
-          margin-top:40px;
+          margin-top: 40px;
           .point-icon {
-             flex-basis: 16px ;
-flex-shrink: 0 ;
+            flex-basis: 16px;
+            flex-shrink: 0;
             height: 16px;
             background: rgba(252, 120, 35, 0.5);
             border-radius: 50%;
@@ -751,10 +997,10 @@ flex-shrink: 0 ;
             font-weight: 400;
             color: #ffffff;
             height: 0.83rem;
-             transform: scale(0.83);
-             transform-origin: 0 0;
-  font-size: 1rem;
-  white-space: nowrap;
+            transform: scale(0.83);
+            transform-origin: 0 0;
+            font-size: 1rem;
+            white-space: nowrap;
           }
         }
       }
