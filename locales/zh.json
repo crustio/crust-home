@@ -66,7 +66,11 @@
     "polkadot_apps": "Polkadot apps",
     "Profit Data": "数据创造价值",
     "Analysis of Economic Model": "解析经济模型",
-    "introductionVideo": "Crust介绍视频"
+    "introductionVideo": "Crust介绍视频",
+    "Storage_capacity":"存储容量：",
+    "Globally_distributed_storage_nodes":"全球分布的节点：",
+    "Real-time_storage_fee":"当前存储费用 :",
+    "Storage_orders":"存储订单 :"
   },
   "footer": {
     "Crust Bounty": "Crust Bounty",

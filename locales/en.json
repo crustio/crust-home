@@ -67,7 +67,11 @@
     "slot_auction": "Slot Auction",
     "polkadot_apps": "Polkadot apps",
     "Profit Data": "Profit Data",
-    "Analysis of Economic Model": "Analysis of Economic Model"
+    "Analysis of Economic Model": "Analysis of Economic Model",
+    "Storage_capacity":"Storage<br/>capacity :",
+    "Globally_distributed_storage_nodes":"Globally distributed<br/>storage nodes :",
+    "Real-time_storage_fee":"Real-time<br/>storage fee :",
+    "Storage_orders":"Storage<br/>orders :"
   },
   "footer": {
     "Crust Bounty": "Crust Bounty",
