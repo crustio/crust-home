@@ -91,128 +91,130 @@
     </div>
     <div class="numlist">
       <div class="numListBox">
-      <div class="numListItem">
-        <div class="numListItemName" v-html="$t('header.Storage_capacity')">Storage<br />capacity :</div>
-        <div class="numListItemValue">
-          <countTo
-            :start-val="sVal"
-            :end-val="endList[0]"
-            :decimals="2"
-            :autoplay="true"
-            :duration="3000"
-          /><span class="unit">TB</span>
-          
+        <div class="numListItem">
+          <div class="numListItemName" v-html="$t('header.Storage_capacity')">
+            Storage<br />capacity :
+          </div>
+          <div class="numListItemValue">
+              <Capacity class="number" />
+           <span class="unit">TB</span>
+          </div>
         </div>
-      </div>
-      <div class="numListItem">
-        <div class="numListItemName" v-html="$t('header.Globally_distributed_storage_nodes')">
-        
+        <div class="numListItem">
+          <div
+            class="numListItemName"
+            v-html="$t('header.Globally_distributed_storage_nodes')"
+          ></div>
+          <div class="numListItemValue">
+            <countTo
+              :start-val="sVal"
+              :end-val="nodesVal"
+              :autoplay="true"
+              :duration="3000"
+            />
+          </div>
         </div>
-        <div class="numListItemValue">
-          <countTo
-            :start-val="sVal"
-            :end-val="endList[1]"
-            :autoplay="true"
-            :duration="3000"
-          />
+        <div class="numListItem">
+          <div
+            class="numListItemName"
+            v-html="$t('header.Real-time_storage_fee')"
+          ></div>
+          <div class="numListItemValue numListItemValuefee">
+            $<countTo
+              :start-val="sVal"
+              :end-val="feeVal"
+              :autoplay="true"
+              :decimals="10"
+              :duration="3000"
+            /><span class="unit">/GB/Year</span>
+          </div>
         </div>
-      </div>
-      <div class="numListItem">
-        <div class="numListItemName" v-html="$t('header.Real-time_storage_fee')"></div>
-        <div class="numListItemValue">$<countTo
-            :start-val="sVal"
-            :end-val="endList[2]"
-            :autoplay="true"
-            :decimals="3"
-            :duration="3000"
-          /><span class="unit">/GB /Year</span></div>
-      </div>
-      <div class="numListItem">
-        <div class="numListItemName" v-html="$t('header.Storage_orders')"></div>
-        <div class="numListItemValue">
-           <countTo
-            :start-val="sVal"
-            :end-val="endList[3]"
-            :autoplay="true"
-            :duration="3000"
-          />
+        <div class="numListItem">
+          <div
+            class="numListItemName"
+            v-html="$t('header.Storage_orders')"
+          ></div>
+          <div class="numListItemValue">
+            <countTo
+              :start-val="sVal"
+              :end-val="ordersVal"
+              :autoplay="true"
+              :duration="3000"
+            />
+          </div>
         </div>
-      </div>
-      <!-- <div class="numListItem"></div>
+        <!-- <div class="numListItem"></div>
       <div class="numListItem"></div>
       <div class="numListItem"></div> -->
       </div>
       <div class="numListSwiper">
-       <swiper class="swiper" :options="swiperOptions">
-        <swiper-slide
-          class="image-wrapper"
-        >
-          <div class="numListItem">
-        <div class="numListItemName" v-html="$t('header.Storage_capacity')">Storage<br />capacity :</div>
-        <div class="numListItemValue">
-          <countTo
-            :start-val="sVal"
-            :end-val="endList[0]"
-            :decimals="2"
-            :autoplay="true"
-            :duration="3000"
-          /><span class="unit">TB</span>
-          
-        </div>
-      </div>
-        </swiper-slide>
-         <swiper-slide
-          class="image-wrapper"
-        >
-         <div class="numListItem">
-        <div class="numListItemName" v-html="$t('header.Globally_distributed_storage_nodes')">
-        
-        </div>
-        <div class="numListItemValue">
-          <countTo
-            :start-val="sVal"
-            :end-val="endList[1]"
-            :autoplay="true"
-            :duration="3000"
-          />
-        </div>
-      </div>
-        </swiper-slide>
-         <swiper-slide
-          class="image-wrapper"
-        >
-          <div class="numListItem">
-        <div class="numListItemName" v-html="$t('header.Real-time_storage_fee')"></div>
-        <div class="numListItemValue">$<countTo
-            :start-val="sVal"
-            :end-val="endList[2]"
-            :autoplay="true"
-            :decimals="3"
-            :duration="3000"
-          /><span class="unit">/GB /Year</span></div>
-      </div>
-        </swiper-slide>
-         <swiper-slide
-          class="image-wrapper"
-        >
-          <div class="numListItem">
-        <div class="numListItemName" v-html="$t('header.Storage_orders')"></div>
-        <div class="numListItemValue">
-           <countTo
-            :start-val="sVal"
-            :end-val="endList[3]"
-            :autoplay="true"
-            :duration="3000"
-          />
-        </div>
-      </div>
-        </swiper-slide>
-       
-               
-      </swiper>
+        <swiper class="swiper" :options="swiperOptions">
+          <swiper-slide class="image-wrapper">
+            <div class="numListItem">
+              <div
+                class="numListItemName"
+                v-html="$t('header.Storage_capacity')"
+              >
+                Storage<br />capacity :
+              </div>
+              <div class="numListItemValue">
+               <Capacity class="number" /><span class="unit">TB</span>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="image-wrapper">
+            <div class="numListItem">
+              <div
+                class="numListItemName"
+                v-html="$t('header.Globally_distributed_storage_nodes')"
+              ></div>
+              <div class="numListItemValue">
+                <countTo
+                  :start-val="sVal"
+                  :end-val="nodesVal"
+                  :autoplay="true"
+                  :duration="3000"
+                />
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="image-wrapper">
+            <div class="numListItem">
+              <div
+                class="numListItemName"
+                v-html="$t('header.Real-time_storage_fee')"
+              ></div>
+              <div class="numListItemValue">
+                $<countTo
+                  :start-val="sVal"
+                  :end-val="feeVal"
+                  :autoplay="true"
+                   :decimals="10"
+                  :duration="3000"
+                /><span class="unit">/GB /Year</span>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="image-wrapper">
+            <div class="numListItem">
+              <div
+                class="numListItemName"
+                v-html="$t('header.Storage_orders')"
+              ></div>
+              <div class="numListItemValue">
+                <countTo
+                  :start-val="sVal"
+                  :end-val="ordersVal"
+                  :autoplay="true"
+                  :duration="3000"
+                />
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper>
       </div>
     </div>
-     
+
     <!-- <div class="container-fluid desc-mobile">
       <div class="description">
         <div class="description-left">
@@ -272,20 +274,24 @@ export default {
   data() {
     return {
       sVal: 0,
-      endList: [0,0,0,0],
+      endList: [0, 0, 0, 0],
+      nodesVal:0,
+      feeVal:0,
+      ordersVal:0,
       icons: [triangle],
       showVideo: false,
       iconPlay: IconPlay,
       swiperOptions: {
-     loop: true,
+        loop: true,
         slidesPerView: "auto",
-       autoplay: {
+        autoplay: {
           disableOnInteraction: false,
         },
         // spaceBetween: 10,
         centeredSlides: false,
         centeredSlidesBounds: false,
       },
+      num:0
     }
   },
   computed: {
@@ -298,56 +304,76 @@ export default {
   mounted() {
     TrackballControls.initControl(THREE)
     globalScript.runGlobal(THREE)
-    this.$nextTick(()=>{
+    this.$nextTick(() => {
       setTimeout(() => {
-        this.endList = [2000000.56, 2000, 0, 0]
+        // this.endList = [2000000.56, 2000, 0, 0]
         this.getOrderPrice()
         this.getOrderTotal()
-      }, 1000);
-      
+        this.getNodes()
+      }, 1000)
     })
-    
   },
   methods: {
-    getOrderPrice(){
+    getOrderPrice() {
       // this.endList[2]=0.003
       this.$axios
-      .$get("https://sd.crustcode.com/api/filePrice", {
-        auth: {
-          username: "crust",
-          password: "654321",
-        },
-      })
-      .then((res) => {
-        if (res.status === "success") {
-          this.endList[2] = res.data
-        } else {
-          throw new Error("FAILED")
-        }
-      })
-      .catch((e) => {
-        console.log(e)
-      })
+        .$get("https://sd.crustcode.com/api/filePrice", {
+          auth: {
+            username: "crust",
+            password: "654321",
+          },
+        })
+        .then((res) => {
+          if (res.status === "success") {
+            this.feeVal = res.data
+            console.log( this.endList[2])
+          } else {
+            throw new Error("FAILED")
+          }
+        })
+        .catch((e) => {
+          console.log(e)
+        })
     },
-    getOrderTotal(){
+    getOrderTotal() {
       // this.endList[3]=123000
       this.$axios
-      .$get("https://sd.crustcode.com/api/orderCount", {
-        auth: {
-          username: "crust",
-          password: "654321",
-        },
-      })
-      .then((res) => {
-        if (res.status === "success") {
-          this.endList[3] = res.data
-        } else {
-          throw new Error("FAILED")
-        }
-      })
-      .catch((e) => {
-        console.log(e)
-      })
+        .$get("https://sd.crustcode.com/api/orderCount", {
+          auth: {
+            username: "crust",
+            password: "654321",
+          },
+        })
+        .then((res) => {
+          if (res.status === "success") {
+            this.ordersVal = res.data
+          } else {
+            throw new Error("FAILED")
+          }
+        })
+        .catch((e) => {
+          console.log(e)
+        })
+    },
+    getNodes() {
+      // this.endList[3]=123000
+      this.$axios
+        .$get("https://sd.crustcode.com/api/totalValidNodes", {
+          auth: {
+            username: "crust",
+            password: "654321",
+          },
+        })
+        .then((res) => {
+          if (res.status === "success") {
+            this.nodesVal = res.data
+          } else {
+            throw new Error("FAILED")
+          }
+        })
+        .catch((e) => {
+          console.log(e)
+        })
     },
     routeTo(url) {
       jumpTo(url)
@@ -417,10 +443,10 @@ export default {
   cursor: pointer;
   text-decoration: underline;
 }
-@media screen and (max-width: 1440px)and (min-width: 1140px){
- .numlist{
-   padding: 0 !important;
- }
+@media screen and (max-width: 1440px) and (min-width: 1140px) {
+  .numlist {
+    padding: 0 !important;
+  }
 }
 @media screen and (min-width: 1140px) {
   .numlist {
@@ -432,15 +458,15 @@ export default {
     height: 100px;
     background: #fc7823;
     z-index: 999999;
-   
-    .numListBox{
+
+    .numListBox {
       margin: 0 auto;
       max-width: 1440px;
-       height: 100px;
-       display: flex;
-    justify-content: space-between;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
     }
-    .numListSwiper{
+    .numListSwiper {
       display: none;
     }
     .numListItem {
@@ -477,9 +503,18 @@ export default {
         font-family: "Montserrat-blod";
         font-weight: bold;
         color: #131313;
-        white-space: nowrap;
-        .unit{
+        // white-space: nowrap;
+        .unit {
           font-size: 16px;
+        }
+      }
+      .numListItemValuefee{
+        font-size: 23px;
+        span{
+          font-size: 23px;
+        }
+        .unit{
+          font-size: 12px;
         }
       }
     }
@@ -750,11 +785,11 @@ export default {
 }
 
 @media screen and (max-width: 1139px) {
-    .numlist {
+  .numlist {
     width: 100%;
     background: #fc7823;
     z-index: 999999;
-  
+
     .numListItem {
       box-sizing: border-box;
       display: flex;
@@ -792,16 +827,24 @@ export default {
         font-weight: bold;
         color: #131313;
         white-space: nowrap;
-        .unit{
+        .unit {
           font-size: 1rem;
         }
       }
+      //  .numListItemValuefee{
+      //   font-size: 23px;
+      //   span{
+      //     font-size: 23px;
+      //   }
+      //   .unit{
+      //     font-size: 12px;
+      //   }
+      // }
     }
-    .numListBox{
+    .numListBox {
       display: none;
     }
-    .numListSwiper{
-     
+    .numListSwiper {
     }
   }
   .main-index {
