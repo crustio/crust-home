@@ -43,7 +43,7 @@ export default {
     .mainpage {
       position: absolute;
       width: 100%;
-      top: 900px;
+      top: 810px;
     }
   }
 

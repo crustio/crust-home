@@ -274,7 +274,7 @@ export default {
     },
     goToCrustFiles() {
       window.open(
-        "https://files.crustapps.net",
+        "https://crustfiles.io",
         "_blank"
       )
     },
