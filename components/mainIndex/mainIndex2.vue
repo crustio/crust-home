@@ -310,10 +310,44 @@ export default {
   },
   methods: {
     getOrderPrice(){
-      this.endList[2]=0.003
+      // this.endList[2]=0.003
+      this.$axios
+      .$get("https://sd.crustcode.com/api/filePrice", {
+        auth: {
+          username: "crust",
+          password: "654321",
+        },
+      })
+      .then((res) => {
+        if (res.status === "success") {
+          this.endList[2] = res.data
+        } else {
+          throw new Error("FAILED")
+        }
+      })
+      .catch((e) => {
+        console.log(e)
+      })
     },
     getOrderTotal(){
-      this.endList[3]=123000
+      // this.endList[3]=123000
+      this.$axios
+      .$get("https://sd.crustcode.com/api/orderCount", {
+        auth: {
+          username: "crust",
+          password: "654321",
+        },
+      })
+      .then((res) => {
+        if (res.status === "success") {
+          this.endList[3] = res.data
+        } else {
+          throw new Error("FAILED")
+        }
+      })
+      .catch((e) => {
+        console.log(e)
+      })
     },
     routeTo(url) {
       jumpTo(url)
