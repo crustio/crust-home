@@ -124,7 +124,7 @@
               :start-val="sVal"
               :end-val="feeVal"
               :autoplay="true"
-              :decimals="10"
+              :decimals="6"
               :duration="3000"
             /><span class="unit">/GB/Year</span>
           </div>
@@ -189,7 +189,7 @@
                   :start-val="sVal"
                   :end-val="feeVal"
                   :autoplay="true"
-                   :decimals="10"
+                   :decimals="6"
                   :duration="3000"
                 /><span class="unit">/GB /Year</span>
               </div>
@@ -509,9 +509,9 @@ export default {
         }
       }
       .numListItemValuefee{
-        font-size: 23px;
+        font-size: 32px;
         span{
-          font-size: 23px;
+          font-size: 32px;
         }
         .unit{
           font-size: 12px;
