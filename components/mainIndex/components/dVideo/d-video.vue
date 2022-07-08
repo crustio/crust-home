@@ -24,7 +24,7 @@ export default {
     source: {
       type: String,
       default:
-        "https://gw.crustapps.net/ipfs/QmbS5j7xUkPapiWs3utyFJ6VGyoEH2y49TYizfPVZhUud1?filename=13832-storageusertutorial3-20210914-225325.mp4",
+        "https://crustwebsites.net/ipfs/QmbS5j7xUkPapiWs3utyFJ6VGyoEH2y49TYizfPVZhUud1?filename=13832-storageusertutorial3-20210914-225325.mp4",
     },
   },
   data() {
