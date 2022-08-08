@@ -9,7 +9,7 @@
           >Crust Network</a
         >
         <p>
-          {{ $t("A decentralized storage network of Web3.0 ecosystem") }}
+          {{ $t("A decentralized cloud storage network that can support the entire Web 3.0 ecosystem") }}
         </p>
       </div>
       <div>
@@ -19,7 +19,7 @@
         <p>
           {{
             $t(
-              "An encrypted storage layer of IPFS that supports customized encryptor"
+              "An encrypted storage layer of IPFS that supports customized encryption"
             )
           }}
         </p>
@@ -65,7 +65,7 @@ export default {
           name: "Encrypted IPFS",
           link: "",
           desc:
-            "an encrypted storage layer of IPFS that supports customized encryptor",
+            "an encrypted storage layer of IPFS that supports customized encryption",
         },
       ],
     }

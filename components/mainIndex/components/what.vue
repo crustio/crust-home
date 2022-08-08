@@ -437,7 +437,7 @@ height: 3.17rem;
           }
           cursor: pointer;
           width: 360px;
-          height: 360px;
+          // height: 360px;
           background: #ffffff;
           box-shadow: 0px 4px 9px 1px rgba(252, 120, 35, 0.05);
           border-radius: 10px;
