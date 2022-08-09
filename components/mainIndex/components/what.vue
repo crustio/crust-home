@@ -386,7 +386,7 @@ height: 3.17rem;
       .what-subTitle {
         margin: 0 auto;
         width: 1130px;
-        height: 78px;
+        // height: 78px;
         text-align: center;
         font-family: Montserrat, "Source Han Sans CN";
         font-size: 16px;
@@ -437,7 +437,7 @@ height: 3.17rem;
           }
           cursor: pointer;
           width: 360px;
-          height: 360px;
+          // height: 360px;
           background: #ffffff;
           box-shadow: 0px 4px 9px 1px rgba(252, 120, 35, 0.05);
           border-radius: 10px;

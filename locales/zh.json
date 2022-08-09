@@ -463,8 +463,8 @@
   "Claim CRU": "认领CRU",
   "Crust Mainnet": "获取CRU",
   "Globally distributed available storage capacity": "全球分布的可用存储容量",
-  "A decentralized storage network of Web3.0 ecosystem": "一个Web3.0生态的去中心化存储网络",
-  "An encrypted storage layer of IPFS that supports customized encryptor": "一个支持定制化加密的IPFS隐私存储层",
+  "A decentralized cloud storage network that can support the entire Web 3.0 ecosystem": "一个Web3.0生态的去中心化存储网络",
+  "An encrypted storage layer of IPFS that supports customized encryption": "一个支持定制化加密的IPFS隐私存储层",
   "crustInfo":{
     "title":"<span style='color:#FC7823'>Crust</span> 是什么",
     "subTitle":"Crust为元宇宙提供了一个Web3.0的去中心化存储网络，以实现去中心化、隐私性、存储保障等三大核心价值。<br/>Crust使用IPFS作为底层存储协议，并向用户开放通过链上即刻触达的应用层接口。<br/>在数据存储之外，Crust的技术栈还可进一步支持数据处理及计算服务。",
