@@ -111,7 +111,7 @@
     "contentAnd": "and",
     "content": "are now available",
     "introduce": "Whitepaper",
-    "desc": "Crust Network ,<br/>Web3.0 Storage<br/> for Metaverse",
+    "desc": "Crust Network,<br/>Web3.0 Storage<br/> for Metaverse",
     "new":"NEW",
     "newTitle":"Join the Crust Crowdloan of Parachain Auction"
   },
@@ -553,8 +553,8 @@
     "crustChainApi":"Crust cross-chain storage API",
     "crustApi_mobile":"Crust",
     "crustChainApi_mobile":"Crust cross-chain",
-    "crustInfo":"Get a Crust account and follow the code sample to learn how to use Crust storage API to store a file .",
-    "crustChainINfo":"Crust cross-chain storage API supports storage requests from existing accounts of various public chains. Crust provides two major cross-chain interfaces: a native cross-chain communication pallet called xStorage based on Polkadot XCMP to support Polkadot Parachains; and a Web3.0 IPFS remote pinning service to support any Web3.0 account. Follow the code sample to learn how to use Crust cross-chain storage API ."
+    "crustInfo":"Get a Crust account and follow the code sample to learn how to use Crust storage API to store a file.",
+    "crustChainINfo":"Crust cross-chain storage API supports storage requests from existing accounts of various public chains. Crust provides two major cross-chain interfaces: a native cross-chain communication pallet called xStorage based on Polkadot XCMP to support Polkadot Parachains; and a Web3.0 IPFS remote pinning service to support any Web3.0 account. Follow the code sample to learn how to use Crust cross-chain storage API."
   },
   "Polkadot":{
     "title":"<span style='color:#FC7823'>Crust </span>cross-chain storage is available on",
@@ -566,14 +566,14 @@
     "title":"Web3.0 platforms",
     "more":"Learn more",  
     "visit":"Visit",
-    "info1":"A highly scalable, fast and secure blockchain platform for distributed apps, enterprise use cases and the new internet economy .",
-    "info2":"Solana is a decentralized blockchain built to enable scalable, user-friendly apps for the world .",
+    "info1":"A highly scalable, fast and secure blockchain platform for distributed apps, enterprise use cases and the new internet economy.",
+    "info2":"Solana is a decentralized blockchain built to enable scalable, user-friendly apps for the world.",
     "info3":"Polygon is a protocol and a framework for building and connecting Ethereum-compatible blockchains with scalable solutions.",
-    "info4":"Binance Smart Chain is a platform that aims to lower transaction costs and provide a space to create DApps and other DeFi products .",
-    "info5":"NEAR is the network for a world reimagined. Through simple, secure, and scalable technology millions are able to invent and explore new experiences .",
-    "info6":"Flow is a new blockchain built for the next generation of apps, games, and the digital assets that power them .",
-    "info7":"HECO is a decentralized and energy efficient public chain for developers .",
-    "info8":"Moonriver is an Ethereum-compatible smart contract parachain on Kusama and provides a permanently incentivized canary network .",
+    "info4":"Binance Smart Chain is a platform that aims to lower transaction costs and provide a space to create DApps and other DeFi products.",
+    "info5":"NEAR is the network for a world reimagined. Through simple, secure, and scalable technology millions are able to invent and explore new experiences.",
+    "info6":"Flow is a new blockchain built for the next generation of apps, games, and the digital assets that power them.",
+    "info7":"HECO is a decentralized and energy efficient public chain for developers.",
+    "info8":"Moonriver is an Ethereum-compatible smart contract parachain on Kusama and provides a permanently incentivized canary network.",
     "info9":"OEC (a.k.a. OKExChain) is a fast, high-performance, open-source smart contract platform backed by OKEx to land large-scale digital assets and Dapps."
 
   },
@@ -610,10 +610,10 @@
     "ipfs5":"A decentralized file storage platform based on Crust Network .",
     "ipfs6":"A decentralized secret sharing protocol that is capable of sharing files from a single seed phraseto GB size of files , to a few peoplle to hundreds and thousands of people .",
     "ipfs7":"Coldstack is a decentralized cloud aggregator",
-    "ipfs8":"Bluna is a platform where people can create , store and trade immersive digital works for Metaverse which has to be immersive,creatable and tokenized.",
-    "ipfs9":"Sinso is based on Web3.0 technology and aims to build Sinso DAC ecosystem . Establish the era of human decentralized medical care .",
-    "ipfs10":"Litentry is a network that supports cross-chain aggregated identities.Build on Substrate .",
-    "ipfs11":"KILT is a blockchain protocol for issuing self-sovereign, anonymous, revocable, verifiable credentials and decentralized identifiers ."
+    "ipfs8":"Bluna is a platform where people can create, store and trade immersive digital works for Metaverse which has to be immersive,creatable and tokenized.",
+    "ipfs9":"Sinso is based on Web3.0 technology and aims to build Sinso DAC ecosystem. Establish the era of human decentralized medical care.",
+    "ipfs10":"Litentry is a network that supports cross-chain aggregated identities.Build on Substrate.",
+    "ipfs11":"KILT is a blockchain protocol for issuing self-sovereign, anonymous, revocable, verifiable credentials and decentralized identifiers."
   },
   "time":{
     "title":"Time line",

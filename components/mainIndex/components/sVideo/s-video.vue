@@ -24,7 +24,7 @@ export default {
     source: {
       type: String,
       default:
-        "https://ipfs.io/ipfs/QmcYfQ6wjb9hop4LhJ9MZrX8GGiJRm6PxBfnVo2JqzEm9V",
+        "https://crustwebsites.net/ipfs/QmcYfQ6wjb9hop4LhJ9MZrX8GGiJRm6PxBfnVo2JqzEm9V",
     },
   },
   data() {

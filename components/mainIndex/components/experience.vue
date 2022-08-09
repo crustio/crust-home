@@ -172,12 +172,12 @@ export default {
     },
     handleSwitchswapVideoClick() {
       this.switchswapVideoSource =
-        "https://ipfs.io/ipfs/QmcYfQ6wjb9hop4LhJ9MZrX8GGiJRm6PxBfnVo2JqzEm9V"
+        "https://crustwebsites.net/ipfs/QmcYfQ6wjb9hop4LhJ9MZrX8GGiJRm6PxBfnVo2JqzEm9V"
       this.showSwitchswapVideo = true
     },
     handleFileVideoClick() {
       this.fileVideoSource =
-        "https://ipfs.io/ipfs/QmWf36uY5E8mLD9nQnVxMEymAMhRh1yJ9th2fqQe1UmLqg"
+        "https://crustwebsites.net/ipfs/QmWf36uY5E8mLD9nQnVxMEymAMhRh1yJ9th2fqQe1UmLqg"
       this.showFilesVideo = true
     },
     handleCloseDemoVideo() {
@@ -194,12 +194,12 @@ export default {
     },
     handleSwitchswapVideoClick() {
       this.switchswapVideoSource =
-        "https://ipfs.io/ipfs/QmcYfQ6wjb9hop4LhJ9MZrX8GGiJRm6PxBfnVo2JqzEm9V"
+        "https://crustwebsites.net/ipfs/QmcYfQ6wjb9hop4LhJ9MZrX8GGiJRm6PxBfnVo2JqzEm9V"
       this.showSwitchswapVideo = true
     },
     handleFileVideoClick() {
       this.fileVideoSource =
-        "https://ipfs.io/ipfs/QmWf36uY5E8mLD9nQnVxMEymAMhRh1yJ9th2fqQe1UmLqg"
+        "https://crustwebsites.net/ipfs/QmWf36uY5E8mLD9nQnVxMEymAMhRh1yJ9th2fqQe1UmLqg"
       this.showFilesVideo = true
     },
   },
