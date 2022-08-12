@@ -528,6 +528,7 @@ height: 3.17rem;
           }
           .what-item-info {
             margin: 0 auto;
+            padding-bottom: 20px;
             width: 344px;
             font-size: 13px;
             font-family: Montserrat, "Source Han Sans CN";
