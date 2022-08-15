@@ -20,8 +20,8 @@
         <div class="using-intro-title">
           {{ $t(`who.${listData[activeTab].title}`) }}
         </div>
-        <div class="using-intro-info">
-          {{ $t(`who.${listData[activeTab].info}`) }}
+        <div class="using-intro-info" v-html=" $t(`who.${listData[activeTab].info}`)">
+          <!-- {{ }} -->
         </div>
       </div>
       <div class="using-pc swiperbox">

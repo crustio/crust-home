@@ -1,11 +1,11 @@
 <template>
   <div>
     <what></what>
+    <who></who>
     <experience></experience>
     <startCode></startCode>
     <Polkadot></Polkadot>
     <platform></platform>
-    <who></who>
     <timeLine></timeLine>
     <community></community>
     <providers></providers>
