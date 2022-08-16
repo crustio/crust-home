@@ -23,6 +23,7 @@
         <div class="using-intro-info" v-html=" $t(`who.${listData[activeTab].info}`)">
           <!-- {{ }} -->
         </div>
+        <div class="using-intro-how-to" v-html=" $t(`who.${listData[activeTab].howTo}`)"></div>
       </div>
       <div class="using-pc swiperbox">
         <swiper
@@ -185,6 +186,7 @@ export default {
           name: "tab1",
           title: "tabTitle1",
           info: "tabInfo1",
+          howTo: 'howTo1',
           children: [
             {
               img: require(`../../../assets/img/5-Who are using Crust/Severless Dapp/UNISWAP@3x.png`),
@@ -236,6 +238,7 @@ export default {
           name: "tab2",
           title: "tabTitle2",
           info: "tabInfo2",
+          howTo: 'howTo2',
           children: [
             {
               img: require(`../../../assets/img/5-Who are using Crust/NFT/swap.png`),
@@ -304,6 +307,7 @@ export default {
           name: "tab3",
           title: "tabTitle3",
           info: "tabInfo3",
+          howTo: 'howTo3',
           children: [
             {
               img: require(`../../../assets/img/5-Who are using Crust/IPFS/crust Files.png`),
@@ -518,11 +522,22 @@ export default {
           width: 1008px;
           margin: 0 auto;
           text-align: center;
-          height: 130px;
+          height: 120px;
           font-size: 16px;
           font-family: Montserrat, "Source Han Sans CN";
           font-weight: 400;
           color: #666666;
+          line-height: 24px;
+        }
+        .using-intro-how-to {
+          width: 1008px;
+          margin: 0 auto;
+          margin-bottom: 40px;
+          text-align: center;
+          font-size: 16px;
+          font-family: Montserrat, "Source Han Sans CN";
+          font-weight: 400;
+          color: #333333;
           line-height: 24px;
         }
       }
