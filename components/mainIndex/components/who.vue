@@ -516,13 +516,14 @@ export default {
           line-height: 48px;
 
           height: 35px;
-          margin-bottom: 29px;
+          margin-bottom: 25px;
         }
         .using-intro-info {
-          width: 1008px;
+          width: 900px;
           margin: 0 auto;
+          margin-bottom: 12px;
           text-align: center;
-          height: 120px;
+          min-height: 80px;
           font-size: 16px;
           font-family: Montserrat, "Source Han Sans CN";
           font-weight: 400;
