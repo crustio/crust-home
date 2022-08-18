@@ -204,7 +204,7 @@ export default {
               style: "width: 133px;height: 29px;",
               url: "https://aave.com/",
               createUrl:
-                "https://medium.com/crustnetwork/decentralized-websites-with-ipfs-and-crust-9435b5810ae1",
+                "https://medium.com/crustnetwork/decentralized-aave-interface-hosting-on-ipfs-ed81cff1d3e2",
             },
             {
               img: require(`../../../assets/img/5-Who are using Crust/Severless Dapp/polkadot@3x.png`),
