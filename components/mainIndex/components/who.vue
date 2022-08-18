@@ -454,6 +454,7 @@ export default {
         font-family: "Montserrat-blod", "Source Han Sans CN-blod";
         font-weight: bold;
         color: #1f1f1f;
+        text-align: center;
       }
       .using-tab {
         margin: 32px 0 40px;
