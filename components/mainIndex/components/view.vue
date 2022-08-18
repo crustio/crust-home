@@ -10,7 +10,7 @@
     <community></community>
     <providers></providers>
     <backed></backed>
-    <blogs></blogs>
+    <!-- <blogs></blogs> -->
     <foot></foot>
   </div>
 </template>
