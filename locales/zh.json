@@ -545,7 +545,7 @@
     "tabTitle2":"高可用性与存储保障",
     "tabTitle3":"隐私性与所有权",
     "howTo1": "<span class='font-weight-bold'> 快来使⽤Crust将您的Dapp或⽹站托管到IPFS并获取遍布全球的副本: <a href='https://medium.com/crustnetwork/decentralized-uniswap-interface-hosting-on-ipfs-18a78d1209ac' style='color:#FC7823' target='_blank'>Uniswap&nbsp;hosting</a> 和 <a href='https://medium.com/crustnetwork/decentralized-websites-with-ipfs-and-crust-9435b5810ae1' style='color:#FC7823' target='_blank'>更多案例</a></span>",
-    "howTo2": "<span class='font-weight-bold'> 了解如何使⽤Crust存储NFT元数据，并能够被<a href='https://ipfs-scan.io/' style='color:#FC7823' target='_blank'>IPFS Scan</a>⼯具验证: <a href='https://wiki.crust.network/docs/zh-CN/buildFileStoringDemo' style='color:#FC7823' target='_blank'>NFT&nbsp;Metadata&nbsp;storage</a></span>",
+    "howTo2": "<span class='font-weight-bold'> 了解如何使⽤Crust存储NFT元数据，并能够被<a href='https://ipfs-scan.io/' style='color:#FC7823' target='_blank'>IPFS Scan</a>⼯具验证: <a href='https://wiki.crust.network/docs/zh-CN/buildIntegrationNFTDataStorage' style='color:#FC7823' target='_blank'>NFT&nbsp;Metadata&nbsp;storage</a></span>",
     "howTo3": "<span class='font-weight-bold'> 了解如何使⽤Crust的存储接⼝以及IPFS Pinning服务来安全存储⽂件: <a href='https://wiki.crust.network/docs/zh-CN/build101' style='color:#FC7823' target='_blank'>Crust&nbsp;dStorage&nbsp;101</a></span>",
     "tabInfo1":"将Dapp和静态网站托管在IPFS上是一个绝佳的主意！无服务托管，DNS劫持免疫（可结合IPND/ENS），更高uptime，更好的可访问性。快来使用Crust将您的Dapp或网站托管到IPFS并获取遍布全球的副本！",
     "tabInfo2":"在高价值数据存储场景（例如NFT元数据）中，去中心化、高可用性、存储保障性是首要考虑因素。您的高价值数据永远不被某一个中心化云服务所控制、总是高可用、并且被可公开验证的方式所保障。",
