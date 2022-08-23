@@ -295,7 +295,7 @@ export default {
       .time-line {
         margin: 0 auto;
         width: 23.33rem;
-        height: 21.42rem;
+        // height: 21.42rem;
         background: #ffffff;
         box-shadow: 0rem 0rem 1rem 0rem rgba(252, 120, 35, 0.05);
         border-radius: 0.67rem;
@@ -438,7 +438,7 @@ export default {
       }
       .time-line {
         width: 1240px;
-        height: 440px;
+        // height: 440px;
         background: #ffffff;
         box-shadow: 0px 5px 5px 0px rgba(4, 0, 0, 0.02);
         border-radius: 10px;
@@ -534,9 +534,10 @@ export default {
           margin-top: 51px;
           display: flex;
           padding-left: 116px;
+          padding-bottom: 20px;
           .time-line-bottom-title {
             width: 474px;
-            height: 93px;
+            // height: 93px;
             font-size: 48px;
             font-family: "Montserrat-blod", "Source Han Sans CN-blod";
             font-weight: bold;
