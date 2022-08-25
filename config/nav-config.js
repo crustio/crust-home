@@ -86,7 +86,7 @@ const outerDit = {
 
   Technology_WP:"https://gw.crustapps.net/ipfs/QmP9WqDYhreSuv5KJWzWVKZXJ4hc7y9fUdwC4u23SmqL6t",
 
-  enjoy_action:"https://crowdloan.parallel.fi/#/auction/contribute/polkadot/2008",
+  enjoy_action:"https://crowdloan.parallel.fi/#/contribute/2008",
 
   start_button1:"https://wiki.crust.network/docs/en/build101",
   start_button2:"https://github.com/crustio/free-storage#-apply-process",
