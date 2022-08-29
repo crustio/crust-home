@@ -5,6 +5,110 @@
         <div class="foot-nav">
           <div class="foot-nav-logo">
             <img src="../../../assets/img/main/logo-B@3x.png" alt="" />
+            <!-- Begin Mailchimp Signup Form -->
+            <link
+              href="//cdn-images.mailchimp.com/embedcode/classic-071822.css"
+              rel="stylesheet"
+              type="text/css"
+            />
+            <style type="text/css">
+              #mc_embed_signup  {
+                <!-- background:#fff; -->
+                clear:left;
+                font:14px Helvetica,Arial,sans-serif;
+                width:270px;
+              }
+              /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <div id="mc_embed_signup">
+              <form
+                action="https://network.us5.list-manage.com/subscribe/post?u=4f7f1f926cc7581aefb48ccc4&amp;id=e2f346caf4&amp;f_id=009882e9f0"
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                class="validate"
+                target="_blank"
+                novalidate
+              >
+                <div id="mc_embed_signup_scroll">
+                  <h2>{{ $t(`foot.Subscribe`) }}</h2>
+                  <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
+                  <div class="mc-field-group">
+                    <label for="mce-EMAIL"
+                      >Email Address<span class="asterisk">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      value=""
+                      name="EMAIL"
+                      class="required email"
+                      id="mce-EMAIL"
+                      required
+                    />
+                    <!-- <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span> -->
+                  </div>
+                  <div id="mce-responses" class="clear foot">
+                    <div
+                      class="response"
+                      id="mce-error-response"
+                      style="display: none"
+                    ></div>
+                    <div
+                      class="response"
+                      id="mce-success-response"
+                      style="display: none"
+                    ></div>
+                  </div>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div
+                    style="position: absolute; left: -5000px"
+                    aria-hidden="true"
+                  >
+                    <input
+                      type="text"
+                      name="b_4f7f1f926cc7581aefb48ccc4_e2f346caf4"
+                      tabindex="-1"
+                      value=""
+                    />
+                  </div>
+                  <div class="optionalParent">
+                    <div class="clear foot">
+                      <input
+                        type="submit"
+                        value="Subscribe"
+                        name="subscribe"
+                        id="mc-embedded-subscribe"
+                        class="button"
+                      />
+                      <!-- <p class="brandingLogo"><a href="http://eepurl.com/h9DYab" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p> -->
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <script
+              type="text/javascript"
+              src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+            ></script>
+            <script type="text/javascript">
+              ;(function ($) {
+                window.fnames = new Array()
+                window.ftypes = new Array()
+                fnames[0] = "EMAIL"
+                ftypes[0] = "email"
+                fnames[1] = "FNAME"
+                ftypes[1] = "text"
+                fnames[2] = "LNAME"
+                ftypes[2] = "text"
+                fnames[3] = "ADDRESS"
+                ftypes[3] = "address"
+                fnames[4] = "PHONE"
+                ftypes[4] = "phone"
+              })(jQuery)
+              var $mcj = jQuery.noConflict(true)
+            </script>
+            <!--End mc_embed_signup-->
           </div>
           <div
             class="foot-nav-item"
@@ -26,16 +130,118 @@
             </div>
           </div>
         </div>
+
+        <div class="foot-mobile">
+            <!-- Begin Mailchimp Signup Form -->
+            <link
+              href="//cdn-images.mailchimp.com/embedcode/classic-071822.css"
+              rel="stylesheet"
+              type="text/css"
+            />
+            <style type="text/css">
+              #mc_embed_signup  {
+                <!-- background:#fff; -->
+                clear:left;
+                font:14px Helvetica,Arial,sans-serif;
+                width:270px;
+              }
+
+              #mc-embedded-subscribe {
+                background-color: #ff8802!important;
+              }
+              
+              /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <div id="mc_embed_signup">
+              <form
+                action="https://network.us5.list-manage.com/subscribe/post?u=4f7f1f926cc7581aefb48ccc4&amp;id=e2f346caf4&amp;f_id=009882e9f0"
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                class="validate"
+                target="_blank"
+                novalidate
+              >
+                <div id="mc_embed_signup_scroll">
+                  <h2>{{ $t(`foot.Subscribe`) }}</h2>
+                  <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
+                  <div class="mc-field-group">
+                    <label for="mce-EMAIL"
+                      >Email Address<span class="asterisk">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      value=""
+                      name="EMAIL"
+                      class="required email"
+                      id="mce-EMAIL"
+                      required
+                    />
+                    <!-- <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span> -->
+                  </div>
+                  <div id="mce-responses" class="clear foot">
+                    <div
+                      class="response"
+                      id="mce-error-response"
+                      style="display: none"
+                    ></div>
+                    <div
+                      class="response"
+                      id="mce-success-response"
+                      style="display: none"
+                    ></div>
+                  </div>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div
+                    style="position: absolute; left: -5000px"
+                    aria-hidden="true"
+                  >
+                    <input
+                      type="text"
+                      name="b_4f7f1f926cc7581aefb48ccc4_e2f346caf4"
+                      tabindex="-1"
+                      value=""
+                    />
+                  </div>
+                  <div class="optionalParent">
+                    <div class="clear foot">
+                      <input
+                        type="submit"
+                        value="Subscribe"
+                        name="subscribe"
+                        id="mc-embedded-subscribe"
+                        class="button"
+                      />
+                      <!-- <p class="brandingLogo"><a href="http://eepurl.com/h9DYab" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p> -->
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <script
+              type="text/javascript"
+              src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+            ></script>
+            <script type="text/javascript">
+              
+            </script>
+            <!--End mc_embed_signup-->
+          </div>
+
         <div class="foot-copy">
           <div class="foot-copy-txt foot-pc">
-            {{`Copyright © Decentralized Cloud Foundation ${new Date().getFullYear()} All Rights Reserved`}}
+            {{
+              `Copyright © Decentralized Cloud Foundation ${new Date().getFullYear()} All Rights Reserved`
+            }}
           </div>
           <div class="foot-copy-txt foot-copy-txt-top foot-mobile">
             Copyright © Decentralized Cloud Foundation<br />
-            {{`${new Date().getFullYear()} All Rights Reserved`}}
+            {{ `${new Date().getFullYear()} All Rights Reserved` }}
           </div>
           <div class="foot-copy-img">
             <!-- <div v-html="item" v-for="item in icons" :key="item"></div> -->
+
             <div
               class="foot-copy-img-logo"
               v-for="item in $store.state.locale === 'zh' ? 6 : 5"
@@ -51,6 +257,7 @@
             <div class="foot-point"></div>
             <div class="footmobile-text">{{ $t(`foot.Terms`) }}</div>
           </div>
+          
         </div>
       </div>
     </div>
@@ -147,6 +354,10 @@ export default {
             {
               title: "email",
               copy: true,
+            },
+            {
+              title: "Subscribe",
+              url: "http://eepurl.com/hFlUa9",
             },
           ],
         },
