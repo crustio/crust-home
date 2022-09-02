@@ -2,7 +2,7 @@
   <div>
     <div class="simple-banner">
       <div class="simple-banner-text">
-        <span><a href="https://baidu.com" target="_blank">MEET THE CRUST TEAM AT EVENTS</a></span>
+        <span><a href="https://medium.com/crustnetwork/meet-crust-at-events-d9e4b79640d6" target="_blank">MEET CRUST AT EVENTS</a></span>
       </div>
     </div>
     <nav-bar></nav-bar>
