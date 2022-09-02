@@ -319,6 +319,7 @@ export default {
 .container {
   z-index: 99999;
   position: relative;
+  top: 50px;
 }
 .auction-tool-bar {
   position: absolute;
@@ -470,18 +471,21 @@ padding: 0.5rem 1rem 0 !important;
     background: #1f1f1f !important;
   }
   .navBar-pc {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: none !important;
   }
   .navBar-mobile{
    
     background: #1f1f1f;
     position: fixed;
-    top: 0;
+    top: 46px;
     left: 0;
     width: 100vw;
     padding: 0 1.67rem 1rem  !important;
     flex-basis: 100%;
-    z-index: 99999999;
+    z-index: 9999998;
     .logoFlex{
       display: flex;
       justify-content: space-between;
