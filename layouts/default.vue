@@ -1,6 +1,11 @@
 <template>
   <div>
-    <nav-bar> </nav-bar>
+    <div class="simple-banner">
+      <div class="simple-banner-text">
+        <span><a href="https://medium.com/crustnetwork/meet-crust-at-events-d9e4b79640d6" target="_blank">MEET CRUST AT EVENTS</a></span>
+      </div>
+    </div>
+    <nav-bar></nav-bar>
     <Nuxt />
     <!-- <footer-bar v-show="showFooter"></footer-bar> -->
   </div>
@@ -49,6 +54,35 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.simple-banner {
+  width: 100%;
+  height: 46px;
+  position: fixed;
+  top: 0;
+  display: block;
+  background: #Ef5A28;
+  z-index: 9999999;
+  text-align: center;
+}
+
+.simple-banner-text {
+  padding: 10px 20px;
+}
+
+.simple-banner-text a {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.simple-banner-text a:hover, a:focus {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .button--green {
