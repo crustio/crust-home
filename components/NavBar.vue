@@ -267,11 +267,11 @@ export default {
       }
       if (name === "ecowhitepaper") {
         let economicPaperurl =
-          "https://gw.crustapps.net/ipfs/Qmdy2Hqdxoq2PuAkvoDZ5SqYjAKym58Gh39Lm5gPChyHwL"
+          "https://gw.crustapps.net/ipfs/QmPWKagEqZxkspDK6KPebWQdpG55TDyiNQi5EJ1bRgo4Z7"
         if (!isZh) {
           name += "_en"
           economicPaperurl =
-            "https://gw.crustapps.net/ipfs/QmRYJN6V5BzwnXp7A2Avcp5WXkgzyunQwqP3Es2Q789phF"
+            "https://gw.crustapps.net/ipfs/QmXUhqUgZGVJsWmV4TCDePwWtpJvEAx7rvNCjuNKaEUHzk"
         }
         return window.open(`${economicPaperurl}`, "_blank")
       }
