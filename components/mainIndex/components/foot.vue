@@ -13,10 +13,22 @@
             />
             <style type="text/css">
               #mc_embed_signup  {
-                <!-- background:#fff; -->
                 clear:left;
                 font:14px Helvetica,Arial,sans-serif;
                 width:270px;
+                margin: 0;
+              }
+
+              #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+                background-color: #fdede2 !important;
+              }
+
+              #mc_embed_signup #mce-success-response {
+                width: 240px;
+              }
+
+              #mc-embedded-subscribe {
+                background-color: #ff8802!important;
               }
               /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
                 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
@@ -35,14 +47,15 @@
                   <h2>{{ $t(`foot.Subscribe`) }}</h2>
                   <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
                   <div class="mc-field-group">
-                    <label for="mce-EMAIL"
+                    <!-- <label for="mce-EMAIL"
                       >Email Address<span class="asterisk">*</span>
-                    </label>
+                    </label> -->
                     <input
                       type="email"
                       value=""
                       name="EMAIL"
                       class="required email"
+                      placeholder="Enter Email"
                       id="mce-EMAIL"
                       required
                     />
@@ -97,14 +110,6 @@
                 window.ftypes = new Array()
                 fnames[0] = "EMAIL"
                 ftypes[0] = "email"
-                fnames[1] = "FNAME"
-                ftypes[1] = "text"
-                fnames[2] = "LNAME"
-                ftypes[2] = "text"
-                fnames[3] = "ADDRESS"
-                ftypes[3] = "address"
-                fnames[4] = "PHONE"
-                ftypes[4] = "phone"
               })(jQuery)
               var $mcj = jQuery.noConflict(true)
             </script>
@@ -139,16 +144,7 @@
               type="text/css"
             />
             <style type="text/css">
-              #mc_embed_signup  {
-                <!-- background:#fff; -->
-                clear:left;
-                font:14px Helvetica,Arial,sans-serif;
-                width:270px;
-              }
-
-              #mc-embedded-subscribe {
-                background-color: #ff8802!important;
-              }
+              
               
               /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
                 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
@@ -167,14 +163,15 @@
                   <h2>{{ $t(`foot.Subscribe`) }}</h2>
                   <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
                   <div class="mc-field-group">
-                    <label for="mce-EMAIL"
+                    <!-- <label for="mce-EMAIL"
                       >Email Address<span class="asterisk">*</span>
-                    </label>
+                    </label> -->
                     <input
                       type="email"
                       value=""
                       name="EMAIL"
                       class="required email"
+                      placeholder="Enter Email"
                       id="mce-EMAIL"
                       required
                     />
@@ -224,7 +221,12 @@
               src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
             ></script>
             <script type="text/javascript">
-              
+              ;(function ($) {
+                window.fnames = new Array()
+                window.ftypes = new Array()
+                fnames[0] = "EMAIL"
+                ftypes[0] = "email"
+              })(jQuery)
             </script>
             <!--End mc_embed_signup-->
           </div>
