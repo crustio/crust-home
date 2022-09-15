@@ -104,6 +104,7 @@ export default {
     "~assets/fonts/orbitron/orbitron.css",
     "~assets/fonts/SourceHanSans/hansans.css",
     "~assets/fonts/FONT-Montserrat/Montserrat.css",
+    "~assets/scss/mailchimp.css"
     // store.state.locale=='en'? "~assets/fonts/FONT-Montserrat/Montserrat.css":"~assets/fonts/SourceHanSans/hansans.css"
   ],
   /*
