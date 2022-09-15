@@ -301,9 +301,9 @@ export default {
             {
               title: "list2",
               down: true,
-              url: "https://gw.crustapps.net/ipfs/QmRYJN6V5BzwnXp7A2Avcp5WXkgzyunQwqP3Es2Q789phF?filename=Crust_economy1.30.pdf",
+              url: "https://gw.crustapps.net/ipfs/QmXUhqUgZGVJsWmV4TCDePwWtpJvEAx7rvNCjuNKaEUHzk",
               zh_url:
-                "https://gw.crustapps.net/ipfs/Qmdy2Hqdxoq2PuAkvoDZ5SqYjAKym58Gh39Lm5gPChyHwL?filename=Crust经济白皮书1.30(1).pdf",
+                "https://gw.crustapps.net/ipfs/QmPWKagEqZxkspDK6KPebWQdpG55TDyiNQi5EJ1bRgo4Z7",
             },
             {
               title: "list3",
