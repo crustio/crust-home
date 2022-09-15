@@ -155,11 +155,7 @@ export default {
             {
               title: "email",
               copy: true,
-            },
-            {
-              title: "Subscribe",
-              url: "http://eepurl.com/hFlUa9",
-            },
+            }
           ],
         },
       ],
