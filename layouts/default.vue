@@ -1,6 +1,5 @@
 <template>
   <div>
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
     <div class="simple-banner">
       <div class="simple-banner-text">
         <span><a href="https://medium.com/crustnetwork/meet-crust-at-events-d9e4b79640d6" target="_blank">MEET CRUST AT
