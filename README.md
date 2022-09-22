@@ -1,6 +1,4 @@
-# my-app
-
-## Build Setup
+## Crust Network, Web3.0 Storage for the Metaverse
 
 ```bash
 # install dependencies

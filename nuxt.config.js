@@ -29,7 +29,7 @@ export default {
           " IPFS",
       },
       { name: "robots", content: "all" },
-      { name: "author", content: "Crust, crust, Crust Network" },
+      { name: "author", content: "Crust Network" },
       {
         hid: "description",
         name: "description",
