@@ -41,6 +41,11 @@ export default {
         content: 'crust.network'
       },
       {
+        hid: 'og:image',
+        name: 'og:image',
+        content: 'https://crustwebsites.net/ipfs/QmdsDC5jU22MN57NSxPJ6mWUpTAME1HcZ79B27JyPMtEpQ'
+      },
+      {
         hid: "description",
         name: "description",
         content:
