@@ -43,7 +43,7 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: 'https://crustwebsites.net/ipfs/QmdsDC5jU22MN57NSxPJ6mWUpTAME1HcZ79B27JyPMtEpQ'
+        content: 'https://miro.medium.com/max/1200/2*mnCYZfHmLg2bFrjM3vKtPw.png'
       },
       {
         hid: "description",
