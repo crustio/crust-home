@@ -31,6 +31,16 @@ export default {
       { name: "robots", content: "all" },
       { name: "author", content: "Crust Network" },
       {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'crust.network'
+      },
+      {
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        content: 'crust.network'
+      },
+      {
         hid: "description",
         name: "description",
         content:
