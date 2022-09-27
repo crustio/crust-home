@@ -2,5 +2,4 @@ User-agent: Twitterbot
 Disallow:
 
 User-agent: *
-Disallow: /asstes/styles/
-Sitemap:  http:-lavatech-org/sitemaps.xml
+Disallow: /
