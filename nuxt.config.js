@@ -58,6 +58,11 @@ export default {
           "CRUST implements the incentive layer protocol for decentralized storage. It is adaptable to multiple storage layer protocols such as IPFS, and provides support for the application layer. ",
       },
       {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary'
+      },
+      {
         hid: 'twitter:title',
         name: 'twitter:title',
         content: 'Home | crust.network'
