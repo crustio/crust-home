@@ -13,7 +13,7 @@
             >
             <div id="mc_embed_signup_scroll">
               <div class="mc-field-group">
-                <input type="email" value="" name="EMAIL" class="required email" placeholder="Enter Email"
+                <input type="email" value="" name="EMAIL" class="required email" placeholder="Enter Email" autocomplete="off"
                   id="mce-EMAIL" required />
               </div>
               <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
@@ -92,7 +92,7 @@ html {
   position: fixed;
   top: 0;
   display: flex;
-  background: #Ef5A28;
+  background: #fc7823;
   z-index: 9999999;
   text-align: center;
   justify-content: space-around;
@@ -115,7 +115,7 @@ html {
     position: fixed;
     top: 0;
     display: flex;
-    background: #Ef5A28;
+    background: #fc7823;
     z-index: 9999999;
     text-align: center;
     justify-content: space-around;
@@ -213,7 +213,7 @@ a:focus {
 }
 
 #mc-embedded-subscribe {
-  background-color: #ff8802 !important;
+  /* background-color: #ff8802 !important; */
   height: 32px;
 }
 
@@ -231,6 +231,6 @@ a:focus {
 }
 
 #mc_embed_signup .button {
-  margin: 0 !important;
+  margin: 0 0 0 10px !important;
 }
 </style>
