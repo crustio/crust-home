@@ -1,27 +1,27 @@
 <template>
   <div>
     <div class="simple-banner">
-      <div class="simple-banner-text">
-        <span><a href="https://medium.com/crustnetwork/meet-crust-at-events-d9e4b79640d6" target="_blank">MEET CRUST AT
-            EVENTS</a></span>
-      </div>
-      <div id="mc_embed_signup">
-          <form
-            action="https://network.us12.list-manage.com/subscribe/post?u=4cdbb1bce15273a3fdcd7c035&amp;id=06062eaf7a&amp;f_id=005bade0f0"
-            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-            novalidate
-            >
-            <div id="mc_embed_signup_scroll">
-              <div class="mc-field-group">
-                <input type="email" value="" name="EMAIL" class="required email" placeholder="Enter Email"
-                  id="mce-EMAIL" required />
-              </div>
-              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
-              <div id="mce-responses">
+      <div class="simple-banner-containner">
+        <div class="simple-banner-text">
+          <span><a href="https://medium.com/crustnetwork/meet-crust-at-events-d9e4b79640d6" target="_blank">MEET CRUST AT EVENTS</a></span>
+        </div>
+        <div id="mc_embed_signup">
+            <form
+              action="https://network.us12.list-manage.com/subscribe/post?u=4cdbb1bce15273a3fdcd7c035&amp;id=06062eaf7a&amp;f_id=005bade0f0"
+              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+              novalidate
+              >
+              <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group">
+                  <input type="email" value="" name="EMAIL" class="required email" placeholder="Enter Email" autocomplete="off"
+                    id="mce-EMAIL" required />
+                </div>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
+                <!-- <div id="mce-responses">
+                </div> -->
                 <div class="response" id="mce-success-response" style="display: none"></div>
               </div>
-            </div>
-          </form>
+            </form>
         </div>
         <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
         <script type='text/javascript'>
@@ -33,6 +33,7 @@
             }
           (jQuery));
         </script>
+      </div>
     </div>
     <nav-bar></nav-bar>
     <Nuxt />
@@ -88,16 +89,31 @@ html {
 
 .simple-banner {
   width: 100%;
-  /* height: 46px; */
+  height: 56px;
   position: fixed;
   top: 0;
   display: flex;
-  background: #Ef5A28;
+  background: #fc7823;
   z-index: 9999999;
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 5px 0;
+  margin: 0 auto;
+}
+
+.simple-banner-containner {
+  width: 1240px;
+  /* position: fixed; */
+  top: 0;
+  display: flex;
+  background: #fc7823;
+  z-index: 9999999;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  margin: 0 auto;
 }
 
 .simple-banner-text {
@@ -109,13 +125,17 @@ html {
 }
 
 @media screen and (max-width: 1200px) {
-  .simple-banner {
+  #mc_embed_signup_scroll {
+    position: relative;
+  }
+
+  .simple-banner-containner {
     width: 100%;
-    /* height: 46px; */
+    height: 56px;
     position: fixed;
     top: 0;
     display: flex;
-    background: #Ef5A28;
+    background: #fc7823;
     z-index: 9999999;
     text-align: center;
     justify-content: space-around;
@@ -129,8 +149,14 @@ html {
     left: 24px!important;
   }
 
-  #mc_embed_signup #mce-success-response {
+  /* #mc_embed_signup #mce-success-response {
     position: relative !important;
+  } */
+
+  #mce-success-response {
+    position: absolute !important;
+    top: 4px !important;
+    left: 0px !important;
   }
   
 }
@@ -202,18 +228,20 @@ a:focus {
   left: 2px;
 }
 
-/* #mce-responses {
- position:absolute; 
-} */
+#mce-responses {
+  width: 0;
+}
 
 #mc_embed_signup #mce-success-response {
   width: 240px;
   color: #fdede2 !important;
   position:absolute;
+  width: 240px;
+  left: 310px;
 }
 
 #mc-embedded-subscribe {
-  background-color: #ff8802 !important;
+  /* background-color: #ff8802 !important; */
   height: 32px;
 }
 
@@ -231,6 +259,6 @@ a:focus {
 }
 
 #mc_embed_signup .button {
-  margin: 0 !important;
+  margin: 0 0 0 10px !important;
 }
 </style>
