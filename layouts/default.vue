@@ -17,9 +17,9 @@
                     id="mce-EMAIL" required />
                 </div>
                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
-                <div id="mce-responses">
-                  <div class="response" id="mce-success-response" style="display: none"></div>
-                </div>
+                <!-- <div id="mce-responses">
+                </div> -->
+                <div class="response" id="mce-success-response" style="display: none"></div>
               </div>
             </form>
         </div>
@@ -103,7 +103,7 @@ html {
 }
 
 .simple-banner-containner {
-  width: 1250px;
+  width: 1240px;
   /* position: fixed; */
   top: 0;
   display: flex;
@@ -125,6 +125,10 @@ html {
 }
 
 @media screen and (max-width: 1200px) {
+  #mc_embed_signup_scroll {
+    position: relative;
+  }
+
   .simple-banner-containner {
     width: 100%;
     height: 56px;
@@ -145,8 +149,14 @@ html {
     left: 24px!important;
   }
 
-  #mc_embed_signup #mce-success-response {
+  /* #mc_embed_signup #mce-success-response {
     position: relative !important;
+  } */
+
+  #mce-success-response {
+    position: absolute !important;
+    top: 4px !important;
+    left: 0px !important;
   }
   
 }
@@ -218,14 +228,16 @@ a:focus {
   left: 2px;
 }
 
-/* #mce-responses {
- position:absolute; 
-} */
+#mce-responses {
+  width: 0;
+}
 
 #mc_embed_signup #mce-success-response {
   width: 240px;
   color: #fdede2 !important;
   position:absolute;
+  width: 240px;
+  left: 310px;
 }
 
 #mc-embedded-subscribe {
