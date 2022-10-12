@@ -236,8 +236,8 @@ a:focus {
   width: 240px;
   color: #fdede2 !important;
   position:absolute;
-  width: 240px;
-  left: 310px;
+  top: 4px !important;
+  left: 0px !important;
 }
 
 #mc-embedded-subscribe {
