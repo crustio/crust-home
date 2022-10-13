@@ -243,6 +243,7 @@ a:focus {
 #mc-embedded-subscribe {
   /* background-color: #ff8802 !important; */
   height: 32px;
+  font-weight: bold !important;
 }
 
 #mc_embed_signup .mc-field-group {
