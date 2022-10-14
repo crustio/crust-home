@@ -99,6 +99,7 @@ export default {
     ],
     script: [
       { src: `//at.alicdn.com/t/font_1432256_b1321qx6myb.js`, async: true },
+      { src: `https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js` },
       {
         src: `https://www.googletagmanager.com/gtag/js?id=UA-160270407-1`,
         async: true,

@@ -2,9 +2,7 @@
   <div>
     <div class="simple-banner">
       <div class="simple-banner-containner">
-        <div class="simple-banner-text">
-          <span><a href="https://medium.com/crustnetwork/meet-crust-at-events-d9e4b79640d6" target="_blank">MEET CRUST AT EVENTS</a></span>
-        </div>
+        
         <div id="mc_embed_signup">
             <form
               action="https://network.us12.list-manage.com/subscribe/post?u=4cdbb1bce15273a3fdcd7c035&amp;id=06062eaf7a&amp;f_id=005bade0f0"
@@ -23,7 +21,10 @@
               </div>
             </form>
         </div>
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+        <div class="simple-banner-text">
+          <span><a href="https://medium.com/crustnetwork/meet-crust-at-events-d9e4b79640d6" target="_blank">MEET CRUST AT EVENTS</a></span>
+        </div>
+        <script type='text/javascript' src='/mcValidate.js'></script>
         <script type='text/javascript'>
           (function($) {
               window.fnames = new Array(); 
@@ -45,6 +46,12 @@ import NavBar from "~/components/NavBar"
 import footerBar from "~/components/footerBar"
 
 export default {
+  // mounted() {
+  //   let script = document.createElement('script');
+  //   script.type = 'text/javascript';
+  //   script.src = 'mcValidate.js';
+  //   document.body.appendChild(script);
+  // },
   components: {
     NavBar,
     footerBar,
@@ -124,6 +131,10 @@ html {
   justify-content: space-around;
 }
 
+.simple-banner-text a {
+  text-decoration: underline !important;;
+}
+
 @media screen and (max-width: 1200px) {
   #mc_embed_signup_scroll {
     position: relative;
@@ -140,7 +151,7 @@ html {
     text-align: center;
     justify-content: space-around;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   #mce-responses {
@@ -236,8 +247,7 @@ a:focus {
   width: 240px;
   color: #fdede2 !important;
   position:absolute;
-  top: 4px !important;
-  left: 0px !important;
+  left: 320px;
 }
 
 #mc-embedded-subscribe {
