@@ -113,7 +113,7 @@
     "introduce": "Whitepaper",
     "desc": "Crust Network,<br/>Web3.0 Storage<br/> for Metaverse",
     "new":"NEW",
-    "newTitle":"Join the Crust Crowdloan of Parachain Auction"
+    "newTitle":"We won the 30th Polkadot parachain! 🎉"
   },
   
   "crust": {
@@ -566,6 +566,7 @@
     "title":"Web3.0 platforms",
     "more":"Learn more",  
     "visit":"Visit",
+    "info0": "Ethereum is the community-run technology powering the cryptocurrency ether (ETH) and thousands of decentralized applications.",
     "info1":"A highly scalable, fast and secure blockchain platform for distributed apps, enterprise use cases and the new internet economy.",
     "info2":"Solana is a decentralized blockchain built to enable scalable, user-friendly apps for the world.",
     "info3":"Polygon is a protocol and a framework for building and connecting Ethereum-compatible blockchains with scalable solutions.",
@@ -574,8 +575,8 @@
     "info6":"Flow is a new blockchain built for the next generation of apps, games, and the digital assets that power them.",
     "info7":"HECO is a decentralized and energy efficient public chain for developers.",
     "info8":"Moonriver is an Ethereum-compatible smart contract parachain on Kusama and provides a permanently incentivized canary network.",
-    "info9":"OEC (a.k.a. OKExChain) is a fast, high-performance, open-source smart contract platform backed by OKEx to land large-scale digital assets and Dapps."
-
+    "info9":"OEC (a.k.a. OKExChain) is a fast, high-performance, open-source smart contract platform backed by OKEx to land large-scale digital assets and Dapps.",
+    "info10": "Committed to developing products and applications on the Aptos blockchain that redefine the web3 user experience."
   },
   "who":{
     "title":"Trusted by industry leaders",
@@ -589,7 +590,7 @@
     "tabTitle2":"Availability and Immutability",
     "tabTitle3":"Privacy and  Ownership",
     "howTo1": "<span class='font-weight-bold'>Learn how to use Crust to host your first dApp or website totally decentralized and with just a few clicks. <a href='https://medium.com/crustnetwork/decentralized-uniswap-interface-hosting-on-ipfs-18a78d1209ac' style='color:#FC7823' target='_blank'>Read&nbsp;how&nbsp;Uniswap&nbsp;integrates&nbsp;with&nbsp;Crust&nbsp;Network</a> and <a href='https://medium.com/crustnetwork/decentralized-websites-with-ipfs-and-crust-9435b5810ae1' style='color:#FC7823' target='_blank'>follow&nbsp;up&nbsp;on&nbsp;other&nbsp;Crust&nbsp;success&nbsp;stories.</a></span>",
-    "howTo2": "<span class='font-weight-bold'>Learn how to: 1) <a href='https://wiki.crust.network/docs/en/buildIntegrationNFTDataStorage' style='color:#FC7823' target='_blank'>Store&nbsp;your&nbsp;NFT&nbsp;metadata</a> in an immutable and decentralized storage via Crust Network. 2) Protect your most valuable NFT data from censorship or any form of security breaches.",
+    "howTo2": "<span class='font-weight-bold'>Learn how to: 1) <a href='https://wiki.crust.network/docs/en/buildIntegrationNFTDataStorage' style='color:#FC7823' target='_blank'>Store&nbsp;your&nbsp;NFT&nbsp;metadata</a> in an immutable and decentralized storage via Crust Network. 2) Protect your most valuable NFT data from censorship or any form of security breaches. 3) <a href='https://www.meet48.xyz/' style='color:#FC7823' target='_blank'>Meet48</a> is a social metaverse where you can meet, interact and manage real life idols or be one yourself",
     "howTo3": "<span class='font-weight-bold'>Learn how to use Crust Network’s file storage services with Crust’s storage API, its IPFS gateway and pinning services and many more features. Visit our <a href='https://wiki.crust.network/docs/en/build101' style='color:#FC7823' target='_blank'>dStorage&nbsp;101&nbsp;article</a>&nbsp;to&nbsp;get&nbsp;started.</span>",
     "tabInfo1": "Decentralized applications often fall victim to front-end related security breaches such as DNS hijacks or DDoS attacks, which can put users and their assets at risk. Storing and hosting your dApp or website via Crust Network drastically reduces cybersecurity risks while keeping your front-end secure.  Crust Network distributes replications globally to prevent single-point-of-failure events to protect the stability of your dApp.",
     "tabInfo2": "Every NFT is associated with a specific set of data representing the visuals, characteristics and other unique information. Most of this so-called metadata is still stored on centralized infrastructure which can lead to issues regarding ownership, censorship and security. By storing and linking NFT metadata in Crust Network’s fully decentralized storage, users enjoy sustainable and immutable storage for valuable NFT data with full ownership of their assets and unstoppable availability.",
