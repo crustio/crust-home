@@ -106,6 +106,15 @@ export default {
       active: 1,
       listData: [
         {
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/ethereum-logo-landscape-black.png`),
+          title: "info0",
+          button: "more",
+          style: "height: 49px;",
+          url: "https://ethereum.org/",
+          medium:
+            "https://medium.com/crustnetwork/crust-is-now-included-in-the-ethereum-docs-as-a-decentralized-storage-solution-3731032d00e",
+        },
+        {
           img: require(`../../../assets/img/4-Start using Crust storage interfaces/elrond.png`),
           title: "info1",
           button: "more",
@@ -121,6 +130,14 @@ export default {
           style: "width: 200px;height: 26px;",
           url: "https://solana.com/",
           medium:"https://medium.com/crustnetwork/crust-network-brings-decentralized-storage-solution-package-to-solana-290ececc21b2"
+        },
+        {
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/Aptos_wordmark_transparent_BLK.png`),
+          title: "info10",
+          button: "more",
+          style: "height: 80px;",
+          url: "https://aptoslabs.com/",
+          medium:"https://medium.com/crustnetwork/crust-network-integrates-with-aptos-to-introduce-decentralized-storage-solutions-to-more-users-1495dd668e39"
         },
         {
           img: require(`../../../assets/img/4-Start using Crust storage interfaces/Polygon.svg`),
