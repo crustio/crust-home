@@ -17,7 +17,7 @@
           </p>
           <p class="dev-team-intro" :class="getZhcnCss()">
             {{ $t("decentralized.foundation-intro1") }}(&nbsp;<a
-              href="https://decloudf.com/"
+              href="https://www.decloudf.com/"
               class="link"
               target="_blank"
               >Decentralized Cloud Foundation</a
