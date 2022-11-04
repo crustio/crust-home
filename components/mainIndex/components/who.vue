@@ -301,6 +301,13 @@ export default {
               createUrl:
                 "https://medium.com/crustnetwork/crust-network-and-uniarts-network-announce-strategic-partnership-crust-provides-decentralized-13af431c269b",
             },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/NFT/Meet48.png`),
+              title: "net8",
+              button: "learn",
+              style: "height: 40px;",
+              url: "https://www.meet48.xyz/"
+            },
           ],
         },
         {
