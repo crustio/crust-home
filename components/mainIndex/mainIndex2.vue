@@ -682,7 +682,6 @@ export default {
       }
       #global {
         margin-left: -228px;
-        margin-top: 940px;
       }
       .margin-left-25 {
         margin-left: 25px;
@@ -966,7 +965,7 @@ export default {
           margin-bottom: 4.58rem;
           opacity: 0.99;
           width: 23.33rem;
-          height: 9.92rem;
+          height: 10.92rem;
           font-size: 2.5rem;
           line-height: 4rem;
         }
