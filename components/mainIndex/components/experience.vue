@@ -54,13 +54,13 @@
           >
             {{ $t(`express.${item.button}`) }}<span></span>
           </div>
-          <div
+          <!-- <div
             class="experience-item-buttom"
             v-if="index == 2"
             @click="handleSwitchswapVideoClick()"
           >
             {{ $t(`express.${item.button}`) }}<span></span>
-          </div>
+          </div> -->
           <div class="experience-item-create" v-if="item.create">
             {{ $t(`express.${item.create}`) }}
           </div>
@@ -101,13 +101,13 @@
           >
             {{ $t(`express.${item.button}`) }}<span></span>
           </div>
-          <div
+          <!-- <div
             class="experience-item-buttom"
             v-if="index == 2"
             @click="handleSwitchswapVideoClick()"
           >
             {{ $t(`express.${item.button}`) }}<span></span>
-          </div>
+          </div> -->
           <div class="experience-item-create" v-if="item.create">
             {{ $t(`express.${item.create}`) }}
           </div>
@@ -156,12 +156,12 @@ export default {
           url: "https://crustfiles.io",
         },
         {
-          img: require(`../../../assets/img/3-Experience now/swap.png`),
+          img: require(`../../../assets/img/3-Experience now/ipfscloud.png`),
           title: "cardTitle3",
           subTitle: "cardSubTitle3",
           button: "cardButton3",
           create: "cardTip3",
-          url: "https://switchswap.io",
+          url: "https://baitech-ipfs.net/",
         },
       ],
     }
@@ -234,6 +234,7 @@ export default {
       display: flex;
       justify-content: center;
       .experience-item-block {
+        position: relative;
         &:nth-child(2) {
           margin: 0 20px;
         }
@@ -321,9 +322,12 @@ export default {
           }
         }
         .experience-item-create {
-          margin-top: 18px;
-          font-size: 11px;
-          text-align: right;
+          position: absolute;
+          bottom: 5px;
+          right: 5px;
+          // margin-top: 18px;
+          // font-size: 11px;
+          // text-align: right;
         }
       }
     }
@@ -358,6 +362,7 @@ color: #1F1F1F;
       padding-top: 4.5rem;
       }
       .experience-item-block {
+        position: relative;
         margin: auto auto;
         padding: 0 1rem;
         padding-top: 4.25rem;
@@ -453,9 +458,9 @@ height: 3rem;
           }
         }
         .experience-item-create {
-          margin-top: 1rem;
-          font-size: 0.83rem;
-          text-align: right;
+          position: absolute;
+          bottom: 5px;
+          right: 5px;
         }
       }
     }
