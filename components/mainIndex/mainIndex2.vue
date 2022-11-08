@@ -682,6 +682,7 @@ export default {
       }
       #global {
         margin-left: -228px;
+        margin-top: 940px;
       }
       .margin-left-25 {
         margin-left: 25px;
