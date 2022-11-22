@@ -115,6 +115,33 @@ export default {
             "https://medium.com/crustnetwork/crust-is-now-included-in-the-ethereum-docs-as-a-decentralized-storage-solution-3731032d00e",
         },
         {
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/Polygon.svg`),
+          title: "info3",
+          button: "more",
+          style: "width: 168px;height: 40px;",
+          url: "https://polygon.technology/",
+          medium:
+            "https://medium.com/crustnetwork/crust-network-brings-decentralized-storage-solution-package-to-polygon-with-seamless-ipfs-dbb2e71a822b",
+        },
+        {
+          // polkadot
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/logo-polkadot.svg`),
+          title: "info11",
+          button: "more",
+          style: "width: 168px;height: 40px;",
+          url: "https://polkadot.network/",
+          medium:
+            "https://medium.com/crustnetwork/how-to-claim-crowdloan-rewards-both-for-kusama-and-polkadot-664b0746b3b9",
+        },
+        {
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/Aptos_wordmark_transparent_BLK.png`),
+          title: "info10",
+          button: "more",
+          style: "height: 80px;",
+          url: "https://aptoslabs.com/",
+          medium:"https://medium.com/crustnetwork/crust-network-integrates-with-aptos-to-introduce-decentralized-storage-solutions-to-more-users-1495dd668e39"
+        },
+        {
           img: require(`../../../assets/img/4-Start using Crust storage interfaces/elrond.png`),
           title: "info1",
           button: "more",
@@ -132,21 +159,13 @@ export default {
           medium:"https://medium.com/crustnetwork/crust-network-brings-decentralized-storage-solution-package-to-solana-290ececc21b2"
         },
         {
-          img: require(`../../../assets/img/4-Start using Crust storage interfaces/Aptos_wordmark_transparent_BLK.png`),
-          title: "info10",
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/NEAR@3x.png`),
+          title: "info5",
           button: "more",
-          style: "height: 80px;",
-          url: "https://aptoslabs.com/",
-          medium:"https://medium.com/crustnetwork/crust-network-integrates-with-aptos-to-introduce-decentralized-storage-solutions-to-more-users-1495dd668e39"
-        },
-        {
-          img: require(`../../../assets/img/4-Start using Crust storage interfaces/Polygon.svg`),
-          title: "info3",
-          button: "more",
-          style: "width: 168px;height: 40px;",
-          url: "https://polygon.technology/",
+          style: "width: 152px;height: 40px;",
+          url: "https://near.org/",
           medium:
-            "https://medium.com/crustnetwork/crust-network-brings-decentralized-storage-solution-package-to-polygon-with-seamless-ipfs-dbb2e71a822b",
+            "https://medium.com/crustnetwork/crust-network-partners-with-near-protocol-to-introduce-decentralized-storage-solutions-dc9b90f7e175",
         },
         {
           img: require(`../../../assets/img/4-Start using Crust storage interfaces/BINANCE.png`),
@@ -158,15 +177,6 @@ export default {
             "https://medium.com/crustnetwork/crust-network-partners-with-bsc-to-introduce-decentralized-storage-solutions-838721942783",
         },
         {
-          img: require(`../../../assets/img/4-Start using Crust storage interfaces/NEAR@3x.png`),
-          title: "info5",
-          button: "more",
-          style: "width: 152px;height: 40px;",
-          url: "https://near.org/",
-          medium:
-            "https://medium.com/crustnetwork/crust-network-partners-with-near-protocol-to-introduce-decentralized-storage-solutions-dc9b90f7e175",
-        },
-        {
           img: require(`../../../assets/img/4-Start using Crust storage interfaces/fiow@3x.png`),
           title: "info6",
           button: "more",
@@ -176,31 +186,86 @@ export default {
             "https://medium.com/crustnetwork/crust-network-partners-with-flow-to-introduce-decentralized-storage-solutions-bc0edc9c15f7",
         },
         {
-          img: require(`../../../assets/img/4-Start using Crust storage interfaces/HECO@3x.png`),
-          title: "info7",
-          button: "more",
-          style: "width: 145px;height: 36px;",
-          url: "https://www.onflow.org/",
-          medium:
-            "https://medium.com/crustnetwork/crust-network-partners-with-heco-chain-to-introduce-decentralized-storage-solutions-to-more-users-3d8bf2deca87",
-        },
-        {
-          img: require(`../../../assets/img/4-Start using Crust storage interfaces/moonriver.png`),
-          title: "info8",
-          button: "more",
-          style: "width: 126px;height: 27px;",
-          url: "https://moonbeam.network/networks/moonriver/",
-          medium:
-            "https://medium.com/crustnetwork/crust-network-integrates-with-moonriver-to-bring-web3-ipfs-storage-to-the-kusama-ecosystem-b73d934293bf",
-        },
-         {
           img: require(`../../../assets/img/4-Start using Crust storage interfaces/OEC-01.png`),
           title: "info9",
           button: "more",
           style: "width:200px;height:83px;",
           url: "https://www.okex.com/oec",
           medium:
-            "https://medium.com/okex-blog",
+          "https://medium.com/okex-blog",
+        },
+        {
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/HECO@3x.png`),
+          title: "info7",
+          button: "more",
+          style: "width: 145px;height: 36px;",
+          url: "https://www.hecochain.com/",
+          medium:
+            "https://medium.com/crustnetwork/crust-network-partners-with-heco-chain-to-introduce-decentralized-storage-solutions-to-more-users-3d8bf2deca87",
+        },
+        {
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/moonbeam-logo-500.png`),
+          title: "info8",
+          button: "more",
+          style: "width: 180px;",
+          url: "https://moonbeam.network/networks/moonbeam/",
+          medium:
+            "https://medium.com/crustnetwork/crust-network-integrates-with-moonriver-to-bring-web3-ipfs-storage-to-the-kusama-ecosystem-b73d934293bf",
+        },
+        {
+          // Acala
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/Acala.svg`),
+          title: "info12",
+          button: "more",
+          url: "https://acala.network/"
+        },
+        {
+          // Astar
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/brand-logo-astar.png`),
+          title: "info13",
+          button: "more",
+          url: "https://astar.network/"
+
+        },
+        {
+          // Bifrost
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/bifrost.svg`),
+          title: "info14",
+          button: "more",
+          url: "https://bifrost.finance/"
+
+        },
+        {
+          // Phala
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/phala_network.png`),
+          title: "info15",
+          button: "more",
+          url: "https://www.phala.network"
+
+        },
+        {
+          // Oak
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/oak.png`),
+          title: "info16",
+          button: "more",
+          url: "https://oak.tech/"
+
+        },
+        {
+          // Robonomics
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/robonomics-logo.svg`),
+          title: "info17",
+          button: "more",
+          url: "https://robonomics.network/"
+
+        },
+        {
+          // Darwinia
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/Darwinia-Text.svg`),
+          style: "width: 200px;",
+          title: "info18",
+          button: "more",
+          url: "https://darwinia.network/"
         },
       ],
     }
