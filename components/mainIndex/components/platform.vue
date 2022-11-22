@@ -186,10 +186,10 @@ export default {
             "https://medium.com/crustnetwork/crust-network-partners-with-flow-to-introduce-decentralized-storage-solutions-bc0edc9c15f7",
         },
         {
-          img: require(`../../../assets/img/4-Start using Crust storage interfaces/OEC-01.png`),
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/okex.svg`),
           title: "info9",
           button: "more",
-          style: "width:200px;height:83px;",
+          style: "width: 180px;",
           url: "https://www.okex.com/oec",
           medium:
           "https://medium.com/okex-blog",
