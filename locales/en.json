@@ -574,9 +574,17 @@
     "info5":"NEAR is the network for a world reimagined. Through simple, secure, and scalable technology millions are able to invent and explore new experiences.",
     "info6":"Flow is a new blockchain built for the next generation of apps, games, and the digital assets that power them.",
     "info7":"HECO is a decentralized and energy efficient public chain for developers.",
-    "info8":"Moonriver is an Ethereum-compatible smart contract parachain on Kusama and provides a permanently incentivized canary network.",
+    "info8":"Moonbeam simplifies the developer experience by combining full Ethereum compatibility with the power of Polkadot, including scalability, cross-chain integrations, and on-chain governance.",
     "info9":"OEC (a.k.a. OKExChain) is a fast, high-performance, open-source smart contract platform backed by OKEx to land large-scale digital assets and Dapps.",
-    "info10": "Committed to developing products and applications on the Aptos blockchain that redefine the web3 user experience."
+    "info10": "Committed to developing products and applications on the Aptos blockchain that redefine the web3 user experience.",
+    "info11": "Polkadot unites and secures a growing ecosystem of specialized blockchains called parachains. Apps and services on Polkadot can securely communicate across chains, forming the basis for a truly interoperable decentralized web.",
+    "info12": "The Decentralized Stablecoin of Polkadot. Integrate your DApp with aUSD, the native decentralized stablecoin of Polkadot and Kusama.",
+    "info13": "Astar is a multi-chain smart contract platform that supports multiple blockchains and virtual machines.",
+    "info14": "Cross-chain liquidity for Staking.",
+    "info15": "COMPUTATION FOR WEB3, Privacy-Enhanced Permissionless Computing Protocol.",
+    "info16": "Secure and Trustless Automation. Payments and finance infrastructure for the Web 3.0",
+    "info17": "Robonomics is an open-source platform for IoT applications which enables the exchange of technical and economic information in the form of atomic transactions between user applications, IoT services, and complex robotics.",
+    "info18": "Darwinia is a cross-chain messaging infrastructure, which provides a light client-based, programmable, universal cross-chain messaging network for decentralized applications."
   },
   "who":{
     "title":"Trusted by industry leaders",
