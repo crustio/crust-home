@@ -241,26 +241,6 @@ export default {
           howTo: 'howTo2',
           children: [
             {
-              img: require(`../../../assets/img/5-Who are using Crust/NFT/swap.png`),
-              title: "net1",
-              button: "learn",
-              create: "create",
-              style: "width: 43px;height: 48px;",
-              url: "https://switchswap.io/",
-              createUrl:
-                "https://medium.com/crustnetwork/switchswap-nft-defi-platform-launching-soon-powered-by-crust-f7094e469dea",
-            },
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/NFT/IPFS scan.png`),
-              title: "net2",
-              button: "learn",
-              create: "create",
-              style: "width: 215px;height: 45px;",
-              url: "https://ipfsscan.crustapps.net/",
-              createUrl:
-                "https://medium.com/crustnetwork/decentralized-websites-with-ipfs-and-crust-9435b5810ae1",
-            },
-            {
               img: require(`../../../assets/img/5-Who are using Crust/NFT/Nftscan@3x.png`),
               title: "net3",
               button: "vist",
@@ -276,37 +256,137 @@ export default {
               createUrl:
                 "https://medium.com/crustnetwork/crust-network-partners-with-rmrk-in-constructing-the-next-generation-nfts-standard-d7f474431ff8",
             },
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/NFT/KAKA@3x.png`),
-              title: "net5",
-              button: "learn",
-              style: "width: 146px;height: 50px;",
-              url: "https://kakanft.com/",
-              createUrl:
-                "https://medium.com/crustnetwork/crust-network-and-kaka-collaborate-for-nft-asset-decentralized-storage-71b45ab99335",
-            },
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/NFT/REALY.png`),
-              title: "net6",
-              button: "vist",
-              style: "width: 137px;height: 40px;",
-              url: "https://realy.pro/",
-            },
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/NFT/UniArts.png`),
-              title: "net7",
-              button: "learn",
-              style: "width: 207px;height: 32px;",
-              url: "https://uniarts.network/",
-              createUrl:
-                "https://medium.com/crustnetwork/crust-network-and-uniarts-network-announce-strategic-partnership-crust-provides-decentralized-13af431c269b",
-            },
+            // {
+            //   img: require(`../../../assets/img/5-Who are using Crust/NFT/swap.png`),
+            //   title: "net1",
+            //   button: "learn",
+            //   create: "create",
+            //   style: "width: 43px;height: 48px;",
+            //   url: "https://switchswap.io/",
+            //   createUrl:
+            //     "https://medium.com/crustnetwork/switchswap-nft-defi-platform-launching-soon-powered-by-crust-f7094e469dea",
+            // },   
+            // {
+            //   img: require(`../../../assets/img/5-Who are using Crust/NFT/KAKA@3x.png`),
+            //   title: "net5",
+            //   button: "learn",
+            //   style: "width: 146px;height: 50px;",
+            //   url: "https://kakanft.com/",
+            //   createUrl:
+            //     "https://medium.com/crustnetwork/crust-network-and-kaka-collaborate-for-nft-asset-decentralized-storage-71b45ab99335",
+            // },
+            // {
+            //   img: require(`../../../assets/img/5-Who are using Crust/NFT/REALY.png`),
+            //   title: "net6",
+            //   button: "vist",
+            //   style: "width: 137px;height: 40px;",
+            //   url: "https://realy.pro/",
+            // },
+            // {
+            //   img: require(`../../../assets/img/5-Who are using Crust/NFT/UniArts.png`),
+            //   title: "net7",
+            //   button: "learn",
+            //   style: "width: 207px;height: 32px;",
+            //   url: "https://uniarts.network/",
+            //   createUrl:
+            //     "https://medium.com/crustnetwork/crust-network-and-uniarts-network-announce-strategic-partnership-crust-provides-decentralized-13af431c269b",
+            // },
             {
               img: require(`../../../assets/img/5-Who are using Crust/NFT/Meet48.png`),
               title: "net8",
               button: "learn",
               style: "height: 40px;",
               url: "https://www.meet48.xyz/"
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/NFT/IPFS scan.png`),
+              title: "net2",
+              button: "learn",
+              // create: "create",
+              style: "width: 215px;height: 45px;",
+              url: "https://ipfsscan.crustapps.net/",
+              createUrl:
+                "https://medium.com/crustnetwork/decentralized-websites-with-ipfs-and-crust-9435b5810ae1",
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/NFT/logo-sandbox.png`),
+              title: "sandbox",
+              button: "learn",
+              // create: "create",
+              // style: "width: 215px;height: 45px;",
+              url: "https://register.sandbox.game/",
+              createUrl:
+                "https://register.sandbox.game/",
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/NFT/xprotocol.png`),
+              title: "xProtocal",
+              button: "learn",
+              // create: "create",
+              // style: "width: 215px;height: 45px;",
+              url: "https://metaverse.x-protocol.com/",
+              createUrl:
+                "https://metaverse.x-protocol.com/",
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/NFT/getaverse.svg`),
+              title: "getaverse",
+              button: "learn",
+              // create: "create",
+              style: "width: 215px;height: 45px;",
+              url: "https://getaverses.com/",
+              createUrl:
+                "https://getaverses.com/",
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/NFT/ternoa.png`),
+              title: "ternoa",
+              button: "learn",
+              // create: "create",
+              // style: "width: 215px;height: 45px;",
+              url: "https://www.ternoa.network/",
+              createUrl:
+                "https://www.ternoa.network/",
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/NFT/MetaPrints-logo.webp`),
+              title: "metaprints",
+              button: "learn",
+              // create: "create",
+              // style: "width: 215px;height: 45px;",
+              url: "http://MonkeyingAround.io ",
+              createUrl:
+                "http://MonkeyingAround.io",
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/NFT/oneland-with-color.png`),
+              title: "oneland",
+              button: "learn",
+              // create: "create",
+              // style: "width: 215px;height: 45px;",
+              url: "https://oneland.world/",
+              createUrl:
+                "https://medium.com/crustnetwork/crust-network-partners-with-oneland-to-provide-decentralized-storage-for-the-metaverse-a795b6e21513",
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/NFT/metamirror-logo.png`),
+              title: "metaMirror",
+              button: "learn",
+              // create: "create",
+              // style: "width: 215px;height: 45px;",
+              url: "https://metamirror.space/",
+              createUrl:
+                "https://medium.com/crustnetwork/crust-network-partners-with-metamirror-to-explore-web-3-0-infrastructure-and-services-together-582875c4bf53",
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/NFT/NFTGO.svg`),
+              title: "nftGo",
+              button: "learn",
+              // create: "create",
+              style: "width: 215px;height: 45px;",
+              url: "https://nftgo.io/",
+              createUrl:
+                "https://nftgo.medium.com/strategic-partnership-announcement-crust-nft-x-nftgo-4d9f5a5cc364",
             },
           ],
         },
@@ -316,89 +396,89 @@ export default {
           info: "tabInfo3",
           howTo: 'howTo3',
           children: [
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/IPFS/crust Files.png`),
-              title: "ipfs1",
-              button: "vist",
-              create: "create",
-              style: "width: 173px;height: 24px;",
-              url: "https://crustfiles.io/",
-            },
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/IPFS/decoo.png`),
-              title: "ipfs2",
-              button: "vist",
-              create: "create",
-              style: "width: 151px;height: 51px;",
-              url: "https://decoo.io/",
-            },
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/IPFS/SOCBAY@3x.png`),
-              title: "ipfs3",
-              button: "learn",
-              create: "create",
-              style: "width: 220px;height: 30px;",
-              url: "https://socbay.io/",
-              createUrl:
-                "https://medium.com/crustnetwork/how-does-socbay-io-use-crust-network-to-decentralize-videos-sharing-platform-81ce1f179694",
-            },
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/IPFS/cruTransfer@3x.png`),
-              title: "ipfs4",
-              button: "learn",
-              create: "create",
-              style: "width: 40px;height: 50px;",
-              url: "https://crutransfer.me",
-              createUrl:
-                "https://medium.com/crustnetwork/whats-so-great-about-crutransfer-me-and-how-does-it-work-52fd873430ec",
-            },
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/IPFS/crato.png`),
-              title: "ipfs5",
-              button: "learn",
-              create: "create",
-              style: "width: 94px;height: 60px;",
-              url: "https://pan.nashcloud.cn/",
-              createUrl:
-                "https://medium.com/crustnetwork/a-brief-introduction-to-crato-the-cloud-storage-solution-of-the-new-era-ed3c0b95502",
-            },
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/IPFS/skyekiwi.png`),
-              title: "ipfs6",
-              button: "learn",
-              create: "create",
-              style: "width: 216px;height: 43px;",
-              url: "https://skye.kiwi/",
-              createUrl:
-                "https://medium.com/crustnetwork/skyekiwi-first-application-accepted-to-crust-grants-program-77071ab5481c",
-            },
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/IPFS/Coldstack@3x.png`),
-              title: "ipfs7",
-              button: "learn",
-              style: "width: 187px;height: 31px;",
-              url: "https://coldstack.io/",
-              createUrl:
-                "https://medium.com/crustnetwork/crust-network-and-coldstack-collaborate-for-decentralized-storage-21b08462b053",
-            },
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/IPFS/Bluna@3x.png`),
-              title: "ipfs8",
-              button: "learn",
-              style: "width: 145px;height: 41px;",
-              url: "http://www.nftggg.com/#/First",
-              createUrl:
-                "https://medium.com/crustnetwork/crust-network-and-bluna-collaborate-for-metaverse-decentralized-storage-78f4833284b4",
-            },
-            {
-              img: require(`../../../assets/img/5-Who are using Crust/IPFS/SINSO.png`),
-              title: "ipfs9",
-              button: "learn",
-              style: "width: 140px;height: 61px;",
-              url: "https://www.sinso.io/",
-              createUrl:
-                "https://medium.com/crustnetwork/distributed-image-cloud-based-on-crust-e5afcfd81c58",
-            },
+            // {
+            //   img: require(`../../../assets/img/5-Who are using Crust/IPFS/crust Files.png`),
+            //   title: "ipfs1",
+            //   button: "vist",
+            //   create: "create",
+            //   style: "width: 173px;height: 24px;",
+            //   url: "https://crustfiles.io/",
+            // },
+            // {
+            //   img: require(`../../../assets/img/5-Who are using Crust/IPFS/decoo.png`),
+            //   title: "ipfs2",
+            //   button: "vist",
+            //   create: "create",
+            //   style: "width: 151px;height: 51px;",
+            //   url: "https://decoo.io/",
+            // },
+            // {
+            //   img: require(`../../../assets/img/5-Who are using Crust/IPFS/SOCBAY@3x.png`),
+            //   title: "ipfs3",
+            //   button: "learn",
+            //   create: "create",
+            //   style: "width: 220px;height: 30px;",
+            //   url: "https://socbay.io/",
+            //   createUrl:
+            //     "https://medium.com/crustnetwork/how-does-socbay-io-use-crust-network-to-decentralize-videos-sharing-platform-81ce1f179694",
+            // },
+            // {
+            //   img: require(`../../../assets/img/5-Who are using Crust/IPFS/cruTransfer@3x.png`),
+            //   title: "ipfs4",
+            //   button: "learn",
+            //   create: "create",
+            //   style: "width: 40px;height: 50px;",
+            //   url: "https://crutransfer.me",
+            //   createUrl:
+            //     "https://medium.com/crustnetwork/whats-so-great-about-crutransfer-me-and-how-does-it-work-52fd873430ec",
+            // },
+            // {
+            //   img: require(`../../../assets/img/5-Who are using Crust/IPFS/crato.png`),
+            //   title: "ipfs5",
+            //   button: "learn",
+            //   create: "create",
+            //   style: "width: 94px;height: 60px;",
+            //   url: "https://pan.nashcloud.cn/",
+            //   createUrl:
+            //     "https://medium.com/crustnetwork/a-brief-introduction-to-crato-the-cloud-storage-solution-of-the-new-era-ed3c0b95502",
+            // },
+            // {
+            //   img: require(`../../../assets/img/5-Who are using Crust/IPFS/skyekiwi.png`),
+            //   title: "ipfs6",
+            //   button: "learn",
+            //   create: "create",
+            //   style: "width: 216px;height: 43px;",
+            //   url: "https://skye.kiwi/",
+            //   createUrl:
+            //     "https://medium.com/crustnetwork/skyekiwi-first-application-accepted-to-crust-grants-program-77071ab5481c",
+            // },
+            // {
+            //   img: require(`../../../assets/img/5-Who are using Crust/IPFS/Coldstack@3x.png`),
+            //   title: "ipfs7",
+            //   button: "learn",
+            //   style: "width: 187px;height: 31px;",
+            //   url: "https://coldstack.io/",
+            //   createUrl:
+            //     "https://medium.com/crustnetwork/crust-network-and-coldstack-collaborate-for-decentralized-storage-21b08462b053",
+            // },
+            // {
+            //   img: require(`../../../assets/img/5-Who are using Crust/IPFS/Bluna@3x.png`),
+            //   title: "ipfs8",
+            //   button: "learn",
+            //   style: "width: 145px;height: 41px;",
+            //   url: "http://www.nftggg.com/#/First",
+            //   createUrl:
+            //     "https://medium.com/crustnetwork/crust-network-and-bluna-collaborate-for-metaverse-decentralized-storage-78f4833284b4",
+            // },
+            // {
+            //   img: require(`../../../assets/img/5-Who are using Crust/IPFS/SINSO.png`),
+            //   title: "ipfs9",
+            //   button: "learn",
+            //   style: "width: 140px;height: 61px;",
+            //   url: "https://www.sinso.io/",
+            //   createUrl:
+            //     "https://medium.com/crustnetwork/distributed-image-cloud-based-on-crust-e5afcfd81c58",
+            // },
             {
               img: require(`../../../assets/img/5-Who are using Crust/IPFS/Litentry.png`),
               title: "ipfs10",
@@ -415,6 +495,88 @@ export default {
               style: "width: 112px;height: 46px;",
               url: "https://www.kilt.io/",
             },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/IPFS/robonomics-logo.svg`),
+              title: "robonomics",
+              button: "vist",
+              style: "width: 112px;height: 46px;",
+              url: "https://robonomics.network/",
+              createUrl: 
+                "https://medium.com/crustnetwork/robonomics-crust-networks-strategic-partnership-announced-f3a9a3b79f35"
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/IPFS/XX_logo1.png`),
+              title: "xxNetwork",
+              button: "vist",
+              // style: "width: 112px;height: 46px;",
+              url: "https://xx.network/",
+              createUrl: 
+                "https://medium.com/crustnetwork/crust-network-partners-with-xx-network-to-offer-web3-industry-a-turn-key-solution-565c68731005"
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/IPFS/ceramic.png`),
+              title: "ceramic",
+              button: "vist",
+              // style: "width: 112px;height: 46px;",
+              url: "https://ceramic.network/",
+              createUrl: 
+                "https://medium.com/crustnetwork/crust-network-enables-truly-decentralized-file-storage-services-on-ceramic-network-60e7a94a59ed"
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/IPFS/chainlink.svg`),
+              title: "chainlink",
+              button: "vist",
+              style: "width: 112px;height: 46px;",
+              url: "https://chain.link/",
+              createUrl: 
+                'https://medium.com/crustnetwork/crust-network-brings-decentralized-storage-to-blockchains-through-chainlink-aaa15b27e29c'
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/IPFS/matters.png`),
+              title: "matters",
+              button: "vist",
+              style: "width: 144px;height: 30px;",
+              url: "https://matters-lab.io/",
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/IPFS/link3.svg`),
+              title: "link3",
+              button: "vist",
+              style: "width: 112px;height: 46px;",
+              url: "https://link3.to/",
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/IPFS/gear.png`),
+              title: "gear",
+              button: "vist",
+              // style: "width: 112px;height: 46px;",
+              url: "https://www.gear-tech.io/",
+              createUrl: 
+                'https://medium.com/crustnetwork/announcing-crust-networks-integration-with-gear-a-substrate-based-wasm-smart-contract-platform-23a8d4609884'
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/IPFS/apillon.svg`),
+              title: "apillon",
+              button: "vist",
+              style: "width: 144px;height: 46px;",
+              url: "https://apillon.io/",
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/IPFS/subsocial.svg`),
+              title: "subsocial",
+              button: "vist",
+              style: "width: 112px;height: 46px;",
+              url: "https://subsocial.network/",
+            },
+            {
+              img: require(`../../../assets/img/5-Who are using Crust/IPFS/relation-labs.png`),
+              title: "relationLabs",
+              button: "vist",
+              // style: "width: 112px;height: 46px;",
+              url: "https://relationlabs.ai/home",
+              createUrl:
+                "https://crustnetwork.medium.com/crust-network-x-relation-labs-collaborate-to-integrate-data-storage-solution-443e457293dc",
+            }
           ],
         },
       ],
