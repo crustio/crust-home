@@ -81,8 +81,8 @@ const outerDit = {
     "https://gw.crustapps.net/ipfs/QmPeoZuvhq8G5SQ95KJ35xGVLP3pHtF2hahrtFsjTaZbFk?filename=Analysis of Crust Network Economic Model.pdf",
   analysis_of_economic_model_zh:
     "https://gw.crustapps.net/ipfs/QmTeYZVYucgF94cU9Bfuew6shWiTESYKYjDFntG9xK5Hru?filename=解析Crust Network经济模型.pdf",
-  crust_mainnet: "https://swap.crustapps.net/#/swap",
-  crust_mainnet_zh: "https://swap.crustapps.net/#/swap",
+  crust_mainnet: "https://swap.crust.network//#/swap",
+  crust_mainnet_zh: "https://swap.crust.network//#/swap",
 
   Technology_WP:"https://gw.crustapps.net/ipfs/QmP9WqDYhreSuv5KJWzWVKZXJ4hc7y9fUdwC4u23SmqL6t",
 
