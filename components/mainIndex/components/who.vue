@@ -379,7 +379,7 @@ export default {
                 "https://medium.com/crustnetwork/crust-network-partners-with-metamirror-to-explore-web-3-0-infrastructure-and-services-together-582875c4bf53",
             },
             {
-              img: require(`../../../assets/img/5-Who are using Crust/NFT/NFTGO.svg`),
+              img: require(`../../../assets/img/5-Who are using Crust/NFT/NFTGo.svg`),
               title: "nftGo",
               button: "learn",
               // create: "create",
