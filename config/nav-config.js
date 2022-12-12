@@ -62,15 +62,15 @@ const outerDit = {
   "dev team": "https://www.linkedin.com/company/clouderium/mycompany/",
   "dcf grants": "https://www.decloudf.com?scrollto=description",
   csm_lightpaper_en:
-    "https://gw.crustapps.net/ipfs/QmYVRP7puUhGvQPuThHK2mtQgj2nUAoJYkBgXYxwiaC8Dq?filename=Crust%20Shadow%20lightpaper202105.pdf",
+    "https://ipfs.io/ipfs/QmYVRP7puUhGvQPuThHK2mtQgj2nUAoJYkBgXYxwiaC8Dq?filename=Crust%20Shadow%20lightpaper202105.pdf",
   csm_lightpaper_zh:
-    "https://gw.crustapps.net/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=Crust Shadow lightpaper中文版202105.pdf",
+    "https://ipfs.io/ipfs/QmdPsqY6W1v5KUYH8Q1m8SCJwFLXSwRJeeeft9WS6ct3JA?filename=Crust Shadow lightpaper中文版202105.pdf",
   rewards_plan_en:
     "https://crustnetwork.medium.com/crust-updates-kusama-parachain-slot-auction-rewards-2f6b32c682ec",
   rewards_plan_zh: "https://mp.weixin.qq.com/s/xtLCalg9fnvoierQTNFDfQ",
   "free storage": "https://fs.crust.network",
   mediamaterials:
-    "https://gw.crustapps.net/ipfs/Qme9uUpunio7heGDnnfsptYWzjLJgvD2hkbLGcvehPz5EK?filename=CrustLogo.zip",
+    "https://ipfs.io/ipfs/Qme9uUpunio7heGDnnfsptYWzjLJgvD2hkbLGcvehPz5EK?filename=CrustLogo.zip",
   dotask: "https://www.coinask.io/n/crust",
   mainnet_plan_medium_zh: "https://www.yuque.com/qm003f/thyzgp/rs6o07",
   mainnet_plan_medium_en:
@@ -78,13 +78,13 @@ const outerDit = {
   cru_claim_en: "https://wiki.crust.network/docs/en/claims",
   cru_claim_zh: "https://wiki.crust.network/docs/zh-CN/claims",
   analysis_of_economic_model_en:
-    "https://gw.crustapps.net/ipfs/QmPeoZuvhq8G5SQ95KJ35xGVLP3pHtF2hahrtFsjTaZbFk?filename=Analysis of Crust Network Economic Model.pdf",
+    "https://ipfs.io/ipfs/QmPeoZuvhq8G5SQ95KJ35xGVLP3pHtF2hahrtFsjTaZbFk?filename=Analysis of Crust Network Economic Model.pdf",
   analysis_of_economic_model_zh:
-    "https://gw.crustapps.net/ipfs/QmTeYZVYucgF94cU9Bfuew6shWiTESYKYjDFntG9xK5Hru?filename=解析Crust Network经济模型.pdf",
+    "https://ipfs.io/ipfs/QmTeYZVYucgF94cU9Bfuew6shWiTESYKYjDFntG9xK5Hru?filename=解析Crust Network经济模型.pdf",
   crust_mainnet: "https://swap.crust.network//#/swap",
   crust_mainnet_zh: "https://swap.crust.network//#/swap",
 
-  Technology_WP:"https://gw.crustapps.net/ipfs/QmP9WqDYhreSuv5KJWzWVKZXJ4hc7y9fUdwC4u23SmqL6t",
+  Technology_WP:"https://ipfs.io/ipfs/QmP9WqDYhreSuv5KJWzWVKZXJ4hc7y9fUdwC4u23SmqL6t",
 
   enjoy_action:"https://twitter.com/CrustNetwork/status/1584431211417833472?s=20&t=C662BQ7jphV6l9D7F59b3Q",
 
