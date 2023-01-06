@@ -111,7 +111,7 @@ export default {
             },
             {
               title: "list4",
-              url: "https://ipfs-hk.decoo.io/ipfs/Qme9uUpunio7heGDnnfsptYWzjLJgvD2hkbLGcvehPz5EK?filename=CrustLogo.zip",
+              url: "http://crustipfs.live/ipfs/QmcFxwu2mocMN6Vvqfxf1KWZ7gWASrj2mMxwedz1VurVxY",
             },
           ],
         },
