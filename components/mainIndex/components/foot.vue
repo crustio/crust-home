@@ -100,9 +100,9 @@ export default {
             {
               title: "list2",
               down: true,
-              url: "https://ipfs.io/ipfs/QmXUhqUgZGVJsWmV4TCDePwWtpJvEAx7rvNCjuNKaEUHzk",
+              url: "https://crustipfs.live/ipfs/QmXUhqUgZGVJsWmV4TCDePwWtpJvEAx7rvNCjuNKaEUHzk",
               zh_url:
-                "https://ipfs.io/ipfs/QmPWKagEqZxkspDK6KPebWQdpG55TDyiNQi5EJ1bRgo4Z7",
+                "https://crustipfs.live/ipfs/QmPWKagEqZxkspDK6KPebWQdpG55TDyiNQi5EJ1bRgo4Z7",
             },
             {
               title: "list3",
