@@ -130,6 +130,10 @@ export default {
               title: "community3",
               url: "https://discord.gg/Jbw2PAUSCR",
             },
+            {
+              title: "community4",
+              url: "https://crust.subsquare.io",
+            },
           ],
         },
         {

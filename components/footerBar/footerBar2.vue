@@ -83,7 +83,7 @@ export default {
       titles: ["Resourcese", "forum", "Developers"],
       items: [
         ["WhitePaper", "EcoWhitePaper", "FAQ", "mediamaterials"],
-        ["Twitter", "Telegram", "Discord"],
+        ["Twitter", "Telegram", "Discord", "Governance"],
         ["Crust Bounty", "Crust Grants", "Github"],
       ],
       iconNames: [
