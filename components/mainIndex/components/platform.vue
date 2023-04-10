@@ -267,6 +267,14 @@ export default {
           button: "more",
           url: "https://darwinia.network/"
         },
+        {
+          // Equilibrium
+          img: require(`../../../assets/img/4-Start using Crust storage interfaces/Equilibrium.png`),
+          style: "width: 200px;",
+          title: "info19",
+          button: "more",
+          url: "https://medium.com/crustnetwork/the-equilibrium-crust-network-xcm-integration-adds-an-eqd-use-case-402dd383afd1"
+        },
       ],
     }
   },
