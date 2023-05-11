@@ -7,10 +7,8 @@ const outerDit = {
   "crust wallet_zh": "https://wiki.crust.network/docs/zh-CN/crustWallet",
   "blockchain explorer": "https://crust.subscan.io/",
   "blockchain explorer_zh": "https://crust.subscan.io/",
-  "storage explorer": "https://splorer.crust.network",
   "token swap": "https://csm.crust.network/#/swap",
   "token swap_zh": "https://csm.crust.network/#/swap",
-  "Storage Explorer_zh": "https://splorer.crust.network/",
   "crust mainnet": "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/explorer",
   "crust mainnet_en": "https://apps.crust.network/?rpc=wss%3A%2F%2Frpc.crust.network#/explorer",
   "crust maxwell":
@@ -42,8 +40,12 @@ const outerDit = {
   "crust apps":
     "https://apps.crust.network/?rpc=wss%3A%2F%2Fapi-maxwell.crust.network#/explorer/",
   "blockchain explorer": "https://crust.subscan.io/",
-  "storage explorer": " https://crust.subscan.io/storage",
-  "storage explorer_zh": " https://crust.subscan.io/storage",
+  "storage explorer": "https://crust.subscan.io/storage",
+  "storage explorer_zh": "https://crust.subscan.io/storage",
+  "crust cloud": "https://crustcloud.io/",
+  "crust cloud_zh": "https://crustcloud.io/",
+  "crust files": "https://crustfiles.io/",
+  "crust files_zh": "https://crustfiles.io/",
   pdfBucket:
     "https://crust-data.oss-cn-shanghai.aliyuncs.com/crust-home/whitepapers/",
   extractDocs: "https://crust-data.oss-cn-shanghai.aliyuncs.com/external_docs/",
