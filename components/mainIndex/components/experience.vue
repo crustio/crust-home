@@ -161,7 +161,7 @@ export default {
           subTitle: "cardSubTitle3",
           button: "cardButton3",
           create: "cardTip3",
-          url: "https://baitech-ipfs.net/",
+          url: "https://crustcloud.io/",
         },
       ],
     }
