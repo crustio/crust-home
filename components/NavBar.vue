@@ -158,6 +158,7 @@ export default {
             "WhitePaper",
             "EcoWhitePaper",
             "CSM Lightpaper",
+            "EVM Storage Lightpaper",
             "FAQ",
           ],
         },
@@ -206,6 +207,7 @@ export default {
             "WhitePaper",
             "EcoWhitePaper",
             "CSM Lightpaper",
+            "EVM Storage Lightpaper",
             "FAQ",
           ],
         },
@@ -312,6 +314,9 @@ export default {
       }
       if (name === "home") {
         return this.$router.push("/")
+      }
+      if (name === 'evm storage lightpaper'){
+        return jumpTo('evm_storage')
       }
       this.$router.push(name)
     },
