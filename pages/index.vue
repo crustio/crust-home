@@ -9,7 +9,9 @@
         </div>
         <div class="btn_group">
           <div class="btn" @click="jumbTo('evm_storage')">Read the Docs</div>
-          <a class="btn" href="https://crustfiles.io/" target="_blank">Upload your files</a>
+          <a class="btn" href="https://crustfiles.io/" target="_blank"
+            >Upload your files</a
+          >
         </div>
       </div>
     </section>
@@ -30,7 +32,7 @@
     </section>
     <section class="section3">
       <div class="title">Key Features</div>
-      <div class="features">
+      <div class="content features">
         <div class="item" v-for="(item, index) in features" :key="index">
           <img class="icon" :src="item.icon" />
           <div class="feat-tit">{{ item.tit }}</div>
@@ -43,24 +45,28 @@
         <div class="app">
           <div class="infos">
             <div class="app-tit">
-              Upload your first file to<br />EVM storage using<br />Crustfiles
+              Upload your first file to EVM storage using Crustfiles
             </div>
             <div class="app-content">
               Store, manage, share, and own your data in a decentralized way,
               with a smooth user experience.
             </div>
-            <a class="app-btn" href="https://crustfiles.io/" target="_blank">Try it now</a>
+            <a class="app-btn" href="https://crustfiles.io/" target="_blank"
+              >Try it now</a
+            >
           </div>
           <img class="app-img1" :src="require('~/assets/images/app1.jpg')" />
         </div>
         <div class="app">
           <img class="app-img2" :src="require('~/assets/images/app2.jpg')" />
           <div class="infos">
-            <div class="app-tit">Mint W3Bucket on<br />Crust Cloud</div>
+            <div class="app-tit">Mint W3Bucket on Crust Cloud</div>
             <div class="app-content">
               Crust Cloud provide S3-like storage service for professional users
             </div>
-            <a class="app-btn" href="https://crustcloud.io/" target="_blank">Try it now</a>
+            <a class="app-btn" href="https://crustcloud.io/" target="_blank"
+              >Try it now</a
+            >
           </div>
         </div>
       </div>
@@ -68,7 +74,7 @@
     <section class="section5">
       <div class="title">EVM storage is now available on</div>
       <div class="content">
-        <img class="img-chain" :src="require('~/assets/images/chain.png')" />
+        <img class="img-chain" :src="require('~/assets/images/chain4.png')" />
         <div class="dev-infos">
           <div class="dev-head">
             <div class="dev-tit">EVM Storage API</div>
@@ -77,15 +83,16 @@
               <span>Dev Guidance</span>
             </div>
           </div>
-          <img class="img-code" :src="require('~/assets/images/code.jpg')" />
+          <div class="code-layout" v-html="code" />
+          <!-- <img class="img-code" :src="require('~/assets/images/code.jpg')" /> -->
         </div>
       </div>
     </section>
     <section class="section6">
       <div class="title">More possibilities enabled by EVM storage</div>
-      <div class="content">
-        <div class="item" v-for="(item,index) in possList" :key="index">
-          <img class="icon" :src="item.icon"/>
+      <div class="content grid">
+        <div class="item" v-for="(item, index) in possList" :key="index">
+          <img class="icon" :src="item.icon" />
           <span>{{ item.name }}</span>
         </div>
       </div>
@@ -162,8 +169,33 @@ const possList = [
   {
     icon: require("@/assets/images/poss6.png"),
     name: "NFT metadata storage",
-  }
+  },
 ]
+
+const code = `<span class="docs">// Take order on Ethereum as an example</span>
+<span>const</span> { <span>ethers</span> } = require("ethers");
+
+<span class="docs">// 1. Get signer</span>
+<span>const</span> provider = new ethers.providers.<span class="fun">JsonRpcProvider</span>("https://mainnet.infura.io/v3/");
+<span>const</span> signer = new ethers.<span class="fun">Wallet</span>(YOUR_PRIVATE_KEY, provider);
+
+<span class="docs">// 2. Get storage contract instance</span>
+<span>const</span> StorageOrderABI = [
+  "function getPrice(uint size, bool isPermanent) public view returns (uint)",
+  "function placeOrder(string memory cid, uint size, bool isPermanent) external payable",
+  "function placeOrderWithNode(string memory cid, uint size, address nodeAddress, bool isPermanent) public payable"
+]
+<span>const</span> storageOrder = new ethers.<span class="fun">Contract</span>("0xE391613d2056e47F74ED5eF1d443d4CDB21AAAd9", StorageOrderABI, signer);
+
+<span class="docs">// 3. Get price by size and isPermanent</span>
+<span>const</span> fileCid = "QmfH5zLmBtptUxRSGWazaumGwSsCW3n6P164eRXpbFatmJ";
+<span>const</span> fileSize = 5246268;
+<span>const</span> isPermanent = false;
+<span>const</span> price = <span>await</span> storageOrder.<span class="fun">getPrice</span>(fileSize, isPermanent);
+
+<span class="docs">// 4. Place storage order</span>
+<span>await</span> storageOrder.<span class="fun">placeOrder</span>(fileCid, fileSize, isPermanent, {value: price});
+`
 
 export default {
   components: { foot },
@@ -173,13 +205,14 @@ export default {
       currentEvm: evms[0],
       features: features,
       possList: possList,
+      code: code,
     }
   },
   methods: {
     onClickEvm(index) {
       this.currentEvm = this.evms[index]
     },
-    jumbTo:jumbTo,
+    jumbTo: jumbTo,
   },
 }
 </script>
@@ -200,7 +233,9 @@ export default {
   }
 
   .content {
-    max-width: 1160px;
+    max-width: 1200px;
+    width: 84%;
+    margin: auto;
   }
 
   .section1 {
@@ -255,13 +290,12 @@ export default {
   .section2 {
     /* height: 788px; */
     width: 100%;
-    padding: 60px 120px 120px 120px;
+    padding: 60px 20px 120px 20px;
     background: white;
     .content {
       display: flex;
       gap: 9.0625rem;
       align-items: center;
-
       margin: auto;
 
       .left {
@@ -328,7 +362,7 @@ export default {
   .section3 {
     /* height: 788px; */
     width: 100%;
-    padding: 148px 140px;
+    padding: 148px 20px;
     background: #fdf7f3;
     .features {
       display: flex;
@@ -368,7 +402,7 @@ export default {
 
   .section4 {
     background: white;
-    padding: 80px 140px;
+    padding: 80px 20px;
     .content {
       margin: auto;
       display: flex;
@@ -381,12 +415,19 @@ export default {
         justify-content: space-between;
         gap: 120px;
         .app-img1 {
-          height: 282px;
+          flex: 1;
+          width: 0;
+          object-fit: contain;
+          max-width: 516px;
         }
         .app-img2 {
-          height: 242px;
+          flex: 1;
+          width: 0;
+          object-fit: contain;
+          max-width: 578px;
         }
         .infos {
+          flex: 1;
           display: flex;
           flex-direction: column;
           gap: 20px;
@@ -424,20 +465,24 @@ export default {
   }
   .section5 {
     background: #fdf7f3;
-    padding: 80px 140px 148px 140px;
+    padding: 80px 20px 120px 20px;
 
     .content {
       display: flex;
-      width: 100%;
       margin: auto;
       justify-content: space-between;
       gap: 20px;
       .img-chain {
-        width: 338px;
+        flex: 1;
+        width: 0;
+        max-width: 338px;
         object-fit: contain;
       }
 
       .dev-infos {
+        width: 0;
+        max-width: 580px;
+        flex: 2;
         .dev-head {
           display: flex;
           justify-content: space-between;
@@ -463,11 +508,27 @@ export default {
             }
           }
         }
+      }
 
-        .img-code {
-          margin-top: 20px;
-          width: 600px;
-          object-fit: contain;
+      .code-layout {
+        overflow: auto;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 2px solid #e5e5e5;
+        background: #fff;
+        max-height: 363px;
+        width: 100%;
+        font-size: 13px;
+        white-space: break-spaces;
+        span {
+          color: #c0392b;
+        }
+        .docs {
+          color: #27ae60 !important;
+        }
+        .fun {
+          color: #2980b9 !important;
         }
       }
     }
@@ -475,12 +536,12 @@ export default {
 
   .section6 {
     background: white;
-    padding: 80px 140px;
+    padding: 80px 20px;
     .content {
       margin: auto;
       display: grid;
       gap: 20px;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(380px,1fr));
 
       .item {
         display: flex;
@@ -507,11 +568,46 @@ export default {
   html {
     font-size: 14px !important;
   }
-
 }
 @media screen and (max-width: 640px) and (min-width: 320px) {
   html {
     font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 960px) {
+  .main {
+    .title {
+      font-size: 8vw !important;
+      line-height: 1.2 !important;
+    }
+    .content {
+      width: calc(100% - 40px) !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 20px !important;
+      .left {
+        width: 300px !important;
+      }
+      img {
+        width: auto !important;
+        max-width: 100% !important;
+      }
+      .app {
+        gap: 10px !important;
+        align-self: flex-start;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+      .app:nth-child(2){
+        flex-direction: column-reverse !important;
+      }
+
+      .dev-infos {
+        width: 100% !important;
+      }
+
+
+    }
   }
 }
 </style>
