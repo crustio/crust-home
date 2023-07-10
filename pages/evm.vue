@@ -118,12 +118,12 @@ const evms = [
   {
     img: evm2,
     tit: "Orderer",
-    content: `"Orderer," as a storage parsing service within the Crust Network 2.0 protocol, establishes a crucial bridge between EVM storage contracts and the Crust main network. It monitors the Storage Events from "The Contract" across various EVM chains, interprets the recorded order information, and bridges it to the Crust main network. Worth noting is that the Orderer in the Crust Network 2.0 protocol employs a semi-permissioned structure. With the consent of Crust Tech Commit, third-party Orderer services can freely join and exit, uniformly providing cross-chain storage parsing services for EVM contracts.`,
+    content: `"Orderer" as a storage parsing service within the Crust Network 2.0 protocol, establishes a crucial bridge between EVM storage contracts and the Crust main network. It monitors the Storage Events from "The Contract" across various EVM chains, interprets the recorded order information, and bridges it to the Crust main network. Worth noting is that the Orderer in the Crust Network 2.0 protocol employs a semi-permissioned structure. With the consent of Crust Tech Commit, third-party Orderer services can freely join and exit, uniformly providing cross-chain storage parsing services for EVM contracts.`,
   },
   {
     img: evm3,
-    tit: "Crust Network",
-    content: `Connector on Crust Network "Connector" is an important extension in the Crust Network 2.0 protocol DSM (Decentralized Storage Marketplace). It adopts a design similar to the RGB protocol to record EVM cross-chain storage information on the Crust mainnet. The Connector is also closely integrated with the Crust Developer Toolkit, which makes it easier for developers to parse contract interaction fields from the EVM chain when building Crust layer 2 applications.`,
+    tit: "Connector on Crust Network",
+    content: `"Connector" is an important extension in the Crust Network 2.0 protocol DSM (Decentralized Storage Marketplace). It adopts a design similar to the RGB protocol to record EVM cross-chain storage information on the Crust mainnet. The Connector is also closely integrated with the Crust Developer Toolkit, which makes it easier for developers to parse contract interaction fields from the EVM chain when building Crust layer 2 applications.`,
   },
 ]
 
