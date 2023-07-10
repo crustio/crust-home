@@ -76,7 +76,7 @@ export function runGlobal(THREE) {
       // renderer.autoClearColor = new THREE.Color(1, 31, 31, 31)
       document.getElementById('global').appendChild(renderer.domElement)
       clock = new THREE.Clock()
-      control = new THREE.TrackballControls(camera)
+      control = new THREE.TrackballControls(camera, render.domElement)
       control.rotateSpeed = 1.0
       control.zoomSpeed = 0
       control.panSpeed = 1.0
