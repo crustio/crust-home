@@ -29,11 +29,11 @@
           <p class="logoMobile" v-html="$t('indexBanner.subMobile')"></p>
           <!-- <p class="logo logo-sub" v-html="$t('indexBanner.subTitle')"></p> -->
           <div class="buttons">
-            <button class="btn-custom-yellow" @click="crustMainnet">
-              {{ $t("Crust Mainnet") }}
-            </button>
-            <button class="btn-custom-common" @click="crustMacell()">
+            <button class="btn-custom-yellow" @click="crustMacell()">
               {{ $t("Crust Maxwell") }}
+            </button>
+            <button class="btn-custom-common" @click="evmStorage()">
+              {{ $t("EVM Storage") }}
             </button>
           </div>
           <!-- <div class="system-point">
@@ -405,6 +405,10 @@ export default {
         window.open(outerDit.crust_mainnet_zh, "_blank")
       }
     },
+
+    evmStorage(){
+      window.open('/evm', "_self")
+    },
     crustMacell() {
       window.open(outerDit["crust maxwellIndex"], "_blank")
     },
@@ -643,6 +647,7 @@ export default {
         .buttons {
           display: flex;
           justify-content: flex-start;
+          gap: 30px;
           .btn-custom-yellow {
             width: 140px;
             height: 50px;
@@ -656,7 +661,6 @@ export default {
             font-family: Montserrat-blod, "Source Han Sans CN-blod";
             font-weight: bold;
             color: #ffffff;
-            margin-right: 30px;
           }
           .btn-custom-common {
             width: 200px;

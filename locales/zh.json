@@ -72,7 +72,8 @@
     "Storage_capacity":"存储容量：",
     "Globally_distributed_storage_nodes":"全球分布的节点：",
     "Real-time_storage_fee":"当前存储费用 :",
-    "Storage_orders":"存储订单 :"
+    "Storage_orders":"存储订单 :",
+    "EVM Storage": "EVM Storage"
   },
   "footer": {
     "Crust Bounty": "Crust Bounty",

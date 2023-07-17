@@ -78,7 +78,7 @@
         <div class="dev-infos">
           <div class="dev-head">
             <div class="dev-tit">EVM Storage API</div>
-            <div class="dev-tip">
+            <div class="dev-tip" @click="jumbTo('evm_storage_dev_wiki')">
               <img class="icon" :src="require('~/assets/images/dev.svg')" />
               <span>Dev Guidance</span>
             </div>
@@ -496,6 +496,7 @@ export default {
           .dev-tip {
             display: flex;
             gap: 20px;
+            cursor: pointer;
             .icon {
               width: 20px;
               object-fit: contain;

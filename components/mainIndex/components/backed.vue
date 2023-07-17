@@ -4,18 +4,18 @@
       <div class="backed-crust-block">
         <div class="backed-title">{{ $t(`backed`) }}</div>
         <div class="backed-item backed-pc">
-          <div class="backed-item-img" v-for="item in 18" :key="item">
+          <div class="backed-item-img" v-for="item in logoArr" :key="item">
             <div class="backed-item-bg"></div>
           </div>
         </div>
         <swiper class="backed-swiper backed-mobile" :options="swiperOptions">
           <swiper-slide
-            v-for="(item,index) in logoArr"
+            v-for="(item, index) in logoArr"
             :key="index"
             class="backed-swiper-slide"
           >
             <div class="backed-item-img">
-              <img :src="item.img" :style="item.style"  alt="">
+              <img :src="item.img" :style="item.style" alt="" />
             </div>
           </swiper-slide>
           <div slot="pagination" class="swiper-pagination"></div>
@@ -26,6 +26,84 @@
 </template>
 
 <script>
+const logoArr = [
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/DWF-Labs.png`),
+    style: "width: 9rem;height: 2.4rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/substrate.png`),
+    style: "width: 9.2rem;height: 2rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/DFG@3x.png`),
+    style: "width: 6.95rem;height: 2.55rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/NGC@3x.png`),
+    style: "width: 6.35rem;height: 2.05rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/HASH@3x.png`),
+    style: "width: 7.7rem;height: 0.8rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/SevenX@3x.png`),
+    style: "width: 7.4rem;height: 2rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/IOSG@3x.png`),
+    style: "width: 5.5rem;height: 2.5rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/Bitcoin.png`),
+    style: "width: 8.5rem;height: 1.2rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/比升资本.png`),
+    style: "width: 3.85rem;height: 2.75rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/CHAIN.png`),
+    style: "width: 4.65rem;height: 4rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/bitscale@3x.png`),
+    style: "width: 6.35rem;height: 2.45rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/AU21.png`),
+    style: "width: 8.5rem;height: 1.4rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/SNZ.png`),
+    style: "width:4.45rem;height: 2.4rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/3Commas@3x.png`),
+    style: "width: 7rem;height: 1.75rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/共识实验室.png`),
+    style: "width: 8.4rem;height: 2.2rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/orgin.png`),
+    style: "width: 5.35rem;height: 4.25rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/太和资本.png`),
+    style: "width: 7.25rem;height: 2.15rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/水滴资本.png`),
+    style: "width: 2.45rem;height: 4.5rem;",
+  },
+  {
+    img: require(`../../../assets/img/7-Strong investor backing/W3.png`),
+    style: "width: 7.3rem;height: 2.5rem;",
+  },
+]
 export default {
   data() {
     return {
@@ -42,64 +120,7 @@ export default {
         //   el: ".swiper-pagination",
         // },
       },
-      logoArr:[
-        {
-          img: require(`../../../assets/img/7-Strong investor backing/W3.png`),
-          style: "width: 7.3rem;height: 2.5rem;",
-        },
-         {
-          img: require(`../../../assets/img/7-Strong investor backing/substrate.png`),
-          style: "width: 9.2rem;height: 2rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/DFG@3x.png`),
-          style: "width: 6.95rem;height: 2.55rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/NGC@3x.png`),
-          style: "width: 6.35rem;height: 2.05rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/HASH@3x.png`),
-          style: "width: 7.7rem;height: 0.8rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/SevenX@3x.png`),
-          style: "width: 7.4rem;height: 2rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/IOSG@3x.png`),
-          style: "width: 5.5rem;height: 2.5rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/Bitcoin.png`),
-          style: "width: 8.5rem;height: 1.2rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/比升资本.png`),
-          style: "width: 3.85rem;height: 2.75rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/CHAIN.png`),
-          style: "width: 4.65rem;height: 4rem;"
-        },{
-          img: require(`../../../assets/img/7-Strong investor backing/bitscale@3x.png`),
-          style: "width: 6.35rem;height: 2.45rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/AU21.png`),
-          style: "width: 8.5rem;height: 1.4rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/SNZ.png`),
-          style: "width:4.45rem;height: 2.4rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/3Commas@3x.png`),
-          style: "width: 7rem;height: 1.75rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/共识实验室.png`),
-          style: "width: 8.4rem;height: 2.2rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/orgin.png`),
-          style: "width: 5.35rem;height: 4.25rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/太和资本.png`),
-          style: "width: 7.25rem;height: 2.15rem;"
-        }, {
-          img: require(`../../../assets/img/7-Strong investor backing/水滴资本.png`),
-          style: "width: 2.45rem;height: 4.5rem;"
-        },
-      ]
+      logoArr: logoArr,
     }
   },
   methods: {},
@@ -130,33 +151,34 @@ export default {
         --swiper-pagination-color: #fc7823;
       }
       .backed-item-img {
-       width: 11.6rem;
+        width: 11.6rem;
         height: 4rem;
         border-radius: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        img{
+        img {
           height: 2.5rem;
           // max-width: 8.5rem;
         }
       }
       .backed-swiper-slide {
-          height: 9.58rem;
-          display: flex;
-          align-items: center;      
-          justify-content: center;
+        height: 9.58rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 50%;
         &:nth-child(5n) {
           margin-right: 0;
         }
 
+        
         &:nth-child(1) {
           .backed-item-bg {
-            background: url("../../../assets/img/7-Strong investor backing/W3.png")
+            background: url("../../../assets/img/7-Strong investor backing/DWF-Labs.png")
               no-repeat center;
-            background-size: 146px 50px;
+            background-size: 170px 46px;
           }
         }
         &:nth-child(2) {
@@ -282,6 +304,13 @@ export default {
             background-size: 49px 90px;
           }
         }
+        &:nth-child(19) {
+          .backed-item-bg {
+            background: url("../../../assets/img/7-Strong investor backing/W3.png")
+              no-repeat center;
+            background-size: 146px 50px;
+          }
+        }
 
         .backed-item-bg {
           width: 184px;
@@ -331,9 +360,9 @@ export default {
 
           &:nth-child(1) {
             .backed-item-bg {
-              background: url("../../../assets/img/7-Strong investor backing/W3.png")
+              background: url("../../../assets/img/7-Strong investor backing/DWF-Labs.png")
                 no-repeat center;
-              background-size: 146px 50px;
+              background-size: 170px 46px;
             }
           }
           &:nth-child(2) {
@@ -457,6 +486,13 @@ export default {
               background: url("../../../assets/img/7-Strong investor backing/水滴资本.png")
                 no-repeat center;
               background-size: 49px 90px;
+            }
+          }
+          &:nth-child(19) {
+            .backed-item-bg {
+              background: url("../../../assets/img/7-Strong investor backing/W3.png")
+                no-repeat center;
+              background-size: 146px 50px;
             }
           }
 

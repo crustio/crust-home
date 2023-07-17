@@ -1,6 +1,9 @@
 const navConfig = require("../config/nav-config")
 module.exports = function jumpTo(navName) {
   navName = navName.toLocaleLowerCase()
-  console.log(navConfig.outerDit[navName])
-  window.open(navConfig.outerDit[navName], "_blank")
+  const url = navConfig.outerDit[navName]
+  console.log("jumpto: ", url)
+  if (!url) return
+  const target = url.startsWith("/") ? "_self" : "_blank"
+  window.open(url, target)
 }
