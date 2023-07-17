@@ -95,8 +95,9 @@ const outerDit = {
   start_button3:"https://wiki.crust.network/docs/en/build101",
   start_button4:"https://wiki.crust.network/docs/en/buildCrossChainSolution",
   
-  evm_storage: "https://ipfs.io/ipfs/QmSijA1yFvMxY2R6CxRzDNtrLA9h7v8hTxZqTvpgdSPsD3?filename=Crust EVM Storage.pdf"
-
+  evm_storage: "https://ipfs.io/ipfs/QmSijA1yFvMxY2R6CxRzDNtrLA9h7v8hTxZqTvpgdSPsD3?filename=Crust EVM Storage.pdf",
+  evm_storage_dev_wiki: "https://wiki.crust.network/docs/en/evmBuildOverview",
+  "evm storage": "/evm",
 }
 const outerList = Object.keys(outerDit)
 module.exports = {

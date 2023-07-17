@@ -2,37 +2,67 @@
   <div>
     <div class="simple-banner">
       <div class="simple-banner-containner">
-        
         <div id="mc_embed_signup">
-            <form
-              action="https://network.us12.list-manage.com/subscribe/post?u=4cdbb1bce15273a3fdcd7c035&amp;id=06062eaf7a&amp;f_id=005bade0f0"
-              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-              novalidate
-              >
-              <div id="mc_embed_signup_scroll">
-                <div class="mc-field-group">
-                  <input type="email" value="" name="EMAIL" class="required email" placeholder="Enter Email" autocomplete="off"
-                    id="mce-EMAIL" required />
-                </div>
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
-                <!-- <div id="mce-responses">
-                </div> -->
-                <div class="response" id="mce-success-response" style="display: none"></div>
+          <form
+            action="https://network.us12.list-manage.com/subscribe/post?u=4cdbb1bce15273a3fdcd7c035&amp;id=06062eaf7a&amp;f_id=005bade0f0"
+            method="post"
+            id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
+            class="validate"
+            novalidate
+          >
+            <div id="mc_embed_signup_scroll">
+              <div class="mc-field-group">
+                <input
+                  type="email"
+                  value=""
+                  name="EMAIL"
+                  class="required email"
+                  placeholder="Enter Email"
+                  autocomplete="off"
+                  id="mce-EMAIL"
+                  required
+                />
               </div>
-            </form>
+              <input
+                type="submit"
+                value="Subscribe"
+                name="subscribe"
+                id="mc-embedded-subscribe"
+                class="button"
+              />
+              <!-- <div id="mce-responses">
+                </div> -->
+              <div
+                class="response"
+                id="mce-success-response"
+                style="display: none"
+              ></div>
+            </div>
+          </form>
         </div>
         <div class="simple-banner-text">
-          <span><a href="https://medium.com/crustnetwork/meet-crust-at-events-d9e4b79640d6" target="_blank">MEET CRUST AT EVENTS</a></span>
+          <span
+            ><a
+              href="https://medium.com/crustnetwork/meet-crust-at-events-d9e4b79640d6"
+              target="_blank"
+              >MEET CRUST AT EVENTS</a
+            ></span
+          >
+          <span
+            ><a :href="outerDit.crust_mainnet" target="_blank">{{
+              $t("Crust Mainnet")
+            }}</a></span
+          >
         </div>
-        <script type='text/javascript' src='/mcValidate.js'></script>
-        <script type='text/javascript'>
-          (function($) {
-              window.fnames = new Array(); 
-              window.ftypes = new Array();
-              fnames[0]='EMAIL';
-              ftypes[0]='email';
-            }
-          (jQuery));
+        <script type="text/javascript" src="/mcValidate.js"></script>
+        <script type="text/javascript">
+          ;(function ($) {
+            window.fnames = new Array()
+            window.ftypes = new Array()
+            fnames[0] = "EMAIL"
+            ftypes[0] = "email"
+          })(jQuery)
         </script>
       </div>
     </div>
@@ -44,7 +74,7 @@
 <script>
 import NavBar from "~/components/NavBar"
 import footerBar from "~/components/footerBar"
-
+import { outerDit } from "@/config/nav-config"
 export default {
   // mounted() {
   //   let script = document.createElement('script');
@@ -52,6 +82,11 @@ export default {
   //   script.src = 'mcValidate.js';
   //   document.body.appendChild(script);
   // },
+  data() {
+    return {
+      outerDit,
+    }
+  },
   components: {
     NavBar,
     footerBar,
@@ -74,8 +109,9 @@ export default {
 
 <style>
 html {
-  font-family: "Source Sans Pro", -apple-system, Montserrat, "Source Han Sans CN", BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, Montserrat,
+    "Source Han Sans CN", BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -127,12 +163,13 @@ html {
   /* padding: 10px 20px; */
   align-items: center;
   display: flex;
+  gap: 20px;
   flex-direction: row;
   justify-content: space-around;
 }
 
 .simple-banner-text a {
-  text-decoration: underline !important;;
+  text-decoration: underline !important;
 }
 
 @media screen and (max-width: 1200px) {
@@ -155,9 +192,9 @@ html {
   }
 
   #mce-responses {
-    position:absolute!important;
-    top: 30px!important;
-    left: 24px!important;
+    position: absolute !important;
+    top: 30px !important;
+    left: 24px !important;
   }
 
   /* #mc_embed_signup #mce-success-response {
@@ -169,7 +206,6 @@ html {
     top: 4px !important;
     left: 0px !important;
   }
-  
 }
 
 .simple-banner-text a {
@@ -246,7 +282,7 @@ a:focus {
 #mc_embed_signup #mce-success-response {
   width: 240px;
   color: #fdede2 !important;
-  position:absolute;
+  position: absolute;
   left: 320px;
 }
 

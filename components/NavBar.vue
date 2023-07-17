@@ -134,6 +134,7 @@ export default {
             "Crust Wallet",
             "Blockchain Explorer",
             "Storage Explorer",
+            "EVM Storage",
             "Crust Cloud",
             "Crust Files",
             // "Crust Maxwell",

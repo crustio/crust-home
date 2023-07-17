@@ -74,7 +74,8 @@
     "Storage_capacity":"Storage<br/>capacity :",
     "Globally_distributed_storage_nodes":"Globally distributed<br/>storage nodes :",
     "Real-time_storage_fee":"Real-time<br/>storage fee :",
-    "Storage_orders":"Storage<br/>orders :"
+    "Storage_orders":"Storage<br/>orders :",
+    "EVM Storage": "EVM Storage"
   },
   "footer": {
     "Crust Bounty": "Crust Bounty",
