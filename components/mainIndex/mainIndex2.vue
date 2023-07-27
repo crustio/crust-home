@@ -971,7 +971,7 @@ export default {
           opacity: 0.99;
           width: 23.33rem;
           height: 10.92rem;
-          font-size: 2.5rem;
+          font-size: 2rem;
           line-height: 4rem;
         }
         .desc {
