@@ -1,4 +1,4 @@
-## Crust Network, Web3.0 Storage for the Metaverse
+## Complete Your Web3 Journey With Decentralized Storage
 
 ```bash
 # install dependencies

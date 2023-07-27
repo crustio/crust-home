@@ -95,8 +95,8 @@ export default {
     return {
       title:
         this.$store.state.locale === "en"
-          ? "Crust Network, Web3.0 Storage for Metaverse"
-          : "Crust Network, Web3.0去中心化存储为元宇宙构建",
+          ? "Complete Your Web3 Journey With Decentralized Storage"
+          : "用去中心化存储完成你的Web3之旅",
     }
   },
   computed: {
