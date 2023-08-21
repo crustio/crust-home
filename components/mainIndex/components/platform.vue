@@ -145,7 +145,7 @@ export default {
           img: require(`../../../assets/img/4-Start using Crust storage interfaces/elrond.png`),
           title: "info1",
           button: "more",
-          style: "width: 165px;height: 49px;",
+          style: "width: 175px;height: 32px;",
           url: "https://elrond.com/",
           medium:
             "https://medium.com/crustnetwork/2-000-petabytes-of-unstoppable-ipfs-storage-will-be-available-for-elrond-nfts-and-dapps-via-22a81805818",
