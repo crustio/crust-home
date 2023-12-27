@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div
-      v-if="showVideo"
-      class="m-video-container"
-      @click="handleCloseDemoVideo"
-    >
+    <div v-if="showVideo" class="m-video-container" @click="handleCloseDemoVideo">
       <dVideo :source="videoLink" />
     </div>
     <div class="container-fluid main-index">
@@ -21,11 +17,7 @@
               <div v-html="icons[0]"></div>
             </div>
           </div>
-          <p
-            class="logo"
-            style="margin-top: 80px"
-            v-html="$t('indexBanner.sub')"
-          ></p>
+          <p class="logo" style="margin-top: 80px" v-html="$t('indexBanner.sub')"></p>
           <p class="logoMobile" v-html="$t('indexBanner.subMobile')"></p>
           <!-- <p class="logo logo-sub" v-html="$t('indexBanner.subTitle')"></p> -->
           <div class="buttons">
@@ -35,6 +27,9 @@
             <button class="btn-custom-common" @click="evmStorage()">
               {{ $t("EVM Storage") }}
             </button>
+            <div class="ethdaimg" @click="openEthDA()">
+              <img :src="require('~/assets/images/ethda.jpg')" class="ethdaimg" />
+            </div>
           </div>
           <!-- <div class="system-point">
             <div class="point-icon"><div></div></div>
@@ -96,51 +91,28 @@
             Storage<br />capacity :
           </div>
           <div class="numListItemValue">
-              <Capacity class="number" />
-           <span class="unit">TB</span>
+            <Capacity class="number" />
+            <span class="unit">TB</span>
           </div>
         </div>
         <div class="numListItem">
-          <div
-            class="numListItemName"
-            v-html="$t('header.Globally_distributed_storage_nodes')"
-          ></div>
+          <div class="numListItemName" v-html="$t('header.Globally_distributed_storage_nodes')"></div>
           <div class="numListItemValue">
-            <countTo
-              :start-val="sVal"
-              :end-val="nodesVal"
-              :autoplay="true"
-              :duration="3000"
-            />
+            <countTo :start-val="sVal" :end-val="nodesVal" :autoplay="true" :duration="3000" />
           </div>
         </div>
         <div class="numListItem">
-          <div
-            class="numListItemName"
-            v-html="$t('header.Real-time_storage_fee')"
-          ></div>
+          <div class="numListItemName" v-html="$t('header.Real-time_storage_fee')"></div>
           <div class="numListItemValue numListItemValuefee">
-            $<countTo
-              :start-val="sVal"
-              :end-val="feeVal"
-              :autoplay="true"
-              :decimals="6"
-              :duration="3000"
-            /><span class="unit">/GB/Year</span>
+            $
+            <countTo :start-val="sVal" :end-val="feeVal" :autoplay="true" :decimals="6" :duration="3000" /><span
+              class="unit">/GB/Year</span>
           </div>
         </div>
         <div class="numListItem">
-          <div
-            class="numListItemName"
-            v-html="$t('header.Storage_orders')"
-          ></div>
+          <div class="numListItemName" v-html="$t('header.Storage_orders')"></div>
           <div class="numListItemValue">
-            <countTo
-              :start-val="sVal"
-              :end-val="ordersVal"
-              :autoplay="true"
-              :duration="3000"
-            />
+            <countTo :start-val="sVal" :end-val="ordersVal" :autoplay="true" :duration="3000" />
           </div>
         </div>
         <!-- <div class="numListItem"></div>
@@ -151,63 +123,37 @@
         <swiper class="swiper" :options="swiperOptions">
           <swiper-slide class="image-wrapper">
             <div class="numListItem">
-              <div
-                class="numListItemName"
-                v-html="$t('header.Storage_capacity')"
-              >
+              <div class="numListItemName" v-html="$t('header.Storage_capacity')">
                 Storage<br />capacity :
               </div>
               <div class="numListItemValue">
-               <Capacity class="number" /><span class="unit">TB</span>
+                <Capacity class="number" /><span class="unit">TB</span>
               </div>
             </div>
           </swiper-slide>
           <swiper-slide class="image-wrapper">
             <div class="numListItem">
-              <div
-                class="numListItemName"
-                v-html="$t('header.Globally_distributed_storage_nodes')"
-              ></div>
+              <div class="numListItemName" v-html="$t('header.Globally_distributed_storage_nodes')"></div>
               <div class="numListItemValue">
-                <countTo
-                  :start-val="sVal"
-                  :end-val="nodesVal"
-                  :autoplay="true"
-                  :duration="3000"
-                />
+                <countTo :start-val="sVal" :end-val="nodesVal" :autoplay="true" :duration="3000" />
               </div>
             </div>
           </swiper-slide>
           <swiper-slide class="image-wrapper">
             <div class="numListItem">
-              <div
-                class="numListItemName"
-                v-html="$t('header.Real-time_storage_fee')"
-              ></div>
+              <div class="numListItemName" v-html="$t('header.Real-time_storage_fee')"></div>
               <div class="numListItemValue">
-                $<countTo
-                  :start-val="sVal"
-                  :end-val="feeVal"
-                  :autoplay="true"
-                   :decimals="6"
-                  :duration="3000"
-                /><span class="unit">/GB /Year</span>
+                $
+                <countTo :start-val="sVal" :end-val="feeVal" :autoplay="true" :decimals="6" :duration="3000" /><span
+                  class="unit">/GB /Year</span>
               </div>
             </div>
           </swiper-slide>
           <swiper-slide class="image-wrapper">
             <div class="numListItem">
-              <div
-                class="numListItemName"
-                v-html="$t('header.Storage_orders')"
-              ></div>
+              <div class="numListItemName" v-html="$t('header.Storage_orders')"></div>
               <div class="numListItemValue">
-                <countTo
-                  :start-val="sVal"
-                  :end-val="ordersVal"
-                  :autoplay="true"
-                  :duration="3000"
-                />
+                <countTo :start-val="sVal" :end-val="ordersVal" :autoplay="true" :duration="3000" />
               </div>
             </div>
           </swiper-slide>
@@ -275,9 +221,9 @@ export default {
     return {
       sVal: 0,
       endList: [0, 0, 0, 0],
-      nodesVal:0,
-      feeVal:0,
-      ordersVal:0,
+      nodesVal: 0,
+      feeVal: 0,
+      ordersVal: 0,
       icons: [triangle],
       showVideo: false,
       iconPlay: IconPlay,
@@ -291,7 +237,7 @@ export default {
         centeredSlides: false,
         centeredSlidesBounds: false,
       },
-      num:0
+      num: 0
     }
   },
   computed: {
@@ -326,7 +272,7 @@ export default {
         .then((res) => {
           if (res.status === "success") {
             this.feeVal = res.data
-            console.log( this.endList[2])
+            console.log(this.endList[2])
           } else {
             throw new Error("FAILED")
           }
@@ -406,9 +352,14 @@ export default {
       }
     },
 
-    evmStorage(){
+    evmStorage() {
       window.open('/evm', "_self")
     },
+
+    openEthDA() {
+      window.open('https://ethda.io', "_self")
+    },
+
     crustMacell() {
       window.open(outerDit["crust maxwellIndex"], "_blank")
     },
@@ -438,20 +389,24 @@ export default {
     width: 16px;
     height: 16px;
     fill: white;
+
     &:hover {
       fill: #000;
     }
   }
 }
+
 .pointer {
   cursor: pointer;
   text-decoration: underline;
 }
+
 @media screen and (max-width: 1440px) and (min-width: 1140px) {
   .numlist {
     padding: 0 !important;
   }
 }
+
 @media screen and (min-width: 1140px) {
   .numlist {
     padding: 0 20px;
@@ -470,9 +425,11 @@ export default {
       display: flex;
       justify-content: space-between;
     }
+
     .numListSwiper {
       display: none;
     }
+
     .numListItem {
       border-right: 2px solid #131313;
       display: flex;
@@ -481,16 +438,20 @@ export default {
       justify-content: center;
       // padding: 0 28px;
       width: 29%;
+
       &:nth-child(2) {
         width: 23%;
       }
+
       &:nth-child(3) {
         width: 27%;
       }
+
       &:nth-child(4) {
         width: 21%;
         border-right: 0;
       }
+
       .numListItemName {
         font-size: 14px;
         font-family: Montserrat;
@@ -500,6 +461,7 @@ export default {
         margin-right: 20px;
         white-space: nowrap;
       }
+
       .numListItemValue {
         height: 36px;
         line-height: 36px;
@@ -507,22 +469,27 @@ export default {
         font-family: "Montserrat-blod";
         font-weight: bold;
         color: #131313;
+
         // white-space: nowrap;
         .unit {
           font-size: 16px;
         }
       }
-      .numListItemValuefee{
+
+      .numListItemValuefee {
         font-size: 32px;
-        span{
+
+        span {
           font-size: 32px;
         }
-        .unit{
+
+        .unit {
           font-size: 12px;
         }
       }
     }
   }
+
   .main-index {
     margin-top: -60px;
     width: 100%;
@@ -530,6 +497,7 @@ export default {
     background-color: #141414;
     position: relative;
     overflow: hidden;
+
     .main {
       width: 100%;
       height: 810px;
@@ -538,6 +506,7 @@ export default {
       align-items: center;
       flex-direction: row-reverse;
       justify-content: flex-end;
+
       .new-link {
         width: 520px;
         margin-bottom: 80px;
@@ -562,6 +531,7 @@ export default {
           // margin-right: 15px;'
           display: inline-block;
         }
+
         .new-link-info {
           background: #343434;
           height: 30px;
@@ -574,16 +544,19 @@ export default {
           display: inline-block;
           border-bottom-right-radius: 5px;
           border-top-right-radius: 5px;
+
           span {
             &:first-child {
               margin-right: 15px;
             }
           }
+
           div {
             display: inline-block;
             width: 6px;
             height: 11px;
           }
+
           .new-link-info-hover {
             height: 11px;
             font-size: 14px;
@@ -597,17 +570,22 @@ export default {
           .new-link-info-hover {
             text-decoration: underline;
             color: #ffffff;
+
             span {
               text-decoration: none;
             }
           }
         }
       }
+
       .main-logo {
         z-index: 9999;
         width: 50%;
-        animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 0.5s; /* don't forget to set a duration! */
+        animation: fadeInUp;
+        /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 0.5s;
+
+        /* don't forget to set a duration! */
         .logo {
           font-family: "Montserrat-blod", "Source Han Sans CN-blod";
           font-weight: bold;
@@ -619,9 +597,11 @@ export default {
           margin-bottom: 85px;
           width: 630px;
         }
+
         .logoMobile {
           display: none;
         }
+
         .desc {
           padding: 0px 0 0 5px;
           font-size: 14px;
@@ -629,25 +609,31 @@ export default {
           font-weight: bold;
           color: #ffffff;
           line-height: 2em;
+
           // margin-top: 20px;
           .capacity {
             font-family: Montserrat-blod, "Source Han Sans CN-blod";
             padding-bottom: 10px;
+
             .number {
               font-size: 60px;
             }
+
             .unit {
               font-size: 60px;
             }
+
             .intro {
               font-size: 18px;
             }
           }
         }
+
         .buttons {
           display: flex;
           justify-content: flex-start;
           gap: 30px;
+
           .btn-custom-yellow {
             width: 140px;
             height: 50px;
@@ -662,6 +648,7 @@ export default {
             font-weight: bold;
             color: #ffffff;
           }
+
           .btn-custom-common {
             width: 200px;
             height: 50px;
@@ -675,6 +662,7 @@ export default {
             font-weight: bold;
             color: #ffffff;
             background: none;
+
             &:hover {
               background: #ffffff;
               border: 2px solid #ffffff;
@@ -684,13 +672,16 @@ export default {
           }
         }
       }
+
       #global {
         margin-left: -228px;
         margin-top: 940px;
       }
+
       .margin-left-25 {
         margin-left: 25px;
       }
+
       .button-width {
         width: 200px;
         padding: 0.5rem 0;
@@ -705,30 +696,37 @@ export default {
       height: calc(553px + 35vh);
       background-color: $secondary;
       clip-path: polygon(0 35vh, 100% 0%, 100% 100%, 0 100%);
+
       .description {
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: space-between;
+
         .description-left {
           align-self: flex-end;
           display: flex;
           flex-direction: column;
           justify-content: center;
+
           .sub-title {
             margin-bottom: 56px;
           }
+
           .content {
             margin-bottom: 40px;
             max-width: 474px;
+
             &.zh-cn {
               line-height: 26px;
             }
           }
+
           .btn-wrapper {
             display: flex;
             margin-bottom: 137px;
             justify-content: space-around;
+
             .btn-custom {
               padding-left: 20px;
               padding-right: 20px;
@@ -736,6 +734,7 @@ export default {
             }
           }
         }
+
         .description-right {
           display: flex;
           align-items: center;
@@ -749,8 +748,17 @@ export default {
       }
     }
   }
+
+
+  .ethdaimg {
+    display: flex;
+    width: 8rem;
+    height: 3.8rem;
+  }
+
   .desc-mobile {
     display: none;
+
     .video {
       display: none;
     }
@@ -761,6 +769,7 @@ export default {
     height: 20px;
     align-items: center;
     margin: 80px 0 37px;
+
     .point-icon {
       width: 16px;
       height: 16px;
@@ -769,6 +778,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+
       div {
         width: 8px;
         height: 8px;
@@ -776,6 +786,7 @@ export default {
         border-radius: 50%;
       }
     }
+
     .point-icon-txt {
       margin-left: 16px;
       height: 14px;
@@ -823,6 +834,7 @@ export default {
         margin-right: 1rem;
         text-align: right;
       }
+
       .numListItemValue {
         height: 2rem;
         line-height: 2rem;
@@ -831,10 +843,12 @@ export default {
         font-weight: bold;
         color: #131313;
         white-space: nowrap;
+
         .unit {
           font-size: 1rem;
         }
       }
+
       //  .numListItemValuefee{
       //   font-size: 23px;
       //   span{
@@ -845,12 +859,14 @@ export default {
       //   }
       // }
     }
+
     .numListBox {
       display: none;
     }
-    .numListSwiper {
-    }
+
+    .numListSwiper {}
   }
+
   .main-index {
     padding-top: 7.5rem;
     width: 100%;
@@ -858,6 +874,7 @@ export default {
     background-color: #1f1f1f;
     position: relative;
     overflow: hidden;
+
     .main {
       width: 100%;
       // height: 100vh;
@@ -868,6 +885,7 @@ export default {
       align-items: center;
       padding: 0;
       padding-bottom: 25px;
+
       .new-link {
         display: flex;
         // align-items: center;
@@ -878,6 +896,7 @@ export default {
         background: #343434;
         border-radius: 0px 5px 5px 0px;
         margin-bottom: 6.25rem;
+
         .new-link-box {
           width: 2.86rem;
           height: 1.67rem;
@@ -892,6 +911,7 @@ export default {
           // margin-right: 15px;'
           display: inline-block;
         }
+
         .new-link-info {
           background: #343434;
           width: 18.6rem;
@@ -910,6 +930,7 @@ export default {
               margin-right: 0.5rem;
             }
           }
+
           div {
             display: inline-block;
             width: 0.5rem;
@@ -917,6 +938,7 @@ export default {
             line-height: 1.67rem;
             vertical-align: top;
           }
+
           .new-link-info-hover {
             display: inline-block;
             width: 16.42rem;
@@ -937,16 +959,19 @@ export default {
           .new-link-info-hover {
             text-decoration: underline;
             color: #ffffff;
+
             span {
               text-decoration: none;
             }
           }
         }
       }
+
       .main-logo {
         width: 100%;
         display: flex;
         flex-direction: column;
+
         .logo {
           display: none;
           font-family: "Montserrat-blod", "Source Han Sans CN-blod";
@@ -961,6 +986,7 @@ export default {
           font-size: 2.5rem;
           line-height: 4rem;
         }
+
         .logoMobile {
           font-family: "Montserrat-blod", "Source Han Sans CN-blod";
           font-weight: bold;
@@ -974,6 +1000,7 @@ export default {
           font-size: 2rem;
           line-height: 4rem;
         }
+
         .desc {
           padding: 11px 0 0 5px;
           font-size: 14px;
@@ -981,16 +1008,20 @@ export default {
           color: #fff;
           line-height: 2em;
           z-index: 10;
+
           .capacity {
             font-family: "Montserrat-blod", "Source Han Sans CN-blod";
             font-weight: bold;
             padding-bottom: 10px;
+
             .number {
               font-size: 2rem;
             }
+
             .unit {
               font-size: 2rem;
             }
+
             .intro {
               font-size: 2rem;
             }
@@ -1008,15 +1039,17 @@ export default {
           max-width: 200px;
           margin-top: -40px;
         }
+
         .buttons {
           display: flex;
           flex-direction: column;
           justify-content: center;
+
           .btn-custom-yellow {
             margin: 0 auto;
             margin-bottom: 2rem;
             width: 13.33rem;
-            height: 3rem;
+            height: 6rem;
             background: #fc7823;
             border-radius: 0.67rem;
             display: flex;
@@ -1028,6 +1061,7 @@ export default {
             font-weight: bold;
             color: #ffffff;
           }
+
           .btn-custom-common {
             margin: 0 auto;
             width: 13.33rem;
@@ -1042,6 +1076,7 @@ export default {
             font-weight: bold;
             color: #ffffff;
             background: none;
+
             &:active {
               background: #ffffff;
               border: 0.17rem solid #ffffff;
@@ -1050,11 +1085,13 @@ export default {
             }
           }
         }
+
         .system-point {
           display: flex;
           height: 20px;
           align-items: center;
           margin-top: 40px;
+
           .point-icon {
             flex-basis: 16px;
             flex-shrink: 0;
@@ -1064,6 +1101,7 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
+
             div {
               width: 8px;
               height: 8px;
@@ -1071,6 +1109,7 @@ export default {
               border-radius: 50%;
             }
           }
+
           .point-icon-txt {
             margin-left: 0.42rem;
             line-height: 0.83rem;
@@ -1085,6 +1124,7 @@ export default {
           }
         }
       }
+
       #global {
         display: none;
         position: absolute;
@@ -1092,9 +1132,11 @@ export default {
         top: -70px;
         left: 0px;
       }
+
       .margin-left-25 {
         margin-left: 25px;
       }
+
       .button-width {
         width: 121px;
       }
@@ -1110,26 +1152,32 @@ export default {
       height: 100%;
       display: flex;
       justify-content: space-between;
+
       .description-left {
         align-self: flex-end;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         .sub-title {
           margin-bottom: 31px;
           margin-top: 45px;
         }
+
         .content {
           margin-bottom: 34px;
           max-width: 474px;
           font-size: 12px;
           line-height: 16px;
+
           &.zh-cn {
             line-height: 26px;
           }
         }
+
         .btn-wrapper {
           margin-bottom: 20px;
+
           .btn-custom {
             margin-bottom: 10px;
             min-width: 128px;
@@ -1138,6 +1186,7 @@ export default {
           }
         }
       }
+
       .description-right {
         display: none;
       }
@@ -1150,6 +1199,7 @@ export default {
     .swiper-container {
       padding-bottom: 45px;
     }
+
     .swiper-pagination-bullets {
       bottom: 0;
     }
@@ -1164,6 +1214,7 @@ export default {
     }
   }
 }
+
 .m-video-container {
   position: fixed;
   z-index: 100;
@@ -1181,6 +1232,7 @@ export default {
 
 .container {
   z-index: 9999;
+
   @media (min-width: 1270px) {
     max-width: 1270px;
   }
