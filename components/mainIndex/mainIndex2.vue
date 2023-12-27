@@ -754,6 +754,7 @@ export default {
     display: flex;
     width: 8rem;
     height: 3.8rem;
+    cursor: pointer;
   }
 
   .desc-mobile {
