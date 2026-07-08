@@ -1,0 +1,37 @@
+name: Deploy To CF Worker
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+          always-auth: true
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Build bundle
+        run: yarn generate
+
+      - name: Use Node 24 for deploy
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Deploy to Cloudflare Worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler@4 deploy --name crust-home --assets ./dist --compatibility-date 2026-07-08
